@@ -1,0 +1,77 @@
+---
+title: 'UltraISO(软碟通)—>轻松做个超好用的u盘系统启动盘！'
+author: wahyd4
+layout: post
+permalink: /2010/09/ultraiso/
+categories:
+  - 头条推荐
+  - 酷玩软件
+tags:
+  - u盘
+  - 下载
+  - 系统
+---
+作者：zhong liang
+
+UltraISO(软碟通)—>轻松做个超好用的u盘系统启动盘！
+
+欢迎来到大染志，欢迎来到酷玩软件。
+
+分享这个软件的功能：怎样做一个u盘系统启动盘。
+
+目的：方便大家，快速的给电脑装：windos xp 或windos 7系统。
+
+1.  下载UltraISO(软碟通)。地址：<http://download.csdn.net/source/1292484>。
+
+这个地址下载的该软件，有软件和软件的注册码，堪称完美破解版。大家进去注册（注册很简单就不介绍 了哈） ，然后就能下载了。
+
+1.  下载个老毛挑winpe：<http://www.duote.com/soft/8624.html>。
+2.  安装：UltraISO（软碟通）。直接点下一步，下一步，……就ok 了。
+3.  制作u盘系统启动盘过程。
+4.  打开安装好的  ：UltraISO(软碟通) ，然后选择文件。如图：
+
+<img title="QQ截图未命名" src="http://www.junv.info/wp-content/uploads/2010/09/QQ截图未命名1-300x217.png" alt="" width="300" height="217" />
+
+然后点，文件下的打开文件：打开后如图：
+
+[<img class="aligncenter size-medium wp-image-351" title="1" src="http://www.junv.info/wp-content/uploads/2010/09/12-300x217.png" alt="" width="300" height="217" />][1]
+
+然后选择：你下好的老毛挑winpeboot.iso文件。如下图：
+
+[<img class="aligncenter size-medium wp-image-353" title="2" src="http://www.junv.info/wp-content/uploads/2010/09/21-300x229.png" alt="" width="300" height="229" />][2]
+
+选择好后，点打开。效果如下图：
+
+[<img class="aligncenter size-medium wp-image-355" title="3" src="http://www.junv.info/wp-content/uploads/2010/09/31-300x231.png" alt="" width="300" height="231" />][3]
+
+用红色圈住的就是winpeboot.iso的全部文件。
+
+接下来就选择，菜单上的：启动  。如下图：
+
+[<img class="aligncenter size-medium wp-image-356" title="4" src="http://www.junv.info/wp-content/uploads/2010/09/41-300x210.png" alt="" width="300" height="210" />][4]
+
+然后选，启动下的：写入硬盘映像，并同时插上你的u盘。
+
+打开效果如图：
+
+[<img class="aligncenter size-medium wp-image-358" title="5" src="http://www.junv.info/wp-content/uploads/2010/09/5-300x244.png" alt="" width="300" height="244" />][5]
+
+这里要注意了，一定要确定：上图显示的硬盘驱动器：是你u盘的信息，就是确保那驱动器是你的u盘，然后，写入放式最好选择：USB-HDD+，最后选择：写入。
+
+这时你等过：10分钟左右就刻录完了，这时你的u盘就是系统启动盘了。
+
+科学家说  ：实践是检验真理的唯一标准，大家赶快试试吧。
+
+经验：本人已做了2个u盘系统启动盘了，跟朋友也做了10多个了 ，绝对好用、使用。
+
+由于篇幅问题，这里就不详细介绍怎样用做好的u盘系统启动盘装系统了。简单的说哈。你在：biso里把      first    boot设为：USB-HDD或USB-ZIP启动。就可以看到，u盘启动里面的强大功能了。
+
+寄予：希望这篇文章，能真正帮助朋友们轻松做个属于自己的u盘系统启动盘。而不是在网上找了一大堆烦杂的资料，最后还是无从下手。
+
+最后：希望大家，多多提出你们的建议，提出你们要求，我们尽最大力量满足大家的要求。希望大家多多评论，如果你觉得：酷玩软件的文章很好很实用，请向你的朋友推荐，在此表示感谢，你们的支持将是我们前进的无限动力！ 谢谢！
+
+ [1]: http://www.junv.info/wp-content/uploads/2010/09/12.png
+ [2]: http://www.junv.info/wp-content/uploads/2010/09/21.png
+ [3]: http://www.junv.info/wp-content/uploads/2010/09/31.png
+ [4]: http://www.junv.info/wp-content/uploads/2010/09/41.png
+ [5]: http://www.junv.info/wp-content/uploads/2010/09/5.png

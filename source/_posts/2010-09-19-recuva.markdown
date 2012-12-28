@@ -1,0 +1,59 @@
+---
+title: 软件分享：Recuva（超强文件恢复软件）
+author: wahyd4
+layout: post
+permalink: /2010/09/recuva/
+categories:
+  - 头条推荐
+  - 酷玩软件
+tags:
+  - recuva，下载
+  - 使用
+  - 数据恢复
+  - 软件
+---
+作者：Zhong Liang
+
+欢迎来到大染志          欢迎来到酷玩软件。  从这周开始每周我们每周都会跟大家分享一些对大家的工作、生活、学习非常有用的软件。大家有什么意见、会有什么要求，请在评论中积极提出，我们将尽最大力量满足大家的需求！
+
+第一款软件分享：
+
+名字：Recuva（超强文件恢复软件）。
+
+功能：该软件能将 ：1.被误删了文件、2.格式化了磁盘里面的资料 ：恢复如初。
+
+适用于：但有些人不小心把自己的重要资料误删了、把盘格式化了、回收站也清空了。这是一点很焦急，这是大家不要慌。Recuva这款超强文件恢复软件能 将你大部分误删的资料找回！   这款软件以得到很多人的认可，并且本人也多次用它，恢复被删的文件的能力超强！觉得值得大家收藏！
+
+用法简绍：1.首先下载：地址：<http://www.skycn.com/soft/40631.html>
+
+2.双击打开，下一步：出现如下图：
+
+[<img class="aligncenter size-full wp-image-175" title="11w2" src="http://www.junv.info/wp-content/uploads/2010/09/11w2.jpg" alt="" width="544" height="432" />][1]
+
+出现这图时你可以选择你要恢复的文件类型，如果都没就选择其它，直到找到你要恢复的文件类型。
+
+3.选好文件类型后下一步，出现如下图：
+
+[<img class="aligncenter size-full wp-image-176" title="asda" src="http://www.junv.info/wp-content/uploads/2010/09/asda.jpg" alt="" width="537" height="436" />][2]
+
+当出现这个画面是，你就选择你被删的文件的路径。也就是：你想要恢复的文件以前存储的路径。
+
+4.当选好路径后点下一步：出现如下图：
+
+[<img class="aligncenter size-full wp-image-177" title="sdasd" src="http://www.junv.info/wp-content/uploads/2010/09/sdasd.jpg" alt="" width="652" height="527" />][3]
+
+这是你被删出的文件就已经出现在如上图的目录里了，然后选择你想恢复的文件，点上勾，然后点恢复。
+
+注意：当你点恢复时：会让你选择你要把文件恢复到那个盘。请不要把恢复文件的路径整到跟以前被删除文件的路径一样。
+
+比如：你以前被删的文件在：c盘
+
+那么你恢复文件的文件就最好在：D盘或其它盘。
+
+这样文件恢复的机会才能到达95%以上。
+
+最后：希望这软件能帮那 些正为重要资料被删而不知道怎恢复的朋友，找回重要的资料。
+
+ [1]: http://www.junv.info/wp-content/uploads/2010/09/11w2.jpg
+ [2]: http://www.junv.info/wp-content/uploads/2010/09/asda.jpg
+ [3]: http://www.junv.info/wp-content/uploads/2010/09/sdasd.jpg

@@ -1,0 +1,68 @@
+---
+title: F1 2010 现在可以下载啦！
+author: wahyd4
+excerpt: >
+  F1 2010
+  与9月22日发行了，作者第一时间在国内几个比较著名的单机游戏网站的醒目位置都看到介绍和下载链接！本人虽然不算一个游戏的狂热的追求者，但是对赛车和足球确实有着很深厚的感情，于是本人也在第一时间下载了游戏，进行试玩。
+layout: post
+permalink: /2010/09/f1-2010/
+categories:
+  - 头条推荐
+  - 游戏下载
+tags:
+  - F1 2010
+  - 上海
+  - 下载
+  - 赛车
+---
+作者：Junv
+
+F1 2010 与9月22日发行了，作者第一时间在国内几个比较著名的单机游戏网站的醒目位置都看到介绍和下载链接！本人虽然不算一个游戏的狂热的追求者，但是对赛车和足球确实有着很深厚的感情，于是本人也在第一时间下载了游戏，进行试玩。
+
+[<img class="aligncenter size-full wp-image-340" title="picthumb.php" src="http://www.junv.info/wp-content/uploads/2010/09/picthumb.php_.jpg" alt="" width="718" height="403" />][1]
+
+我下载的是完整破解版，文件大小的5个多G，（我将在文末提供外链种子下载链接），安装的时候也很顺利，没好远出现什么异常，只是我感觉它 的安装界面比较单调，而是剩余时间弄得不好，安装在我的笔记本上大概话了20-30分钟吧。要在安装的过程中输入密钥：01911-01911-01911-01911-01911。
+
+安装好之后只需要将镜像razar里面的文件，复制替换到原游戏文件夹即可！
+
+安装信息：
+
+1. 解压缩  
+2. 载入镜像  
+3. 安装并且输入序列号01911-01911-01911-01911-01911  
+4. 将破解补丁复制到游戏安装目录下  
+5. 运行游戏
+
+[<img class="aligncenter size-full wp-image-350" title="33" src="http://www.junv.info/wp-content/uploads/2010/09/33.jpg" alt="" width="718" height="403" />][2]
+
+这里有一点需要说明一下，可能有的童鞋，进入游戏会发现需要你登陆windows live 并输入key 才可以保存游戏，本人最初玩这个游戏的时候也犯了这个错误，后面再网上查了资料。其实不用的，就是在叫你选择使用已有的账号或者新建账号登陆的时候，请选择新建账号，然后进去将选择条往下拉到底，会出现 “ creat a local profile” 这样一个链接，点进去就可以啦。你就可以不用登陆到网上了。
+
+我觉得对于我来说刚开始操作这个游戏的时候，感觉还是比较困难的，
+
+下面简单说一下按键吧   A:进档  Z：退档     空格：油门     ctrl:  刹车，或者倒车用的倒档，   C：切换屏幕，级切换视角    方向键左键：左转    方向键右键：右转
+
+其他就差不多啦。
+
+[<img class="aligncenter size-full wp-image-349" title="22" src="http://www.junv.info/wp-content/uploads/2010/09/22.jpg" alt="" width="718" height="403" />][3]
+
+刚开始你会从练习赛开始，这个操作也需要大家慢慢适应吧，玩多了就应该觉得好些了。
+
+我玩了雨天赛道，感觉太震撼了，而且特别真实，连水雾都模仿得非常逼真。
+
+值得一玩的是，里面还有上海国际赛道哦，感觉很亲切。玩过之后发现上海国际赛道还是有两个比较大的弯感觉很困难拐过去，
+
+而且我还发现法拉利的车子真的直线加速好快好快，很轻易就超过一半的车子。
+
+更多精彩由你来体验吧。
+
+下面附上下载链接：[点我下载BT种子][4]
+
+[ 迅雷下载][5]（来自gamersky）
+
+图片来自：多玩
+
+ [1]: http://www.junv.info/wp-content/uploads/2010/09/picthumb.php_.jpg
+ [2]: http://www.junv.info/wp-content/uploads/2010/09/33.jpg
+ [3]: http://www.junv.info/wp-content/uploads/2010/09/22.jpg
+ [4]: http://db.gamersky.com/Soft/ShowSoftDown.asp?UrlID=1&SoftID=25895
+ [5]: http://db.gamersky.com/Soft/ShowSoftDown.asp?UrlID=1&SoftID=25895&flag=1

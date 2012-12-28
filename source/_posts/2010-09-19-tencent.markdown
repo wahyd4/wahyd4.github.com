@@ -1,0 +1,201 @@
+---
+title: 送腾讯企业邮箱邀请码啦！
+author: wahyd4
+layout: post
+permalink: /2010/09/tencent/
+categories:
+  - 我们爱分享
+tags:
+  - 企业邮箱
+  - 腾讯
+  - 邀请码
+---
+作者：Junv
+
+前几天在网友那里要到的腾讯企业邮箱邀请码，绑定了我的域名。感觉还不错，但是现在腾讯企业邮箱只支持邀请的方式去使用。
+
+现在我有30个邀请名额，请各位需要邀请码的朋友们，在下面留言吧，我会尽快送上邀请码的！
+
+下面是关于腾讯企业邮箱的一些参数。
+
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="2" width="530">
+      <span style="font-family: Verdana, Arail; font-size: small;">附：腾讯企业邮箱功能速览</span>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      独立邮箱帐号数
+    </td>
+    
+    <td>
+      200个
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      多域名支持
+    </td>
+    
+    <td>
+      5个
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      邮箱容量
+    </td>
+    
+    <td>
+      无限制
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      企业网盘
+    </td>
+    
+    <td>
+      2GB，内部共享
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      普通附件
+    </td>
+    
+    <td>
+      50 MB
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      超大附件
+    </td>
+    
+    <td>
+      1 GB/每个帐号
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      短信支持
+    </td>
+    
+    <td>
+      来信提醒、备忘提醒
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      全球互通、南北互联
+    </td>
+    
+    <td>
+      国内外10多个城市架设服务器
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      防病毒
+    </td>
+    
+    <td>
+      卡巴斯基防病毒引擎
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      反垃圾功能
+    </td>
+    
+    <td>
+      系统级反垃圾过滤，支持企业自定义黑白名单
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      多种方式访问
+    </td>
+    
+    <td>
+      网页、POP3/SMTP、IMAP
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      支持SSL
+    </td>
+    
+    <td>
+      全程SSL
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      企业内部信息通知
+    </td>
+    
+    <td>
+      支持公告板和邮件群发
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      帐号自主管理
+    </td>
+    
+    <td>
+      支持批量导入、邮件群组、分级管理
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      企业地址本
+    </td>
+    
+    <td>
+      多级组织架构管理
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      日志管理
+    </td>
+    
+    <td>
+      用户和管理员登录及常用操作记录
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      企业LOGO
+    </td>
+    
+    <td>
+      支持自定义
+    </td>
+  </tr>
+</table>
+
+[<img class="aligncenter size-medium wp-image-184" title="qiye" src="http://www.junv.info/wp-content/uploads/2010/09/qiye-300x150.png" alt="" width="300" height="150" />][1]
+
+ [1]: http://www.junv.info/wp-content/uploads/2010/09/qiye.png

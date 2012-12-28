@@ -1,0 +1,41 @@
+---
+title: .tk顶级域名免费注册啦
+author: wahyd4
+excerpt: |
+  笔者在浏览网页时，发现一个可以免费注册的顶级域名，而且还比较短哦。那就是.tk
+  
+  注册地址：http://www.dot.tk/zh/pageA00.html
+layout: post
+permalink: /2010/10/tk-free/
+categories:
+  - 头条推荐
+  - 我们爱分享
+tags:
+  - 免费
+  - 域名
+---
+作者：Junv
+
+笔者在浏览网页时，发现一个可以免费注册的顶级域名，而且还比较短哦。那就是.tk
+
+注册地址：<http://www.dot.tk/zh/pageA00.html>
+
+笔者尝试注册了一下，而且注册步骤也很简单。不要注意的是，长度在4个字母以上的域名是免费的，而长度在四个字母以下的域名是需要付费的，而且很贵。
+
+注册里面你需要留下你真实的邮箱信息，因为你注册的时候，系统会将一个链接和一个相信的类似于激活码的东西发送到你的邮箱，此时你打开邮箱的链接，输入“激活码”即可完成注册了。
+
+下面送上注册过程中的图片吧。
+
+[<img class="aligncenter size-full wp-image-559" title="regdom" src="http://www.junv.info/wp-content/uploads/2010/10/regdom.jpg" alt="" width="636" height="531" />][1]
+
+[][1]在这里面填上你想要注册的域名的字母就可以了  
+[<img class="aligncenter size-full wp-image-561" title="reg1" src="http://www.junv.info/wp-content/uploads/2010/10/reg1.jpg" alt="" width="645" height="355" />][2]
+
+如果你的域名没有被注册，显示你可以注册，然后勾选免费域名就行啦。下面的填的的一些信息就没什么特别的了
+
+切记：你需要填写你真实的邮箱地址，否则你将收不到域名注册的有关信息。
+
+如果个别童鞋仍然搞不懂域名注册，请在后门留言吧，我会尽快帮你解决的。
+
+ [1]: http://www.junv.info/wp-content/uploads/2010/10/regdom.jpg
+ [2]: http://www.junv.info/wp-content/uploads/2010/10/reg1.jpg
