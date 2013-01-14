@@ -26,13 +26,14 @@ tags:
 
 首先是在linux/ubuntu上安装postgres.
 
-> sudo apt-get install postgresql-9.1
-> 
-> sudo apt-get install postgresql-server-dev-9.1
+		sudo apt-get install postgresql-9.1
+ 
+		sudo apt-get install postgresql-server-dev-9.1  
 
 postgresql 数据库在安装的时候会默认创建postgres用户，它的身份可以简单理解成为mysql 中的root用户。并且我们现在可以这样登录postgresql
 
-> sudo -u postgres psql (注意这里是小写的u，和后面的有区别)
+		
+		sudo -u postgres psql (注意这里是小写的u，和后面的有区别)
 
 接下俩我们需要在postgresql 中创建一个与当前你使用的linux用户名一致，并赋予superuser.（当然这个操作需要在连接到数据库的基础上）
 
@@ -46,26 +47,27 @@ create user junv with superuser (当前我的linux用户名为junv)
 
 然后，我们需要修改/etc/postgresql/9.1/main/pg_hba.conf（这里的9.1，是因为我安装的数据库版本是9.1）
 
-> sudo gedit  /etc/postgresql/9.1/main/pg_hba.conf
+		sudo gedit  /etc/postgresql/9.1/main/pg_hba.conf
 
 将里面相似的内容修改为类似如下所示：
 
-> \# Database administrative login by Unix domain socket  
-> local all postgres trust
-> 
-> \# TYPE DATABASE USER ADDRESS METHOD  
-> \# “local” is for Unix domain socket connections only  
-> local all all trust  
-> \# IPv4 local connections:  
-> host all all 127.0.0.1/32 trust  
-> \# IPv6 local connections:  
-> host all all ::1/128 trust
+		\# Database administrative login by Unix domain socket  
+		local all postgres trust
 
-最周这个method,改成trust,表示信任所有来地本地(localhost)的连接。这样我们就可以脸上数据库了
+		\# TYPE DATABASE USER ADDRESS METHOD  
+		\# “local” is for Unix domain socket connections only  
+		local all all trust  
+		\# IPv4 local connections:  
+		host all all 127.0.0.1/32 trust  
+		\# IPv6 local connections:  
+		host all all ::1/128 trust
+
+最后这个method,改成trust,表示信任所有来地本地(localhost)的连接。这样我们就可以连上数据库了
 
 和mysql 我们修改了配置文件之后还需要做的是 重启 数据库，让配置生效。
 
-> sudo service postgresql restart
+		
+		sudo service postgresql restart
 
 到现在为止。我们对数据库进行的操作就差不多了。现在你应该已经可以成功脸上数据库了。
 
