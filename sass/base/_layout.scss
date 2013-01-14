@@ -1,40 +1,49 @@
+$max-width: 1000px;
+
 *{
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 body{
-  background: $color-background;
-  font: 300 14px $font-main;
-  text-shadow: 0 0 1px transparent;
+	font-family: $font-default;
+	font-weight: 300;
+	font-size: 14px;
+	background: $color-background;
+	color: $color-gray01;
+	@media screen and (max-width: 1040px){
+		margin: 0 20px;
+	}
+	@media screen and (max-width: 600px){
+		font-size: 13px;
+	}
 }
 h1{
-  font-size: 2em;
+	font-size: 1.8em;
 }
 h2{
-  font-size: 1.6em;
+	font-size: 1.5em;
 }
 h3{
-  font-size: 1.3em;
+	font-size: 1.3em;
 }
 a{
-  color: $color-main01;
-  text-decoration: none;
-}
-strong{
-  font-weight: bold;
+	text-decoration: none;
+	outline-width: 0;
+	color: $color-main;
 }
 .alignleft{
-  float: left;
+	float: left;
 }
 .alignright{
-  float: right;
+	float: right;
 }
 .clearfix{
-  @include pie-clearfix;
+	@include pie-clearfix;
 }
 .inner{
-  margin: 0 auto;
-  position: relative;
-  width: 1000px;
-  z-index: 0;
+	width: $max-width;
+	margin: 0 auto;
+	@media screen and (max-width: 1040px){
+		width: 100%;
+	}
 }

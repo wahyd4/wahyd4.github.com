@@ -1,1 +1,6 @@
-<p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}</p>
+Copyright &copy; {{ site.time | date: "%Y" }}
+{% if site.author %}
+    {{ site.author }}
+{% else %}
+    {{ site.title }}
+{% endif %}
