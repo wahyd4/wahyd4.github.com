@@ -1,6 +1,7 @@
 ---
 title: 在线测试电脑的游戏性能
 author: wahyd4
+comments: true
 excerpt: >
   今天说的这个网站就是专门防止这样的情况发生的，它可以在线检测你的电脑对于某一款游戏的性能，简单说就是检测你的电脑是否符合游戏的最低要求（Minimum
   requirements）和标准要求(Recommended requirements)。

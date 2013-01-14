@@ -1,6 +1,7 @@
 ---
 title: 备战四级！
 author: wahyd4
+comments: true
 excerpt: |
   马上要四级考试。
   

@@ -2,6 +2,7 @@
 title: 几个常用的网站，要记到哈！
 author: wahyd4
 layout: post
+comments: true
 permalink: /2010/09/a-most-usefual-website/
 categories:
   - 我们爱分享

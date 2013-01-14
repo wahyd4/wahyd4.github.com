@@ -1,6 +1,7 @@
 ---
 title: Google Picasa 可以访问了？
 author: wahyd4
+comments: true
 excerpt: >
   本来今天作者想来试验前些天以为有人介绍的用http://picasaweb.google.com.jp来访问Picasa，可是我今天用我的chrome
   打开这个这个网址是，网址直接调到http://picasaweb.google.com/home

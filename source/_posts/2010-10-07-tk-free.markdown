@@ -1,6 +1,7 @@
 ---
 title: .tk顶级域名免费注册啦
 author: wahyd4
+comments: true
 excerpt: |
   笔者在浏览网页时，发现一个可以免费注册的顶级域名，而且还比较短哦。那就是.tk
   

@@ -2,6 +2,7 @@
 title: 'UltraISO(软碟通)—>轻松做个超好用的u盘系统启动盘！'
 author: wahyd4
 layout: post
+comments: true
 permalink: /2010/09/ultraiso/
 categories:
   - 头条推荐

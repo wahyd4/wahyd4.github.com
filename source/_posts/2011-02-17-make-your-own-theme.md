@@ -1,6 +1,7 @@
 ---
 title: 快速高效制作一款属于你的chrome主题（在线/本地）
 author: wahyd4
+comments: true
 excerpt: |
   打开http://www.chrometheme.net/，在页面底部点击create chrome theme online 这个按钮即可进入制作主题。
   

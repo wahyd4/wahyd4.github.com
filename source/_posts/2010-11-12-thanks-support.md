@@ -1,6 +1,7 @@
 ---
 title: 多谢大家支持
 author: wahyd4
+comments: true
 excerpt: '   网站建了还是有几个月了，可以一直以来苦于没有宣传，加上其他一些原因吧，网站的浏览量一直很低，一般每天也就10几二十个人访问，'
 layout: post
 permalink: /2010/11/thanks-support/

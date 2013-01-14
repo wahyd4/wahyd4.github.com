@@ -1,6 +1,7 @@
 ---
 title: tomcat 7配置数据库连接池，使用SQL Server2005实现
 author: wahyd4
+comments: true
 excerpt: >
   昨天看了一些网上的tomcat数据库连接池配置的东西，但是一直没配好，主要原因是网上的文章几乎没有争对tomcat
   7进行配置的，而且针对SQL

@@ -1,6 +1,7 @@
 ---
 title: 使用maven编译Sonatype Nexus源码
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/07/maven-compile-nexus/
 categories:

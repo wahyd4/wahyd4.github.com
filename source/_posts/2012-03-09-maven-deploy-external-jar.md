@@ -1,6 +1,7 @@
 ---
 title: Maven 直接部署第三方jar，bundle,war包到仓库
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/03/maven-deploy-external-jar/
 categories:

@@ -2,6 +2,7 @@
 title: 魅族M9最新谍照？？不是以前的哦
 author: wahyd4
 layout: post
+comments: true
 permalink: /2010/09/newest-m9/
 categories:
   - 头条推荐

@@ -1,6 +1,7 @@
 ---
 title: javascript 语言精粹 下载
 author: wahyd4
+comments: true
 excerpt: |
   众所周知要做一个很好，很酷炫的网页 html+css+javascript是必不可少的。前面我们已经分享了一本经典的css书籍css精粹3
   

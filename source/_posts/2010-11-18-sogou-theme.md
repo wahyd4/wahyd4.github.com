@@ -1,6 +1,7 @@
 ---
 title: 推荐两款搜狗输入法酷炫动画皮肤
 author: wahyd4
+comments: true
 excerpt: >
   不知道各位用搜狗输入法的童鞋们注意没有，自从搜狗输入法进入5.
   0

@@ -1,6 +1,7 @@
 ---
 title: 让你的wordpress圣诞也飘雪吧
 author: wahyd4
+comments: true
 excerpt: |
   |
     虽然可能中国的童鞋不怎么过圣诞节吧，但是笔者还是看到很多网站，在圣诞到来之际，挂出了越来越多的和圣诞节相关的小挂件。

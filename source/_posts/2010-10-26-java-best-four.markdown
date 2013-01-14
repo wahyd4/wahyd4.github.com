@@ -1,6 +1,7 @@
 ---
 title: 传说中的JAVA四大名著
 author: wahyd4
+comments: true
 layout: post
 permalink: /2010/10/java-best-four/
 categories:
@@ -160,7 +161,7 @@ JAVA 2核心技术 卷II：高级特性（原书第7版)———Cay Horstmann
 > 
 > <span style="color: #ff0000;"><strong>请你支持我们的网站，而不是做一个来了下了就走了！如不能下载，请告知我们，我们会尽快发到你的电子邮箱</strong></span>
 
- [1]: http://www.junv.info/wp-content/uploads/2010/10/Java编程语言（第三版）.jpg
- [2]: http://www.junv.info/wp-content/uploads/2010/10/Java编程思想（第2版）.jpg
- [3]: http://www.junv.info/wp-content/uploads/2010/10/Java编程思想：第3版.jpg
- [4]: http://www.junv.info/wp-content/uploads/2010/10/JAVA-2核心技术-卷I：基础知识（原书第7版）.jpg
+ [1]: http://www.junv.info/wp-content/uploads/2010/10/.jpg
+ [2]: http://www.junv.info/wp-content/uploads/2010/10/Java.jpg
+ [3]: http://www.junv.info/wp-content/uploads/2010/10/Java.jpg
+ [4]: http://www.junv.info/wp-content/uploads/2010/10/JAVA-2.jpg

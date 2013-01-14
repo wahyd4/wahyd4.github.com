@@ -1,6 +1,7 @@
 ---
 title: SSD3教材下载
 author: wahyd4
+comments: true
 excerpt: >
   SSD系列教程是美国卡内基梅隆大学的计算机专业学生的系列教程，一共是从SSD1到SSD9。此教程一般在国内比较有名的大学有使用，据我所知，我们附近有四川大学，电子科技大学，西北工业大学在使用此系列教程。
 layout: post

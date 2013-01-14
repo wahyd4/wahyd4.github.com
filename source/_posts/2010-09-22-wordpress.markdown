@@ -2,6 +2,7 @@
 title: 一款很棒的wordpress 首页动画展示插件
 author: wahyd4
 layout: post
+comments: true
 permalink: /2010/09/wordpress/
 categories:
   - 头条推荐

@@ -1,6 +1,7 @@
 ---
 title: 深入比较几种maven仓库的优先级
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/07/compare-priority-of-maven-repository/
 categories:

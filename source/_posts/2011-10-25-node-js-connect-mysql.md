@@ -1,6 +1,7 @@
 ---
 title: 使用node.js连接mysql数据库
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/10/node-js-connect-mysql/
 categories:

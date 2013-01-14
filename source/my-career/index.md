@@ -1,6 +1,7 @@
 ---
 title: My Career
 author: wahyd4
+comments: true
 layout: page
 ---
 ### **java-sorting**

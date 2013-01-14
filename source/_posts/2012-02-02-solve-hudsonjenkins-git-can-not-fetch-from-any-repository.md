@@ -1,6 +1,7 @@
 ---
 title: 解决 hudson/Jenkins git can not fetch from any repository错误
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/02/solve-hudsonjenkins-git-can-not-fetch-from-any-repository/
 categories:

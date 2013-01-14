@@ -1,6 +1,7 @@
 ---
 title: CSS精粹3免费下载
 author: wahyd4
+comments: true
 excerpt: >
   这本书的英文原名叫CSS
   anthology,翻译成中文叫CSS精粹，目前这本书已经出到了第三版了。但是中文翻译的只有第二版，第二版是08年出版的，里面几乎没有提及CSS

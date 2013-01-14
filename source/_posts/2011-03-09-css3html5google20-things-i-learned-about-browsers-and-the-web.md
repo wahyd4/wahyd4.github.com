@@ -1,6 +1,7 @@
 ---
 title: CSS3+HTML5+Google=20 things i learned about browsers and the web
 author: wahyd4
+comments: true
 excerpt: >
   就是google chrome
   浏览器团队用CSS3+HTML5开发出的一本在线图书叫做20 things i

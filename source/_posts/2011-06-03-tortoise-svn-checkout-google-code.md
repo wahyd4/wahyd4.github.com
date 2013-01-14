@@ -1,6 +1,7 @@
 ---
 title: 解决tortoise svn不能checkout Google code
 author: wahyd4
+comments: true
 excerpt: >
   不知道各位同学使用svn吗？简单说SVN是一个代码版本管理软件，可以让不同的人更新和同步代码，并对代码进行版本管理。现在google
   code 里面这么多开源项目，都是可以去用SVN checkout

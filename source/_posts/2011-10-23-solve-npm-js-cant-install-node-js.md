@@ -1,6 +1,7 @@
 ---
 title: 解决npm.js不能成功安装Node.js包
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/10/solve-npm-js-cant-install-node-js/
 categories:

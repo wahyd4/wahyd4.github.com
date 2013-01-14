@@ -1,6 +1,7 @@
 ---
 title: 疯狂老爸箴言录Shit My Dad Says
 author: wahyd4
+comments: true
 excerpt: >
   今天给大家推荐一部美剧疯狂老爸箴言录Shit My Dad
   Says，这部美剧是根据一位在twitter上的老者说的话改编的，他说的话总是语出惊人。

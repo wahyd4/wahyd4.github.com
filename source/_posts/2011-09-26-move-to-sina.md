@@ -1,6 +1,7 @@
 ---
 title: 搬到新浪，初衷很无耐
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/09/move-to-sina/
 categories:

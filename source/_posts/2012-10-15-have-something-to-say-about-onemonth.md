@@ -1,6 +1,7 @@
 ---
 title: 最近一个多月找工作有感！
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/10/have-something-to-say-about-onemonth/
 categories:

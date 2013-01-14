@@ -1,6 +1,7 @@
 ---
 title: SSD1教材下载
 author: wahyd4
+comments: true
 excerpt: >
   SSD1 的全称叫Introduction to Information
   Systems，翻译成中文叫信息系统导论，是美国卡内基梅隆大学的计算机系列教材的第一个。

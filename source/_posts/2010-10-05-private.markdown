@@ -1,6 +1,7 @@
 ---
 title: 游戏推荐——private
 author: wahyd4
+comments: true
 excerpt: >
   在浏览网页时，笔者偶然发现了这款名为《private》的游戏，有些直译成中文又叫“私处”但是总觉得这个名字有点不太尊重女性朋友一样。这个姑且放过不提。
 layout: post

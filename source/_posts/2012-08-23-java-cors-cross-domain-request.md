@@ -1,6 +1,7 @@
 ---
 title: Java CORS实现Ajax跨域请求
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/08/java-cors-cross-domain-request/
 categories:

@@ -1,6 +1,7 @@
 ---
 title: 新年快乐
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/02/happy-new-year-2/
 categories:

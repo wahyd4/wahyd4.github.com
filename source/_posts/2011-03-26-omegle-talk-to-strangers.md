@@ -1,6 +1,7 @@
 ---
 title: Omegle——Talk to strangers！和全世界的陌生人聊天
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/03/omegle-talk-to-strangers/
 categories:

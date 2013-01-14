@@ -1,6 +1,7 @@
 ---
 title: 用你的佳能EOS相机拍摄视频吧
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/01/use-your-eos-take-video/
 categories:

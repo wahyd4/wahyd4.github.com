@@ -2,6 +2,7 @@
 title: 分享六级词汇供下载，只是因为我需要面对！
 author: wahyd4
 layout: post
+comments: true
 permalink: /2010/09/cet-6-2/
 categories:
   - 头条推荐

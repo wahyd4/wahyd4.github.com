@@ -1,6 +1,7 @@
 ---
 title: Mongodb 入门
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/07/mongodb-getstart/
 categories:

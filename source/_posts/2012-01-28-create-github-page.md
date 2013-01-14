@@ -1,6 +1,7 @@
 ---
 title: 创建自己的github page
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/01/create-github-page/
 categories:

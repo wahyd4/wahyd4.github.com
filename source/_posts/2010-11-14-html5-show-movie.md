@@ -1,6 +1,7 @@
 ---
 title: 用HTML5演绎你自己的电影
 author: wahyd4
+comments: true
 excerpt: >
   你是否曾经是否设想过，自己只要点点鼠标，就可以拍一部自己的电影。也许这个想法在当时不太可能，可是现在在google、html
   5、chrom等的强力支持下，这个愿望就可以实现啦，

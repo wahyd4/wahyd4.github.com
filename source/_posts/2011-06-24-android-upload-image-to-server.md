@@ -1,6 +1,7 @@
 ---
 title: Android上传图片到服务器Server端servlet源码
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/06/android-upload-image-to-server/
 categories:

@@ -1,6 +1,7 @@
 ---
 title: 动态展示网站读者信息
 author: wahyd4
+comments: true
 excerpt: >
    今天给大家介绍一个很不错，很炫的小东西。这个小东西很适合站长用，它是用flash的方式动态展示你网站的访问者的来源。动画做得很炫哦。
 layout: post

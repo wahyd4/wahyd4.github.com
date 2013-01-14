@@ -1,6 +1,7 @@
 ---
 title: 年度游戏大作——使命召唤7完美破解版下载
 author: wahyd4
+comments: true
 excerpt: '《使命召唤：黑色行动》（Call of Duty: Black Ops）是Activision公司出品的著名FPS游戏《使命召唤》系列的第七部，故事设定在越南战争与北极、古巴等一些冷战地区。'
 layout: post
 permalink: /2010/11/call-of-duty-7/

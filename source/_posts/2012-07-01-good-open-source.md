@@ -1,6 +1,7 @@
 ---
 title: 那些年我用过的开源软件、框架
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/07/good-open-source/
 categories:

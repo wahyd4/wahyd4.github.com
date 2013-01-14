@@ -2,6 +2,7 @@
 title: end of the summer
 author: wahyd4
 layout: post
+comments: true
 permalink: /2010/09/end-of-the-summer/
 categories:
   - 《 theLun》
@@ -10,4 +11,4 @@ categories:
 
 [<img class="alignnone size-medium wp-image-193" title="DSC02310_副本_副本" src="http://www.junv.info/wp-content/uploads/2010/09/DSC02310_副本_副本3-300x169.jpg" alt="" width="300" height="169" />][1]
 
- [1]: http://www.junv.info/wp-content/uploads/2010/09/DSC02310_副本_副本3.jpg
+ [1]: http://www.junv.info/wp-content/uploads/2010/09/DSC02310jpg

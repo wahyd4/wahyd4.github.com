@@ -1,6 +1,7 @@
 ---
 title: Android 拍照并上传图片到服务器源码
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/06/android-take-photo-and-upload/
 categories:

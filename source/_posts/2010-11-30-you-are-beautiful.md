@@ -1,6 +1,7 @@
 ---
 title: you are beautiful.
 author: wahyd4
+comments: true
 layout: post
 permalink: /2010/11/you-are-beautiful/
 categories:
@@ -16,4 +17,4 @@ categories:
 
 可我还是庸俗地想单纯把它视作一首情歌来听。他唱到: i saw you face in a crowded place..and I don’t know what to do..’Cause I’ll never be with you…..
 
- [1]: /images/2010/11/高清MV.James_.Blunt-You-Are-Beautiful.mkv.flv
+ [1]: /images/2010/11/MV.James_.Blunt-You-Are-Beautiful.mkv.flv

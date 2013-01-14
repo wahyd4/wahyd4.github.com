@@ -1,6 +1,7 @@
 ---
 title: Javascript DOM编程艺术 中文PDF下载
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/04/javascript-dom-pdf/
 categories:

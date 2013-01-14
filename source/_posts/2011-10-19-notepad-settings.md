@@ -1,6 +1,7 @@
 ---
 title: Notepad++ 设置、插件配置
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/10/notepad-settings/
 categories:

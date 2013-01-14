@@ -1,6 +1,7 @@
 ---
 title: 快将你的windows 7升级到SP1吧
 author: wahyd4
+comments: true
 excerpt: '     作为一个还是比较爱折腾的童鞋，笔者曾在windows 7 RTM版本刚在网上泄露的时候就下载了，系统进行安装，先尝试了一番。最近windows 7 sp1 的最终版本又在网上泄露了，笔者前天晚上已经等不及下载下来进行安装了，经过一天多的使用，确认没有任何和我的windows 7旗舰版 不兼容或者bug,现在和大家分享一下。'
 layout: post
 permalink: /2011/01/update-windows7-to-sp1/

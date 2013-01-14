@@ -1,6 +1,7 @@
 ---
 title: 分享多个公网上著名的maven组件仓库
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/08/most-popular-free-repository/
 categories:

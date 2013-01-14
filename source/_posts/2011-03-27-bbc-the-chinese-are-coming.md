@@ -1,6 +1,7 @@
 ---
 title: 《BBC 中国人要来了》(BBC The Chinese Are Coming)
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/03/bbc-the-chinese-are-coming/
 categories:

@@ -2,6 +2,7 @@
 title: photoshop CS4入门到精通视频教程（完整版）
 author: wahyd4
 layout: post
+comments: true
 permalink: /2011/01/photoshop-cs4/
 categories:
   - 各类教程

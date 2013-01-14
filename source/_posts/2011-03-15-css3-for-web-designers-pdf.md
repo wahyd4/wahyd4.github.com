@@ -1,6 +1,7 @@
 ---
 title: 'CSS3 for web designers [PDF]下载'
 author: wahyd4
+comments: true
 excerpt: >
   最近在看css和javascript方面的书籍，不过最新的CSS3几乎找不到什么参考书，只能在网上找到零星的资料。中文资料就更是少了，笔者最近在网上找到一本比较好的CSS书籍——CSS3
   for web designers（不过是英文版本的，希望各位将就看吧！）

@@ -1,6 +1,7 @@
 ---
 title: Linux 视频教程
 author: wahyd4
+comments: true
 excerpt: '今天给大家分享的是一个linux  ubuntu 视频教程，所使用的系统是ubuntu 9.04 还是很新的版本，其实这个版本也不太重要，因为再怎么变，ubuntu的系统内核不会该表多少的，因为操作也不会改变。'
 layout: post
 permalink: /2010/11/linux-video-tutorial/

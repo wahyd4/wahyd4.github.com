@@ -1,6 +1,7 @@
 ---
 title: 王振飞：用程序写出来的建筑
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/01/wang-zhen-fei/
 categories:

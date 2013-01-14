@@ -2,6 +2,7 @@
 title: Java实现单一账号某时刻单一登录
 author: wahyd4
 layout: post
+comments: true
 permalink: /2011/12/java-single-sign-on/
 categories:
   - java

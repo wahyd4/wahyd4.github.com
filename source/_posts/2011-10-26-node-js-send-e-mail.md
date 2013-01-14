@@ -1,6 +1,7 @@
 ---
 title: 使用Node.js发送电子邮件（E-mail）
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/10/node-js-send-e-mail/
 categories:

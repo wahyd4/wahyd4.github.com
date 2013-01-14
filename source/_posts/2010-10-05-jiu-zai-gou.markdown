@@ -2,6 +2,7 @@
 title: 九寨沟。黄龙（美图）
 author: wahyd4
 layout: post
+comments: true
 permalink: /2010/10/jiu-zai-gou/
 categories:
   - 头条推荐

@@ -1,6 +1,7 @@
 ---
 title: node、express、mysql、jade实现用户登录数据获取及验证
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/11/node-jade-express-mysql-simplelogin/
 categories:

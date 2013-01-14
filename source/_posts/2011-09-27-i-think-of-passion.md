@@ -1,6 +1,7 @@
 ---
 title: 积极性之我见
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/09/i-think-of-passion/
 categories:

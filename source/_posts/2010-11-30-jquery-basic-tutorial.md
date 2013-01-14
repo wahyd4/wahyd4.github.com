@@ -1,6 +1,7 @@
 ---
 title: jQuery基础教程
 author: wahyd4
+comments: true
 excerpt: >
   jQuery是继prototype之后又一个优秀的Javascrīpt框架。其宗旨是——WRITE
   LESS,DO

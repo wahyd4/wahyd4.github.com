@@ -2,6 +2,7 @@
 title: Spring OSGI入门(1) Hello World
 author: wahyd4
 layout: post
+comments: true
 permalink: /2012/01/spring-osgi-hello-world1/
 categories:
   - java

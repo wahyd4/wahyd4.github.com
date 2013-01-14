@@ -1,6 +1,7 @@
 ---
 title: PHP与MySQL程序设计(第3版) PDF下载
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/02/php-mysql-pdf-download/
 categories:

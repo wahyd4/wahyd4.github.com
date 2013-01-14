@@ -1,11 +1,12 @@
 ---
 title: Maven 学习入门 1
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/01/maven-study-case-one/
 categories:
   - java
-  - MAVEN
+  - maven
   - 各类教程
 tags:
   - java

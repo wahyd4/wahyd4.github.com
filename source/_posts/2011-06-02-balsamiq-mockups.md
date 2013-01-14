@@ -1,6 +1,7 @@
 ---
 title: 专业的项目UI原型设计软件——Balsamiq Mockups
 author: wahyd4
+comments: true
 excerpt: >
   前面我介绍了一款项目UI原型设计软件pencil,之前我以为那个工具已经足够使用，足够方便了，足够强大了。不过上午时候在网上偶然发现原来设计界还有这样一款更加棒的UI原型设计软件——Balsamiq
   Mockups。

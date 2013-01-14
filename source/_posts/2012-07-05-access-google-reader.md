@@ -1,6 +1,7 @@
 ---
 title: 解决不能访问google reader
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/07/access-google-reader/
 categories:

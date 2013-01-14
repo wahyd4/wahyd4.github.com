@@ -1,6 +1,7 @@
 ---
 title: 雨林木风dll库文件下载
 author: wahyd4
+comments: true
 excerpt: >
   相信很多童鞋有和我一样的经历吧，当我们安装游戏或者软件的时候（绝大多数是游戏），电脑弹出一个框说我们的系统缺少某个.dll的类库文件，不能动态连接什么什么的信息，
 layout: post

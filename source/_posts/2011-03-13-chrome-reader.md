@@ -1,6 +1,7 @@
 ---
 title: chrome 阅读文章app——ireader:给你更好的阅读体验
 author: wahyd4
+comments: true
 excerpt: >
   又有几天笔者没有认真更新博客了，自己有些事需要处理吧，老实说看着自己博客的这个样子有时候性质很高，但是有时候又感觉没有动力。不过我还是会继续更新的。今天给大家分享的还是关于google
   chrome浏览器的东西，一款阅读app ——ireader.

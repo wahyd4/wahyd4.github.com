@@ -1,6 +1,7 @@
 ---
 title: JAVA创建git仓库
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/07/java-create-git-repository/
 categories:

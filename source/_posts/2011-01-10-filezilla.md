@@ -1,6 +1,7 @@
 ---
 title: Filezilla:全平台开源免费ftp客户端
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/01/filezilla/
 categories:

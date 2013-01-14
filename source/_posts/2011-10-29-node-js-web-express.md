@@ -1,6 +1,7 @@
 ---
 title: Node.js web框架express入门（1）
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/10/node-js-web-express/
 categories:

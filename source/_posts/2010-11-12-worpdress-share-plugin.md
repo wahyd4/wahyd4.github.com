@@ -1,6 +1,7 @@
 ---
 title: 超炫的wordpress 收藏分享插件
 author: wahyd4
+comments: true
 excerpt: >
   玩wordpress博客的朋友，都希望通过读者的分享，给大家带来更多的流量吧，今天就给大家介绍一款这样的插件，而且效果特炫哦，我的文章后面就是用的这个插件，实际效果，大家在文章末尾就可以看到啦。
 layout: post

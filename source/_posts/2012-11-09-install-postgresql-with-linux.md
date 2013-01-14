@@ -2,6 +2,7 @@
 title: linux安装配置postgresql
 author: wahyd4
 layout: post
+comments: true
 permalink: /2012/11/install-postgresql-with-linux/
 categories:
   - linux
@@ -35,9 +36,11 @@ postgresql 数据库在安装的时候会默认创建postgres用户，它的身�
 
 接下俩我们需要在postgresql 中创建一个与当前你使用的linux用户名一致，并赋予superuser.（当然这个操作需要在连接到数据库的基础上）
 
-<pre class="brush: sql; title: ; notranslate" title="">create user junv with superuser (当前我的linux用户名为junv)
+``` sql  Create SuperUser
+create user junv with superuser (当前我的linux用户名为junv)  
+```
 
-</pre>
+
 
 完成数据库操作后，使用 \q退出数据库命令行
 
@@ -47,16 +50,15 @@ postgresql 数据库在安装的时候会默认创建postgres用户，它的身�
 
 将里面相似的内容修改为类似如下所示：
 
-> # Database administrative login by Unix domain socket  
+> \# Database administrative login by Unix domain socket  
 > local all postgres trust
 > 
-> # TYPE DATABASE USER ADDRESS METHOD
-> 
-> # “local” is for Unix domain socket connections only  
+> \# TYPE DATABASE USER ADDRESS METHOD  
+> \# “local” is for Unix domain socket connections only  
 > local all all trust  
-> # IPv4 local connections:  
+> \# IPv4 local connections:  
 > host all all 127.0.0.1/32 trust  
-> # IPv6 local connections:  
+> \# IPv6 local connections:  
 > host all all ::1/128 trust
 
 最周这个method,改成trust,表示信任所有来地本地(localhost)的连接。这样我们就可以脸上数据库了

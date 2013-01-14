@@ -1,6 +1,7 @@
 ---
 title: 一周学Flex4视频中文版
 author: wahyd4
+comments: true
 excerpt: >
   有了上面的那些东西，所以才有了这个视频教程，这个教程是Adobe
   开发者中心官方推出的一周学习flex教程，从最基础的学起，应该说只要你是有些许编程经验的对这个教程都可以看懂，

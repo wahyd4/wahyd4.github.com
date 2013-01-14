@@ -1,6 +1,7 @@
 ---
 title: '格式转换：音频、视频、图片->想要什么格式就有什么格式!'
 author: wahyd4
+comments: true
 excerpt: |
   软件名称：格式工厂
   

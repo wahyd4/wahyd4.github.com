@@ -1,6 +1,7 @@
 ---
 title: 华为一个字符串处理的上机题
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/09/huawei-hire-exam/
 categories:

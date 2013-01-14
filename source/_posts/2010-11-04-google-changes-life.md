@@ -1,6 +1,7 @@
 ---
 title: 《Google改变生活》好书推荐
 author: wahyd4
+comments: true
 excerpt: >
   今天在学校图书馆看书，看到新书架上到了这样一本书《google
   改变生活》。我很好奇，在谷歌离开中国内地以后还会有专门写google的非技术性的文章。

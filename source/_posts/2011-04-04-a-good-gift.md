@@ -2,6 +2,7 @@
 title: 一个好的礼物——希望对你有所触动
 author: wahyd4
 layout: post
+comments: true
 permalink: /2011/04/a-good-gift/
 categories:
   - 视频/音乐分享

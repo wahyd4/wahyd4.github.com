@@ -1,6 +1,7 @@
 ---
 title: 解决Hibernate只执行8次数据库操作
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/11/solve-hibernate-8-actions/
 categories:

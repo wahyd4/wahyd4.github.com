@@ -1,6 +1,7 @@
 ---
 title: 你可能不知道的可牛影像的几个小功能
 author: wahyd4
+comments: true
 excerpt: >
   老实说，我平时处理图像用的最多的不是Photoshop，也不是picasa，而是可牛影像，因为绝大多数的日常图片处理都可以用它完成，而且还几乎是傻瓜式的操作，所以当然photoshop就被抛到一边了。
 layout: post

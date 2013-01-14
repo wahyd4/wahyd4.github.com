@@ -2,6 +2,7 @@
 title: '第三届中国成都青年（大学生）电子商务创业大赛[全国的大学生，三年内毕业青年皆可参加哦]'
 author: wahyd4
 layout: post
+comments: true
 permalink: /2010/09/a-competation/
 categories:
   - 头条推荐

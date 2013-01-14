@@ -1,6 +1,7 @@
 ---
 title: 嘿，有人在吗？新年快乐
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/01/happy-new-year/
 categories:

@@ -2,6 +2,7 @@
 title: Html5+CSS 3实现Cover Flow 动画特效(支持chrome、safari浏览器)
 author: wahyd4
 layout: post
+comments: true
 permalink: /2011/04/html5-css3-javascript-coverflow/
 categories:
   - 编程之美

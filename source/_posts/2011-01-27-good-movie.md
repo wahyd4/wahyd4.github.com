@@ -1,6 +1,7 @@
 ---
 title: 好电影推荐一
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/01/good-movie/
 categories:

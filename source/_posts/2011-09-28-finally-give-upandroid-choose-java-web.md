@@ -1,6 +1,7 @@
 ---
 title: 我最终还是放弃了android选择了Java web
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/09/finally-give-upandroid-choose-java-web/
 categories:

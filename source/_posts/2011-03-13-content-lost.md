@@ -1,6 +1,7 @@
 ---
 title: 不好意思！博客被黑了，内容丢失了。
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/03/content-lost/
 categories:

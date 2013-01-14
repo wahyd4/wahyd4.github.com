@@ -2,6 +2,7 @@
 title: 送腾讯企业邮箱邀请码啦！
 author: wahyd4
 layout: post
+comments: true
 permalink: /2010/09/tencent/
 categories:
   - 我们爱分享

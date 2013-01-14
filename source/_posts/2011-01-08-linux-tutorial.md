@@ -1,6 +1,7 @@
 ---
 title: 马士兵Linux视频教程
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/01/linux-tutorial/
 categories:

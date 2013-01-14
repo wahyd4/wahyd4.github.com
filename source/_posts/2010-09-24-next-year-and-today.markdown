@@ -2,6 +2,7 @@
 title: 明年今日。
 author: wahyd4
 layout: post
+comments: true
 permalink: /2010/09/next-year-and-today/
 categories:
   - 《 theLun》

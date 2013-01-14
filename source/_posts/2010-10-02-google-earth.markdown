@@ -2,6 +2,7 @@
 title: Google地图，卫星定位！
 author: wahyd4
 layout: post
+comments: true
 permalink: /2010/10/google-earth/
 categories:
   - 我们爱分享

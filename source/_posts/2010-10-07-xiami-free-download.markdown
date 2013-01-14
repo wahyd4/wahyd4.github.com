@@ -1,6 +1,7 @@
 ---
 title: 虾米正版音乐免费下载
 author: wahyd4
+comments: true
 excerpt: >
   也许很多在网上听歌的童鞋都知道虾米这个网站吧，他是一个web
   2.0

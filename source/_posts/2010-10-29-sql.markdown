@@ -1,6 +1,7 @@
 ---
 title: SQL入门经典（第4版）附下载
 author: wahyd4
+comments: true
 layout: post
 permalink: /2010/10/sql/
 categories:

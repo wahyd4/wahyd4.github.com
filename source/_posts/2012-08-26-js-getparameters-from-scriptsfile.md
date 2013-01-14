@@ -1,6 +1,7 @@
 ---
 title: javascript获取引用js文件所携带的参数
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/08/js-getparameters-from-scriptsfile/
 categories:

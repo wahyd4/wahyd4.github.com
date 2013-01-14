@@ -1,6 +1,7 @@
 ---
 title: 我推荐
 author: wahyd4
+comments: true
 layout: page
 ---
 我希望把我日常生活中看到的、学到的一些好资料、东西分享给大家！希望和大家一起学习、成长！
@@ -39,18 +40,29 @@ Google JavaScript Style Guide :  <http://google-styleguide.googlecode.com/svn/t
 
 **书籍：**
 
-《浪潮之巅》
-
-《深入浅出设计模式》
-
-《Javascript语言精粹》
-
-《Thinking in java》
-
-《编程珠玑》
+[《浪潮之巅》](http://book.douban.com/subject/6709783/)  
+《深入浅出设计模式》  
+[《Javascript语言精粹》](http://book.douban.com/subject/3590768/)  
+《Thinking in java》  
+[《编程珠玑》](http://book.douban.com/subject/3227098/)  
+[《Responsive Web Design》](http://book.douban.com/subject/6521003/)  
+[《精益创业》](http://book.douban.com/subject/10945606/)  
 
 **网站：**
 
-CDNJS： （托管很多著名的js,css,甚至其包含的图片，你还可以提交自己的js） <http://cdnjs.com/>
+[CDNJS：](http://cdnjs.com/)（托管很多著名的js,css,甚至其包含的图片，你还可以提交自己的js)  
+[Internet Archive:Wayback Machine](http://archive.org/web/web.php)  
 
-updated 2012/12/13
+**软件:**  
+
+[Sublime Text2](http://www.sublimetext.com/)  
+[Evernote](http://evernote.com/intl/zh-cn/)  
+
+**开源框架：**  
+
+[Bootstrap](http://twitter.github.com/bootstrap/)  
+[D3.js](http://d3js.org/)  
+[Octopress](http://octopress.org/)  
+
+
+updated 2013/1/6

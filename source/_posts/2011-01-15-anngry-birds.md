@@ -1,6 +1,7 @@
 ---
 title: 愤怒的小鸟PC版下载
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/01/anngry-birds/
 categories:

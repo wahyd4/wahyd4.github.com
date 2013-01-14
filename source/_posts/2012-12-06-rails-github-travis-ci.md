@@ -2,6 +2,7 @@
 title: 给你的Rails 项目配Travis 持续集成工具
 author: wahyd4
 layout: post
+comments: true
 permalink: /2012/12/rails-github-travis-ci/
 categories:
   - 'ruby &amp; rails'
@@ -23,17 +24,16 @@ tags:
 
 因此我们需要在Rails项目的跟目录创建一个.travis.yml 的文件。文件的内容格式大致如下
 
-<pre class="brush: ruby; title: ; notranslate" title="">language: ruby
-rvm:
-  - 1.9.3
-env:
-  - DB=postgresql
-script:
-  - RAILS_ENV=test bundle exec rake ci --trace db:migrate
-before_script:
-  - psql -c 'create database ocelots_test' -U postgres
-
-</pre>
+``` ruby  
+rvm:  
+  - 1.9.3  
+env:  
+  - DB=postgresql  
+script:  
+  - RAILS_ENV=test bundle exec rake ci --trace db:migrate  
+before_script:  
+  - psql -c 'create database ocelots_test' -U postgres  
+```
 
 大致解释一下，这里我们指定了我们使用的编译环境是 ruby 1.9.3,指定了我们使用的数据库，因为我希望travis 可以帮我创建测试数据库。  
 script 标签里指定了我们运行测试的命令。  

@@ -1,6 +1,7 @@
 ---
 title: 'Spring OSGI入门(2) 处理Log4j &#8220;WARN No appenders could be found for logger&#8221;'
 author: wahyd4
+comments: true
 layout: post
 permalink: >
   /2012/01/spring-osgi-hello-world2-log4j-warn-no-appenders-could-be-found-for-logger/

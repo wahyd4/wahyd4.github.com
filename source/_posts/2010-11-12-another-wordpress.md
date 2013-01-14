@@ -1,6 +1,7 @@
 ---
 title: 换一种方式阅读wordpress 博客
 author: wahyd4
+comments: true
 excerpt: >
   今天给大家介绍一款很新颖的插件，这个插件是一位中国ajax
   达人写的，它可以让你的博客变成QQ 阅读

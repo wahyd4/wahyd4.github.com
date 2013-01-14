@@ -1,6 +1,7 @@
 ---
 title: 巨经典的网页游戏《三国杀》
 author: wahyd4
+comments: true
 excerpt: >
   作为一个忠实的三国粉丝，今天为大家推荐一款虽然有点落伍的三国游戏《三国杀》，但是它的可玩性很不错哦！可以算是网页游戏中比较有内涵，有质量的精品！
 layout: post
@@ -26,6 +27,6 @@ categories:
 
 《三国杀》，看谁不爽，就杀谁。你，还等什么呢？
 
- [1]: http://www.junv.info/wp-content/uploads/2010/10/图片1.jpg
+ [1]: http://www.junv.info/wp-content/uploads/2010/10/1.jpg
  [2]: http://www.junv.info/wp-content/uploads/2010/10/f2264e2cd53cfcde8813996f.jpg
- [3]: http://www.junv.info/wp-content/uploads/2010/10/图片2.jpg
+ [3]: http://www.junv.info/wp-content/uploads/2010/10/2.jpg

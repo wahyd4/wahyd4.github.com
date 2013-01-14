@@ -1,6 +1,7 @@
 ---
 title: '整理并提升计算机速度，SpeedUpMyPc评测&#038;下载'
 author: wahyd4
+comments: true
 excerpt: >
   也许每个人有时都会不经意间发现自己的电脑变得很慢，连打开本地的文件夹都感觉不是很流畅，这种感觉可能在windows
   7上比windows xp

@@ -1,6 +1,7 @@
 ---
 title: wordpress 主题：未来之城v4.0
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/01/the-city-in-the-future/
 categories:

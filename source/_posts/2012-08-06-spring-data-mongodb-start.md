@@ -1,6 +1,7 @@
 ---
 title: Spring Data MongoDB 简单使用
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/08/spring-data-mongodb-start/
 categories:

@@ -1,6 +1,7 @@
 ---
 title: Eclipse 自动补全、联想设置
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/10/eclipse-auto-complited/
 categories:

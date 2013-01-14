@@ -1,6 +1,7 @@
 ---
 title: 说说这两天
 author: wahyd4
+comments: true
 excerpt: |
   周末本以为可以和以前一样享受上网，更新我的网站，可是没有想到的是，昨天早上起来，很悲剧的是我们就没网了。
   

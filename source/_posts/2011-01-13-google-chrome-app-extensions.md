@@ -1,6 +1,7 @@
 ---
 title: 又两个Google Chrome app浏览器扩展
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/01/google-chrome-app-extensions/
 categories:

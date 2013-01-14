@@ -1,6 +1,7 @@
 ---
 title: 让你的chrome也能支持迅雷、电驴、QQ旋风
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/01/chrome-support-xunlei/
 categories:

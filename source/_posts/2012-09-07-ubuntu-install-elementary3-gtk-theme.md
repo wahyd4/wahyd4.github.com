@@ -1,6 +1,7 @@
 ---
 title: Ubuntu安装 GTK主题 Elementary 3
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/09/ubuntu-install-elementary3-gtk-theme/
 categories:

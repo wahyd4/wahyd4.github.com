@@ -1,6 +1,7 @@
 ---
 title: Java 实现直接插入排序
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/09/java-insertion-sort/
 categories:

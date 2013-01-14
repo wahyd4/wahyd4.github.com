@@ -1,6 +1,7 @@
 ---
 title: Android 2.3 姜饼出炉啦
 author: wahyd4
+comments: true
 excerpt: >
   看过一系列的Gingerbread姜饼和相关传言后，今日有答案了。
   Google正式在网站公布第二部旗下品牌的手机Nexus

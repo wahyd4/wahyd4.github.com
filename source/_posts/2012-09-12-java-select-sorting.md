@@ -1,6 +1,7 @@
 ---
 title: java实现选择排序
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/09/java-select-sorting/
 categories:

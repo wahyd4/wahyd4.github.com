@@ -1,6 +1,7 @@
 ---
 title: 一个全新的开始
 author: wahyd4
+comments: true
 excerpt: |
   |
     我们想大声的宣布大染志今天上线啦！！！

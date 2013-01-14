@@ -1,6 +1,7 @@
 ---
 title: HTML5 全屏(full screen)API
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/07/html5-full-screen-api/
 categories:

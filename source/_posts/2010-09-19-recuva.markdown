@@ -2,6 +2,7 @@
 title: 软件分享：Recuva（超强文件恢复软件）
 author: wahyd4
 layout: post
+comments: true
 permalink: /2010/09/recuva/
 categories:
   - 头条推荐

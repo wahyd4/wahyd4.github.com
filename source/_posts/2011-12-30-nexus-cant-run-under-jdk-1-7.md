@@ -2,6 +2,7 @@
 title: Nexus 1.9 在JDK 1.7下不能安装运行
 author: wahyd4
 layout: post
+comments: true
 permalink: /2011/12/nexus-cant-run-under-jdk-1-7/
 categories:
   - java

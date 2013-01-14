@@ -1,6 +1,7 @@
 ---
 title: 且说M9
 author: wahyd4
+comments: true
 excerpt: >
   M9这个名字已经出现了N久N久，从最开始说有tds-cdma 和wcdma
   两个版本，到现在M9只有WCDMA版本。一款手机让我们等了太久，太久。

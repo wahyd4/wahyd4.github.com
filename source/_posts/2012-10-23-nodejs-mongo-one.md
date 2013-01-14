@@ -1,6 +1,7 @@
 ---
 title: Node.js操作Mongodb(1)
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/10/nodejs-mongo-one/
 categories:

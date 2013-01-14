@@ -1,6 +1,7 @@
 ---
 title: 提个神。
 author: wahyd4
+comments: true
 excerpt: |
   晚餐时间。各位吃过了吗？来欣赏一下这张颇具艺术感的图片吧。
   

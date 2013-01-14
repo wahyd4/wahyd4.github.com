@@ -1,6 +1,7 @@
 ---
 title: 'java 服务器端实现HTTP无enctype=&#8221;multipart/form-data&#8221;文件上传'
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/08/java-upload-file-without-enctypemultipartform-data/
 categories:

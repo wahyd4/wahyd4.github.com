@@ -1,6 +1,7 @@
 ---
 title: '解决Spring 管理Hibernate执行数据库操作出现“too  many connection&#8221;的错误'
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/11/spring-hibernate-db-too-many-connection/
 categories:

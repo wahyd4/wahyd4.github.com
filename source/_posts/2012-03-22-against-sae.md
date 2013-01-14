@@ -1,6 +1,7 @@
 ---
 title: 抗议SAE !!
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/03/against-sae/
 categories:

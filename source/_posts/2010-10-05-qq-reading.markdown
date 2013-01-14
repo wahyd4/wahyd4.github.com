@@ -1,6 +1,7 @@
 ---
 title: QQ阅读——像艺术一样阅读
 author: wahyd4
+comments: true
 excerpt: >
   笔者今天偶然登录QQ邮箱，发现了QQ阅读这个东西（现在还处于beta版本）。于是我便试着开始使用这个东西。用过之后，的确我被这样一个艺术品一样的东西给镇住了，它的界面是如此漂亮，让人惊艳不已。
 layout: post

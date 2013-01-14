@@ -1,6 +1,7 @@
 ---
 title: 一个Nodejs写的简易订饭程序
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/07/a-simple-nodejs-program/
 categories:

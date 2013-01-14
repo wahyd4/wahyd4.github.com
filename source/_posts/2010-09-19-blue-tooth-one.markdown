@@ -1,6 +1,7 @@
 ---
 title: 蓝牙手机控制电脑——不是梦！(1)
 author: wahyd4
+comments: true
 layout: post
 permalink: /2010/09/blue-tooth-one/
 categories:

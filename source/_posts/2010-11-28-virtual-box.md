@@ -1,6 +1,7 @@
 ---
 title: Virtual Box 虚拟机
 author: wahyd4
+comments: true
 excerpt: >
   今天要给大家介绍的是virtual box,如果你以前用过Vmware station
   的话，那好说virtual box和Vmware 是一样的软件，只是virtual box

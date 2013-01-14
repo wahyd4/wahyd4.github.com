@@ -1,6 +1,7 @@
 ---
 title: 感恩节话感恩
 author: wahyd4
+comments: true
 excerpt: >
   今天是美国的感恩节，其实作为彻头彻尾的中国人，其实感恩节和我算是没有多少关系吧，但是呢也许我们还是应该用一种很开放的态度来对待一些事，
 layout: post

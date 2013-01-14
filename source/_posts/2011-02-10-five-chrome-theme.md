@@ -1,6 +1,7 @@
 ---
 title: 五款精选chrome谷歌浏览器主题
 author: wahyd4
+comments: true
 excerpt: >
   现在全球的chrome浏览器占有率是节节攀升，有的调查显示chrome浏览器的全球占有率已经达到10%，各种谷歌浏览器扩展程序也很丰富，之前我们也曾经两次介绍过类似的文章。几款google
   chrome浏览器扩展程序（app）,又两个Google Chrome

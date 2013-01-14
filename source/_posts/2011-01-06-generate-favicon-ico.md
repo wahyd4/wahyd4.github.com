@@ -1,6 +1,7 @@
 ---
 title: 在线生成favicon.ico网站图标
 author: wahyd4
+comments: true
 excerpt: |
   所谓favicon.ico就是我们平时所说的网站图标，即是你在浏览器里面看到关于网站的样子即图片里面所示，其实这个图片一般是不好生成的，因为她不是传统的.jpg 或者.png/.gif格式的图片。
   

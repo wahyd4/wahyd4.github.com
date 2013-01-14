@@ -3,6 +3,7 @@ title: >
   《斯巴达克斯：诸神竞技场》美剧下载(独家提供中英字幕)更新
 author: wahyd4
 layout: post
+comments: true
 permalink: /2011/01/sparkdaks/
 categories:
   - 视频/音乐分享

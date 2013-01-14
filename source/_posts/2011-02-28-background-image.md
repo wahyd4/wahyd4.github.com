@@ -1,6 +1,7 @@
 ---
 title: 送上自己拍的图片三张，高清壁纸
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/02/background-image/
 categories:

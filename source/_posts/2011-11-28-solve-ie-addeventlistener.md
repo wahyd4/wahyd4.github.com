@@ -1,6 +1,7 @@
 ---
 title: 解决IE不兼容addEventListener
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/11/solve-ie-addeventlistener/
 categories:

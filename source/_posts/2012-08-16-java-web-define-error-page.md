@@ -1,6 +1,7 @@
 ---
 title: java web.xml定义配置错误页面及使用
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/08/java-web-define-error-page/
 categories:

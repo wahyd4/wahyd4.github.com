@@ -2,6 +2,7 @@
 title: 教你一招:清除你电脑中的垃圾文件(很好用)
 author: wahyd4
 layout: post
+comments: true
 permalink: /2010/09/remove-trashes/
 categories:
   - 我们爱分享

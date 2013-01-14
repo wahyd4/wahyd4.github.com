@@ -1,0 +1,10 @@
+---
+layout: post
+title: "2013 目标"
+date: 2013-01-04 09:17
+comments: true
+categories: ['talk']
+---
+![2013 goal](/images/2013/1/2013-goal.jpg)  
+
+我会努力去实现这些目标，这一年是我真正工作的第一年，希望可以可以快速成长，做一个可以让其他人信任、依赖的人。

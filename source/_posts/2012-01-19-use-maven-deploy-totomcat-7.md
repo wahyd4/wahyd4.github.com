@@ -1,11 +1,12 @@
 ---
 title: 使用maven部署项目到tomcat 7
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/01/use-maven-deploy-totomcat-7/
 categories:
   - java
-  - MAVEN
+  - maven
 tags:
   - java
   - maven

@@ -1,6 +1,7 @@
 ---
 title: 几款google chrome浏览器扩展程序（app）
 author: wahyd4
+comments: true
 excerpt: >
   笔者作为一个忠实的chrome粉丝，一直坚持用chrome浏览器，除了淘宝和网银这些不得不用IE。老实说你用过了chrome
   你就一点也不想再回去用IE 8这样的蜗牛浏览器，用chrome
@@ -46,8 +47,8 @@ tags:
 
  [1]: https://chrome.google.com/extensions?hl=zh-CN
  [2]: https://chrome.google.com/extensions/detail/alelhddbbhepgpmgidjdcjakblofbmce
- [3]: http://www.junv.info/wp-content/uploads/2010/10/下载_conew1.jpg
+ [3]: http://www.junv.info/wp-content/uploads/2010/10/_conew1.jpg
  [4]: https://chrome.google.com/extensions/detail/dbpojpfdiliekbbiplijcphappgcgjfn
- [5]: http://www.junv.info/wp-content/uploads/2010/10/QQ截图未命名.jpg
+ [5]: http://www.junv.info/wp-content/uploads/2010/10/Q.jpg
  [6]: https://chrome.google.com/extensions/detail/lambangeielkjcnmioccboaphdfcffib
  [7]: http://www.junv.info/wp-content/uploads/2010/10/1132sdasaz.jpg

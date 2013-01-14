@@ -1,12 +1,13 @@
 ---
 title: maven 远程部署项目到jboss as 7（maven remote deploy to jboss as 7）
 author: wahyd4
+comments: true
 layout: post
 permalink: /2012/02/maven-remote-deploy-to-jboss-as-7/
 categories:
   - java
   - jboss
-  - MAVEN
+  - maven
 tags:
   - java
   - jboss

@@ -1,6 +1,7 @@
 ---
 title: 钱让很多小人原形毕露
 author: wahyd4
+comments: true
 layout: post
 permalink: /2011/10/money-is-dirty/
 categories:

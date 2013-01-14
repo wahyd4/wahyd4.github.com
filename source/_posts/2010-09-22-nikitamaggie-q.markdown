@@ -1,6 +1,7 @@
 ---
 title: NIKITA/maggie Q
 author: wahyd4
+comments: true
 excerpt: >
   美剧回归了。盼来了久违的《gossip
   girl》。除此之外还有一部新上的《Nikita》,是继《吸血鬼日记》之后美国CW电视台推出的又一部谍战电视连续剧，

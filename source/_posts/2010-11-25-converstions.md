@@ -1,6 +1,7 @@
 ---
 title: 口语课上即兴编写的关于疾病与建议的对话
 author: wahyd4
+comments: true
 excerpt: |
   下面就是当时在课上临场发挥写的一个对话！其实我觉得写得很简单哈。
   
