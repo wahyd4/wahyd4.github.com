@@ -46,7 +46,9 @@ Google JavaScript Style Guide :  <http://google-styleguide.googlecode.com/svn/t
 《Thinking in java》  
 [《编程珠玑》](http://book.douban.com/subject/3227098/)  
 [《Responsive Web Design》](http://book.douban.com/subject/6521003/)  
-[《精益创业》](http://book.douban.com/subject/10945606/)  
+[《精益创业》](http://book.douban.com/subject/10945606/)   
+[《大数据时代》](http://book.douban.com/subject/20429677/)   
+[《ReWork》](http://book.douban.com/subject/5320866/)
 
 **网站：**
 
@@ -65,4 +67,9 @@ Google JavaScript Style Guide :  <http://google-styleguide.googlecode.com/svn/t
 [Octopress](http://octopress.org/)  
 
 
-updated 2013/1/6
+updated 2013/3/17   
+
+** 最近看的书：**  
+<div>
+	<script type="text/javascript" src="http://www.douban.com/service/badge/wahyd4/?show=collection&amp;n=16&amp;columns=8&amp;hidelogo=yes" ></script>
+</div>
