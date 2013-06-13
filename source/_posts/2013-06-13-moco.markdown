@@ -1,0 +1,51 @@
+---
+layout: post
+title: "Moco使用心得分享"
+date: 2013-06-13 16:03
+comments: true
+categories: 
+ - ‘Java’
+---
+
+##### Moco是个什么东西呢？  
+
+Moco是Thoughtworker [@Dreamhead][1] 写的一个用于Mock服务和和进行相关测试的框架。在Moco的官方介绍中是这样描述的：“Moco is an easy setup stub framework, mainly focusing on testing and integration, inspired by Mock framework, e.g. Mockito, and Playframework。”在我要讲的这个应用中，我们主要用Moco来mock第三方、应用外部的服务。保障我们进行高效和稳定的开发。  
+
+##### 为什么我们要使用Moco：  
+
+我们的应用主要的数据来源和持久化等操作都不是在应用内完成，而主要是通过调用外部的Web service来达到目的。在使用Moco之前我们经常遇到这样的问题，外部的服务挂了，我们本地获取不到数据，就直接导致我们不能进行开发工作，集成测试不工作，就导致我们不能验证自己的工作是否是正确的。我们就期望有一个东西，能在我们进行开发时，屏蔽我们对外部外部的高度依赖。然后我们只需要通过每天定期跑集成测试，以保证我们的工作是正常的，有效的。Moco则满足我们的条件，于是我们在项目中加入了Moco。  
+
+##### 我们如何使用Moco：  
+
+Moco可以使用java代码API和外挂json配置文件两种形式进行使用，在我们项目中我们使用后者的方法，这样可以保持项目本身和Moco的低耦合，我们只需要在我们需要Moco的时间段——functional test、验收测试段让其加入进来即可。
+
+我们将Moco和外部服务的 base domain（域和端口）写入到一个配置文件中，我们可以根据我们的需要在自行选择是否使用Moco来mock服务。
+然后我们需要为被mock的每个服务的endpoint编写监听请求和回应。一个简单的例子如下：  
+
+```json
+{
+        "request": {
+            "method": "get",
+            "uri": "/hello"
+        },
+        "response": {
+            "file": "xml-folder/sample.xml"
+        }
+    }
+```  
+
+**其大致的意思是：监听“/hello” 这样的GET请求，一旦收到这样的请求即返回某目录下的一个xml文件。**
+
+在运行 functional test的时候，我们也使用了Moco来代替真实服务。也许你会问这样做能保证做出来的功能正确吗？答案是肯定的。
+首先Moco中所有的数据都是真实的，只是它是某次请求的数据，因此它是固定的。其次我们在项目中每天定期跑集成测试，集成测试保证了我们调用外部服务的接口是正常工作的，数据是准确的。
+
+Moco给我们的优点或者说给我们带来的好处：  
+
+-  集成简单、方便，隔离开发对外部服务的高度依赖，使得我们在任何时间都能进行开发，即使所依赖的服务挂了。
+-  与Maven、Gradle良好集成，有maven和Gradle插件为我们保驾护航，使得我们可以在Concoridion Test等中轻松使用Moco
+-  使得我们的测试运行速度更快，经测试单个接口请求和响应时间至少减少50%以上，节省程序员等待CI状态的时间。  
+  
+更详细的Moco使用说明，请移步[Moco Github repo][2]
+
+[1]:http://weibo.com/dreamhead
+[2]:https://github.com/dreamhead/moco
