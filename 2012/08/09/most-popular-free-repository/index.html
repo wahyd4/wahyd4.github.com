@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="maven,Nexus,仓库," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="我们都知道maven是项目构建的神器，不过用maven从国外下载东西的时候这速度可真就不怎么神器了。而且如果你在公司里面使用maven,而公司里面没有自己建一个maven代理仓库的话，大家一起使用maven下载组件的时候，就费力了。 因此一个公司是完全有必须要搭建一个maven代理仓库的。既可以节省宽带资源、也可以节省其他人编译相同代码说下载组件的时间，而且代理仓库服务器上的组件还可以随时复制、迁">
+<meta name="keywords" content="maven,Nexus,仓库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="分享多个公网上著名的maven组件仓库">
+<meta property="og:url" content="http://toozhao.com/2012/08/09/most-popular-free-repository/index.html">
+<meta property="og:site_name" content="大染志">
+<meta property="og:description" content="我们都知道maven是项目构建的神器，不过用maven从国外下载东西的时候这速度可真就不怎么神器了。而且如果你在公司里面使用maven,而公司里面没有自己建一个maven代理仓库的话，大家一起使用maven下载组件的时候，就费力了。 因此一个公司是完全有必须要搭建一个maven代理仓库的。既可以节省宽带资源、也可以节省其他人编译相同代码说下载组件的时间，而且代理仓库服务器上的组件还可以随时复制、迁">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2014-07-22T08:51:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="分享多个公网上著名的maven组件仓库">
+<meta name="twitter:description" content="我们都知道maven是项目构建的神器，不过用maven从国外下载东西的时候这速度可真就不怎么神器了。而且如果你在公司里面使用maven,而公司里面没有自己建一个maven代理仓库的话，大家一起使用maven下载组件的时候，就费力了。 因此一个公司是完全有必须要搭建一个maven代理仓库的。既可以节省宽带资源、也可以节省其他人编译相同代码说下载组件的时间，而且代理仓库服务器上的组件还可以随时复制、迁">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://toozhao.com/2012/08/09/most-popular-free-repository/"/>
+
+
+
+
+
+  <title>分享多个公网上著名的maven组件仓库 | 大染志</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-5243064-16', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">大染志</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">想要玩得很 High 的程序员</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/08/09/most-popular-free-repository/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">分享多个公网上著名的maven组件仓库</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-08-09T00:00:00+08:00">
+                2012-08-09
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:51:36+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/MAVEN/" itemprop="url" rel="index">
+                    <span itemprop="name">MAVEN</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>我们都知道maven是项目构建的神器，不过用maven从国外下载东西的时候这速度可真就不怎么神器了。而且如果你在公司里面使用maven,而公司里面没有自己建一个maven代理仓库的话，大家一起使用maven下载组件的时候，就费力了。</p>
+<p>因此一个公司是完全有必须要搭建一个maven代理仓库的。既可以节省宽带资源、也可以节省其他人编译相同代码说下载组件的时间，而且代理仓库服务器上的组件还可以随时复制、迁移到其他服务器，造福其他程序员。通常情况下，我们使用nexus搭建自己的maven仓库和做公网上那些用得很多的仓库的代理仓库，今天就在这里分享一些我搜集的公网上常用的代理仓库。这些已经能够保证我工作中的maven项目95%以上正常编译了。</p>
+<blockquote>
+<p>中央仓库：<a href="http://repo1.maven.org/maven2/" target="_blank" rel="external">http://repo1.maven.org/maven2/</a></p>
+</blockquote>
+<p>这个就是全世界最核心的maven仓库，相信大家都知道，nexus默认就已经提供。</p>
+<blockquote>
+<p>apache snapshots: <a href="http://repository.apache.org/snapshots/" target="_blank" rel="external">http://repository.apache.org/snapshots/</a></p>
+</blockquote>
+<p>apache 的快照组件仓库</p>
+<blockquote>
+<p>apache webservices :<a href="http://ws.zones.apache.org/repository2/" target="_blank" rel="external">http://ws.zones.apache.org/repository2/</a></p>
+</blockquote>
+<p>apache 的web services仓库，通常用得不多。</p>
+<blockquote>
+<p>codehaus snapshots:  <a href="http://nexus.codehaus.org/snapshots/" target="_blank" rel="external">http://nexus.codehaus.org/snapshots/</a></p>
+<p>and ：<a href="http://snapshots.repository.codehaus.org/" target="_blank" rel="external">http://snapshots.repository.codehaus.org/</a></p>
+</blockquote>
+<p>另外一个比较著名的开源组织codehaus的快照仓库，貌似其中一个已经有一年多没有更新了。</p>
+<blockquote>
+<p>jenkins :<a href="http://repo.jenkins-ci.org/public/" target="_blank" rel="external">http://repo.jenkins-ci.org/public/</a></p>
+</blockquote>
+<p>开源项目jenkins 的仓库</p>
+<blockquote>
+<p>ops4j:<a href="http://repository.ops4j.org/maven2/" target="_blank" rel="external">http://repository.ops4j.org/maven2/</a></p>
+</blockquote>
+<p>开源项目ops4j的maven仓库</p>
+<blockquote>
+<p>nexus ：<a href="https://repository.sonatype.org/content/groups/forge/" target="_blank" rel="external">https://repository.sonatype.org/content/groups/forge/</a></p>
+</blockquote>
+<p>这是nexus自己的仓库，本身就包含了很过仓库仓库的代理，不过速度貌似不够快。</p>
+<blockquote>
+<p>spring external:<a href="http://repository.springsource.com/maven/bundles/external/" target="_blank" rel="external">http://repository.springsource.com/maven/bundles/external/</a></p>
+<p>spring osgi:<a href="http://s3.amazonaws.com/maven.springframework.org/osgi/" target="_blank" rel="external">http://s3.amazonaws.com/maven.springframework.org/osgi/</a></p>
+<p>spring release bundle:<a href="http://repository.springsource.com/maven/bundles/release/" target="_blank" rel="external">http://repository.springsource.com/maven/bundles/release/</a></p>
+<p>spring release libs:<a href="http://repo.springsource.org/libs-release/" target="_blank" rel="external">http://repo.springsource.org/libs-release/</a></p>
+<p>spring snapshots libs:<a href="http://repo.springsource.org/libs-snapshot/" target="_blank" rel="external">http://repo.springsource.org/libs-snapshot/</a></p>
+</blockquote>
+<p>spring 这个开源组织提供的仓库的确很多，而在我平时的编译中也经常用到，有一点spring 做得特别牛，那就是它吧很多一般的jar包转成了或者重新制作成了bundle。(bundle是osgi技术中需要的jar包，bundle可以当成普通jar包使用，而普通jar包不能当成bundle使用，举个简单的例子，如果你想把jar包放到你的osgi 应用服务器virgo 或者 jboss as 7中使用，你就必须得用bundle才可以。)所以当你找不到某个包的bundle版本的时候，试试去spring的maven仓库，他的所有包都是bundle.</p>
+<blockquote>
+<p>wso2：<a href="http://maven.wso2.org/nexus/content/groups/wso2-public/" target="_blank" rel="external">http://maven.wso2.org/nexus/content/groups/wso2-public/</a></p>
+<p>wso2-2:<a href="http://dist.wso2.org/maven2/" target="_blank" rel="external">http://dist.wso2.org/maven2/</a></p>
+</blockquote>
+<p>wso2是一个企业级web services中间件，提供了很多，比较强大的组件。如AS， IS,ESB等。大家有兴趣可以看看。</p>
+<p>把这样仓库全部做成你的nexus的代理，就相当于你拥有它们所有仓库的能力了。是不是瞬间战斗力提升了很多。</p>
+<p>如果你想尽快使用你添加的这些代理仓库，请在nexus中更新这些仓库的 index(索引)，你就可以马上使用这些仓库了。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/maven/" rel="tag"># maven</a>
+          
+            <a href="/tags/Nexus/" rel="tag"># Nexus</a>
+          
+            <a href="/tags/仓库/" rel="tag"># 仓库</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2012/08/06/spring-data-mongodb-start/" rel="next" title="Spring Data MongoDB 简单使用">
+                <i class="fa fa-chevron-left"></i> Spring Data MongoDB 简单使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2012/08/14/java-upload-file-without-enctypemultipartform-data/" rel="prev" title="java 服务器端实现HTTP无enctype=&#8221;multipart/form-data&#8221;文件上传">
+                java 服务器端实现HTTP无enctype=&#8221;multipart/form-data&#8221;文件上传 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Junv" />
+          <p class="site-author-name" itemprop="name">Junv</p>
+           
+              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">304</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">69</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">244</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wahyd4" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/junwei-zhao-46944557" target="_blank" title="LinkedIn">
+                  
+                    <i class="fa fa-fw fa-linkedin"></i>
+                  
+                    
+                      LinkedIn
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Junv</span>
+
+  
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

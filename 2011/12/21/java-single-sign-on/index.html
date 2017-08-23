@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="java,Application,JAVA EE,Session," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="原谅我使用如此晦涩的词语来表达我的意思，其实我想表达的意思的用java实现类似于当其他人登录你的QQ时，你会收到“你的账号已在其他地方登录，请重新登录。”这样的东西，简单的说就是同一时刻一账号只允许一个人登录在线状态。也许就是保证时间、空间上的唯一性。但是我想强调的是这种效果绝不是单点登录，真正的单点登录是类似于Google中，使用多个产品只需要登录一次，其实QQ也有这样的功能。好了，废话少说下面">
+<meta name="keywords" content="java,Application,JAVA EE,Session">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java实现单一账号某时刻单一登录">
+<meta property="og:url" content="http://toozhao.com/2011/12/21/java-single-sign-on/index.html">
+<meta property="og:site_name" content="大染志">
+<meta property="og:description" content="原谅我使用如此晦涩的词语来表达我的意思，其实我想表达的意思的用java实现类似于当其他人登录你的QQ时，你会收到“你的账号已在其他地方登录，请重新登录。”这样的东西，简单的说就是同一时刻一账号只允许一个人登录在线状态。也许就是保证时间、空间上的唯一性。但是我想强调的是这种效果绝不是单点登录，真正的单点登录是类似于Google中，使用多个产品只需要登录一次，其实QQ也有这样的功能。好了，废话少说下面">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2014-07-22T08:49:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java实现单一账号某时刻单一登录">
+<meta name="twitter:description" content="原谅我使用如此晦涩的词语来表达我的意思，其实我想表达的意思的用java实现类似于当其他人登录你的QQ时，你会收到“你的账号已在其他地方登录，请重新登录。”这样的东西，简单的说就是同一时刻一账号只允许一个人登录在线状态。也许就是保证时间、空间上的唯一性。但是我想强调的是这种效果绝不是单点登录，真正的单点登录是类似于Google中，使用多个产品只需要登录一次，其实QQ也有这样的功能。好了，废话少说下面">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://toozhao.com/2011/12/21/java-single-sign-on/"/>
+
+
+
+
+
+  <title>Java实现单一账号某时刻单一登录 | 大染志</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-5243064-16', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">大染志</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">想要玩得很 High 的程序员</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2011/12/21/java-single-sign-on/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java实现单一账号某时刻单一登录</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-12-21T00:00:00+08:00">
+                2011-12-21
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:49:29+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>原谅我使用如此晦涩的词语来表达我的意思，其实我想表达的意思的用java实现类似于当其他人登录你的QQ时，你会收到“你的账号已在其他地方登录，请重新登录。”这样的东西，简单的说就是同一时刻一账号只允许一个人登录在线状态。也许就是保证时间、空间上的唯一性。但是我想强调的是这种效果绝不是单点登录，真正的单点登录是类似于Google中，使用多个产品只需要登录一次，其实QQ也有这样的功能。好了，废话少说下面说正经的。</p>
+<p>我们最常用的用来验证用户使用登录的东西是Session，但是session并不能达到我们想要的效果，因为每个客户端访问网站的时候都会获得一个session，因此虽然是同一个账号登录系统，只要用户使用的浏览器，服务器都会产生两个session。但是每个客户端访问服务器的服务器的时候都会产生一个SessionId,而这个ID这是唯一的，我们会在后面用到。这里我们使用使用Application 域，在Java EE里面是ServletContext。这个东西是一个全局变量，当Web 程序运行的时候便会一直存在。而且整个程序只有一个Application.</p>
+<p>于是我们可以这样。我们将数据存入Application中。而存入的内容则是：键（key）为当前用户使用用户名或者其他一个可以识别用户身份信息的ID，而值（value）则是用户得到的sessionID。这样便保证了一个账号同时至于一个用户对应。在用户登录的时候想Application中写入 key:value信息，在以后用户每次请求数据的时候，进行验证。看Application中的SessionID与用户本身的SessionID是否一致，不一致则说明多人登录。</p>
+<p>下面是代码了：（我感觉说了好多废话）</p>
+<p>首先获取Application:</p>
+<pre class="brush: java; title: ; notranslate" title="">HttpSession session = request.getSession(); //request为HttpServletRequest对象
+    ServletContext  application = session.getServletContext();</pre>
+
+<p>向其中存入我们的验证数据，这里键为用户ID，值为该用户实例获得的sessionID</p>
+<pre class="brush: java; title: ; notranslate" title="">application.setAttribute(userId, session.getId());//userID为用户ID，</pre>
+
+<p>在每次验证的时候，在java里面我们可以采用至少两种方法，一种是Filter(Servlet 过滤器)、另外一种则是Spring AOC 面向切面编程，这里由于我对Spring AOC还不太熟悉，所以就用Filter，Filter具体设置，编写都不说了，只说一些怎么处理。拿到一个客户端来的请求，就进行sessionID比较，如果相同就让请求继续，如果不相同，就将该请求所对于的session清空（如果采用session验证用户是否登录，就可以达到让该用户退出登录）,并给出提示信息，跳转到登录页面。</p>
+<pre class="brush: java; title: ; notranslate" title="">//获取application对象
+      ServletContext  application = session.getServletContext();
+      String sessionId = (String) application.getAttribute(userid);
+    String trueSessionId = session.getId();
+    System.out.println("sessionID====="+sessionId+"现在的sessionID"+trueSessionId);
+    if(sessionId.equals(trueSessionId)){
+        //do nothing
+    }else{
+        //说明有多个用户登录,去掉其session
+        session.removeAttribute(sessionKey);
+        //response.sendRedirect(request.getContextPath() + redirectURL);
+        response.setContentType("text/html;charset=utf-8");
+             PrintWriter out = response.getWriter();
+            out.println(MyTools.getAlertMessage(request.getContextPath(), "您的账户已在别处登录，请重新登录", 3));
+        return;
+        }
+</pre>
+
+<p>这里可以使用sendRedirect,将用户直接跳转到某个页面，但是这样不太友好，因为没有提示信息，我选择另外一个使用response给用户一些提示信息，然后设置一段时间后跳转到另外的页面。这就是我写的一个静态方法 getAlertMessage,下面贴出具体代码吧。</p>
+<pre class="brush: java; title: ; notranslate" title="">/**
+     * 生成用户返回的警告页面信息
+     *
+     * @param path
+     *            系统根目录
+     * @param content
+     *            需要显示的内容
+     * @param second
+     *            需要停留消息的秒数
+     * @return String
+     */
+    public static String getAlertMessage(String path, String content, int second) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("&lt;html&gt;");
+        sb.append("&lt;head&gt;");
+        sb.append("&lt;meta http-equiv='refresh' content='3;url=" + path
+                + "/login.html'&gt;");
+        sb.append("&lt;link rel='stylesheet' type='text/css' href='" + path
+                + "/css/login.css'&gt;");
+        sb.append("&lt;/head&gt;");
+        sb.append("&lt;body&gt;&lt;form id='login'&gt;&lt;fieldset id='inputs' style='font-size:18px;'&gt;"
+                + content
+                + ","
+                + second
+                + "秒后你将跳转到登录页面&lt;/form&gt;&lt;/fieldset&gt;&lt;/body&gt;");
+        sb.append("&lt;/html&gt;");
+
+        return sb.toString();
+
+    }</pre>
+
+<p>好了，现在差不多实现这个功能的主要代码都有了。原谅我的表达能力不够好，如果各位有什么问题，留言吧。我们可以讨论一下。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/Application/" rel="tag"># Application</a>
+          
+            <a href="/tags/JAVA-EE/" rel="tag"># JAVA EE</a>
+          
+            <a href="/tags/Session/" rel="tag"># Session</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2011/11/29/spring-hibernate-db-too-many-connection/" rel="next" title="解决Spring 管理Hibernate执行数据库操作出现“too  many connection&#8221;的错误">
+                <i class="fa fa-chevron-left"></i> 解决Spring 管理Hibernate执行数据库操作出现“too  many connection&#8221;的错误
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2011/12/30/nexus-cant-run-under-jdk-1-7/" rel="prev" title="Nexus 1.9 在JDK 1.7下不能安装运行">
+                Nexus 1.9 在JDK 1.7下不能安装运行 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Junv" />
+          <p class="site-author-name" itemprop="name">Junv</p>
+           
+              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">304</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">69</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">244</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wahyd4" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/junwei-zhao-46944557" target="_blank" title="LinkedIn">
+                  
+                    <i class="fa fa-fw fa-linkedin"></i>
+                  
+                    
+                      LinkedIn
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Junv</span>
+
+  
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

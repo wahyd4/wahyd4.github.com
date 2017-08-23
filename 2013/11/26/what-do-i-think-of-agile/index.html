@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="敏捷," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="去年11月份的时候，我进到了ThoughWorks实习，开始了我的TW生涯，从现在除去今年年初由于毕业论文断断续续的10天左右的请假，我已经到ThoughtWorks1年了，现在我想来我聊聊我眼中的敏捷和我对敏捷的看法。它是比较主观的看法。首先，我必须得说敏捷并不是完美无缺的，当然也不是所有行业，所有软件项目都适合使用敏捷来开发和管理的。很明显的一个例子就是，你不能用敏捷来开发NASA的航天飞机的">
+<meta name="keywords" content="敏捷">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我怎么看敏捷">
+<meta property="og:url" content="http://toozhao.com/2013/11/26/what-do-i-think-of-agile/index.html">
+<meta property="og:site_name" content="大染志">
+<meta property="og:description" content="去年11月份的时候，我进到了ThoughWorks实习，开始了我的TW生涯，从现在除去今年年初由于毕业论文断断续续的10天左右的请假，我已经到ThoughtWorks1年了，现在我想来我聊聊我眼中的敏捷和我对敏捷的看法。它是比较主观的看法。首先，我必须得说敏捷并不是完美无缺的，当然也不是所有行业，所有软件项目都适合使用敏捷来开发和管理的。很明显的一个例子就是，你不能用敏捷来开发NASA的航天飞机的">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://toozhao.com/images/2013/11/agile.jpg">
+<meta property="og:updated_time" content="2013-11-26T12:31:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我怎么看敏捷">
+<meta name="twitter:description" content="去年11月份的时候，我进到了ThoughWorks实习，开始了我的TW生涯，从现在除去今年年初由于毕业论文断断续续的10天左右的请假，我已经到ThoughtWorks1年了，现在我想来我聊聊我眼中的敏捷和我对敏捷的看法。它是比较主观的看法。首先，我必须得说敏捷并不是完美无缺的，当然也不是所有行业，所有软件项目都适合使用敏捷来开发和管理的。很明显的一个例子就是，你不能用敏捷来开发NASA的航天飞机的">
+<meta name="twitter:image" content="http://toozhao.com/images/2013/11/agile.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://toozhao.com/2013/11/26/what-do-i-think-of-agile/"/>
+
+
+
+
+
+  <title>我怎么看敏捷 | 大染志</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-5243064-16', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">大染志</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">想要玩得很 High 的程序员</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2013/11/26/what-do-i-think-of-agile/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">我怎么看敏捷</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2013-11-26T18:51:55+08:00">
+                2013-11-26
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2013-11-26T20:31:33+08:00">
+                2013-11-26
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/我说/" itemprop="url" rel="index">
+                    <span itemprop="name">我说</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/images/2013/11/agile.jpg" alt="Agile"><br>去年11月份的时候，我进到了ThoughWorks实习，开始了我的TW生涯，从现在除去今年年初由于毕业论文断断续续的10天左右的请假，我已经到ThoughtWorks1年了，现在我想来我聊聊我眼中的敏捷和我对敏捷的看法。它是比较主观的看法。<br>首先，我必须得说敏捷并不是完美无缺的，当然也不是所有行业，所有软件项目都适合使用敏捷来开发和管理的。很明显的一个例子就是，你不能用敏捷来开发NASA的航天飞机的软件系统。从敏捷的理念我们会说，我们让开发航天飞机的起飞系统，然后交付给NASA使用，之后再继续交付降落等其他系统，显示这是行不通的，航天飞机不能在仅仅拥有起飞功能的时候就上天啊。敏捷里强调快速交付，快速响应，及时修复bug，因此我们会允许软件存在潜在少量bug的时候让其上线，使用。这在航天飞行系统里面也是行不通的，因为涉及到人的生命，航天飞行系统应该是不允许任何bug的。  </p>
+<blockquote>
+<p>但我依然会说，敏捷是一种很好的理念和实践，适合大部分IT企业使用，特别是互联网企业和运行互联网产品的企业使用。</p>
+</blockquote>
+<p>在现在互联网时代，天下武功唯快不破。采用敏捷的实践，初期开发MVP（Minimal Valuable Product）产品，快速上线，根据用户的反馈不断更新、改进自己的产品，开发新的功能，这样周而复始，产品把用户最喜欢，优先级最高的功能永远都放在第一时间开发、上线。根据用户的反馈、统计数据的结果不断调整产品的策略，这样才能立于当今互联网。在我们身边也许Github、 Flickr等都是很好的成功例子。<br>下面是我对于一些是非的意见：  </p>
+<ul>
+<li>结对编程能够明显提升代码的质量，让团队成员对代码的熟悉度大幅提升，但是我不赞成至始至终都是结对编程，应该留时间进行单独编程，这样虽然代码质量也许会有一些下降，但是如果伴以TDD对进行辅佐，是不会下降太多，单独编程有助于让dev独立思考，发挥创造力，很多时候会达到意想不到的结果。另外一点结果编程通常达不到两个dev独立编写代码的效率，就像在《人月神话》中讲到的那样，1一个人如果需要开发一个软件需要100填，那么10个程序员10天肯定不能完成任务的，因为期间还需要算上沟通的成本。  </li>
+<li>关于TDD，确有遇到过几次绞尽脑汁也没想明白怎么测试的case。但是我们如果使用 隔离依赖（即mock依赖，stub行为，如使用mockito中的：given().willReturn();或者when().thenReturn()等）的原则来编写测试，绝大多数情况都会变得豁然开朗，就Java而言，遇到静态方法，我们可以通过间接的调用去测试，对于无返回值的方法（void）我们可以采用验证行为的方法去测试(如使用mockito中的verify（）函数)。使用TDD的好处是不言而喻的，用测试代码描述你的需求，表达你想要的结果，既保证了质量也不用担心会做出多余的功能。不过在开发自己的小点子、小创意时，我通常选择Rails和Node.js进行开发因此TDD做得并不好，通产只是选择性的对重要的部分进行测试保证。</li>
+<li>沟通胜于一切，跟项目中所有的人频繁沟通，在实际项目中有一次是这样的，对于story中一个对于生效时间信息的描述有些模糊，我没有多想久自己认为肯定的全局的生效时间，但是不曾想到，当多个子产品出现时，就不能依赖全局生效时间，因为全局生效时间是其中最大第一个，而不一定是当前所需准确的生效时间，因此这个sotry在最后给BA 检查的时候才发现这个bug,试想最初如果我没有随便假设，而是马上给BA发邮件沟通，问清楚生效时间，也不会出现返工的情况。我个人认为良好、高效的沟通甚至比写好代码优先级更高。  </li>
+<li>站会（stand up）既是一种对团队成员工作的可视化，了解彼此的进度等情况，也是锻炼表达能力、增强自信心的好机会。为何这样讲，因为在站会上每个人需要用几句话来概括自己前一天所做的一切，当你讲到你前一天做的一些进步时，团队为你真心叫好，难道不会让你你增强自信心吗？对于站会进行的方式，有团队会选择每个人依次讲解前一天的工作内容；也有人会选择采用按照故事墙的方式来进行，依次对每个列（analysis, ready for dev, in development, test, sign off等）进行浏览等，当讲到自己的那个story时，每个人需要更新自己前一天在这个story上的工作，这样的好处是可以对每个story的情况进行可视化。但是我个人更喜欢前者，这样更加自由，但是目前在工作中基本尝试的都是后者。  </li>
+<li>另外一点是尽早集成，这点感触很深，大三的时候在一家公司实习，当时做一个原型系统，两三个人做一个模块，到最后快要演示的时候，才把几个模块尝试连到一起做集成测试。结果就是，所有人坐在一起进行的进行各种接口的连接、调用，bug修补。一旦连接成功就兴奋到难以言表，仿佛很长一段时间的工作都没有这一下来得兴奋。系统可以集成后，一直都提心吊胆，担心其中某个东西会不会莫名挂掉，因为集成测试都是使用人肉测试的啊。在展示的时候，各种紧张，安排专人时时刻刻注意到服务器。在敏捷中，我们要求及早进行系统集成和和创建部署环境的脚本，每次CI的运行都是一次集成测试，都是一次服务器的部署。因此不用担心在realse的时候不能部署的情况。不过有一件事情是需要注意的，那就是数据库的迁移，在开发机器，测试服务器你还能每次部署的时候都干掉之前的数据库，重新创建，但是在部署到产品服务器的时候就需要小心了，在Java中我们可以用<a href="http://flywaydb.org/" target="_blank" rel="external">Flyway</a> 达到类似Rails中的 rake db migrate的效果。  </li>
+</ul>
+<p>另外，我认为 switch pair(变还你结对同事)、 code review（团队成员坐到一起对团队前一天提交的代码进行浏览、解读），这些都可以让整个团队共享更多的上下文，还可以检查出不到的代码，学习好的代码。<br>也许明年这个时候我对敏捷的看法又有不少新的见解，到时候再来分享。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/敏捷/" rel="tag"># 敏捷</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2013/11/05/run-jetty-7,-8-with-gradle/" rel="next" title="使用Gradle 运行jetty 7, 8">
+                <i class="fa fa-chevron-left"></i> 使用Gradle 运行jetty 7, 8
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/04/09/develop-web-based-cross-platform-mobile-app/" rel="prev" title="Develop web based cross platform mobile app（开发基于Web的跨平台移动应用）">
+                Develop web based cross platform mobile app（开发基于Web的跨平台移动应用） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Junv" />
+          <p class="site-author-name" itemprop="name">Junv</p>
+           
+              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">304</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">69</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">244</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wahyd4" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/junwei-zhao-46944557" target="_blank" title="LinkedIn">
+                  
+                    <i class="fa fa-fw fa-linkedin"></i>
+                  
+                    
+                      LinkedIn
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Junv</span>
+
+  
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
