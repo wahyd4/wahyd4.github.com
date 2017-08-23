@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova" />
+  <meta name="keywords" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography" />
 
 
 
@@ -94,16 +94,16 @@
 
 
 
-<meta name="description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta name="description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 <meta property="og:type" content="website">
 <meta property="og:title" content="大染志">
 <meta property="og:url" content="http://toozhao.com/page/7/index.html">
 <meta property="og:site_name" content="大染志">
-<meta property="og:description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta property="og:description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="大染志">
-<meta name="twitter:description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta name="twitter:description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 
 
 
@@ -225,22 +225,22 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
           </a>
         </li>
       
@@ -277,12 +277,255 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/01/12/maven-study-case-one/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2012/01/12/maven-study-case-one/" itemprop="url">Maven 学习入门 1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-01-12T00:00:00+08:00">
+                2012-01-12
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:49:50+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/maven/" itemprop="url" rel="index">
+                    <span itemprop="name">maven</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/maven/各类教程/" itemprop="url" rel="index">
+                    <span itemprop="name">各类教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Maven是一个项目构建工具，它不止可以用于Java，可能大家对Ant更加熟悉，个人感觉Maven相比Ant更加高级，功能也更加丰富，使用比较灵活的构建工具，maven还支持插件，当然也有机遇eclipse的插件m2e。现在还有maven的仓库软件nexus，以及更对可以对maven进行持续集成的服务器Hudson。对于Maven过多的讲解就不再这里提及，希望把这个日志作为一个maven学习的记录。下面我们就来一步一步安装并学习使用Maven：</p>
+<p>首先下载并安装maven，进入<a href="http://maven.apache.org/download.html" target="_blank" rel="external">http://maven.apache.org/download.html</a> 下载Maven的已编译好的binary可运行版本。然后将这个压缩文件解压到一个指定目录，比如说D盘。我为了使用方便已经将maven后面的版本号去掉，因为我的文件夹目录为：</p>
+<pre class="brush: xml; title: ; notranslate" title="">D:maven</pre>
+
+<p>请下载最新版本3.X版。3.X和2.X的版本有较大差别。</p>
+<p>接下来我们需要做的是，配置环境变量：<strong>M2_HOME，</strong>其值为你解压的maven文件夹根目录，比如我的就是D:maven.</p>
+<p>添加环境变量 <strong>M2</strong>，其值为%M2_HOME%bin目录。（注：所有配置均在windows下完成）</p>
+<pre class="brush: xml; title: ; notranslate" title="">M2_HOME=D:maven;
+
+M2=%M2_HOME%bin;
+PATH=$M2:$PATH;
+</pre>
+
+<p>保存并退出。然后打开命令行，输入以下命令：<strong>mvn –version</strong></p>
+<p>如果出现类似于下面这些信息，即是安装成功了。</p>
+<p><a href="/images/2012/01/111.png"><img class="alignnone size-medium wp-image-2035" title="111" src="/images/2012/01/111-300x78.png" alt="" width="300" height="78"></a></p>
+<p>我们也可以通过命令行 <strong>mvn –help</strong>来查看maven 有哪些常用命令。</p>
+<p>接下来我们对仓库的相关设置做一个简单设置，windows下默认地maven会自动将<strong>c:usersYOURNAE.m2repository</strong>作为仓库，用来存放下载的类库。个人不太喜欢各种这类东西安装在C盘，这样比较消耗资源。因此请将你的maven文件夹下面的 conf/settings.xml打开，找到：</p>
+<pre class="brush: xml; title: ; notranslate" title="">&lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</pre>
+
+<p>并将其值改成你想要防止仓库的位置，个人建议放在maven程序下的repository目录下，并去掉该语句前后的注释。</p>
+<p>紧接着，我们就来创建一个maven项目：</p>
+<p>我们选择一步一步来创建项目，使用命令行切换到你需要创建项目的文件夹，在命令行输入：</p>
+<pre class="brush: xml; title: ; notranslate" title="">mvn archetype:generate</pre>
+
+<p>然后按照maven的提醒来输入相关信息.</p>
+<p>大致解释一下相关属性：</p>
+<p><strong>groupId</strong>：在一个项目或者组织中通常是唯一的标识符，一般以项目或者组织的网址来命名，例：info.junv.test</p>
+<p><strong>artifactId</strong>:类似于给项目取个别名。例：first-app</p>
+<p><strong>version</strong>:项目的版本号。例：1.0-snapshot</p>
+<p><strong>package</strong>:为项目的包名，例：info.junv.test</p>
+<p>当程序显示DUILD SUCCESS 时即表示，项目创建成功了，打开创建项目的文件夹就可以看到刚才创建的文件了。</p>
+<p>源代码在first-app/src/main下面，first-app/src/test下为测试的相关代码。</p>
+<p>并且在first-app代码的根目录下生成了pom.xml，该文件非常重要，里面包含程序的相关包依赖和仓库地址，以及其他项目任务等，这里不多讲。</p>
+<p>下面执行有管项目的其他一些操作：（需要在命令行下进入该项目，例：cd fitst-app）</p>
+<pre class="brush: xml; title: ; notranslate" title="">mvn package #执行项目打包操作，生成target文件夹，jar文件，以及其他相关文件夹
+
+</pre>
+
+<p>下面是maven官方的一些其他命令，以及解释：</p>
+<p>Although hardly a comprehensive list, these are the most common <em>default</em> lifecycle phases executed.</p>
+<ul>
+<li><strong>validate</strong>: validate the project is correct and all necessary information is available</li>
+<li><strong>compile</strong>: compile the source code of the project</li>
+<li><strong>test</strong>: test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed</li>
+<li><strong>package</strong>: take the compiled code and package it in its distributable format, such as a JAR.</li>
+<li><strong>integration-test</strong>: process and deploy the package if necessary into an environment where integration tests can be run</li>
+<li><strong>verify</strong>: run any checks to verify the package is valid and meets quality criteria</li>
+<li><strong>install</strong>: install the package into the local repository, for use as a dependency in other projects locally</li>
+<li><strong>deploy</strong>: done in an integration or release environment, copies the final package to the remote repository for sharing with other developers and projects.</li>
+</ul>
+<p>There are two other Maven lifecycles of note beyond the <em>default</em> list above. They are</p>
+<ul>
+<li><p><strong>clean</strong>: cleans up artifacts created by prior builds</p>
+</li>
+<li><p><strong>site</strong>: generates site documentation for this project</p>
+</li>
+</ul>
+<p><span style="line-height: 24px;">   如果需要将源代码编译后并打包：则需要使用package或者install。如果选择install，maven还会将该包存放至本地仓库。<br> </span></p>
+<p>上面这些都是生成普通的项目结构，其实我们平时使用最多的是eclipse项目。maven也可以生成eclipse项目结构。</p>
+<pre class="brush: xml; title: ; notranslate" title="">mvn eclipse:eclipse </pre>
+
+<p>为了删除eclipse的文件结构我们需要使用：</p>
+<pre class="brush: xml; title: ; notranslate" title="">mvn eclipse:clean </pre>
+
+<p>这样我们就可以在eclipse中导入maven生成的eclipse项目，最方便的还是在eclipse中安装maven 的eclipse插件m2e。</p>
+<p>m2e下载地址：<a href="http://download.eclipse.org/technology/m2e/releases/" target="_blank" rel="external">http://download.eclipse.org/technology/m2e/releases/</a></p>
+<p>好了，这就是maven的简单应用，希望下一次写pom.xml。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/01/09/spring-osgi-hello-world1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -483,7 +726,7 @@ log4j:WARN Please initialize the log4j system properly.</pre>
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -673,7 +916,7 @@ log4j.appender.FirstAppender.layout.ConversionPattern = [%x]-%p-%d{yyyy-MM-dd HH
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -839,7 +1082,7 @@ log4j.appender.FirstAppender.layout.ConversionPattern = [%x]-%p-%d{yyyy-MM-dd HH
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1055,7 +1298,7 @@ log4j.appender.FirstAppender.layout.ConversionPattern = [%x]-%p-%d{yyyy-MM-dd HH
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1226,7 +1469,7 @@ log4j.appender.FirstAppender.layout.ConversionPattern = [%x]-%p-%d{yyyy-MM-dd HH
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1396,7 +1639,7 @@ addEventListener('click',myfunction，false); //前两个参数与attachEvent一
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1555,7 +1798,7 @@ addEventListener('click',myfunction，false); //前两个参数与attachEvent一
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1853,7 +2096,7 @@ app.post('/login',function(req,res){
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -2018,235 +2261,6 @@ app.post('/login',function(req,res){
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2011/10/26/node-js-send-e-mail/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大染志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2011/10/26/node-js-send-e-mail/" itemprop="url">使用Node.js发送电子邮件（E-mail）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-10-26T00:00:00+08:00">
-                2011-10-26
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:49:00+08:00">
-                2014-07-22
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/node-js/" itemprop="url" rel="index">
-                    <span itemprop="name">node.js</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><span style="color: #ff0000;">10月27日更新，可以发送附件</span></p>
-<p>今天晚上花了点时间试了一下使用node.js发送电子邮件，也挺简单的，<del>不过有个问题一直没有解决，就是发送附件,</del>我弄明白的时候，会补充资料的。</p>
-<p>首先我们还是得安装node的第三方用户发送email的module 。</p>
-<pre><code>npm install nodemailer
-</code></pre><p>安装好之后，还有一个问题需要注意，我们应该确保用来发送邮件的邮箱地址是打开只是IMAP 、SMTP功能的，这样才可以发送邮件成功。</p>
-<p>接下来我们就开始写代码，其实很简单，官方网站也都已经说得很清楚了。</p>
-<pre class="brush: jscript; title: ; notranslate" title="">var mail = require('nodemailer');  //包含发送邮件所需module
-mail.SMTP = {
-    use_authentication: true, //如果我们使用QQ等邮箱，这个必须写且为true
-    host: 'smtp.qq.com',   //定义用来发送邮件的邮箱服务器，一般是QQ这些的
-    port:25,    //定义服务器端口，一般是25    ,如果是使用SSL端口一般为465,或者587
-    ssl:false,     //默认不适用SSL，可以省略不写
-    user: 'wahyd4@qq.com',   //邮箱用户名
-    pass:'*****'   //输入邮箱密码
-}
-mail.send_mail(
-{
-    sender:'wahyd4@qq.com',   //发送邮件的地址
-    to:'wahyd4@gmail.com',     //发给谁
-    subject:'随便把',               //主题
-    body:'Hello,这个邮件来自node.js'
-},
-//回调函数，用户判断发送是否成功，如果失败，输出失败原因。
-function(error,success){
-    if(!error){
-        console.log('message success');
-        }else{
-        console.log('failed'+error);
-    }
-}
-);</pre>
-
-<p>这里我没有使用SSL进行发送，而且发送的是纯文本，也可以发送html,如果发送html则在send_mail函数里面加上：</p>
-<pre><code>html: &apos;&lt;p&gt; 你好。。邮件来自node.js&lt;/p&gt;&apos;,
-</code></pre><p>如果使用SSL进行发送我们则需要将mail.SMTP改为：</p>
-<pre class="brush: jscript; title: ; notranslate" title="">mail.SMTP = {
-    use_authentication: true,  //如果我们使用QQ等邮箱，这个必须写且为true
-    host: 'smtp.qq.com',   //定义用来发送邮件的邮箱服务器，一般是QQ这些的
-    port:465,    //定义服务器端口，一般是25    ,如果是使用SSL端口一般为465
-    ssl:true,     //默认不适用SSL，可以省略不写
-    user: 'wahyd4@qq.com',   //邮箱用户名
-    pass:'*****'   //输入邮箱密码
-}
-</pre>
-
-<p>好了。现在你运行程序试试,是不是成功了。</p>
-<p>我今天晚上遇到一个错误 :<strong>503 ERROR,need EHLO and AUTH first</strong>。就是因为没有添加use_authentication = true的缘故。加上之后，搞定。</p>
-<p>———————————————————分割线———————-</p>
-<p>发送附件的话。首先我们得使用</p>
-<pre class="brush: jscript; title: ; notranslate" title="">var fs = require('fs');    //导入文件系统相关的包</pre>
-
-<p>饭后我们将文件读入内存，并将其发送。</p>
-<pre class="brush: jscript; title: ; notranslate" title="">//读入文件
-var img = fs.readFileSync(__dirname+"/cat.jpg");
-
-var attachment = [{
-    'filename': "cat.jpg",   //这里只是给附件取名称，而不是导入文件内容
-    'contents': img         //导入文件
-}]    //定义我们需要发送的附件
-</pre>
-
-<p>接下来我们需要在send_mail函数中加入发送附件即可</p>
-<pre class="brush: jscript; title: ; notranslate" title="">mail.send_mail(
-{
-    sender:'wahyd4@qq.com',   //发送邮件的地址
-    to:'wahyd4@gmail.com',     //发给谁
-    subject:'测试发送文件',       //主题
-    attachments: attachment, //添加附件
-    body:'Hello,这个邮件来自node.js，包含附件哦，亲！'
-
-},
-</pre>
-
-<p>附上Nodemailer的网址：<a href="http://www.nodemailer.org/" target="_blank" rel="external">http://www.nodemailer.org/</a></p>
-<p>enjoy it!</p>
-<p>最后还是感谢 <a href="https://github.com/andris9" target="_blank" rel="external">andris9</a> 大叔很快帮我解决了问题！</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2285,11 +2299,11 @@ var attachment = [{
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
                alt="Junv" />
           <p class="site-author-name" itemprop="name">Junv</p>
            
-              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova</p>
+              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -2299,7 +2313,7 @@ var attachment = [{
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">304</span>
+                <span class="site-state-item-count">305</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2309,10 +2323,10 @@ var attachment = [{
             
             
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -2320,10 +2334,10 @@ var attachment = [{
             
             
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">244</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">245</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -2352,6 +2366,28 @@ var attachment = [{
                   
                     
                       LinkedIn
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                    
+                      StackOverflow
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
                     
                 </a>
               </span>

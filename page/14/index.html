@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova" />
+  <meta name="keywords" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography" />
 
 
 
@@ -94,16 +94,16 @@
 
 
 
-<meta name="description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta name="description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 <meta property="og:type" content="website">
 <meta property="og:title" content="大染志">
 <meta property="og:url" content="http://toozhao.com/page/14/index.html">
 <meta property="og:site_name" content="大染志">
-<meta property="og:description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta property="og:description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="大染志">
-<meta name="twitter:description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta name="twitter:description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 
 
 
@@ -225,22 +225,22 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
           </a>
         </li>
       
@@ -277,12 +277,192 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2010/12/27/google-public-dns/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2010/12/27/google-public-dns/" itemprop="url">使用Google public DNS加速网站访问</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2010-12-27T00:00:00+08:00">
+                2010-12-27
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:43:21+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/我说/" itemprop="url" rel="index">
+                    <span itemprop="name">我说</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>如果你也出现了一下问题：本来一些网站的域名存在，可是你缺被莫名其妙的引导到电信的114页面或者联通的什么页面。或者你访问一些网站时 他告诉你 网站不能打开，或者显示的不是正常的网页。</p>
+<p>那么这些都可能是DNS 的问题。如果我们自己不做修改的话，你联网的时候是默认使用电信运营商的DNS解析。比如电信，或者联通他们自己的。这些dns 平时可能看不出来有什么问题，也许一到关键时刻就出篓子。</p>
+<p>这两天我自己是真正遇到了这些问题。一个学院的网站域名我一直打不开。只有偶尔有时候才可以打开。让我一直觉得是网站服务器的问题，可是经过老师解答之后才发现时DNS解析的问题。</p>
+<p>今天就给大家推荐使用google public DNS解析。比起其他的DNS解析来说google更加权威。给你带来更快的网站访问速度。还可以提高安全性。因为众所周知google在全球都有自己服务器。</p>
+<p><a href="http://code.google.com/intl/zh-CN/speed/public-dns/" target="_blank">google public dns</a></p>
+<p>那好下面就让我们在动手设置DNS。因为我的电脑是windows 7环境 所以就设置win 7吧。</p>
+<p>首先<strong>打开 网络和共享中心（就在右下角的网络菜单栏）</strong></p>
+<p><strong>然后选择你现在说很使用的网络。 点击连接后面的。</strong></p>
+<p style="text-align: center;"><br>  <strong><a href="/images/2010/12/12-27-1.jpg"><img class="size-full wp-image-1131 aligncenter" title="12-27-1" src="/images/2010/12/12-27-1.jpg" alt="" width="595" height="90"> </a></strong>点击进入之后，你将看到如下界面<br></p>
+
+<p style="text-align: center;"><br>  <a href="/images/2010/12/12-27-2.jpg"><img class="size-full wp-image-1132 aligncenter" title="12-27-2" src="/images/2010/12/12-27-2.jpg" alt="" width="365" height="409"></a><strong>然后点击属性，进行设置 </strong><br></p>
+
+<p style="text-align: center;"><br>  <strong><a href="/images/2010/12/12-27-3.jpg"><img class="size-full wp-image-1133 aligncenter" title="12-27-3" src="/images/2010/12/12-27-3.jpg" alt="" width="361" height="325"></a>找到internet 协议版本4 tcp/IP.然后点击属性进入设置</strong><br></p>
+
+<p style="text-align: center;"><br>  <strong><a href="/images/2010/12/12-27-4.jpg"><img class="size-full wp-image-1135 aligncenter" title="12-27-4" src="/images/2010/12/12-27-4.jpg" alt="" width="406" height="421"></a>选择使用下面的DNS服务器地址。</strong><br></p>
+
+<p style="text-align: center;"><br>  <strong>在DNS 服务器里面按照图片所示填入：  8.8.8.8</strong><br></p>
+
+<p style="text-align: center;"><br>  <strong>备用里面填入：8.8.4.4</strong><br></p>
+
+<p style="text-align: center;"><br>  <strong>然后点击确定，就可以啦。</strong><br></p>
+
+<p style="text-align: center;"><br>  <strong>现在断开网络，重新连接，试试。</strong><br></p>
+
+<p style="text-align: center;"><br>  <strong>是不是以前不能打开的域名地址，现在可以打开了。（当然这里所指的域名是因为DNS关系不能打开） </strong><br></p>
+
+<p><strong><a href="/images/2010/12/12-27-1.jpg"> </a> </strong></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2010/12/23/c-plus-link/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -441,7 +621,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -604,7 +784,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -781,7 +961,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -948,7 +1128,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1119,7 +1299,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1299,7 +1479,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1474,7 +1654,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1663,7 +1843,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1816,168 +1996,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2010/12/11/linux-2010/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大染志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2010/12/11/linux-2010/" itemprop="url">linux宝典2010</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2010-12-11T00:00:00+08:00">
-                2010-12-11
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:42:22+08:00">
-                2014-07-22
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/IT书籍/" itemprop="url" rel="index">
-                    <span itemprop="name">IT书籍</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>阅读的时候你可能还喜欢我今天发表的：<a href="http://www.junv.info/2010/12/11/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91%E7%AC%AC%E4%BA%8C%E7%89%88/" target="_blank">编程珠玑第二版</a></p>
-<p>你应该还喜欢:<a href="http://www.junv.info/2010/11/29/linux-%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/" target="_blank">linux视频教程免费下载</a></p>
-<p>废话，这本书同样是我在图书馆找到的好书，其实我在图书馆找到的是第五版，是图书馆最新到的书，我大概翻看了一下，这本书真的很不错，首先讲得很详细，从linux的起源就讲起，而且适合各种层次的负责阅读，里面的内容既有图像界面的应用，也有适合程序员学习的shell代码操作的讲解，最后还讲linux下的编程环境以及如何编程。而且分的很细，每章都很恨详细的实例，所以值得大家阅读和学习啦。</p>
-<p><a href="/images/2010/12/thumb.jpg"><img class="size-medium wp-image-2005 aligncenter" title="thumb" src="/images/2010/12/thumb-236x300.jpg" alt="" width="236" height="300"></a></p>
-<p>内容介绍（引用）：</p>
-<p>本书详尽地介绍了Linux的方方面面。全书共分为6个部分，从讲述基本的Linux概念、shell基本命令以及图形用户界面开始，一直到最后介绍Linux编程环境，每一部分都提供了主要命令的详细解释和流程说明。本书的一个显著特点是安排了很多章节来介绍各种最新流行的Linux发行版(多达12个)。此外，本书最后提供的大量参考资料可帮助读者获得所需的各种知识。<br>本书可作为Linux新手的入门指南，对于Linux专业人员也极具参考价值。</p>
-<p>可是有点遗憾的是，我没有找到我在图书馆看到的linux宝典第五版，我只找到最新出版的英文版2010版供大家下载！</p>
-<p>下载地址：<a href="http://u.115.com/file/f16c38a9f1" target="_blank">点我下载</a></p>
-<p>请有能力的同学支持正版，购买正版链接，linux宝典第五版：<a href="http://product.dangdang.com/product.aspx?product_id=20836559" target="_blank">点我</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2016,11 +2034,11 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
                alt="Junv" />
           <p class="site-author-name" itemprop="name">Junv</p>
            
-              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova</p>
+              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -2030,7 +2048,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">304</span>
+                <span class="site-state-item-count">305</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2040,10 +2058,10 @@
             
             
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -2051,10 +2069,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">244</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">245</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -2083,6 +2101,28 @@
                   
                     
                       LinkedIn
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                    
+                      StackOverflow
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
                     
                 </a>
               </span>

@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova" />
+  <meta name="keywords" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography" />
 
 
 
@@ -94,16 +94,16 @@
 
 
 
-<meta name="description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta name="description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 <meta property="og:type" content="website">
 <meta property="og:title" content="大染志">
 <meta property="og:url" content="http://toozhao.com/page/4/index.html">
 <meta property="og:site_name" content="大染志">
-<meta property="og:description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta property="og:description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="大染志">
-<meta name="twitter:description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta name="twitter:description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 
 
 
@@ -225,22 +225,22 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
           </a>
         </li>
       
@@ -277,12 +277,308 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/10/23/nodejs-mongo-one/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2012/10/23/nodejs-mongo-one/" itemprop="url">Node.js操作Mongodb(1)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-10-23T00:00:00+08:00">
+                2012-10-23
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:52:25+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/mongodb/" itemprop="url" rel="index">
+                    <span itemprop="name">mongodb</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/mongodb/node-js/" itemprop="url" rel="index">
+                    <span itemprop="name">node.js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天想要分享是使用node.js来连接并操作mongodb数据库实现基本的增删查改操作。</p>
+<p>首先我们需要在node.js下安装mongodb争对node的驱动。</p>
+<p>npm install mongodb</p>
+<p>下面就可以开始写代码了。首先当然是在node代码引用mongodb:</p>
+<pre class="brush: jscript; title: ; notranslate" title="">var mongodb = require("mongodb");
+
+</pre>
+
+<p>其次就是连接到mongodb数据库server:</p>
+<pre class="brush: jscript; title: ; notranslate" title="">var server = new mongodb.Server('localhost',27017,{auto_reconnect:true});
+
+</pre>
+
+<p>其中第一、二分参数分别是IP地址和端口，由于我们这里没有设计到验证，因此便不需要验证参数。最后的参数是一个对象，我们设置了一个属性auto_reconnect为true，就表示如果当程序与mongodb失去连接便回自动重连。</p>
+<pre class="brush: jscript; title: ; notranslate" title="">var server = new mongodb.Server('localhost',27017,{auto_reconnect:true},10);
+
+</pre>
+
+<p>通常情况下我们可以不管最后一个参数，这个参数是线程池的数量，系统默认的设置是5，也就是说可以同时支持打开5个数据库连接，并进行操作。当然我们可以根据自己需要设置希望的值。</p>
+<p>然后就是获取或者创建一个DB实例。</p>
+<pre class="brush: jscript; title: ; notranslate" title="">var db = new mongodb.Db("mydb2",server);
+
+</pre>
+
+<p>第一个参数需要传入被数据库的名称，如果数据库不存在系统会创建该数据库，当时不是现在，而是当我们试图打开数据库的时候。</p>
+<pre class="brush: jscript; title: ; notranslate" title="">db.open(function(err,db){
+if(err){
+console.log(err);
+}
+if(!err){
+console.log("we are connected!");
+}
+});
+</pre>
+
+<p>我们想要对数据库进行的相关操作都是在db.open()的回调函数内完成的。即是说我们对数据库的操作需要在数据库被打开的情况下完成。<br>在mongodb中collection可以看做是我们平时所用的关系型数据库中的table(表)，我们可以通过显式或者隐式的方式来创建collection：<br><strong>显式</strong>即是使用db.createCollection()创建。</p>
+<pre class="brush: jscript; title: ; notranslate" title="">db.createCollection('test',{safe:true},function(err,collection){
+if(err){
+console.log(err);
+}else{
+console.log("created successful!");
+}
+ });
+</pre>
+
+<p>safe:true如果我们使用了这个参数即表示，如果当我们想要创建的collection已经存在时，则会报错，如果去掉则不会。<br>隐式则是我们在使用某个collection的时候，系统发现没有该collection，则会自动创建。</p>
+<pre class="brush: jscript; title: ; notranslate" title="">db.collection('fuck',function(err,collection){
+});
+</pre>
+
+<p>这个时候如果我们使用safe:true，当程序发现我们希望使用的collection不存在则会报错。通过这段代码，我们可以在该回调函数中执行所有我们对该collection的操作。</p>
+<p>插入数据：</p>
+<pre class="brush: jscript; title: ; notranslate" title="">//插入单条数据
+collection.insert({'name':'tom'},function(err,result){});
+//插入数组
+var array = [{'name':'mary'},{'name':'lily','age':20}];
+collection.insert(array,{safe:true},function(err,result){
+     if(err) throw err;
+});
+</pre>
+
+<p>当我们一次插入或者在以后的删除、更新多条数据时，我们都应该使用safe:true，以保证数据的完整性和一致性，如果在插入数组的过程中某些数据未能成功插入，即会报错。<br>更新数据：</p>
+<pre class="brush: jscript; title: ; notranslate" title="">collection.update({'name':'tom'},{$set:{'name':'lily','age':100}},function(err,result){
+if(err) throw err;
+if(!err){
+console.log("update successful");
+}
+ });
+</pre>
+
+<p>第一个参数为我们定位目标的属性，这里即是我们更新所有名字为tom的数据，$set的意思则是我们将其更换其他的数据。<br>删除数据：</p>
+<pre class="brush: jscript; title: ; notranslate" title="">//删除用户名为tom的数据
+collection.remove({'name':'tom'},{safe:true},function(err,result){
+if(err) console.log(err);
+
+});
+
+//删除集合内的所有数据
+
+collection.remove();
+</pre>
+
+<p>查找数据：</p>
+<pre class="brush: jscript; title: ; notranslate" title="">//查找一条符合的数据
+collection.findOne({'name':'tom'},function(err,result){
+if (err) throw err;
+console.log(result);
+ });
+
+//查找多条数据，将结果集转换成数组。
+
+collection.find().toArray(function(err,items){
+if(err) throw err;
+
+//遍历数据
+
+for(item in array){
+ console.log(array[item]);
+ }
+ });
+
+//另外一种查找多条数据的方式是使用流式来处理。
+
+var stream = collection.find().streamRecords();
+
+//监听获取数据
+ stream.on("data",function(item){
+ console.log(item);
+ });
+
+//当数据读取完毕时，执行的方法。
+ stream.on("end",function(){
+ console.log("stream is end");
+ });
+</pre>
+
+<p>当然我们这里使用的查找数据的方式很简单，没有涉及到高级的查询语句，比如限制返回数据的条数limit()，这些都是可以使用的。大家可以从下面的文档中获取到更多的信息。</p>
+<p>完整代码下载：</p>
+<p><a href="https://github.com/wahyd4/node.js-mongodb-demo" target="_blank" rel="external">https://github.com/wahyd4/node.js-mongodb-demo</a><br>参考文档：<br><a href="http://mongodb.github.com/node-mongodb-native/api-articles/nodekoarticle1.html" target="_blank" rel="external">http://mongodb.github.com/node-mongodb-native/api-articles/nodekoarticle1.html</a><br><a href="http://www.mongodb.org/display/DOCS/Advanced+Queries" target="_blank" rel="external">http://www.mongodb.org/display/DOCS/Advanced+Queries</a></p>
+<p>请阅读下一篇：</p>
+<p><a href="http://toozhao.com/2012/10/nodejs-mongodb-gridfs/" target="_blank">Node.js操作mongodb（2）——gridfs操作文件</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/10/15/have-something-to-say-about-onemonth/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -448,7 +744,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -762,7 +1058,7 @@ public class MyWord {
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -958,202 +1254,12 @@ public class SelectSort {
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/09/11/java-insertion-sort/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大染志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2012/09/11/java-insertion-sort/" itemprop="url">Java 实现直接插入排序</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-09-11T00:00:00+08:00">
-                2012-09-11
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:52:03+08:00">
-                2014-07-22
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>项目代码已经发布到github.欢迎各位下载：<a href="https://github.com/wahyd4/java-sorting" target="_blank" rel="external">https://github.com/wahyd4/java-sorting</a></p>
-</blockquote>
-<p>快到校招了，我还是把以前的数据结构的书拿出来复习了，不过这次我将用java 来实现数据结构中的一些算法。当然还是希望能够顺利通过这些公司的笔试。下面分享的是直接插入排序。</p>
-<pre class="brush: java; title: ; notranslate" title="">public class InsertionSort {
-
-// 定义需要排序的数组
-private static int[] array = { 1, 20, 6, 3, 19, 7, 14, 12, 10 };
-
-public static void main(String args[]) {
-
-for (int outer = 1; outer &lt; array.length; outer++) {
-  int temp = array[outer];
-  for (int inner = outer - 1; inner &gt;= 0 && temp &lt; array[inner]; inner--) {
-
-    /**
-    * 将最大的赋值给目前比较的数组尾部 由于这里的数组下标需要
-    *  跟随循环而变化，所以只能使用 j来表示
-    */
-    array[inner + 1] = array[inner];
-    // 重新赋值第二大的数
-    array[inner] = temp;
-    // 重新赋值参考值，接着下标-1
-    temp = array[inner];
-  }
-}
-   // 便利排序后的数组
-   for (int flag : array) {
-     System.out.println(flag);
-   }
- }
-}
-
-</pre>
-
-<p><strong>算法的时间复杂度：</strong></p>
-<p>直接排序最糟糕时需要比较的次数为（若数组长度为n）:1+2+…+n-1=n(n-1)/2,复杂度为O（n2），一般情况下，复杂度也是如此。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/09/11/java-shell-sorting/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1352,12 +1458,202 @@ for (int outer = 1; outer &lt; array.length; outer++) {
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/09/11/java-insertion-sort/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2012/09/11/java-insertion-sort/" itemprop="url">Java 实现直接插入排序</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-09-11T00:00:00+08:00">
+                2012-09-11
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:52:03+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>项目代码已经发布到github.欢迎各位下载：<a href="https://github.com/wahyd4/java-sorting" target="_blank" rel="external">https://github.com/wahyd4/java-sorting</a></p>
+</blockquote>
+<p>快到校招了，我还是把以前的数据结构的书拿出来复习了，不过这次我将用java 来实现数据结构中的一些算法。当然还是希望能够顺利通过这些公司的笔试。下面分享的是直接插入排序。</p>
+<pre class="brush: java; title: ; notranslate" title="">public class InsertionSort {
+
+// 定义需要排序的数组
+private static int[] array = { 1, 20, 6, 3, 19, 7, 14, 12, 10 };
+
+public static void main(String args[]) {
+
+for (int outer = 1; outer &lt; array.length; outer++) {
+  int temp = array[outer];
+  for (int inner = outer - 1; inner &gt;= 0 && temp &lt; array[inner]; inner--) {
+
+    /**
+    * 将最大的赋值给目前比较的数组尾部 由于这里的数组下标需要
+    *  跟随循环而变化，所以只能使用 j来表示
+    */
+    array[inner + 1] = array[inner];
+    // 重新赋值第二大的数
+    array[inner] = temp;
+    // 重新赋值参考值，接着下标-1
+    temp = array[inner];
+  }
+}
+   // 便利排序后的数组
+   for (int flag : array) {
+     System.out.println(flag);
+   }
+ }
+}
+
+</pre>
+
+<p><strong>算法的时间复杂度：</strong></p>
+<p>直接排序最糟糕时需要比较的次数为（若数组长度为n）:1+2+…+n-1=n(n-1)/2,复杂度为O（n2），一般情况下，复杂度也是如此。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/09/07/ubuntu-install-elementary3-gtk-theme/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1556,7 +1852,7 @@ for (int outer = 1; outer &lt; array.length; outer++) {
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1787,7 +2083,7 @@ console.log(new Date().getTime()-original);
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -2003,7 +2299,7 @@ console.log(msg);
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -2189,205 +2485,6 @@ response.sendError(404,"这里写想要输出到前台的提示信息");
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/08/14/java-upload-file-without-enctypemultipartform-data/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大染志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2012/08/14/java-upload-file-without-enctypemultipartform-data/" itemprop="url">java 服务器端实现HTTP无enctype=&#8221;multipart/form-data&#8221;文件上传</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-08-14T00:00:00+08:00">
-                2012-08-14
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:51:40+08:00">
-                2014-07-22
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>在java web中我们一般都是使用commons-fileupload 和cos 进行服务器端上传文件的处理，而这种情况通常是我们通过在网页中的form标签中设置enctype=”multipart/form-data”这样的信息，才可以。否则commons-fileupload和cos都不能获取到文件。HTML网页设置格式如下图所示：</p>
-<pre class="brush: xml; title: ; notranslate" title="">&lt;html&gt;
-&lt;body&gt;
-&lt;h2&gt;Hello upload-file&lt;/h2&gt;
-&lt;form method="POST" action="upload" enctype="multipart/form-data"&gt;
-file upload:&lt;br&gt;
-&lt;input type="file" name="file" /&gt;
-&lt;input type="submit" value="submit"&gt;
-&lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
-</pre>
-
-<p>这只是一个简单例子，但如果我们遇到这样的情况：我们有一个java本地的客户端，使用HTTP协议来上传文件，不过这里没有表单。commons-fileupload的服务器端就会报错</p>
-<p>其实解决的办法也很简单，面对没有设置”multipart/form-data”属性的客户端，我们可以通过request.getInputStream() 获取输入流，从中读取文件内容。</p>
-<p>下面是我写的一断简单代码，把输入流信息，写入到C盘的一个文件：</p>
-<pre class="brush: java; title: ; notranslate" title="">protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
- InputStream input= request.getInputStream(); //获取流
- OutputStream out = new FileOutputStream(new File("c://test.txt"));
- byte[] buffer = new byte[1024];
- int count;
- while ((count = input.read(buffer)) != -1) {
- out.write(buffer, 0, count);  //写文件
- }
- out.flush();
- out.close();
- input.close();
- }
-
-</pre>
-
-<p>不过这种方式是不能直接解析上面那种form表单的文件上传方式，他会在文件的前后各加上一段信息,下面是一个form表单上传，输入流中的信息：</p>
-<pre class="brush: xml; title: ; notranslate" title="">------WebKitFormBoundaryOPczhvGNCBlneBER
-Content-Disposition: form-data; name="file"; filename="??????.txt"
-Content-Type: text/plain
-#下面是我写入的文件内容
-df03c9cf37c5fbc5a7894e04297127d7
-3a9bb0371ea5789666ab438b3b7e05c2
-#到此为止
-------WebKitFormBoundaryOPczhvGNCBlneBER--
-
-</pre>
-
-<p>如果form中没有加上enctype=”multipart/form-data”属性信息，输入流中得到的只有在&lt;input value=””&gt;中设置的value值，因此，通过流来获取上传的文件，应该只适合于从客户端直接向服务器写文件。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2426,11 +2523,11 @@ df03c9cf37c5fbc5a7894e04297127d7
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
                alt="Junv" />
           <p class="site-author-name" itemprop="name">Junv</p>
            
-              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova</p>
+              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -2440,7 +2537,7 @@ df03c9cf37c5fbc5a7894e04297127d7
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">304</span>
+                <span class="site-state-item-count">305</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2450,10 +2547,10 @@ df03c9cf37c5fbc5a7894e04297127d7
             
             
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -2461,10 +2558,10 @@ df03c9cf37c5fbc5a7894e04297127d7
             
             
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">244</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">245</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -2493,6 +2590,28 @@ df03c9cf37c5fbc5a7894e04297127d7
                   
                     
                       LinkedIn
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                    
+                      StackOverflow
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
                     
                 </a>
               </span>

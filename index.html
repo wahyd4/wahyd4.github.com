@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova" />
+  <meta name="keywords" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography" />
 
 
 
@@ -94,16 +94,16 @@
 
 
 
-<meta name="description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta name="description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 <meta property="og:type" content="website">
 <meta property="og:title" content="大染志">
 <meta property="og:url" content="http://toozhao.com/index.html">
 <meta property="og:site_name" content="大染志">
-<meta property="og:description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta property="og:description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="大染志">
-<meta name="twitter:description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta name="twitter:description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 
 
 
@@ -225,22 +225,22 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
           </a>
         </li>
       
@@ -277,12 +277,193 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2017/08/23/vscode-golang/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/23/vscode-golang/" itemprop="url">使用 VS Code 快速搭建你的 Golang 开发 IDE</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-23T17:26:31+08:00">
+                2017-08-23
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-23T17:28:12+08:00">
+                2017-08-23
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>说到 IDE 我们想到的都是 Intellij 和 Eclipse系列这样的几百兆的桌面应用程序，它让我们编程效率得以很大提升，在日常工作中变得离不开这些软件。我们最喜欢用的 IDE 功能主要有：</p>
+<ul>
+<li>代码自动补全</li>
+<li>代码重构</li>
+<li>代码格式化</li>
+<li>代码调试</li>
+<li>代码高亮</li>
+<li>代码错误检查</li>
+<li>代码引用查询与跳转</li>
+</ul>
+<p>但往往 IDE 也有占用内存多，时不时反应卡顿等问题。因此很多程序员在开发一些动态语言、脚本语言的时候更倾向于选择轻量级的文本编辑器软件。如：Sublime Text、Atom 、vscode（Visual Studio Code 简称 vscode）。其实不仅仅是动态语言或者脚本语言，现在的文本编辑器已经基本包含了上述 IDE 配置的功能了，除开在<strong>代码重构</strong>方面还落后甚远之外，其他功能点已经差别不大了。<br>纵观前两年最流行文本编辑器的还是 Sublime Text，而当下最新，最火热，最好用的我认为还得属于 vscode。为什么 vscode 能够在Sublime Text 和 Atom 两位前辈面前打下一片天地？如果用一个最大的优势来描述的话：</p>
+<ul>
+<li>对于 Sublime Text， vscode 最大的优势是 UI 美观、功能全面，比如集成了代码调试、Git 代码变更查和更友好的插件安装功能</li>
+<li>而相较于 Atom 而言，vscode 比它的同门师兄最大的优势则是快。</li>
+</ul>
+<p>就我自己日常开发而言，除开 Java 以外，平时编写 Ruby、JavaScript、HTML、Vue.js、Golang、Markdown、Dockerfile 等语言都在使用 vscode。</p>
+<p>在这篇文章中我不会再对为什么要用 VS Code 做过多解释。而是将介绍使用 vscode 快速搭建一个优秀的 Go (Golang) 的开发环境。</p>
+<h3 id="安装-vscode"><a href="#安装-vscode" class="headerlink" title="安装 vscode"></a>安装 vscode</h3><p>说了 vscode 这么多好，如果你还不知道 vscode 是何物的话，这里简单介绍下。vscode 是微软基于 Electron 框架开发的跨平台的开源的文本编辑器。也许你曾用过它的兄弟 Visual Studio，被它的庞大和臃肿吓到，在这里却不用担心。vscode 是一个全新的项目，旨在打造一个轻量级、面向 Web 开发、稳定高效的开发平台。</p>
+<p>你可以通过 <a href="https://code.visualstudio.com" target="_blank" rel="external">https://code.visualstudio.com</a> 官网下载安装 vscode软件</p>
+<h3 id="安装-Go-插件"><a href="#安装-Go-插件" class="headerlink" title="安装 Go 插件"></a>安装 Go 插件</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>vscode 之所以强大，其中很大一点便是因为它拥有庞大的插件对各个语言提供相关的功能。而对于 Go,官方提供了强大的插件 <a href="https://marketplace.visualstudio.com/items?itemName=lukehoban.Go" target="_blank" rel="external">Go</a>。你可以直接通过在插件页面，输入搜索 Go 进行安装相关插件，安装之后对 vscode 进行重启。该插件对 Golang 支持非常丰富的功能：</p>
+<ul>
+<li>代码格式化</li>
+<li>保存时代码自动格式化</li>
+<li>自动添加 Imports</li>
+<li>代码错误提示</li>
+<li>引用查询与跳转到定义位置</li>
+<li>Go 代码元素搜索</li>
+<li>文档查看</li>
+<li>支持代码调试等等功能。</li>
+</ul>
+<p>这些可以功能可以很好的满足我们日常开发所需。</p>
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>Go 插件提供丰富的配置项，让我们对插件的默认行为进行调整，以便最大限度的适合每个人。<br>依次键入<code>F1</code> -&gt; <code>Open User Settings</code> 即可打开vscode 用户配置文件，在文件末尾可以添加类似如下属性。<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">"go.buildOnSave": true, //在保存代码时自动编译代码</div><div class="line">"go.lintOnSave": true, //在保存代码时自动检查代码可以优化的地方，并给出建议</div><div class="line">"go.vetOnSave": true, //在保存代码时自动检查潜在的错误</div><div class="line">"go.buildTags": "",</div><div class="line">"go.buildFlags": [],</div><div class="line">"go.lintTool": "golint", //使用 golint 库来执行 lint操作，你也可以选择使用gometalinter</div><div class="line">"go.lintFlags": [],</div><div class="line">"go.vetFlags": [],</div><div class="line">"go.coverOnSave": false, //在保存代码时执行测试，并显示测试覆盖率</div><div class="line">"go.useCodeSnippetsOnFunctionSuggest": true, //使用代码片段作为提示</div><div class="line">"go.formatOnSave": true, //在保存代码时自动格式化代码</div><div class="line">"go.formatTool": "goimports", //使用 goimports 工具进行代码格式化，或者使用 goreturns和gofmt</div><div class="line">"go.formatFlags": [],</div><div class="line">"go.gocodeAutoBuild": true, //代码自动编译构建</div><div class="line">"go.goroot": "/usr/local/Cellar/go/1.8.3/libexec", //设置 goroot，正常编译 go 代码。</div><div class="line">"go.gopath": "/Users/junv/gocode:/Users/junv/mygocode", // 设置 gopath，有利于自动导入库</div></pre></td></tr></table></figure></p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p><img src="http://7ktsrz.com1.z0.glb.clouddn.com/vscode.gif" alt="使用"></p>
+<h4 id="调试-Go程序"><a href="#调试-Go程序" class="headerlink" title="调试 Go程序"></a>调试 Go程序</h4><p>打开 go 源码，在你期望调试的行号左侧，点击即可添加断点。<br>当你第一次进行调试时，vscode 则要求你添加调试程序的相关配置。可以输入类似下图的配置即可。<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"version"</span>: <span class="string">"0.2.0"</span>,</div><div class="line">    <span class="attr">"configurations"</span>: [</div><div class="line">        &#123;</div><div class="line">            "name": "monitor-api", //程序名字</div><div class="line">            "type": "go",</div><div class="line">            "request": "launch",</div><div class="line">            "mode": "debug",</div><div class="line">            "remotePath": "",</div><div class="line">            "port": 1234,</div><div class="line">            "host": "127.0.0.1",</div><div class="line">            "program": "$&#123;workspaceRoot&#125;",</div><div class="line">            "env": &#123;</div><div class="line">                "QUICKPAY_ENV": "testing" //注入你需要的环境变量</div><div class="line">            &#125;,</div><div class="line">            "args": []</div><div class="line">        &#125;</div><div class="line">    ]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>点击开始按钮，即可进行Go 程序调试了。</p>
+<p><img src="http://7ktsrz.com1.z0.glb.clouddn.com/debug.png" alt="debug"></p>
+<h4 id="快速的搜索"><a href="#快速的搜索" class="headerlink" title="快速的搜索"></a>快速的搜索</h4><p>当项目源代码越来越多，依赖的第三方库也越来越多的时候，你会发现 vscode的搜索功能 变慢了，而且很多时候我们并不希望搜索结果中包含 vendor （第三方依赖源代码）目录下的代码。<br>那么你可以尝试在<code>User Settings</code> 中添加如下的配置：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">"search.exclude": &#123;</div><div class="line">  "**/node_modules": true,</div><div class="line">  "**/bower_components": true,</div><div class="line">  "**/vendor": true  //排除 vendor 目录</div><div class="line">&#125;,</div></pre></td></tr></table></figure></p>
+<p>这样 vscode 在执行搜索的时候就会跳过 vendor 目录下的文件，让搜索保持高效。</p>
+<h3 id="如虎添翼的其他插件"><a href="#如虎添翼的其他插件" class="headerlink" title="如虎添翼的其他插件"></a>如虎添翼的其他插件</h3><h4 id="IntelliJ-IDEA-Keybindings"><a href="#IntelliJ-IDEA-Keybindings" class="headerlink" title="IntelliJ IDEA Keybindings"></a>IntelliJ IDEA Keybindings</h4><p>如果你和我一样也是从 Intellij 系列 IDE 迁移过来，想必你也遇到快捷键不习惯的问题。推荐你安装<a href="https://marketplace.visualstudio.com/items?itemName=k--kato.intellij-idea-keybindings" target="_blank" rel="external">IntelliJ IDEA Keybindings</a> 插件。来映射快捷键，让你在 vscode 可以使用使用 Intellij 的快捷键。<br>如：</p>
+<ul>
+<li><code>alt</code> + <code>F7</code> 查看方法引用</li>
+<li><code>ctrl</code> + <code>shift</code> + <code>↑</code> 或者 <code>ctrl</code> + <code>shift</code> + <code>↓</code> 移动行</li>
+<li><code>cmd</code> + <code>F4</code> 关闭当前窗口</li>
+<li><code>alt</code> + <code>cmd</code>+ <code>→</code> 或者 <code>alt</code> + <code>cmd</code>+ <code>←</code> 切换到前/后一次操作的鼠标位置了</li>
+</ul>
+<p>更多的快捷键映射，可以查看该插件主页。</p>
+<h4 id="Code-Runner"><a href="#Code-Runner" class="headerlink" title="Code Runner"></a>Code Runner</h4><p><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner" target="_blank" rel="external">Code Runner</a> 插件，让你可以快速你运行各种语言的代码片段。</p>
+<p>在可运行的 go 文件页面，点击界面右上角的<code>➤</code> 即可快速运行该文件。</p>
+<p><img src="http://7ktsrz.com1.z0.glb.clouddn.com/code-runner.png" alt="code runner"></p>
+<h3 id="概括"><a href="#概括" class="headerlink" title="概括"></a>概括</h3><p>通过本篇文章可以看出，依赖于vscode 强大的插件我们可以快速搭建完善的 Go 语言开发环境。而它相较于 IDE 的最大优势则是性能良好、扩展性强、免费和轻量级。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2016/10/17/easiest-way-to-use-go/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -491,7 +672,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -663,7 +844,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -836,7 +1017,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -990,7 +1171,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1152,7 +1333,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1319,7 +1500,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1496,7 +1677,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1662,7 +1843,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1826,163 +2007,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2013/10/28/how-a-graduate-become-a-qualified-programmer/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大染志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2013/10/28/how-a-graduate-become-a-qualified-programmer/" itemprop="url">毕业生成长记——如何成长为一个合格的程序员</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2013-10-28T09:07:17+08:00">
-                2013-10-28
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2013-10-28T09:15:05+08:00">
-                2013-10-28
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/我说/" itemprop="url" rel="index">
-                    <span itemprop="name">我说</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <pre><code>上周六去成都Open Party 讲了自己怎么从一个毕业生成长为一个合格的程序员的感想吧，的确自己还有很多问题，最主要的是对自己写的东西和对自己的演讲不够自信，然后分享的的东西有些零零散散，希望以后可以在这方面做得越来越好。
-</code></pre><p>还是把PPT分享出来吧，也算做是一篇博客，这个东西还是花了我不少心思在里面的。</p>
-<script async class="speakerdeck-embed" data-id="581fada0219a01317a7f3af527e709f2" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2021,11 +2045,11 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
                alt="Junv" />
           <p class="site-author-name" itemprop="name">Junv</p>
            
-              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova</p>
+              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -2035,7 +2059,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">304</span>
+                <span class="site-state-item-count">305</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2045,10 +2069,10 @@
             
             
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -2056,10 +2080,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">244</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">245</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -2088,6 +2112,28 @@
                   
                     
                       LinkedIn
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                    
+                      StackOverflow
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
                     
                 </a>
               </span>

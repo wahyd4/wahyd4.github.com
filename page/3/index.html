@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova" />
+  <meta name="keywords" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography" />
 
 
 
@@ -94,16 +94,16 @@
 
 
 
-<meta name="description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta name="description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 <meta property="og:type" content="website">
 <meta property="og:title" content="大染志">
 <meta property="og:url" content="http://toozhao.com/page/3/index.html">
 <meta property="og:site_name" content="大染志">
-<meta property="og:description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta property="og:description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="大染志">
-<meta name="twitter:description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta name="twitter:description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 
 
 
@@ -225,22 +225,22 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
           </a>
         </li>
       
@@ -277,12 +277,166 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2013/02/01/update-ruby-on-mac-osx/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2013/02/01/update-ruby-on-mac-osx/" itemprop="url">更新Mac OSX 中Ruby到最新版本</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2013-02-01T20:19:00+08:00">
+                2013-02-01
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2013-08-31T22:34:15+08:00">
+                2013-08-31
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ruby/" itemprop="url" rel="index">
+                    <span itemprop="name">ruby</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>大概一个月前，我拿到了公司发的Macbook Pro，但是这一个月中，似乎它有时会出点问题。Anyway, 这些都不重要。重要的是搞不懂苹果的新出的10.8 Mountain Lion 居然内置的Ruby 版本还是1.87。但是要用最近版本的Rails 版本的话，还是需要ruby 1.9以上的。因此我们需要将其更新。此文只是针对小白，和自己的一个记录，其他人可以忽略。<br>在Mac OSX 中，我们可以使用 Homebrew 和 rvm 来安装新的版本。homebrew 正如你官网介绍所说，是Mac 下的包安装管理工具。而rvm这是ruby的版本管理工具，这里当然最好选用 rvm.<br>首先我们需要需要登录苹果开发者中心，安装 <a href="https://developer.apple.com/downloads/index.action" target="_blank" rel="external">Command Line Tools</a>.<br>然后，我们在terminal中输入以下命令安装rvm:<br>        \curl -L <a href="https://get.rvm.io" target="_blank" rel="external">https://get.rvm.io</a> | bash -s stable –ruby<br>如果中途没有出错的话，系统将会安装最新的rvm 和最新的 ruby，如果没有成功安装ruby，你也可以手动使用：<br>        rvm install ruby<br>来安装最新版本的ruby,系统并会自动切换到最新的ruby。<br>如果你在更新ruby的时候，也出现这样的错误，可以使用使用一下的命令行：<br>        rvm get head<br>        rvm requirements run<br>安装说需要，依赖的包，然后在使用下面的命令行安装ruby:<br>        rvm install 1.9.3 –with-opt-dir=<code>brew --prefix readline</code> –without-tcl –without-tk<br>应该就成功了。So, enjoy.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2013/01/22/fuck-gfw/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -437,7 +591,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -597,7 +751,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -777,7 +931,7 @@ Jetty Maven Plugin : http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -932,7 +1086,7 @@ Jetty Maven Plugin : http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1072,7 +1226,7 @@ Jetty Maven Plugin : http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1247,7 +1401,7 @@ Jetty Maven Plugin : http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1409,7 +1563,7 @@ Jetty Maven Plugin : http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1602,7 +1756,7 @@ host all all ::1/128 trust
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1781,302 +1935,6 @@ host all all ::1/128 trust
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/10/23/nodejs-mongo-one/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大染志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2012/10/23/nodejs-mongo-one/" itemprop="url">Node.js操作Mongodb(1)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-10-23T00:00:00+08:00">
-                2012-10-23
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:52:25+08:00">
-                2014-07-22
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/mongodb/" itemprop="url" rel="index">
-                    <span itemprop="name">mongodb</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/mongodb/node-js/" itemprop="url" rel="index">
-                    <span itemprop="name">node.js</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>今天想要分享是使用node.js来连接并操作mongodb数据库实现基本的增删查改操作。</p>
-<p>首先我们需要在node.js下安装mongodb争对node的驱动。</p>
-<p>npm install mongodb</p>
-<p>下面就可以开始写代码了。首先当然是在node代码引用mongodb:</p>
-<pre class="brush: jscript; title: ; notranslate" title="">var mongodb = require("mongodb");
-
-</pre>
-
-<p>其次就是连接到mongodb数据库server:</p>
-<pre class="brush: jscript; title: ; notranslate" title="">var server = new mongodb.Server('localhost',27017,{auto_reconnect:true});
-
-</pre>
-
-<p>其中第一、二分参数分别是IP地址和端口，由于我们这里没有设计到验证，因此便不需要验证参数。最后的参数是一个对象，我们设置了一个属性auto_reconnect为true，就表示如果当程序与mongodb失去连接便回自动重连。</p>
-<pre class="brush: jscript; title: ; notranslate" title="">var server = new mongodb.Server('localhost',27017,{auto_reconnect:true},10);
-
-</pre>
-
-<p>通常情况下我们可以不管最后一个参数，这个参数是线程池的数量，系统默认的设置是5，也就是说可以同时支持打开5个数据库连接，并进行操作。当然我们可以根据自己需要设置希望的值。</p>
-<p>然后就是获取或者创建一个DB实例。</p>
-<pre class="brush: jscript; title: ; notranslate" title="">var db = new mongodb.Db("mydb2",server);
-
-</pre>
-
-<p>第一个参数需要传入被数据库的名称，如果数据库不存在系统会创建该数据库，当时不是现在，而是当我们试图打开数据库的时候。</p>
-<pre class="brush: jscript; title: ; notranslate" title="">db.open(function(err,db){
-if(err){
-console.log(err);
-}
-if(!err){
-console.log("we are connected!");
-}
-});
-</pre>
-
-<p>我们想要对数据库进行的相关操作都是在db.open()的回调函数内完成的。即是说我们对数据库的操作需要在数据库被打开的情况下完成。<br>在mongodb中collection可以看做是我们平时所用的关系型数据库中的table(表)，我们可以通过显式或者隐式的方式来创建collection：<br><strong>显式</strong>即是使用db.createCollection()创建。</p>
-<pre class="brush: jscript; title: ; notranslate" title="">db.createCollection('test',{safe:true},function(err,collection){
-if(err){
-console.log(err);
-}else{
-console.log("created successful!");
-}
- });
-</pre>
-
-<p>safe:true如果我们使用了这个参数即表示，如果当我们想要创建的collection已经存在时，则会报错，如果去掉则不会。<br>隐式则是我们在使用某个collection的时候，系统发现没有该collection，则会自动创建。</p>
-<pre class="brush: jscript; title: ; notranslate" title="">db.collection('fuck',function(err,collection){
-});
-</pre>
-
-<p>这个时候如果我们使用safe:true，当程序发现我们希望使用的collection不存在则会报错。通过这段代码，我们可以在该回调函数中执行所有我们对该collection的操作。</p>
-<p>插入数据：</p>
-<pre class="brush: jscript; title: ; notranslate" title="">//插入单条数据
-collection.insert({'name':'tom'},function(err,result){});
-//插入数组
-var array = [{'name':'mary'},{'name':'lily','age':20}];
-collection.insert(array,{safe:true},function(err,result){
-     if(err) throw err;
-});
-</pre>
-
-<p>当我们一次插入或者在以后的删除、更新多条数据时，我们都应该使用safe:true，以保证数据的完整性和一致性，如果在插入数组的过程中某些数据未能成功插入，即会报错。<br>更新数据：</p>
-<pre class="brush: jscript; title: ; notranslate" title="">collection.update({'name':'tom'},{$set:{'name':'lily','age':100}},function(err,result){
-if(err) throw err;
-if(!err){
-console.log("update successful");
-}
- });
-</pre>
-
-<p>第一个参数为我们定位目标的属性，这里即是我们更新所有名字为tom的数据，$set的意思则是我们将其更换其他的数据。<br>删除数据：</p>
-<pre class="brush: jscript; title: ; notranslate" title="">//删除用户名为tom的数据
-collection.remove({'name':'tom'},{safe:true},function(err,result){
-if(err) console.log(err);
-
-});
-
-//删除集合内的所有数据
-
-collection.remove();
-</pre>
-
-<p>查找数据：</p>
-<pre class="brush: jscript; title: ; notranslate" title="">//查找一条符合的数据
-collection.findOne({'name':'tom'},function(err,result){
-if (err) throw err;
-console.log(result);
- });
-
-//查找多条数据，将结果集转换成数组。
-
-collection.find().toArray(function(err,items){
-if(err) throw err;
-
-//遍历数据
-
-for(item in array){
- console.log(array[item]);
- }
- });
-
-//另外一种查找多条数据的方式是使用流式来处理。
-
-var stream = collection.find().streamRecords();
-
-//监听获取数据
- stream.on("data",function(item){
- console.log(item);
- });
-
-//当数据读取完毕时，执行的方法。
- stream.on("end",function(){
- console.log("stream is end");
- });
-</pre>
-
-<p>当然我们这里使用的查找数据的方式很简单，没有涉及到高级的查询语句，比如限制返回数据的条数limit()，这些都是可以使用的。大家可以从下面的文档中获取到更多的信息。</p>
-<p>完整代码下载：</p>
-<p><a href="https://github.com/wahyd4/node.js-mongodb-demo" target="_blank" rel="external">https://github.com/wahyd4/node.js-mongodb-demo</a><br>参考文档：<br><a href="http://mongodb.github.com/node-mongodb-native/api-articles/nodekoarticle1.html" target="_blank" rel="external">http://mongodb.github.com/node-mongodb-native/api-articles/nodekoarticle1.html</a><br><a href="http://www.mongodb.org/display/DOCS/Advanced+Queries" target="_blank" rel="external">http://www.mongodb.org/display/DOCS/Advanced+Queries</a></p>
-<p>请阅读下一篇：</p>
-<p><a href="http://toozhao.com/2012/10/nodejs-mongodb-gridfs/" target="_blank">Node.js操作mongodb（2）——gridfs操作文件</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2115,11 +1973,11 @@ var stream = collection.find().streamRecords();
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
                alt="Junv" />
           <p class="site-author-name" itemprop="name">Junv</p>
            
-              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova</p>
+              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -2129,7 +1987,7 @@ var stream = collection.find().streamRecords();
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">304</span>
+                <span class="site-state-item-count">305</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2139,10 +1997,10 @@ var stream = collection.find().streamRecords();
             
             
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -2150,10 +2008,10 @@ var stream = collection.find().streamRecords();
             
             
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">244</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">245</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -2182,6 +2040,28 @@ var stream = collection.find().streamRecords();
                   
                     
                       LinkedIn
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                    
+                      StackOverflow
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
                     
                 </a>
               </span>

@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova" />
+  <meta name="keywords" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography" />
 
 
 
@@ -94,16 +94,16 @@
 
 
 
-<meta name="description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta name="description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 <meta property="og:type" content="website">
 <meta property="og:title" content="大染志">
 <meta property="og:url" content="http://toozhao.com/page/10/index.html">
 <meta property="og:site_name" content="大染志">
-<meta property="og:description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta property="og:description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="大染志">
-<meta name="twitter:description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta name="twitter:description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 
 
 
@@ -225,22 +225,22 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
           </a>
         </li>
       
@@ -277,12 +277,321 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2011/04/12/html5-css3-javascript-coverflow/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2011/04/12/html5-css3-javascript-coverflow/" itemprop="url">Html5+CSS 3实现Cover Flow 动画特效(支持chrome、safari浏览器)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-04-12T00:00:00+08:00">
+                2011-04-12
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:46:55+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程之美/" itemprop="url" rel="index">
+                    <span itemprop="name">编程之美</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p><strong><span style="color: #ff6600;">更新：已经加入了javascript，现支持图片之间进行动态切换，大家enjoy吧！</span></strong></p>
+<p>下面将要给大家演示的这个东西，算是这几天的一个小小的成果吧，不过目前仅仅是静态的实现，还没有对其加上javascript 等控制。但是这个动画相比传统动画有一个很大的优点就是，动画的内容组成是可以是DIV，因此里面包含的内容可以是canvas 或者图片，甚至可能视频，等等，目前我还没有测试。理论上可以放进DIV 的东西都可以放到动画里面去。</p>
+</blockquote>
+<p><a href="/images/2011/04/s_conew1.jpg"><img class="size-full wp-image-2069 aligncenter" title="s_conew1" src="/images/2011/04/s_conew1.jpg" alt="" width="499" height="260"></a></p>
+<p>这个动画其实最关键的部分就是使用了一个最新的CSS  3 属性 animation，目前仅有webkit核心的浏览器支持这个特效。</p>
+<p>而在本动画中涉及的有：（动画的声明）</p>
+<blockquote>
+<div id="_mcePaste"><br>  -webkit-animation-name:junv;                    //动画名称<br></div>
+
+<div id="_mcePaste"><br>  -webkit-animation-duration:4s;                 //动画循环时间，单位为秒<br></div>
+
+<div id="_mcePaste"><br>  -webkit-animation-iteration-count:infinite;              //动画播放次数，infinite 表示 无线循环   也可以饿确定的数字<br></div>
+
+</blockquote>
+<div><br>  <span style="color: #ff0000;">注意：这里的” // ” 并不是CSS 的注释，这里这样写，只是为了方便。下面一样，不再重复说明。</span><br></div>
+
+<div><br></div>
+
+<blockquote>
+<div><br>  <span style="color: #000000;">@-webkit-keyframes’junv’{</span><br></div>
+
+<div><br>  from{<br></div>
+
+<div><br>  }<br></div>
+
+<div><br><br></div>
+
+<div><br>  to{<br></div>
+
+<div><br>  }<br></div>
+
+<div><br>  <span style="color: #000000;">}</span><br></div>
+
+</blockquote>
+<div><br>  上面的是动画的默认形式，<br></div>
+
+<div><br>  <blockquote><br>    <div><br>      @-webkit-keyframes’junv’{<br>    </div>
+
+<pre><code>&lt;div&gt;
+  from{           //设置动画起始状态的CSS
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  top:15px;
+&lt;/div&gt;
+
+&lt;div&gt;
+  left:-160px;
+&lt;/div&gt;
+
+&lt;div&gt;
+  -webkit-transform:   rotate(7deg) scale(0.4,0.75) skew(12deg,8deg);
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  }
+&lt;/div&gt;
+
+&lt;div&gt;
+  40%{
+&lt;/div&gt;
+
+&lt;div&gt;
+  //这是动画过程中 CSS ，  百分之多少，大家可以可以根据自己需要任意设置，数量也不限，设置得越多，对动画的人为控制也越多。
+&lt;/div&gt;
+
+&lt;div&gt;
+  top:62px;
+&lt;/div&gt;
+
+&lt;div&gt;
+  left:230px;
+&lt;/div&gt;
+
+&lt;div&gt;
+  -webkit-transform:  rotate(0deg) scale(1,1) skew(0deg,0deg);         //设置设置对象的形态， rotate 是旋转，跟的 单位度数，可为负数
+&lt;/div&gt;
+
+&lt;div&gt;
+  //scale 是放缩，分别对 x,y方向放缩倍数
+&lt;/div&gt;
+
+&lt;div&gt;
+  //skew 是旋转，即x轴方向旋转多少，y轴旋转多少 ，单位为度
+&lt;/div&gt;
+
+&lt;div&gt;
+  }
+&lt;/div&gt;
+
+&lt;div&gt;
+  70%{
+&lt;/div&gt;
+
+&lt;div&gt;
+  top:62px;
+&lt;/div&gt;
+
+&lt;div&gt;
+  left:230px;
+&lt;/div&gt;
+
+&lt;div&gt;
+  -webkit-transform:  rotate(0deg) scale(1,1) skew(0deg,0deg);
+&lt;/div&gt;
+
+&lt;div&gt;
+  }
+&lt;/div&gt;
+
+&lt;div&gt;
+  100%{
+&lt;/div&gt;
+
+&lt;div&gt;
+  top:12px;
+&lt;/div&gt;
+
+&lt;div&gt;
+  left:580px;
+&lt;/div&gt;
+
+&lt;div&gt;
+  -webkit-transform:  rotate(-7deg) scale(0.4,0.75) skew(-12deg,-8deg);
+&lt;/div&gt;
+
+&lt;div&gt;
+  }
+&lt;/div&gt;
+
+&lt;div&gt;
+  }
+&lt;/div&gt;
+</code></pre><p>  </p></blockquote><p></p>
+  <div><br>    这是具体在这个页面里面的代码。<br>  </div>
+
+  <div><br>  </div>
+
+  <div><br>    下面稍微解释一下，我之所以设置40%，和70%状态一样，为为了，让整个动画，可以在中间位置停留更长的时间。<br>  </div>
+
+  <div><br>    其他的东西先不多说了，我要回寝室睡觉了，大家有什么不懂的，或者想讨论的留言吧。！<br>  </div>
+
+<p>  <blockquote><br>    <h2><br>      示例（demo）：<a title="cover flow" href="http://toozhao.com/coverflow/" target="_blank">点我进入</a><br>    </h2><br>  </blockquote><br></p></div><p></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2011/04/04/a-good-gift/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -444,7 +753,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -616,7 +925,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -792,7 +1101,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -965,7 +1274,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1132,172 +1441,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2011/03/13/content-lost/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大染志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2011/03/13/content-lost/" itemprop="url">不好意思！博客被黑了，内容丢失了。</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-03-13T00:00:00+08:00">
-                2011-03-13
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:46:01+08:00">
-                2014-07-22
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/我说/" itemprop="url" rel="index">
-                    <span itemprop="name">我说</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>RT，也许今天下午太黑暗了，我的博客被黑了，而且数据全被删了，虽然我还原了单身3月一号以后的文章的图片还是丢失了，我现在也不想在我的电脑上去找。</p>
-<p>下午踢足球脚光荣负伤了，很痛，今天晚上特别痛。不知道今天晚上会不会因为这个而失眠。</p>
-<p>如果明天早上还是很痛，就只有不去上课了，</p>
-<p>可是还要想一个很重要的东西，或者说要做出一个原型！</p>
-<p>大家也多注意点安全，</p>
-<p>这几天都知道地球活动有点剧烈。</p>
-<p>希望各位同学都平平安安的，春天来了，一定要多去耍耍！</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2011/03/13/chrome-reader/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1461,12 +1610,172 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2011/03/13/content-lost/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2011/03/13/content-lost/" itemprop="url">不好意思！博客被黑了，内容丢失了。</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-03-13T00:00:00+08:00">
+                2011-03-13
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:46:01+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/我说/" itemprop="url" rel="index">
+                    <span itemprop="name">我说</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>RT，也许今天下午太黑暗了，我的博客被黑了，而且数据全被删了，虽然我还原了单身3月一号以后的文章的图片还是丢失了，我现在也不想在我的电脑上去找。</p>
+<p>下午踢足球脚光荣负伤了，很痛，今天晚上特别痛。不知道今天晚上会不会因为这个而失眠。</p>
+<p>如果明天早上还是很痛，就只有不去上课了，</p>
+<p>可是还要想一个很重要的东西，或者说要做出一个原型！</p>
+<p>大家也多注意点安全，</p>
+<p>这几天都知道地球活动有点剧烈。</p>
+<p>希望各位同学都平平安安的，春天来了，一定要多去耍耍！</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2011/03/09/css3html5google20-things-i-learned-about-browsers-and-the-web/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1632,7 +1941,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1791,169 +2100,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2011/03/05/background-images/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大染志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2011/03/05/background-images/" itemprop="url">一些适合做网站背景的五彩壁纸下载</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-03-05T00:00:00+08:00">
-                2011-03-05
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:45:41+08:00">
-                2014-07-22
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/我们爱分享/" itemprop="url" rel="index">
-                    <span itemprop="name">我们爱分享</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>如果各位也和我一样对网站的颜色搭配特别不敏感，如果各位也希望可以找到很漂亮的比较没有太多杂乱图案的壁纸用作网站的背景，那么今天给各位分享的一定就适合你啦。</p>
-</blockquote>
-<p>包内所含的图片的分辨率都是2000*2000的，应该是设计原稿吧，是jpg格式的，各位如果想要用作壁纸的需要自己再加工一下。毕竟文件太大了，每张图片几乎都是2M左右。</p>
-<p>包含如此多的颜色，应该够各位下载使用了吧。</p>
-<p>如果喜欢就支持我们把！</p>
-<p>其他废话就 不多说了。</p>
-<blockquote>
-<p>下载地址：<a href="http://u.115.com/file/t1e2944734" target="_blank">网盘下载</a></p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1992,11 +2138,11 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
                alt="Junv" />
           <p class="site-author-name" itemprop="name">Junv</p>
            
-              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova</p>
+              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -2006,7 +2152,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">304</span>
+                <span class="site-state-item-count">305</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2016,10 +2162,10 @@
             
             
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -2027,10 +2173,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">244</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">245</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -2059,6 +2205,28 @@
                   
                     
                       LinkedIn
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                    
+                      StackOverflow
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
                     
                 </a>
               </span>

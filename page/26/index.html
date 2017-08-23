@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova" />
+  <meta name="keywords" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography" />
 
 
 
@@ -94,16 +94,16 @@
 
 
 
-<meta name="description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta name="description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 <meta property="og:type" content="website">
 <meta property="og:title" content="大染志">
 <meta property="og:url" content="http://toozhao.com/page/26/index.html">
 <meta property="og:site_name" content="大染志">
-<meta property="og:description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta property="og:description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="大染志">
-<meta name="twitter:description" content="Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova">
+<meta name="twitter:description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
 
 
 
@@ -225,22 +225,22 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
           </a>
         </li>
       
@@ -277,12 +277,202 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2010/02/02/JAVA里面重要而基础的东西/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2010/02/02/JAVA里面重要而基础的东西/" itemprop="url">JAVA里面重要而基础的东西</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2010-02-02T23:00:21+08:00">
+                2010-02-02
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-09-01T21:38:45+08:00">
+                2014-09-01
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>其实JAVA是在C和C++上开发的，因此他们很多东西是类似的。下面就是我学习的过程中觉得一些很重要的东西，写下来吧。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><strong><font color="#0000FF">JAVA里面输出语句有两种。</font></strong></p>
+<p><strong><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>System.out.print(“……”);&nbsp;<br>这一个就相当于C里面的printf(“……”);</font></strong></p>
+<p><strong><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(“…….”);这一个就相当于printf(“……\n”);</font></strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>第一个使用命令行参数程序</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>public class new1{</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>public static void main (String[] args){</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>System.out.print(“Hi, “);</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>System.out.print(args[0]);</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>System.out.println(“.How are you?”);</p>
+<p>}</p>
+<p>}</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>编译命令为&nbsp;&nbsp; javac new1.java</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>java&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>new1&nbsp;&nbsp; alice</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>运行结果为&nbsp;&nbsp; Hi, alice. How are<br>you?</p>
+<p>&nbsp;&nbsp; <strong><font color="#0000FF">Integer.parseInt()是将String值转为int值。例如： int<br>a=Integer.parseInt(args[o]);</font></strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>比如这个整数的乘法与除法。</p>
+<p>&nbsp;&nbsp;</p>
+<p>&nbsp;public&nbsp; class new1</p>
+<p>{</p>
+<p>&nbsp;public static void main(String[] args)</p>
+<p>&nbsp;{</p>
+<p>&nbsp;&nbsp;int<br>a=Integer.parseInt(args[0]);</p>
+<p>&nbsp;&nbsp;int<br>b=Integer.parseInt(args[1]);</p>
+<p>&nbsp;&nbsp;int sum=a+b;</p>
+<p>&nbsp;&nbsp;int prod=a*b;</p>
+<p>&nbsp;&nbsp;int quot=a/b;</p>
+<p>&nbsp;&nbsp;int rem=a%b;</p>
+<p>&nbsp;&nbsp;System.out.println(a+”+”+b+”=”+sum);</p>
+<p>&nbsp;&nbsp;System.out.println(a+”*”+b+”=”+prod);</p>
+<p>&nbsp;&nbsp;System.out.println(a+”/“+b+”=”+quot);</p>
+<p>&nbsp;&nbsp;System.out.println(a+”%”+b+”=”+rem);</p>
+<p>&nbsp;&nbsp;System.out.println(a+”=”+quot+”*”+b+”=”+rem);</p>
+<p>&nbsp;}运行结果为：</p>
+<p>}<a href="http://b31.photo.store.qq.com/http_imgload.cgi?/rurl4_b=d41256b632232b48d8dd65aaab89838fde93ab16b7c163f5b37a370284a5e77288bf478e19a5c8d93fea1c1fa3fe75bcf9b193aa72165f8d4be37e0c652ecfa06f5523fc764b6a972781a338ed554fd293a5830b&amp;a=28&amp;b=31" target="_blank" rel="external"><img src="http://b31.photo.store.qq.com/http_imgload.cgi?/rurl4_b=d41256b632232b48d8dd65aaab89838fde93ab16b7c163f5b37a370284a5e77288bf478e19a5c8d93fea1c1fa3fe75bcf9b193aa72165f8d4be37e0c652ecfa06f5523fc764b6a972781a338ed554fd293a5830b&amp;a=28&amp;b=31" alt="图片"></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><strong><font color="#0000FF">这里需要说明的就是，a+,+b+,+quot.</font></strong></p>
+<p><strong><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>我们分析这句System.out.println(a+”%”+b+”=”+rem);</font></strong></p>
+<p><strong><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>就可以发现<br>这个a+,+b+,+quot.类似于C语言里面的取地址。而且它是成对称分布的。如果只有一个变量的话则按最后的变量形式输出。例如：+quot;</font></strong></p>
+<p><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><a target="_blank">\\\</a>然后需要说的就是强制转换类型。其形式是比如：（int）1.10就是将1.10转化为整型</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>还有几个容易混淆的：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>(int)11*0.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>结果为：&nbsp;&nbsp; 3.3</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>11*(int)0.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>结果为：&nbsp; 0</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>(int)(11*0.3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>结果为：3</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>通过比较就可以看出区别了。</p>
+<p>下面是强制转换整型的一个例子得到随机整数：</p>
+<p>public&nbsp; class new2{</p>
+<p>&nbsp;public static void main(String[] args){</p>
+<p>&nbsp;&nbsp;int<br>n=Integer.parseInt(args[0]);</p>
+<p>&nbsp;&nbsp;double<br>r=Math.random();//产生0到1之间的随机数。</p>
+<p>&nbsp;&nbsp;int x=(int)(r*n);<br>//产生0到n-1之间的随机数。</p>
+<p>&nbsp;&nbsp;System.out.println(“Your random<br>number integer is:”+x);</p>
+<p>&nbsp;}</p>
+<p>}<a href="http://b31.photo.store.qq.com/http_imgload.cgi?/rurl4_b=1cd8a98831d7e0027dc0462ed206bd35082ca154ce27b2712a124653120c1efbc61b10e82ebdbefeb8269aa616ce14cf8b97cff44f304a26019d572a8b387b322cdf0f769d15abe6c32d96689423c607c67e2ab1&amp;a=28&amp;b=31" target="_blank" rel="external"><img src="http://b31.photo.store.qq.com/http_imgload.cgi?/rurl4_b=1cd8a98831d7e0027dc0462ed206bd35082ca154ce27b2712a124653120c1efbc61b10e82ebdbefeb8269aa616ce14cf8b97cff44f304a26019d572a8b387b322cdf0f769d15abe6c32d96689423c607c67e2ab1&amp;a=28&amp;b=31" alt="图片"></a>运行结果。</p>
+<p>我看书上有一个数的自动提升，我大概懂。它有这样一句话，“你可以使用任何基本数值类型的数据，这些数据类型有用户希望的，很大的取值范围。因为Java自动将这些类型转换到更大的范围。”</p>
+<p>同样有个例子。<strong><font color="#0000FF">b,c<br>都是int类型的。&nbsp; b<em>b-4.0</em>c这个系统会自动将b,c<br>变到double类型再进行计算，最后的结果是double类型的。如果你想得到int<br>类型的，则需要将4.0改为4.则可。</font></strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>好了就写这么多哦，哎，其实写这些好累人哦，但是仍然希望我可以坚持下去，这相当是我在重新学习一遍这些东西，一定对我有很大的帮助。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>加油。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2010/02/02/Hello-World!JAVA-我来了/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -430,7 +620,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -563,7 +753,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -720,7 +910,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -861,7 +1051,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1003,7 +1193,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1195,7 +1385,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1337,7 +1527,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1472,7 +1662,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junv">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1589,153 +1779,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2009/10/25/传媒中心我把你开除了——我自我安慰地说。-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大染志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/10/25/传媒中心我把你开除了——我自我安慰地说。-1/" itemprop="url">传媒中心我把你开除了——我自我安慰地说。</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-10-25T18:30:44+08:00">
-                2009-10-25
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-09-01T21:36:59+08:00">
-                2014-09-01
-              </time>
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>故事的开始有一个美丽的开始，却没有一个完美的结尾。</p>
-<p>到文新学院传媒中心当摄影记者，是我怎么都没有想过的，然后由于学姐的出现，让我有了这样一个美好的开端。不好意思，我的确是走的后门，没有经过正式的考核，也不能进行正式的考核（由于我不是他们学院的），也许正是这没有考核，成为了该死的导火索（当然也许和这个完全没有关系。），我又想多了。</p>
-<p><font face="Calibri" style="line-height:1.3em;">&nbsp;&nbsp;&nbsp;&nbsp;</font><wbr>说说我是怎么进去的吧。（似乎我记得不是很清楚）是我和学姐聊天的时候，无意聊到她是传媒中心的，然后·······我记不清了。反正是学姐给他们学院的院长，书记说了，然后我才加进去的。（学姐在这里真的要好好的感谢你<font face="Calibri" style="line-height:1.3em;">,</font><wbr>然后我让你失望了，不好意思）</p>
-<p>细数起来，我一共拍了<font face="Calibri" style="line-height:1.3em;">5</font><wbr>个新闻吧。哎其中有些也不是我一个人拍的。这其中的新闻有大新闻当然也有小新闻。怎么说呢，我努力了，然后部长说我几次都没什么进步，老实说我不服气。说实话我有时候拍的照片确实没有主题，我承认，我后已经在改变了，我觉得后两次新闻我都是认真的拍。倒数第二次吧，当时就感觉到这个会议不好拍，为什么呢，因为那个房间不大，而且他们开会时做的椭圆形，我要找一个地方把他们全部都照下来，真的很困难，而且那间会议室没有开灯，光线也不好。至于最后一次嘛。我个人觉得是我拍得最好的一次了，看到那篇新闻几乎都是用的我拍的，而不是另外的，也许这是最后的一丝慰藉。</p>
-<p>有个事情我必须要说哈，管它影响怎么样。就是我被训，也是唯一一次被人这样指手画脚而且我还没发火（为了这个记者，我已经改变了很多）。但是老实说我受不了被人这样说，说我莫得啥子啥子感觉，我说我可以学噻，他说有些东西是学不到的。我只能说当时有好不爽···但是我什么也没用狡辩，我忍了，我真的要说好难得。以后再也不会有人对我这样说了。说到这又想起些许，是在最后一次执行任务吧，在最后任务的最后时刻，你知道被人这样说的感觉吗<font face="Calibri" style="line-height:1.3em;">?</font><wbr>“<font face="Calibri" style="line-height:1.3em;">XXX</font><wbr>，这次任务比较重要，你吧这个给<font face="Calibri" style="line-height:1.3em;">XX</font><wbr>拍嘛。”这个感觉也许就是当兵<font face="Calibri" style="line-height:1.3em;">&nbsp;</font><wbr>的人被人把枪夺了的感觉吧，最根本还是不信任吧。老实说真的很打击人。在我以前从来没有被人这样不信任过，有的话都是别人信任我，而我自己选择逃避，而现在“终于”被人不信任了。</p>
-<p>传媒中心我把你开除了——我自我安慰地说。</p>
-<p>下面要说说在传媒中心的一些人吧。</p>
-<p>当然，学姐你又是第一个，因为我要感谢你，感谢你让我加入那个大家庭，虽然时间短暂，但是我看到了很多东西，学到了很多。</p>
-<p>罗岚姐，和你一起去拍过三次新闻，真的下来感觉你人很好。很友善，也教了我一些东西，谢谢。</p>
-<p>邓志娟部长，允许我现在还这样叫你哈。反正还是谢谢你的照顾嘛。有时候你怕伤到我太间接了，其实我还是喜欢直接点，因为我是急性子，不喜欢憋到起。</p>
-<p>还有邓丹，贺悦，还有视频部那天在<font face="Calibri" style="line-height:1.3em;">DV</font><wbr>大赛和我一起拍照的那个兄弟（不好意思，还晓不到名字）。。。认识你们很高兴。</p>
-<p>要离开这个集体了，有舍不得，当然更多的是失落（因为我试被走的，但是我想说的是我不服气）。不舍这里的人，不舍的还有······</p>
-<p>最后就当个“怨妇”嘛，我不服气，难道我这么几次没有进步，难道我不适合做这个？我不相信是这样的。</p>
-<p>哎，也许真的我应该更多的去从事和我自己专业有关的事了，<font face="Calibri" style="line-height:1.3em;">Junv</font><wbr>啊美好的未来喊你回家吃饭了······</p>
-<p>想知道我的理想吗，我的理想是开一个<font face="Calibri" style="line-height:1.3em;">google</font><wbr>这样的公司。当然这个是相当困难的，也许就是一个梦，但是谁说他没有可能呢。心有多大，舞台就有多大。。。</p>
-<p>传媒中心我把你开除了——我自我安慰地说。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1774,11 +1817,11 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
                alt="Junv" />
           <p class="site-author-name" itemprop="name">Junv</p>
            
-              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java, Git, Docker, CI, CD, HTML5, 创新, 拍照, 创业, Cordova</p>
+              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -1788,7 +1831,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">304</span>
+                <span class="site-state-item-count">305</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1798,10 +1841,10 @@
             
             
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -1809,10 +1852,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">244</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">245</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -1841,6 +1884,28 @@
                   
                     
                       LinkedIn
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                    
+                      StackOverflow
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
                     
                 </a>
               </span>
