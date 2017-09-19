@@ -277,6 +277,258 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/01/19/use-maven-deploy-totomcat-7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2012/01/19/use-maven-deploy-totomcat-7/" itemprop="url">使用maven部署项目到tomcat 7</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-01-19T00:00:00+08:00">
+                2012-01-19
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:49:56+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/maven/" itemprop="url" rel="index">
+                    <span itemprop="name">maven</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="/images/2012/01/tomcat.gif"><img class="size-full wp-image-1982 aligncenter" title="tomcat" alt="" src="/images/2012/01/tomcat.gif" width="146" height="92"></a></p>
+<p>上一篇文章，我们讲了maven的简单入门应用，其实最详尽的文档还是应该看官方的document。我想其他人在网上写都是一些细节上的解释和补充。或者干脆就是简单的大致的描述。</p>
+<p>今天我想分享的是使用maven插件部署we项目到tomcat 7 中运行。之前如果我们没有使用maven,那么我想很多人都是使用的eclipse自带的run on server中选择tomcat，将web项目部署到tomcat中实现自动部署和运行。我想maven本身强大也在于，我们可以写很多插件（plugin）来扩展maven的功能，实现各种自动化的操作。下面进入正题。</p>
+<p>对于使用maven插件部署项目到tomcat 6中，网上已经有很多说明。对tomcat 7由于推出不久，笔者今天弄的时候，也在网上找了很多资料感觉都说得不好，或者不能解决问题，于是今天我们来讲这个。（<span style="color: #ff0000;">下面Tomcat 均指Tomcat 7</span>）</p>
+<p>tomcat maven plugin 插件已经从codehaus 转到Tomcat官网了，以前的codehaus只支持tomcat 6.这里我们需要使用最新的<a href="http://tomcat.apache.org/maven-plugin.html" target="_blank">tomcat maven plugin</a>. 该插件的pom为，即是在pom.xml加入：</p>
+<pre class="brush: xml; highlight: [12,13,14,15]; title: ; notranslate" title="">&lt;pluginManagement&gt;
+      &lt;plugins&gt;
+        &lt;plugin&gt;
+          &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;
+          &lt;artifactId&gt;tomcat6-maven-plugin&lt;/artifactId&gt;
+          &lt;version&gt;2.0-SNAPSHOT&lt;/version&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+          &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;
+          &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;
+          &lt;version&gt;2.0-SNAPSHOT&lt;/version&gt;
+              &lt;configuration&gt;
+                 &lt;url&gt;http://localhost:8080/manager/html&lt;/url&gt;
+                 &lt;server&gt;tomcat&lt;/server&gt;
+             &lt;/configuration&gt;
+        &lt;/plugin&gt;
+      &lt;/plugins&gt;
+    &lt;/pluginManagement&gt;
+</pre>
+
+<p>这样写的目的是既支持tomcat 6 也支持tomcat 7.虽说这个插件是2.0-snapshot版本，不太稳定，不过我试的时候没有遇到任何问题，可以放心使用。(红色部分我们将在下面解释)</p>
+<p>下面我们需要在插件仓库（plugin repositories）和普通仓库（repositories）中添加以下仓库到pom.xml:</p>
+<p><strong>repository:</strong></p>
+<pre class="brush: xml; title: ; notranslate" title="">&lt;repository&gt;
+      &lt;id&gt;people.apache.snapshots&lt;/id&gt;
+      &lt;url&gt;http://repository.apache.org/content/groups/snapshots-group/&lt;/url&gt;
+      &lt;releases&gt;
+        &lt;enabled&gt;false&lt;/enabled&gt;
+      &lt;/releases&gt;
+      &lt;snapshots&gt;
+        &lt;enabled&gt;true&lt;/enabled&gt;
+      &lt;/snapshots&gt;
+    &lt;/repository&gt;
+</pre>
+
+<p><strong>plugin repository:</strong></p>
+<pre class="brush: xml; title: ; notranslate" title="">&lt;pluginRepository&gt;
+      &lt;id&gt;apache.snapshots&lt;/id&gt;
+      &lt;name&gt;Apache Snapshots&lt;/name&gt;
+      &lt;url&gt;http://repository.apache.org/content/groups/snapshots-group/&lt;/url&gt;
+      &lt;releases&gt;
+        &lt;enabled&gt;false&lt;/enabled&gt;
+      &lt;/releases&gt;
+      &lt;snapshots&gt;
+        &lt;enabled&gt;true&lt;/enabled&gt;
+      &lt;/snapshots&gt;
+    &lt;/pluginRepository&gt;
+</pre>
+
+<p>这样做的目的是为了保证maven能够下载到maven tomcat plugin。而且是从上述的仓库。</p>
+<p>为了成功执行maven 部署 我们需要开启tomcat支持 admin-script，manager-gui的权限。</p>
+<p>admin-script:是让tomcat支持以脚本的形式来管理</p>
+<p>manager-gui:是让tomcat支持图形化的管理界面。</p>
+<p>打开tomcat的安装目录的 conf/tomcat-users.xml</p>
+<p>添加以下内容：</p>
+<pre class="brush: xml; title: ; notranslate" title="">&lt;role rolename="admin-script"/&gt;
+&lt;role rolename="manager-gui"/&gt;
+&lt;user username="admin" password="admin" roles="manager-gui,admin-script"/&gt;
+</pre>
+
+<p>这里请自行改变用户名和密码。</p>
+<p>接下来我们还需要配置一下maven，给他添加一个服务器和相关配置，在maven安装目录下的conf/settings.xml添加如下内容。</p>
+<pre class="brush: xml; title: ; notranslate" title="">&lt;!--Tomcat 7 server --&gt;
+     &lt;server&gt;
+            &lt;id&gt;tomcat&lt;/id&gt;
+            &lt;username&gt;admin&lt;/username&gt;
+            &lt;password&gt;admin&lt;/password&gt;
+     &lt;/server&gt;
+</pre>
+
+<p>注意：这里的id需要和上面用醒目绿色标记的ID一致，用户名和密码需要和tomcat里面设置的用户名和密码相同。</p>
+<p>这里在解释一下，上面红色部分的地址的是因为tomcat7中的部署地址变成了</p>
+<pre class="brush: plain; title: ; notranslate" title="">http://localhost:8080/manager/html</pre>
+
+<p>好了，配置我们就做好了，在部署之前，当然我们需要打开tomcat服务器。tomcat 7部署请使用命令:</p>
+<pre class="brush: xml; title: ; notranslate" title="">mvn tomcat7:deploy
+</pre>
+
+<p>在eclipse只需要在goal中填入 <strong>tomcat7：deploy</strong> 即可。<br>不出意外，应该就可以部署成功了。<br>童鞋们，试试吧。有什么疑问以及文中的缺点，请指出。谢谢。</p>
+<p>如果出现以下错误，请按照本文章验证，就可以搞定了。</p>
+<blockquote>
+<p>Failed to execute goal org.codehaus.mojo:tomcat-maven-plugin:1.0:deploy (default-cli) on project my-webapp: Cannot invoke Tomcat manager: Server returned HTTP response code: 403 for URL:</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/01/12/maven-study-case-one/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2078,189 +2330,6 @@ app.post('/login',function(req,res){
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2011/10/29/node-js-web-express/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大染志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2011/10/29/node-js-web-express/" itemprop="url">Node.js web框架express入门（1）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-10-29T00:00:00+08:00">
-                2011-10-29
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:49:04+08:00">
-                2014-07-22
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/node-js/" itemprop="url" rel="index">
-                    <span itemprop="name">node.js</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>从我自己现在学校node.js说了解的情况，我觉得node.js至少比Java简单不少。使用node.js的诸多第三方框架更是让node.js简单了不少。其实express 框架几天前我就看了一些。也写了一些例子。虽然没有完全掌握，但是我想在这里和大家一起分享我学到的知识，也算是一种记录。</p>
-<p>首先，当然我们也得安装express 的module</p>
-<pre class="brush: xml; title: ; notranslate" title="">npm install express</pre>
-
-<p>接下来我们就是可以开始写一个简单的程序了。</p>
-<pre class="brush: jscript; title: ; notranslate" title="">var express = require('express'); //导入module
- var app = express.createServer(); //创建并返回一个express的server对象
- app.get('/',function (req,res){ //为跟地址目录设置路由，并且监听get方法。
-       res.send("Hello,World"); //向浏览器返回hello world
-  });
- app.listen(4000); //设置服务器监听4000端口
-</pre>
-
-<p>运行程序，然后再浏览器中输入localhost:4000试试，是不是出现了hello world了。当然这只是一个最简单的程序。下面我们可以再多做一些。</p>
-<p>这里需要说明一下。默认的，系统将在您的请求处理中，在此例里面即在app.get();里面为你添加下面两句话</p>
-<pre class="brush: jscript; title: ; notranslate" title="">res.charset='utf-8';         //系统默认的res.send()和res.render（）都默认采用utf-8编码
-    res.contentType('Text/html');      //系统提供默认为Text/Html的Content-Type
-</pre>
-
-<p>接下来，我们将通过链接中的地址获取请求内容</p>
-<p>在程序中加入一段代码如下</p>
-<pre class="brush: jscript; title: ; notranslate" title="">app.get('/hello/:name',function (req,res){
-       //如果你在地址栏中输入如下/hello/Junv.那么你将在页面中看到name=======Junv
-      //'/hello/:name'中的name相当于定义一个变量name，并且把我们输入的名字赋值给他。
-       res.send('name======'+req.params.name);
-});
-</pre>
-
-<p>试试看看吧。成功了吧！</p>
-<p>对不起，写着写着觉得很别扭。今天就写到这里吧。下次在继续吧。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2313,7 +2382,7 @@ app.post('/login',function(req,res){
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">305</span>
+                <span class="site-state-item-count">306</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

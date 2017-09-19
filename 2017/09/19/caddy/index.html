@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="说到Web 服务器，我们大多想到的是 Apache 这个老前辈和如日中天的Nginx，但是这里今天我将要分享的是 Web 服务器和反向代理服务器的新秀 Caddy。在我们拥有了这么强大的 Nginx 以后我们为什么还需要 Caddy？我认为 Caddy 之所以可以占有一席之地是因为它的两大法宝：配置简单 和 自动启用 HTTPS。下面带下面快速上手这个软件。 安装Caddy 提醒定制化的下载，可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="快速上手更简单的 Web 服务器 —— Caddy">
+<meta property="og:url" content="http://toozhao.com/2017/09/19/caddy/index.html">
+<meta property="og:site_name" content="大染志">
+<meta property="og:description" content="说到Web 服务器，我们大多想到的是 Apache 这个老前辈和如日中天的Nginx，但是这里今天我将要分享的是 Web 服务器和反向代理服务器的新秀 Caddy。在我们拥有了这么强大的 Nginx 以后我们为什么还需要 Caddy？我认为 Caddy 之所以可以占有一席之地是因为它的两大法宝：配置简单 和 自动启用 HTTPS。下面带下面快速上手这个软件。 安装Caddy 提醒定制化的下载，可">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://wx2.sinaimg.cn/mw1024/49fcaea6gy1fjp0hua3q1j20yp0l7dzc.jpg">
+<meta property="og:updated_time" content="2017-09-19T09:50:51.177Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="快速上手更简单的 Web 服务器 —— Caddy">
+<meta name="twitter:description" content="说到Web 服务器，我们大多想到的是 Apache 这个老前辈和如日中天的Nginx，但是这里今天我将要分享的是 Web 服务器和反向代理服务器的新秀 Caddy。在我们拥有了这么强大的 Nginx 以后我们为什么还需要 Caddy？我认为 Caddy 之所以可以占有一席之地是因为它的两大法宝：配置简单 和 自动启用 HTTPS。下面带下面快速上手这个软件。 安装Caddy 提醒定制化的下载，可">
+<meta name="twitter:image" content="https://wx2.sinaimg.cn/mw1024/49fcaea6gy1fjp0hua3q1j20yp0l7dzc.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://toozhao.com/2017/09/19/caddy/"/>
+
+
+
+
+
+  <title>快速上手更简单的 Web 服务器 —— Caddy | 大染志</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-5243064-16', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">大染志</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">想要玩得很 High 的程序员</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2017/09/19/caddy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">快速上手更简单的 Web 服务器 —— Caddy</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-19T16:23:53+08:00">
+                2017-09-19
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-19T17:50:51+08:00">
+                2017-09-19
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://wx2.sinaimg.cn/mw1024/49fcaea6gy1fjp0hua3q1j20yp0l7dzc.jpg" alt="Caddy"></p>
+<p>说到Web 服务器，我们大多想到的是 Apache 这个老前辈和如日中天的Nginx，但是这里今天我将要分享的是 Web 服务器和反向代理服务器的新秀 Caddy。在我们拥有了这么强大的 Nginx 以后我们为什么还需要 Caddy？<br>我认为 Caddy 之所以可以占有一席之地是因为它的两大法宝：<code>配置简单</code> 和 <code>自动启用 HTTPS</code>。下面带下面快速上手这个软件。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>Caddy 提醒定制化的下载，可以自由选择各种插件和平台。请前往: <a href="https://caddyserver.com/download" target="_blank" rel="external">https://caddyserver.com/download</a> 下载。 也可以使用这个一键安装脚本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://getcaddy.com | bash</div></pre></td></tr></table></figure></p>
+<p>完成之后，我们可以尝试执行下<code>caddy -version</code>。 当你看到有有类似：<code>Caddy 0.10.9</code>，即表示安装成功。</p>
+<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p>在命令行里面直接输入<code>caddy</code>，然后打开浏览器输入： <code>http://ip:2015</code>。 看到什么了吗？ 你得到了一个404页面。Caddy 已经成功运行了。相比与其他浏览器需要各种配置文件才能运行相比，这就是 Caddy 的简单之处，不需要任何配置文件即可运行。当然当我们需要各种高级功能的时候，配置文件还是必不可少的。</p>
+<p>默认情况下，Caddy 运行在<code>2015</code> 端口。我们可以可以 Caddy 强大的命令行工具来自定义运行端口。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">caddy -p 80</div></pre></td></tr></table></figure></p>
+<p>在无配置文件的情况下，Caddy 默认是映射当前程序执行的目录所有文件。因此我们可以快速创建一个文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="string">"&lt;h1&gt;Hello Caddy&lt;/h1&gt;"</span> &gt;&gt; index.html</div></pre></td></tr></table></figure></p>
+<p>再次刷新浏览器，刚才我们写的 <code>Hello Caddy</code> 已经出现在页面上了</p>
+<h2 id="强大的配置文件"><a href="#强大的配置文件" class="headerlink" title="强大的配置文件"></a>强大的配置文件</h2><p>Caddy 各种强大的功能还得需要 Caddyfile 体现。我们可以在任意目录放置我们的配置文件,通过命令行<code>caddy -conf</code> 即可指定</p>
+<h3 id="Host-目录下的网页"><a href="#Host-目录下的网页" class="headerlink" title="Host 目录下的网页"></a>Host 目录下的网页</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">0.0.0.0:8080 &#123;</div><div class="line">  root /usr/local/www/</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这里简单解释下，<code>0.0.0.0</code> 表示我们将网站绑定至可以访问到本机的任意一个 IP；<code>8080</code>表示我们将网站暴露在8080端口； <code>root</code> 参数则表示网站的根节点。这就是最简单的一个Host 网站的配置。</p>
+<p>当前我们可以对网站添加更多的配置。比如设置响应过期时间，启用 gzip, 指定各种日志的输出端。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">0.0.0.0:8080 &#123;</div><div class="line">  root /usr/<span class="built_in">local</span>/www/</div><div class="line">  timeouts 30s</div><div class="line">  gzip</div><div class="line">  <span class="built_in">log</span> /var/<span class="built_in">log</span>/caddy/access.log</div><div class="line">  errors /var/<span class="built_in">log</span>/caddy/error.log</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="配置反向代理"><a href="#配置反向代理" class="headerlink" title="配置反向代理"></a>配置反向代理</h3><p>什么时候你会需要反向代理呢？想象你有一个前后端分离的程序。前端是通过 JS 发送 Ajax 请求后端 API。默认情况下前端程序占用一个端口，后端占用一个另外端口。我们会遇到两个问题： CORS（跨域请求）和额外的 Options 请求。 这个时候我们就可以使用反向代理让前端和后端共享一个端口。</p>
+<p>那怎么做呢，在 Caddy 里面也特别简单，假设我们的前端就是上面的那样，而我们的后面之前都运行在：<code>http://ip:4000</code> 下面。而且我们的 后端 API URL 里面都有 <code>/api</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">0.0.0.0:8080/api &#123;</div><div class="line">    proxy / 127.0.0.0:4000/api &#123;</div><div class="line">        transparent</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这里的配置的意思是说，当浏览器收到所有包含<code>:8080/api</code> 的请求都会自动转发到<code>127.0.0.1:4000/api</code> 这个地址，而<code>:8080/api</code> 后面的地址会自动转发下去，而<code>transparent</code> 这个设置保证了我们的转发不会在浏览器生成任何额外的<code>301</code> 或者<code>302</code>请求。</p>
+<h2 id="自动-HTTPS"><a href="#自动-HTTPS" class="headerlink" title="自动 HTTPS"></a>自动 HTTPS</h2><p>Caddy 另外一个亮点就是，可以为已经<code>绑定域名</code>的在<code>公网</code>运行的服务器自动从 Let’s Encrypt生成和下载 HTTPS 证书，让你的网站支持 HTTPS 协议访问，保证网站数据传输的安全。很简单，你所需的仅仅是将绑定的 IP 改成域名。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">xxx.com &#123;</div><div class="line">  root /usr/<span class="built_in">local</span>/www/</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>再次运行Caddy，按照提示输入你的 Email 之后。Caddy 会自动帮你获取并启用 HTTPS 证书。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">root@ss2:~<span class="comment"># caddy -conf Caddyfile</span></div><div class="line">Activating privacy features...</div><div class="line">Your sites will be served over HTTPS automatically using Let<span class="string">'s Encrypt.</span></div><div class="line"><span class="string">By continuing, you agree to the Let'</span>s Encrypt Subscriber Agreement at:</div><div class="line">  https://acme-v01.api.letsencrypt.org/terms</div><div class="line">Please enter your email address so you can recover your account <span class="keyword">if</span> needed.</div><div class="line">You can leave it blank, but you<span class="string">'ll lose the ability to recover your account.</span></div><div class="line"><span class="string">Email address: xxxx@gmail.com</span></div><div class="line"><span class="string"> done.</span></div><div class="line"><span class="string">https://xxx.com</span></div><div class="line"><span class="string">http://xxx.com</span></div></pre></td></tr></table></figure></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过上面的例子，我们可以看出 Caddy的快速上手能力和超级实用的 HTTPS 功能。除此之前 Caddy 还提供一大堆的插件供我们使用。比如直接访问 Markdown 文件、Host Git 仓库的文件、将自身 Metric 数据传到 Prometheus 等等。快去试试吧！</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/23/vscode-golang/" rel="next" title="使用 VS Code 快速搭建你的 Golang 开发 IDE">
+                <i class="fa fa-chevron-left"></i> 使用 VS Code 快速搭建你的 Golang 开发 IDE
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
+               alt="Junv" />
+          <p class="site-author-name" itemprop="name">Junv</p>
+           
+              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">306</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">69</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">245</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wahyd4" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/junwei-zhao-46944557" target="_blank" title="LinkedIn">
+                  
+                    <i class="fa fa-fw fa-linkedin"></i>
+                  
+                    
+                      LinkedIn
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                    
+                      StackOverflow
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-World"><span class="nav-number">2.</span> <span class="nav-text">Hello World</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#强大的配置文件"><span class="nav-number">3.</span> <span class="nav-text">强大的配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Host-目录下的网页"><span class="nav-number">3.1.</span> <span class="nav-text">Host 目录下的网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置反向代理"><span class="nav-number">3.2.</span> <span class="nav-text">配置反向代理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动-HTTPS"><span class="nav-number">4.</span> <span class="nav-text">自动 HTTPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Junv</span>
+
+  
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

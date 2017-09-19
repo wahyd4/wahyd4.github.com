@@ -277,6 +277,178 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2010/02/03/Java双重循环的典型应用（九九乘法表）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2010/02/03/Java双重循环的典型应用（九九乘法表）/" itemprop="url">Java双重循环的典型应用（九九乘法表）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2010-02-03T11:02:38+08:00">
+                2010-02-03
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-09-01T21:31:16+08:00">
+                2014-09-01
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;刚才正好在看JAVA的双重循环这一块，然后突然就想到了很经典的九九乘法表。因为我们之前C语言里面也写过这样的程序。所以我就试着写这个程序。确实在试的过程中还是发现很多问题和值得注意的地方。下面慢慢说来。</p>
+<p>&nbsp;&nbsp;用JAVA写的九九乘法表。</p>
+<p><font color="#0000FF" style="line-height:1.3em;">**<wbr>&nbsp;&nbsp;public&nbsp;&nbsp;class&nbsp;new4&nbsp;</font></p>
+<p>{</p>
+<p>&nbsp;public&nbsp;static&nbsp;void&nbsp;main(String[]&nbsp;args)&nbsp;</p>
+<p>&nbsp;{</p>
+<p>&nbsp;&nbsp;int&nbsp;a,b,s;</p>
+<p>&nbsp;&nbsp;for&nbsp;(a=1;a&lt;=9&nbsp;;a++&nbsp;)</p>
+<p>&nbsp;&nbsp;{</p>
+<p>&nbsp;&nbsp;&nbsp;for(b=1;b&lt;=a;b++)</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s=a*b;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(a+”*”+b+”=”+s);</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(“&nbsp;&nbsp;”);</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println();</p>
+<p>&nbsp;&nbsp;}</p>
+<p>&nbsp;&nbsp;</p>
+<p>&nbsp;}</p>
+<p>}<br>**<wbr><wbr><font color="#000000" style="line-height:1.3em;">用C语言写的九九乘法表</font><wbr></p>
+<p>**<wbr><font color="#0000FF" style="line-height:1.3em;">#include&nbsp;”stdio.h”&nbsp;&nbsp;&nbsp;&nbsp;//九九乘法表。</font></p>
+<p>void&nbsp;main()</p>
+<p>{</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;i,j,s;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(i=1;i&lt;=9;i++)</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(j=1;j&lt;=i;j++)</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;s=i*j;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf&nbsp;(“%d*%d=%-4d”,i,j,s);</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf&nbsp;(“\n”)&nbsp;;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p>&nbsp;&nbsp;&nbsp;</p>
+<p>}<wbr>**<wbr></p>
+<p>&nbsp;<wbr><img src="http://img.bimg.126.net/photo/Qq_PXIya9rduD-DBLMyd_Q==/5671720780721238163.jpg" alt="Java双重循环的典型应用（九九乘法表） - wahyd4 - 龙的博客" title="Java双重循环的典型应用（九九乘法表） - wahyd4 - 龙的博客"><wbr>这个是没用使用空格</p>
+<p><wbr><img src="http://img.bimg.126.net/photo/APft0EoQVcSefNmqxzr9kw==/5671720780721238166.jpg" alt="Java双重循环的典型应用（九九乘法表） - wahyd4 - 龙的博客" title="Java双重循环的典型应用（九九乘法表） - wahyd4 - 龙的博客"><wbr>这个是使用了空格，但是没有左对齐。</p>
+<p><font color="#0000FF" style="line-height:1.3em;"><strong><wbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000" style="line-height:1.3em;">其实通过比较我们就可以很容易看到，这个&nbsp;程序JAVA和C的代码都是差不多的。只是细节上有一些变化。有个不同就是我不不知道JAVA里面有没有类似</font><wbr></strong><wbr><font color="#0000FF" style="line-height:1.3em;"><strong><wbr>&nbsp;printf&nbsp;(“%d*%d=%-4d”,i,j,s);这样的语句。即实现左对齐。</strong><wbr></font><wbr></font><wbr><font color="#000000" style="line-height:1.3em;">于是我在JAVA里面想到了这样一个办法。再输出一行，让它打印空格就好。</font><wbr></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<em>*<wbr><font color="#0000FF" style="line-height:1.3em;">&nbsp;System.out.print(a+”</font></em>“+b+”=”+s);</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(“&nbsp;&nbsp;”);<wbr>**<wbr></p>
+<p>&nbsp;<strong><wbr><font color="#0000FF" style="line-height:1.3em;">当然我也试过这样一种方法。即System.out.print(a+”*”+b+”=”+s&nbsp;“&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;”)但是通过编译发现这样是行不通的。</font><wbr></strong><wbr></p>
+<p><strong><wbr><font color="#0000FF" style="line-height:1.3em;">&nbsp;&nbsp;&nbsp;还有一个就是我晓得了那个String&nbsp;()agrs&nbsp;.它其实就是一个数组其实相当于是程序比不可少的东西，不管怎样你都要写出来，但是你还是可以选择不在程序里面使用它。</font><wbr></strong><wbr><br>.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2010/02/02/JAVA里面重要而基础的东西/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1644,141 +1816,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2009/11/07/流感来袭/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大染志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/11/07/流感来袭/" itemprop="url">流感来袭</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-11-07T00:24:58+08:00">
-                2009-11-07
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-09-01T21:31:16+08:00">
-                2014-09-01
-              </time>
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>流感来袭，很不幸昨天晚上我不知不觉地倒下了，遭传染了，不过我相信我得的不是甲流，应该是普通的流感。</p>
-<p>哎，今天一天都好恼火哦，上午鼻子不通，下午流清鼻涕，晚上鼻子又不通，到现在仍然不通，真的感受到痛苦了，我都好久没有这样生病过了…我郁闷啊。</p>
-<p>最近这两天可能还要写一两篇日志，是关于最近的生活上的一些感受嘛。反正哦现在体会到了一些，我这两个月成熟得比高中三年都还多。还有就是很多女生变得比你想象的要快！</p>
-<p>哎，不写多了，明天事还很多，晚上还要去联谊，可是有很多美女啊，是编导班的…哈哈，刚好和我们互补…<br>.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1831,7 +1868,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">305</span>
+                <span class="site-state-item-count">306</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

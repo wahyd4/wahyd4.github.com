@@ -277,6 +277,249 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/07/04/java-create-git-repository/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2012/07/04/java-create-git-repository/" itemprop="url">JAVA创建git仓库</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-07-04T00:00:00+08:00">
+                2012-07-04
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:50:43+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="/images/2012/07/logo.png"><img class="size-full wp-image-2051 aligncenter" title="logo" src="/images/2012/07/logo.png" alt="" width="110" height="46"></a></p>
+<p>我们通常使用git都是使用的git的客户端，比如linux下的脚本。其实windows下也是间接使用linux脚本来进行操作。不过在现在有完全使用java语言实现的git：<a title="jgit" href="http://www.eclipse.org/jgit/" target="_blank">JGIT</a>。我们可以通过jgit来完成我们所有的git操作。</p>
+<p>下面我将简单些一个例子来说明，使用java来创建一个git仓库，并且为仓库添加一个远端仓库地址。如果通过git脚本来执行，那么语句就是：</p>
+<pre class="brush: xml; title: ; notranslate" title="">git init
+
+git remote add git://XXXXXX
+
+</pre>
+
+<p>首先我们需要下载<a href="http://download.eclipse.org/jgit/maven/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r/org.eclipse.jgit-2.0.0.201206130900-r.jar" target="_blank" rel="external">org.eclipse.jgit.jar</a> 包，并将其加入eclipse 的classpath中（当然这里使用eclipse来完成操作）。示例代码为：</p>
+<pre class="brush: java; title: ; notranslate" title="">package com.toozhao.git;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
+
+import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.api.InitCommand;
+import org.eclipse.jgit.api.errors.GitAPIException;
+import org.eclipse.jgit.lib.Repository;
+import org.eclipse.jgit.lib.StoredConfig;
+import org.eclipse.jgit.transport.RefSpec;
+import org.eclipse.jgit.transport.RemoteConfig;
+import org.eclipse.jgit.transport.URIish;
+
+public class TestJGit {
+ public static void main(String[] args) {
+ Repository repo = null;
+
+String path = "d:/testjgit"; // 设置git仓库的路径
+ InitCommand init = new InitCommand();
+ // 设置路径
+ init.setBare(false).setDirectory(new File(path));
+ // 执行git init ，创建仓库
+ Git git;
+ try {
+ git = init.call(); // 创建仓库
+ repo = git.getRepository();
+ System.out.println("create repo success");
+ } catch (GitAPIException e) {
+
+e.printStackTrace();
+ }
+ // 执行 git remote add 命令
+ // 实例化一个RemoteConfig 对象，用户配置远端仓库
+ StoredConfig config = repo.getConfig();
+ try {
+ RemoteConfig remoteConfig = new RemoteConfig(config, "origin");
+ // 设置你的远端地址
+ URIish uri = new URIish("git://github.com/wahyd4/testjgit");
+ // 设置哪个分支
+ RefSpec refSpec = new RefSpec("+refs/head/*:refs/remotes/origin/*");
+ // 更新配置
+ remoteConfig.addFetchRefSpec(refSpec);
+ remoteConfig.addPushRefSpec(refSpec);
+ remoteConfig.addURI(uri);
+ remoteConfig.addPushURI(uri);
+ // 更新配置
+ remoteConfig.update(config);
+ // 保存到本地文件中
+ config.save();
+ System.out.println("git remote add success.");
+ } catch (URISyntaxException e) {
+
+e.printStackTrace();
+ } catch (IOException e) {
+ e.printStackTrace();
+ }
+
+}
+
+}
+
+</pre>
+
+<p>执行完本代码后，打开d:/testjgit/可以看到一个.git的隐藏文件夹（如果看不到，请设置去除隐藏文件夹）。表明它已经是一个git仓库了。如果你的eclipse安装有aptana 插件，将仓库导入eclipse,eclipse还可以自动识别出git仓库。而在Egit 1.x插件中版本中都不能识别出。</p>
+<p>如果你打开.git/CONFIG文件。你还可以看到：</p>
+<pre class="brush: xml; title: ; notranslate" title="">[core]
+ repositoryformatversion = 0
+ filemode = false
+ logallrefupdates = true
+[remote "origin"]
+ url = git://github.com/wahyd4/testjgit
+ pushurl = git://github.com/wahyd4/testjgit
+ fetch = +refs/head/*:refs/remotes/origin/*
+ push = +refs/head/*:refs/remotes/origin/*
+
+</pre>
+
+<p>这些既是我们对仓库进行的配置，全都由这个文件定义。使用aptana，你可以直接将仓库push 到你设置的远端地址。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/07/03/maven-compile-nexus/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -423,162 +666,6 @@
 </pre>
 
 <p>然后再次编译，就应该可以构建成功了。由于nexus的仓库在国外，个人感觉速度比maven中央仓库要慢一个等级。在编译过程中，maven会自动执行一些插件和完成相关的单元测试。大概等待1-2个小时左右（由电脑性能和网络决定），就可以编译完成了。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/07/01/come-back/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大染志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2012/07/01/come-back/" itemprop="url">复活？？</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-07-01T00:00:00+08:00">
-                2012-07-01
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:50:31+08:00">
-                2014-07-22
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/我说/" itemprop="url" rel="index">
-                    <span itemprop="name">我说</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>大概把博客恢复了。不过图片还是不行的。</p>
-<p>以前的主题也用不了了。造孽。</p>
-<p>后面再慢慢选主题吧。</p>
 
           
         
@@ -838,6 +925,162 @@
 <div><br>  目前只想到这些，文中对开源软件的描述可能有错，欢迎指出，讨论。<br></div>
 
 <div><br>  不要重复造轮子。<br></div>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/07/01/come-back/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2012/07/01/come-back/" itemprop="url">复活？？</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-07-01T00:00:00+08:00">
+                2012-07-01
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:50:31+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/我说/" itemprop="url" rel="index">
+                    <span itemprop="name">我说</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>大概把博客恢复了。不过图片还是不行的。</p>
+<p>以前的主题也用不了了。造孽。</p>
+<p>后面再慢慢选主题吧。</p>
 
           
         
@@ -1981,258 +2224,6 @@ sudo apt-get install ssh
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/01/19/use-maven-deploy-totomcat-7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大染志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2012/01/19/use-maven-deploy-totomcat-7/" itemprop="url">使用maven部署项目到tomcat 7</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-01-19T00:00:00+08:00">
-                2012-01-19
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:49:56+08:00">
-                2014-07-22
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java/maven/" itemprop="url" rel="index">
-                    <span itemprop="name">maven</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="/images/2012/01/tomcat.gif"><img class="size-full wp-image-1982 aligncenter" title="tomcat" alt="" src="/images/2012/01/tomcat.gif" width="146" height="92"></a></p>
-<p>上一篇文章，我们讲了maven的简单入门应用，其实最详尽的文档还是应该看官方的document。我想其他人在网上写都是一些细节上的解释和补充。或者干脆就是简单的大致的描述。</p>
-<p>今天我想分享的是使用maven插件部署we项目到tomcat 7 中运行。之前如果我们没有使用maven,那么我想很多人都是使用的eclipse自带的run on server中选择tomcat，将web项目部署到tomcat中实现自动部署和运行。我想maven本身强大也在于，我们可以写很多插件（plugin）来扩展maven的功能，实现各种自动化的操作。下面进入正题。</p>
-<p>对于使用maven插件部署项目到tomcat 6中，网上已经有很多说明。对tomcat 7由于推出不久，笔者今天弄的时候，也在网上找了很多资料感觉都说得不好，或者不能解决问题，于是今天我们来讲这个。（<span style="color: #ff0000;">下面Tomcat 均指Tomcat 7</span>）</p>
-<p>tomcat maven plugin 插件已经从codehaus 转到Tomcat官网了，以前的codehaus只支持tomcat 6.这里我们需要使用最新的<a href="http://tomcat.apache.org/maven-plugin.html" target="_blank">tomcat maven plugin</a>. 该插件的pom为，即是在pom.xml加入：</p>
-<pre class="brush: xml; highlight: [12,13,14,15]; title: ; notranslate" title="">&lt;pluginManagement&gt;
-      &lt;plugins&gt;
-        &lt;plugin&gt;
-          &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;
-          &lt;artifactId&gt;tomcat6-maven-plugin&lt;/artifactId&gt;
-          &lt;version&gt;2.0-SNAPSHOT&lt;/version&gt;
-        &lt;/plugin&gt;
-        &lt;plugin&gt;
-          &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;
-          &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;
-          &lt;version&gt;2.0-SNAPSHOT&lt;/version&gt;
-              &lt;configuration&gt;
-                 &lt;url&gt;http://localhost:8080/manager/html&lt;/url&gt;
-                 &lt;server&gt;tomcat&lt;/server&gt;
-             &lt;/configuration&gt;
-        &lt;/plugin&gt;
-      &lt;/plugins&gt;
-    &lt;/pluginManagement&gt;
-</pre>
-
-<p>这样写的目的是既支持tomcat 6 也支持tomcat 7.虽说这个插件是2.0-snapshot版本，不太稳定，不过我试的时候没有遇到任何问题，可以放心使用。(红色部分我们将在下面解释)</p>
-<p>下面我们需要在插件仓库（plugin repositories）和普通仓库（repositories）中添加以下仓库到pom.xml:</p>
-<p><strong>repository:</strong></p>
-<pre class="brush: xml; title: ; notranslate" title="">&lt;repository&gt;
-      &lt;id&gt;people.apache.snapshots&lt;/id&gt;
-      &lt;url&gt;http://repository.apache.org/content/groups/snapshots-group/&lt;/url&gt;
-      &lt;releases&gt;
-        &lt;enabled&gt;false&lt;/enabled&gt;
-      &lt;/releases&gt;
-      &lt;snapshots&gt;
-        &lt;enabled&gt;true&lt;/enabled&gt;
-      &lt;/snapshots&gt;
-    &lt;/repository&gt;
-</pre>
-
-<p><strong>plugin repository:</strong></p>
-<pre class="brush: xml; title: ; notranslate" title="">&lt;pluginRepository&gt;
-      &lt;id&gt;apache.snapshots&lt;/id&gt;
-      &lt;name&gt;Apache Snapshots&lt;/name&gt;
-      &lt;url&gt;http://repository.apache.org/content/groups/snapshots-group/&lt;/url&gt;
-      &lt;releases&gt;
-        &lt;enabled&gt;false&lt;/enabled&gt;
-      &lt;/releases&gt;
-      &lt;snapshots&gt;
-        &lt;enabled&gt;true&lt;/enabled&gt;
-      &lt;/snapshots&gt;
-    &lt;/pluginRepository&gt;
-</pre>
-
-<p>这样做的目的是为了保证maven能够下载到maven tomcat plugin。而且是从上述的仓库。</p>
-<p>为了成功执行maven 部署 我们需要开启tomcat支持 admin-script，manager-gui的权限。</p>
-<p>admin-script:是让tomcat支持以脚本的形式来管理</p>
-<p>manager-gui:是让tomcat支持图形化的管理界面。</p>
-<p>打开tomcat的安装目录的 conf/tomcat-users.xml</p>
-<p>添加以下内容：</p>
-<pre class="brush: xml; title: ; notranslate" title="">&lt;role rolename="admin-script"/&gt;
-&lt;role rolename="manager-gui"/&gt;
-&lt;user username="admin" password="admin" roles="manager-gui,admin-script"/&gt;
-</pre>
-
-<p>这里请自行改变用户名和密码。</p>
-<p>接下来我们还需要配置一下maven，给他添加一个服务器和相关配置，在maven安装目录下的conf/settings.xml添加如下内容。</p>
-<pre class="brush: xml; title: ; notranslate" title="">&lt;!--Tomcat 7 server --&gt;
-     &lt;server&gt;
-            &lt;id&gt;tomcat&lt;/id&gt;
-            &lt;username&gt;admin&lt;/username&gt;
-            &lt;password&gt;admin&lt;/password&gt;
-     &lt;/server&gt;
-</pre>
-
-<p>注意：这里的id需要和上面用醒目绿色标记的ID一致，用户名和密码需要和tomcat里面设置的用户名和密码相同。</p>
-<p>这里在解释一下，上面红色部分的地址的是因为tomcat7中的部署地址变成了</p>
-<pre class="brush: plain; title: ; notranslate" title="">http://localhost:8080/manager/html</pre>
-
-<p>好了，配置我们就做好了，在部署之前，当然我们需要打开tomcat服务器。tomcat 7部署请使用命令:</p>
-<pre class="brush: xml; title: ; notranslate" title="">mvn tomcat7:deploy
-</pre>
-
-<p>在eclipse只需要在goal中填入 <strong>tomcat7：deploy</strong> 即可。<br>不出意外，应该就可以部署成功了。<br>童鞋们，试试吧。有什么疑问以及文中的缺点，请指出。谢谢。</p>
-<p>如果出现以下错误，请按照本文章验证，就可以搞定了。</p>
-<blockquote>
-<p>Failed to execute goal org.codehaus.mojo:tomcat-maven-plugin:1.0:deploy (default-cli) on project my-webapp: Cannot invoke Tomcat manager: Server returned HTTP response code: 403 for URL:</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2285,7 +2276,7 @@ sudo apt-get install ssh
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">305</span>
+                <span class="site-state-item-count">306</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

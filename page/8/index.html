@@ -277,6 +277,189 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2011/10/29/node-js-web-express/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2011/10/29/node-js-web-express/" itemprop="url">Node.js web框架express入门（1）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-10-29T00:00:00+08:00">
+                2011-10-29
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:49:04+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/node-js/" itemprop="url" rel="index">
+                    <span itemprop="name">node.js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>从我自己现在学校node.js说了解的情况，我觉得node.js至少比Java简单不少。使用node.js的诸多第三方框架更是让node.js简单了不少。其实express 框架几天前我就看了一些。也写了一些例子。虽然没有完全掌握，但是我想在这里和大家一起分享我学到的知识，也算是一种记录。</p>
+<p>首先，当然我们也得安装express 的module</p>
+<pre class="brush: xml; title: ; notranslate" title="">npm install express</pre>
+
+<p>接下来我们就是可以开始写一个简单的程序了。</p>
+<pre class="brush: jscript; title: ; notranslate" title="">var express = require('express'); //导入module
+ var app = express.createServer(); //创建并返回一个express的server对象
+ app.get('/',function (req,res){ //为跟地址目录设置路由，并且监听get方法。
+       res.send("Hello,World"); //向浏览器返回hello world
+  });
+ app.listen(4000); //设置服务器监听4000端口
+</pre>
+
+<p>运行程序，然后再浏览器中输入localhost:4000试试，是不是出现了hello world了。当然这只是一个最简单的程序。下面我们可以再多做一些。</p>
+<p>这里需要说明一下。默认的，系统将在您的请求处理中，在此例里面即在app.get();里面为你添加下面两句话</p>
+<pre class="brush: jscript; title: ; notranslate" title="">res.charset='utf-8';         //系统默认的res.send()和res.render（）都默认采用utf-8编码
+    res.contentType('Text/html');      //系统提供默认为Text/Html的Content-Type
+</pre>
+
+<p>接下来，我们将通过链接中的地址获取请求内容</p>
+<p>在程序中加入一段代码如下</p>
+<pre class="brush: jscript; title: ; notranslate" title="">app.get('/hello/:name',function (req,res){
+       //如果你在地址栏中输入如下/hello/Junv.那么你将在页面中看到name=======Junv
+      //'/hello/:name'中的name相当于定义一个变量name，并且把我们输入的名字赋值给他。
+       res.send('name======'+req.params.name);
+});
+</pre>
+
+<p>试试看看吧。成功了吧！</p>
+<p>对不起，写着写着觉得很别扭。今天就写到这里吧。下次在继续吧。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2011/10/26/node-js-send-e-mail/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1899,164 +2082,6 @@ client.database = 'node';
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2011/09/28/finally-give-upandroid-choose-java-web/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大染志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2011/09/28/finally-give-upandroid-choose-java-web/" itemprop="url">我最终还是放弃了android选择了Java web</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-09-28T00:00:00+08:00">
-                2011-09-28
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:47:46+08:00">
-                2014-07-22
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/我说/" itemprop="url" rel="index">
-                    <span itemprop="name">我说</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>也许是今天上课听到其他人讲人家去腾讯面试怎么怎么样，我心里还是有很大的震动。我不再想学android了，虽然老师叫我负责这一块工作，但是我感觉我在学习的过程中发现android的代码逻辑和我平时接触的java EE的逻辑还是有一些区别。我真的还是喜欢搞我的网站。这些我都比较了解。我也喜欢那些新鲜的事物，因为我喜欢他。虽然就在今天上午之前，我还是很想把Android尽快学好。但是原谅我吧，明年我就去面试了，在这短短一年的时间里面请允许我学习我最喜欢的东西吧，这样我想我胜利的机会才会更大。</p>
-<p>况且，我觉得Web App应该是未来的王者，看看Chrome OS,虽然现在Android 还不推荐使用Web App ,但是我大胆预测一下，未来三年内Android 将允许使用Web App.而且Windows 8将来也支持使用javascript +html 5进行程序开发。这些都是学习javascript的好处吧。而且我自己也有javascript 的底子啊，经过暑假一个多月的奋斗，我觉得我的javascript能力提升了不少！</p>
-<p>看看Java EE那么多好用的框架，看看 Nosql是多么地吸引人，看看node.js是多么的新潮，还有很多很多好的东西！</p>
-<p>从现在开始，我就搞Java EE了！</p>
-<p>加油！</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2109,7 +2134,7 @@ client.database = 'node';
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">305</span>
+                <span class="site-state-item-count">306</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
