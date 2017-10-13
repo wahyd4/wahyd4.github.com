@@ -94,21 +94,23 @@
 
 
 
-<meta name="description" content="建议阅读此篇文章前，先阅读我们公众号的前篇 Caddy上手文章 ——【快速上手更简单的 Web 服务器 —— Caddy】 本篇文章我们将利用 Caddy Web 服务器的Markdown 插件和它强大的网页模板功能，在直接托管，渲染显示Markdown文件。 现在得益于 Markdown 的简单易用，越来越多的文档都在使用使用 Markdown来编写。像我们常用的 Github、GitBook">
+<meta name="description" content="建议阅读此篇文章前，先阅读本博客的前篇 Caddy上手文章 ——【快速上手更简单的 Web 服务器 —— Caddy】 本篇文章我们将利用 Caddy Web 服务器的Markdown 插件和它强大的网页模板功能，在直接托管，渲染显示Markdown文件。 现在得益于 Markdown 的简单易用，越来越多的文档都在使用使用 Markdown来编写。像我们常用的 Github、GitBook 等流">
 <meta name="keywords" content="caddy,markdown">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 Caddy Web服务器显示 Markdown 文件">
 <meta property="og:url" content="http://toozhao.com/2017/10/12/caddy-markdown/index.html">
 <meta property="og:site_name" content="大染志">
-<meta property="og:description" content="建议阅读此篇文章前，先阅读我们公众号的前篇 Caddy上手文章 ——【快速上手更简单的 Web 服务器 —— Caddy】 本篇文章我们将利用 Caddy Web 服务器的Markdown 插件和它强大的网页模板功能，在直接托管，渲染显示Markdown文件。 现在得益于 Markdown 的简单易用，越来越多的文档都在使用使用 Markdown来编写。像我们常用的 Github、GitBook">
+<meta property="og:description" content="建议阅读此篇文章前，先阅读本博客的前篇 Caddy上手文章 ——【快速上手更简单的 Web 服务器 —— Caddy】 本篇文章我们将利用 Caddy Web 服务器的Markdown 插件和它强大的网页模板功能，在直接托管，渲染显示Markdown文件。 现在得益于 Markdown 的简单易用，越来越多的文档都在使用使用 Markdown来编写。像我们常用的 Github、GitBook 等流">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://7ktsrz.com1.z0.glb.clouddn.com/files.png">
 <meta property="og:image" content="http://7ktsrz.com1.z0.glb.clouddn.com/raw.png">
 <meta property="og:image" content="http://7ktsrz.com1.z0.glb.clouddn.com/css.png">
-<meta property="og:updated_time" content="2017-10-13T01:41:12.467Z">
+<meta property="og:image" content="http://7ktsrz.com1.z0.glb.clouddn.com/final.png">
+<meta property="og:image" content="http://7ktsrz.com1.z0.glb.clouddn.com/another.png">
+<meta property="og:updated_time" content="2017-10-13T01:44:28.252Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 Caddy Web服务器显示 Markdown 文件">
-<meta name="twitter:description" content="建议阅读此篇文章前，先阅读我们公众号的前篇 Caddy上手文章 ——【快速上手更简单的 Web 服务器 —— Caddy】 本篇文章我们将利用 Caddy Web 服务器的Markdown 插件和它强大的网页模板功能，在直接托管，渲染显示Markdown文件。 现在得益于 Markdown 的简单易用，越来越多的文档都在使用使用 Markdown来编写。像我们常用的 Github、GitBook">
+<meta name="twitter:description" content="建议阅读此篇文章前，先阅读本博客的前篇 Caddy上手文章 ——【快速上手更简单的 Web 服务器 —— Caddy】 本篇文章我们将利用 Caddy Web 服务器的Markdown 插件和它强大的网页模板功能，在直接托管，渲染显示Markdown文件。 现在得益于 Markdown 的简单易用，越来越多的文档都在使用使用 Markdown来编写。像我们常用的 Github、GitBook 等流">
 <meta name="twitter:image" content="http://7ktsrz.com1.z0.glb.clouddn.com/files.png">
 
 
@@ -326,7 +328,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-10-13T09:41:12+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-13T09:44:28+08:00">
                 2017-10-13
               </time>
             
@@ -360,10 +362,10 @@
       
 
       
-        <p>建议阅读此篇文章前，先阅读我们公众号的前篇 Caddy上手文章 ——【<a href="http://toozhao.com/2017/09/19/caddy/">快速上手更简单的 Web 服务器 —— Caddy</a>】</p>
+        <p>建议阅读此篇文章前，先阅读本博客的前篇 Caddy上手文章 ——【<a href="http://toozhao.com/2017/09/19/caddy/">快速上手更简单的 Web 服务器 —— Caddy</a>】</p>
 <p>本篇文章我们将利用 Caddy Web 服务器的Markdown 插件和它强大的网页模板功能，在直接托管，渲染显示Markdown文件。</p>
 <p>现在得益于 Markdown 的简单易用，越来越多的文档都在使用使用 Markdown来编写。像我们常用的 Github、GitBook 等流行服务也都在使用 Markdown。那么为什么越来越多的相关技术文档和资料都是使用 Markdown 编写的呢？我觉得所有原因都归于『简单』二字。我们通过一些常用的符号标记，就可以写出格式整齐、漂亮的文档。而不用写繁琐的 HTML。而通过简单的工具转化，我们就可以将 Markdown 文档转成 HTML 的格式。</p>
-<h2 id="安装-Caddy"><a href="#安装-Caddy" class="headerlink" title="安装 Caddy"></a>安装 Caddy</h2><p>那现在就让我们来实现这个功能吧，首先你得在你的电脑或者服务器上安装 Caddy，如何安装？请查看本公众号之前的文章进行回顾或直接运行如下脚本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://getcaddy.com | bash -s personal</div></pre></td></tr></table></figure></p>
+<h2 id="安装-Caddy"><a href="#安装-Caddy" class="headerlink" title="安装 Caddy"></a>安装 Caddy</h2><p>那现在就让我们来实现这个功能吧，首先你得在你的电脑或者服务器上安装 Caddy，如何安装？请查看之前的文章进行回顾或直接运行如下脚本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://getcaddy.com | bash -s personal</div></pre></td></tr></table></figure></p>
 <h2 id="初步渲染-Markdown"><a href="#初步渲染-Markdown" class="headerlink" title="初步渲染 Markdown"></a>初步渲染 Markdown</h2><p>Markdown 作为 Caddy Web 服务器的标准指令，使得我们可以直接在 Caddyfile 配置文件中使用该指令，托管，渲染Markdown 文件。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">0.0.0.0:8080 &#123;</div><div class="line">  markdown &#123;</div><div class="line">    ext .md .markdown</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>这里的配置是说：在我们希望托管 Markdown 文件的服务器地址块中，让服务器对当前目录启用渲染 Markdown 文件的功能，即当我们访问 Markdown 文件时，Caddy 自动将其转化为 HTML 进行展示。下面我将以为我本地的文件作为示例给大家展示效果和截图。</p>
 <p><img src="http://7ktsrz.com1.z0.glb.clouddn.com/files.png" alt="files"></p>
@@ -377,6 +379,18 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">0.0.0.0:8080 &#123;</div><div class="line">  markdown &#123;</div><div class="line">    ext .md .markdown</div><div class="line">    template template.html  <span class="comment">#后面的值即为模板文件的文件地址</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>重启 Caddy 服务器，刷新页面。有没有觉得页面变得更加美观，漂亮了。</p>
 <p><img src="http://7ktsrz.com1.z0.glb.clouddn.com/css.png" alt="css"></p>
+<h3 id="添加文档目录索引（TOC）"><a href="#添加文档目录索引（TOC）" class="headerlink" title="添加文档目录索引（TOC）"></a>添加文档目录索引（TOC）</h3><p>现在我们的 Markdown 文档已经可以很美观的进行展示了，但是我们还可以做得更好，让用户在第一屏就可以查看当前文档的目录索引，而且可以点击链接进行快速访问和跳转。 这就是我们常见的 TOC 功能。（Table of contents）</p>
+<p>为了实现 TOC功能，我们需要引入两个 JS 库：</p>
+<ul>
+<li>jQuery， 由于 Caddy 在对 Markdown文档进行转化时，没有为h1,h2,h3 这样的标题添加 id属性，而我们的<code>&lt;a&gt;</code>链接跳转，正需要 id 属性。因此，我们需要手动为各级标题添加 id 属性。</li>
+<li>tocbot，该 JS 库可以自动生成 TOC 内容。</li>
+</ul>
+<p>因此修改我们的网页模板成类似以下内容：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>&#123;&#123;.Doc.title&#125;&#125;<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/tocbot/3.0.4/tocbot.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.8.0/github-markdown.css"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/tocbot/3.0.4/tocbot.css"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">    .markdown-body &#123;</span></div><div class="line"><span class="undefined">      box-sizing: border-box;</span></div><div class="line"><span class="undefined">      min-width: 200px;</span></div><div class="line"><span class="undefined">      max-width: 980px;</span></div><div class="line"><span class="undefined">      margin: 0 auto;</span></div><div class="line"><span class="undefined">      padding: 45px;</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">    $(document).ready(function () &#123;</span></div><div class="line"><span class="undefined">      //为各级标题自动生成id属性</span></div><div class="line"><span class="undefined">      $("h1,h2,h3").each(function () &#123;</span></div><div class="line"><span class="undefined">        var hyphenated = $(this).text().replace(/\s/g, '-');</span></div><div class="line"><span class="undefined">        $(this).attr('id', hyphenated);</span></div><div class="line"><span class="undefined">      &#125;);</span></div><div class="line"><span class="undefined">      // 初始化 toc 内容</span></div><div class="line"><span class="undefined">      tocbot.init(&#123;</span></div><div class="line"><span class="undefined">        tocSelector: '.toc', // 放置 toc 内容的容器</span></div><div class="line"><span class="undefined">        contentSelector: '.markdown-body', // markdown 文档内容所在</span></div><div class="line"><span class="undefined">        headingSelector: 'h1, h2, h3', // 需要索引的标题级别</span></div><div class="line"><span class="undefined">        positionFixedSelector: ".toc" //将 toc 内容块位置固定。</span></div><div class="line"><span class="undefined">      &#125;);</span></div><div class="line"><span class="undefined">    &#125;);</span></div><div class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"toc"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"markdown-body"</span>&gt;</span></div><div class="line">    &#123;&#123;.Doc.body&#125;&#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>保存后，直接刷新页面。我们就可以看到带有 TOC 的 Markdown 文档了。</p>
+<p><img src="http://7ktsrz.com1.z0.glb.clouddn.com/final.png" alt="toc"></p>
+<p>我们还可以试着访问下另外目录下的 Markdown 文件，可以看到所有 Markdown 文件都带有 TOC 和美观的样式了。</p>
+<p><img src="http://7ktsrz.com1.z0.glb.clouddn.com/another.png" alt="monitor"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>所以，如果你不想把 Markdown文档放到 Github 或者使用 GitBook 来托管，可以试试这种方法，快速搭建一个基于 Caddy 服务器的 Markdown 文档的网站。</p>
 
       
     </div>
@@ -599,7 +613,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Caddy"><span class="nav-number">1.</span> <span class="nav-text">安装 Caddy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初步渲染-Markdown"><span class="nav-number">2.</span> <span class="nav-text">初步渲染 Markdown</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#美化-Markdown-文件"><span class="nav-number">2.1.</span> <span class="nav-text">美化 Markdown 文件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Caddy"><span class="nav-number">1.</span> <span class="nav-text">安装 Caddy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初步渲染-Markdown"><span class="nav-number">2.</span> <span class="nav-text">初步渲染 Markdown</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#美化-Markdown-文件"><span class="nav-number">2.1.</span> <span class="nav-text">美化 Markdown 文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加文档目录索引（TOC）"><span class="nav-number">2.2.</span> <span class="nav-text">添加文档目录索引（TOC）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
