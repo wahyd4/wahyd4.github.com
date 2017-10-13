@@ -277,6 +277,222 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/08/23/java-cors-cross-domain-request/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2012/08/23/java-cors-cross-domain-request/" itemprop="url">Java CORS实现Ajax跨域请求</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-08-23T00:00:00+08:00">
+                2012-08-23
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:51:50+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML5/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML5</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML5/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML5/java/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>跨域问题在我们开发web应用的时候经常遇到，但一直没有很好的解决方案。目前可能大家认为相对比较好使的就是——JSONP技术。不过这样前台通常需要告诉后台需要返回的函数名称，而后台需要向前台前台返回的则是一个可以执行的代码段。这样在后台处理的时候就相对麻烦一些。</p>
+<p>其实在新的W3C标准中，我们只需要在服务器后端添加一句话即可以比较好的解决跨域问题。如java servlet中：</p>
+<pre class="brush: java; title: ; notranslate" title="">response.setHeader("Access-Control-Allow-Origin","http://toozhao.com");
+
+</pre>
+
+<p>这段代码的意思就是，允许来自toozhao.com的跨域HTTP请求，当然我们也可以使用通配符 “*”,这样任意的请求都可以访问这个地址了，而不会出现跨域的问题。</p>
+<p>不过据其他文档中介绍，这样做是不安全的。因为这样服务器不能访问document.cookie 对象。不知道请求者的相关信息，而微软的介绍文档中说到：</p>
+<blockquote>
+<p><strong>安全警报</strong>  为了保护用户数据，跨域请求是匿名的，这意味着服务器无法轻松找出正在请求数据的用户。 因此，只应请求和响应不属于敏感信息或个人身份识别信息的跨域数据。</p>
+</blockquote>
+<p>因此为了安全，我们只应该向我们能保证其安全的站点提供Access-Control-Allow-Origin，即（CORS）。或者对可以公开的数据采用该种方式。</p>
+<p>我个人认为在下面的情景中，比较适合采用这种跨域处理技术：</p>
+<p><a href="/images/2012/08/aa1.png"><img class="aligncenter size-full wp-image-2179" title="aa" src="/images/2012/08/aa1.png" alt="" width="622" height="432"></a></p>
+<p>此外，CORS还有一些其他属性可以设置：</p>
+<pre class="brush: xml; title: ; notranslate" title="">Access-Control-Allow-Origin: http://www.toozhao.com   //设置允许跨域的地址
+Access-Control-Allow-Methods: POST, GET   //设置跨域允许的方法
+Access-Control-Allow-Headers: NCZ      //设置跨域允许的头部信息
+Access-Control-Max-Age: 1728000   //设置跨域允许的最大时间
+
+</pre>
+
+<p>好了有了上面的这些参数，只要我们在java 中可以获取到HttpServletResponse 对象，即可以设置属性。被允许的前台就可以使用一般的ajax调用了。如jquery：</p>
+<pre class="brush: jscript; title: ; notranslate" title="">$.ajax({
+
+url: 'http://toozhao.com/test/xxx',
+
+method: 'GET'，
+
+success: function(msg){
+
+console.log(msg);
+
+}
+
+});
+
+</pre>
+
+<p>参考文档：<br><a href="http://huaidan.org/archives/2729.html" target="_blank" rel="external">http://huaidan.org/archives/2729.html</a><br><a href="http://msdn.microsoft.com/zh-cn/library/dd573303(v=vs.85).aspx" target="_blank" rel="external">http://msdn.microsoft.com/zh-cn/library/dd573303(v=vs.85).aspx</a></p>
+<p>注：已修正图片中B系统URL错误。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/08/16/java-web-define-error-page/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2471,169 +2687,6 @@ console.log("server listen on port 80");&lt;/p&gt;
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/07/05/access-google-reader/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大染志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2012/07/05/access-google-reader/" itemprop="url">解决不能访问google reader</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-07-05T00:00:00+08:00">
-                2012-07-05
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:50:48+08:00">
-                2014-07-22
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/我说/" itemprop="url" rel="index">
-                    <span itemprop="name">我说</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="/images/2012/07/2-110H12040500-L.png"><img class="size-medium wp-image-2056 aligncenter" title="2-110H12040500-L" src="/images/2012/07/2-110H12040500-L-300x300.png" alt="" width="300" height="300"></a></p>
-<p>如果你和我一样都打不开Google reader。或者你打开网页是现实了下面的信息：</p>
-<blockquote>
-<h3 id="很抱歉，在-www-google-cn-上没找到您要访问的网页"><a href="#很抱歉，在-www-google-cn-上没找到您要访问的网页" class="headerlink" title="很抱歉，在 www.google.cn 上没找到您要访问的网页"></a>很抱歉，在 <a href="http://www.google.cn/" target="_blank" rel="external">www.google.cn</a> 上没找到您要访问的网页</h3></blockquote>
-<p>你的页面跳转到：<a href="http://www.google.com/reader/?hl=zh-CN&amp;tab=wy" target="_blank" rel="external">http://www.google.com/reader/?hl=zh-CN&amp;tab=wy</a></p>
-<p>因为我们众所周知的原因，它的确访问不到了。不过我们可以通过下面这个地址访问：</p>
-<blockquote>
-<p><a href="http://reader.google.com.tw" target="_blank" rel="external">http://reader.google.com.tw</a></p>
-</blockquote>
-<p>是不是瞬间从屌丝变成高富帅了？哈哈</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2686,7 +2739,7 @@ console.log("server listen on port 80");&lt;/p&gt;
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">306</span>
+                <span class="site-state-item-count">307</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2708,7 +2761,7 @@ console.log("server listen on port 80");&lt;/p&gt;
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">245</span>
+                <span class="site-state-item-count">248</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

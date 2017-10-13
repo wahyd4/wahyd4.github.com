@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="caddy,markdown," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="建议阅读此篇文章前，先阅读我们公众号的前篇 Caddy上手文章 ——【快速上手更简单的 Web 服务器 —— Caddy】 本篇文章我们将利用 Caddy Web 服务器的Markdown 插件和它强大的网页模板功能，在直接托管，渲染显示Markdown文件。 现在得益于 Markdown 的简单易用，越来越多的文档都在使用使用 Markdown来编写。像我们常用的 Github、GitBook">
+<meta name="keywords" content="caddy,markdown">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Caddy Web服务器显示 Markdown 文件">
+<meta property="og:url" content="http://toozhao.com/2017/10/12/caddy-markdown/index.html">
+<meta property="og:site_name" content="大染志">
+<meta property="og:description" content="建议阅读此篇文章前，先阅读我们公众号的前篇 Caddy上手文章 ——【快速上手更简单的 Web 服务器 —— Caddy】 本篇文章我们将利用 Caddy Web 服务器的Markdown 插件和它强大的网页模板功能，在直接托管，渲染显示Markdown文件。 现在得益于 Markdown 的简单易用，越来越多的文档都在使用使用 Markdown来编写。像我们常用的 Github、GitBook">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://7ktsrz.com1.z0.glb.clouddn.com/files.png">
+<meta property="og:image" content="http://7ktsrz.com1.z0.glb.clouddn.com/raw.png">
+<meta property="og:image" content="http://7ktsrz.com1.z0.glb.clouddn.com/css.png">
+<meta property="og:updated_time" content="2017-10-13T01:41:12.467Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用 Caddy Web服务器显示 Markdown 文件">
+<meta name="twitter:description" content="建议阅读此篇文章前，先阅读我们公众号的前篇 Caddy上手文章 ——【快速上手更简单的 Web 服务器 —— Caddy】 本篇文章我们将利用 Caddy Web 服务器的Markdown 插件和它强大的网页模板功能，在直接托管，渲染显示Markdown文件。 现在得益于 Markdown 的简单易用，越来越多的文档都在使用使用 Markdown来编写。像我们常用的 Github、GitBook">
+<meta name="twitter:image" content="http://7ktsrz.com1.z0.glb.clouddn.com/files.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://toozhao.com/2017/10/12/caddy-markdown/"/>
+
+
+
+
+
+  <title>使用 Caddy Web服务器显示 Markdown 文件 | 大染志</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-5243064-16', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">大染志</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">想要玩得很 High 的程序员</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2017/10/12/caddy-markdown/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">使用 Caddy Web服务器显示 Markdown 文件</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-12T16:15:20+08:00">
+                2017-10-12
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-13T09:41:12+08:00">
+                2017-10-13
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>建议阅读此篇文章前，先阅读我们公众号的前篇 Caddy上手文章 ——【<a href="http://toozhao.com/2017/09/19/caddy/">快速上手更简单的 Web 服务器 —— Caddy</a>】</p>
+<p>本篇文章我们将利用 Caddy Web 服务器的Markdown 插件和它强大的网页模板功能，在直接托管，渲染显示Markdown文件。</p>
+<p>现在得益于 Markdown 的简单易用，越来越多的文档都在使用使用 Markdown来编写。像我们常用的 Github、GitBook 等流行服务也都在使用 Markdown。那么为什么越来越多的相关技术文档和资料都是使用 Markdown 编写的呢？我觉得所有原因都归于『简单』二字。我们通过一些常用的符号标记，就可以写出格式整齐、漂亮的文档。而不用写繁琐的 HTML。而通过简单的工具转化，我们就可以将 Markdown 文档转成 HTML 的格式。</p>
+<h2 id="安装-Caddy"><a href="#安装-Caddy" class="headerlink" title="安装 Caddy"></a>安装 Caddy</h2><p>那现在就让我们来实现这个功能吧，首先你得在你的电脑或者服务器上安装 Caddy，如何安装？请查看本公众号之前的文章进行回顾或直接运行如下脚本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://getcaddy.com | bash -s personal</div></pre></td></tr></table></figure></p>
+<h2 id="初步渲染-Markdown"><a href="#初步渲染-Markdown" class="headerlink" title="初步渲染 Markdown"></a>初步渲染 Markdown</h2><p>Markdown 作为 Caddy Web 服务器的标准指令，使得我们可以直接在 Caddyfile 配置文件中使用该指令，托管，渲染Markdown 文件。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">0.0.0.0:8080 &#123;</div><div class="line">  markdown &#123;</div><div class="line">    ext .md .markdown</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这里的配置是说：在我们希望托管 Markdown 文件的服务器地址块中，让服务器对当前目录启用渲染 Markdown 文件的功能，即当我们访问 Markdown 文件时，Caddy 自动将其转化为 HTML 进行展示。下面我将以为我本地的文件作为示例给大家展示效果和截图。</p>
+<p><img src="http://7ktsrz.com1.z0.glb.clouddn.com/files.png" alt="files"></p>
+<p>如图所示为 Caddyfile 所在目录。可以看到这里有若干子目录，和子目录下面的.md 文件。现在让我们运行 caddy。 在浏览器中访问 <code>http://localhost:8080/0.general/0.general.md</code>文件。可以看到效果如下：</p>
+<p><img src="http://7ktsrz.com1.z0.glb.clouddn.com/raw.png" alt="raw"></p>
+<p>Caddy 成功的将 Markdown文件以网页的形式进行展示，并且正确显示此了相应的格式和层次结构。但是这里有个美中不足之处，Caddy 渲染出的效果，不够美观。简单一点说，没有 CSS 修饰。</p>
+<h3 id="美化-Markdown-文件"><a href="#美化-Markdown-文件" class="headerlink" title="美化 Markdown 文件"></a>美化 Markdown 文件</h3><p>那我们如何将Markdown 文件更加美观的展示呢？由于 Caddy 本身是使用 Golang 进行开发的，因此 Caddy 也将 Go 强大的模板功能提供给了用户。这里我们可以利用 Caddy 模板功能来美化 Markdown 文件。我们将在模板网页中加入特定 CSS 来美化页面。CSS 库来自： <a href="https://github.com/sindresorhus/github-markdown-css" target="_blank" rel="external">https://github.com/sindresorhus/github-markdown-css</a></p>
+<p>在 Caddyfile 目录下创建一个叫 <code>template.html</code> 的网页文件，添加如下内容:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>&#123;&#123;.Doc.title&#125;&#125;<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.8.0/github-markdown.css"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">    .markdown-body &#123;</span></div><div class="line"><span class="undefined">      box-sizing: border-box;</span></div><div class="line"><span class="undefined">      min-width: 200px;</span></div><div class="line"><span class="undefined">      max-width: 980px;</span></div><div class="line"><span class="undefined">      margin: 0 auto;</span></div><div class="line"><span class="undefined">      padding: 45px;</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"markdown-body"</span>&gt;</span></div><div class="line">    &#123;&#123;.Doc.body&#125;&#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>我们的 Markdown 文本内容会在 <code>&lt;div class=&quot;markdown-body&quot;&gt;</code> 中显示。<code>github-markdown-css</code> 库会对类名为 <code>markdown-body</code> 中的内容进行美化。<br><code>.Doc.title</code> 和 <code>.Doc.body</code> 则是网页模板中的动态内容，前者为文档的文件名，而后者为文档中的全部内容。与此同时，我们需要在 Caddyfile 配置文件中添加模板特性。<br>HTML 中而外的 <code>&lt;style&gt;</code>标签是为了，限制页面内容的宽度，和将内容居中显示。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">0.0.0.0:8080 &#123;</div><div class="line">  markdown &#123;</div><div class="line">    ext .md .markdown</div><div class="line">    template template.html  <span class="comment">#后面的值即为模板文件的文件地址</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>重启 Caddy 服务器，刷新页面。有没有觉得页面变得更加美观，漂亮了。</p>
+<p><img src="http://7ktsrz.com1.z0.glb.clouddn.com/css.png" alt="css"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/caddy/" rel="tag"># caddy</a>
+          
+            <a href="/tags/markdown/" rel="tag"># markdown</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/19/caddy/" rel="next" title="快速上手更简单的 Web 服务器 —— Caddy">
+                <i class="fa fa-chevron-left"></i> 快速上手更简单的 Web 服务器 —— Caddy
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
+               alt="Junv" />
+          <p class="site-author-name" itemprop="name">Junv</p>
+           
+              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">307</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">69</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">248</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wahyd4" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/junwei-zhao-46944557" target="_blank" title="LinkedIn">
+                  
+                    <i class="fa fa-fw fa-linkedin"></i>
+                  
+                    
+                      LinkedIn
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                    
+                      StackOverflow
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Caddy"><span class="nav-number">1.</span> <span class="nav-text">安装 Caddy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初步渲染-Markdown"><span class="nav-number">2.</span> <span class="nav-text">初步渲染 Markdown</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#美化-Markdown-文件"><span class="nav-number">2.1.</span> <span class="nav-text">美化 Markdown 文件</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Junv</span>
+
+  
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

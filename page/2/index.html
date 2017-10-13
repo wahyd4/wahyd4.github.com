@@ -277,6 +277,172 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2013/11/26/what-do-i-think-of-agile/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2013/11/26/what-do-i-think-of-agile/" itemprop="url">我怎么看敏捷</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2013-11-26T18:51:55+08:00">
+                2013-11-26
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2013-11-26T20:31:33+08:00">
+                2013-11-26
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/我说/" itemprop="url" rel="index">
+                    <span itemprop="name">我说</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="/images/2013/11/agile.jpg" alt="Agile"><br>去年11月份的时候，我进到了ThoughWorks实习，开始了我的TW生涯，从现在除去今年年初由于毕业论文断断续续的10天左右的请假，我已经到ThoughtWorks1年了，现在我想来我聊聊我眼中的敏捷和我对敏捷的看法。它是比较主观的看法。<br>首先，我必须得说敏捷并不是完美无缺的，当然也不是所有行业，所有软件项目都适合使用敏捷来开发和管理的。很明显的一个例子就是，你不能用敏捷来开发NASA的航天飞机的软件系统。从敏捷的理念我们会说，我们让开发航天飞机的起飞系统，然后交付给NASA使用，之后再继续交付降落等其他系统，显示这是行不通的，航天飞机不能在仅仅拥有起飞功能的时候就上天啊。敏捷里强调快速交付，快速响应，及时修复bug，因此我们会允许软件存在潜在少量bug的时候让其上线，使用。这在航天飞行系统里面也是行不通的，因为涉及到人的生命，航天飞行系统应该是不允许任何bug的。  </p>
+<blockquote>
+<p>但我依然会说，敏捷是一种很好的理念和实践，适合大部分IT企业使用，特别是互联网企业和运行互联网产品的企业使用。</p>
+</blockquote>
+<p>在现在互联网时代，天下武功唯快不破。采用敏捷的实践，初期开发MVP（Minimal Valuable Product）产品，快速上线，根据用户的反馈不断更新、改进自己的产品，开发新的功能，这样周而复始，产品把用户最喜欢，优先级最高的功能永远都放在第一时间开发、上线。根据用户的反馈、统计数据的结果不断调整产品的策略，这样才能立于当今互联网。在我们身边也许Github、 Flickr等都是很好的成功例子。<br>下面是我对于一些是非的意见：  </p>
+<ul>
+<li>结对编程能够明显提升代码的质量，让团队成员对代码的熟悉度大幅提升，但是我不赞成至始至终都是结对编程，应该留时间进行单独编程，这样虽然代码质量也许会有一些下降，但是如果伴以TDD对进行辅佐，是不会下降太多，单独编程有助于让dev独立思考，发挥创造力，很多时候会达到意想不到的结果。另外一点结果编程通常达不到两个dev独立编写代码的效率，就像在《人月神话》中讲到的那样，1一个人如果需要开发一个软件需要100填，那么10个程序员10天肯定不能完成任务的，因为期间还需要算上沟通的成本。  </li>
+<li>关于TDD，确有遇到过几次绞尽脑汁也没想明白怎么测试的case。但是我们如果使用 隔离依赖（即mock依赖，stub行为，如使用mockito中的：given().willReturn();或者when().thenReturn()等）的原则来编写测试，绝大多数情况都会变得豁然开朗，就Java而言，遇到静态方法，我们可以通过间接的调用去测试，对于无返回值的方法（void）我们可以采用验证行为的方法去测试(如使用mockito中的verify（）函数)。使用TDD的好处是不言而喻的，用测试代码描述你的需求，表达你想要的结果，既保证了质量也不用担心会做出多余的功能。不过在开发自己的小点子、小创意时，我通常选择Rails和Node.js进行开发因此TDD做得并不好，通产只是选择性的对重要的部分进行测试保证。</li>
+<li>沟通胜于一切，跟项目中所有的人频繁沟通，在实际项目中有一次是这样的，对于story中一个对于生效时间信息的描述有些模糊，我没有多想久自己认为肯定的全局的生效时间，但是不曾想到，当多个子产品出现时，就不能依赖全局生效时间，因为全局生效时间是其中最大第一个，而不一定是当前所需准确的生效时间，因此这个sotry在最后给BA 检查的时候才发现这个bug,试想最初如果我没有随便假设，而是马上给BA发邮件沟通，问清楚生效时间，也不会出现返工的情况。我个人认为良好、高效的沟通甚至比写好代码优先级更高。  </li>
+<li>站会（stand up）既是一种对团队成员工作的可视化，了解彼此的进度等情况，也是锻炼表达能力、增强自信心的好机会。为何这样讲，因为在站会上每个人需要用几句话来概括自己前一天所做的一切，当你讲到你前一天做的一些进步时，团队为你真心叫好，难道不会让你你增强自信心吗？对于站会进行的方式，有团队会选择每个人依次讲解前一天的工作内容；也有人会选择采用按照故事墙的方式来进行，依次对每个列（analysis, ready for dev, in development, test, sign off等）进行浏览等，当讲到自己的那个story时，每个人需要更新自己前一天在这个story上的工作，这样的好处是可以对每个story的情况进行可视化。但是我个人更喜欢前者，这样更加自由，但是目前在工作中基本尝试的都是后者。  </li>
+<li>另外一点是尽早集成，这点感触很深，大三的时候在一家公司实习，当时做一个原型系统，两三个人做一个模块，到最后快要演示的时候，才把几个模块尝试连到一起做集成测试。结果就是，所有人坐在一起进行的进行各种接口的连接、调用，bug修补。一旦连接成功就兴奋到难以言表，仿佛很长一段时间的工作都没有这一下来得兴奋。系统可以集成后，一直都提心吊胆，担心其中某个东西会不会莫名挂掉，因为集成测试都是使用人肉测试的啊。在展示的时候，各种紧张，安排专人时时刻刻注意到服务器。在敏捷中，我们要求及早进行系统集成和和创建部署环境的脚本，每次CI的运行都是一次集成测试，都是一次服务器的部署。因此不用担心在realse的时候不能部署的情况。不过有一件事情是需要注意的，那就是数据库的迁移，在开发机器，测试服务器你还能每次部署的时候都干掉之前的数据库，重新创建，但是在部署到产品服务器的时候就需要小心了，在Java中我们可以用<a href="http://flywaydb.org/" target="_blank" rel="external">Flyway</a> 达到类似Rails中的 rake db migrate的效果。  </li>
+</ul>
+<p>另外，我认为 switch pair(变还你结对同事)、 code review（团队成员坐到一起对团队前一天提交的代码进行浏览、解读），这些都可以让整个团队共享更多的上下文，还可以检查出不到的代码，学习好的代码。<br>也许明年这个时候我对敏捷的看法又有不少新的见解，到时候再来分享。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2013/11/05/run-jetty-7,-8-with-gradle/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -839,8 +1005,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2013-09-24T01:58:54+08:00">
-                2013-09-24
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-13T09:10:45+08:00">
+                2017-10-13
               </time>
             
           </span>
@@ -908,10 +1074,10 @@
       
         
           
-            <p>这个系列的感受都是我在印度参加TWU的所有感受，感受来自我，难免比较主观，当然我也尽可能的表达我所观察到的客观的东西，第三周，基本上是我最累的一周，这周有忙项目的事情，有忙计划出去玩的事情，也有忙小session的事情，几天晚上都是凌晨1点才睡，所有导致这一周整体来说，状态不太好。当然还是有不少感受的。  </p>
-<h5 id="疲惫"><a href="#疲惫" class="headerlink" title="疲惫"></a>疲惫</h5><p>首先说疲惫吧，为什么会疲惫，当然原因是多方面的，一方面TWU 的安排还是比较满的，早上7点办起床，吃早饭，8点坐上车到HOTEL，开始一天的培训和工作，基本上晚上7点到7点半下班。上午，下午分别有Tea Time可以休息，不过这一周我没有在Tea Time休息，事情比较多。一方面我们还有P3 case study 需要我们花些时间在上面，还有如同我之前说的，因为我自己和其他几个同学在计划周末外出游玩的事情，也花了不少时间，还有我发现Pair 是相当消耗体力和脑力的，特别是当Pair 高度集中，并且Pair之间有一些能力差异的时候，花在解释上的时间会不少。不过经过周末的休整，状态好了不少。而且想到接下来是倒数第二周了，开始变得期待回国了。  </p>
+            <p>这个系列的感受都是我在印度参加TWU的所有感受，感受来自我，难免比较主观，当然我也尽可能的表达我所观察到的客观的东西，第三周，基本上是我最累的一周，这周有忙项目的事情，有忙计划出去玩的事情，也有忙小session的事情，几天晚上都是凌晨1点才睡，所有导致这一周整体来说，状态不太好。当然还是有不少感受的。</p>
+<h5 id="疲惫"><a href="#疲惫" class="headerlink" title="疲惫"></a>疲惫</h5><p>首先说疲惫吧，为什么会疲惫，当然原因是多方面的，一方面TWU 的安排还是比较满的，早上7点办起床，吃早饭，8点坐上车到HOTEL，开始一天的培训和工作，基本上晚上7点到7点半下班。上午，下午分别有Tea Time可以休息，不过这一周我没有在Tea Time休息，事情比较多。一方面我们还有P3 case study 需要我们花些时间在上面，还有如同我之前说的，因为我自己和其他几个同学在计划周末外出游玩的事情，也花了不少时间，还有我发现Pair 是相当消耗体力和脑力的，特别是当Pair 高度集中，并且Pair之间有一些能力差异的时候，花在解释上的时间会不少。不过经过周末的休整，状态好了不少。而且想到接下来是倒数第二周了，开始变得期待回国了。</p>
 <p>#####项目改进</p>
-<p>上一周也提到，经过第一个Release的失败的经验教训后，我们项目组本身也在不断的完善改进自己，项目组给自己提了不好action，来对团队进行流程上的规划，还有有一定作用，不过这个东西也产生了一个负面影响，那就是我们决定在Sign up story之前不做假设，不盲目开始开发story，这导致本来就只有一周的release，我们丢掉了不少时间来完成story，我们利用那段时间修改了一些release 1的story的bug,又交付了一些。不好的地方就是，我们星期五才sign up story，这一周星期二又要进行release 2 的show case,也就是我们只有不到两天的时间进行开发，测试，还不包括这之间一些session 和class 会占用我们一些时间。<br>此外，也许因为时间的关系，上周星期五，QA希望我完成一个story，但是那个story里面还有一个很重要的点，是没有确定的。 QA希望我先做确定的点，后面再来改，但是我拒绝了，因为不确定的那点就是这个story中相对比较复杂的一点，而且我也认为这样做assumption容易导致项目返工，最终没有接受那个story。今天在和一个同学pair的时候，又发生一件让我很纠结的事情，我发现这个story之前的部分，很多地方都没有测试，而且我们今天的时间和任务很紧，当我们希望在这个基础上添加新的功能的时候，我的pair告诉我，他认为我们现在应该尽快完成现在的这个story，测试可以后面来写，我很疑惑的望着他。 是的我知道，我们小组中，有些同学的目标不一样，更何况今天是我们的show case之前的最后一天，想尽快story 是对的，但是保证质量也是对的。最终在大部分地方，我们采用了测试驱动开发，有小部分地方因为需要做spike的时候，TDD做得不好。代码也没有进行重构，时间已经来到了下午7点。<br>其实这个时候我是很纠结的，一方面我自己在这次TWU中，希望聚焦好的代码质量，另外一方面我们身处在团队之中，团队成员的coding能力不一致，更何况我们面临的是很零碎的工作时间，当然也是很紧的工作时间，我们必须从中进行取舍，这算是我在印度TWU面临的比较大的困惑了。  </p>
+<p>上一周也提到，经过第一个Release的失败的经验教训后，我们项目组本身也在不断的完善改进自己，项目组给自己提了不好action，来对团队进行流程上的规划，还有有一定作用，不过这个东西也产生了一个负面影响，那就是我们决定在Sign up story之前不做假设，不盲目开始开发story，这导致本来就只有一周的release，我们丢掉了不少时间来完成story，我们利用那段时间修改了一些release 1的story的bug,又交付了一些。不好的地方就是，我们星期五才sign up story，这一周星期二又要进行release 2 的show case,也就是我们只有不到两天的时间进行开发，测试，还不包括这之间一些session 和class 会占用我们一些时间。<br>此外，也许因为时间的关系，上周星期五，QA希望我完成一个story，但是那个story里面还有一个很重要的点，是没有确定的。 QA希望我先做确定的点，后面再来改，但是我拒绝了，因为不确定的那点就是这个story中相对比较复杂的一点，而且我也认为这样做assumption容易导致项目返工，最终没有接受那个story。今天在和一个同学pair的时候，又发生一件让我很纠结的事情，我发现这个story之前的部分，很多地方都没有测试，而且我们今天的时间和任务很紧，当我们希望在这个基础上添加新的功能的时候，我的pair告诉我，他认为我们现在应该尽快完成现在的这个story，测试可以后面来写，我很疑惑的望着他。 是的我知道，我们小组中，有些同学的目标不一样，更何况今天是我们的show case之前的最后一天，想尽快story 是对的，但是保证质量也是对的。最终在大部分地方，我们采用了测试驱动开发，有小部分地方因为需要做spike的时候，TDD做得不好。代码也没有进行重构，时间已经来到了下午7点。<br>其实这个时候我是很纠结的，一方面我自己在这次TWU中，希望聚焦好的代码质量，另外一方面我们身处在团队之中，团队成员的coding能力不一致，更何况我们面临的是很零碎的工作时间，当然也是很紧的工作时间，我们必须从中进行取舍，这算是我在印度TWU面临的比较大的困惑了。</p>
 <h5 id="关于P3"><a href="#关于P3" class="headerlink" title="关于P3"></a>关于P3</h5><p>来之前我们就听说了P3在如今的TWU的重要性，还有也听说了我们中国的童鞋大部分对这方面不太感冒，这次来，我也算颇有感触。我们中国的同学在这方面的确表现得不是很好，首先，讲话的流畅性是个很大的挑战，其实我还是觉得有文化的因素在里面，感觉我们没有特别强烈的愿望想表达自己的意见。当然在P3的session上表现得不那么好，并不代表我们什么都没做，就我自己而言，在两次P3 case stuudy 中，我都和电话那头的Thoughtworks同时，讲述我们中国的情况，介绍了我曾经干的类似的事情。我承认我可以做得更好。</p>
 <h5 id="关于积极参加项目管理的工作"><a href="#关于积极参加项目管理的工作" class="headerlink" title="关于积极参加项目管理的工作"></a>关于积极参加项目管理的工作</h5><p>参加这次TWU，我在参加项目管理以及与客户沟通方面，我是有不少期望的，但是事实说明到目前位置我做的并不好，一个事实就是，今天我和我的pair去跟PO确定细节，PO问我叫什么名字，说没有在之前的会议里面听到太多发言，我才意识到我在这方面做得多么不好，其实上周Coach JK也给我提过这一点。我的“借口”就是，项目里面不知道什么时候突然就冒出两个在这方面特别主要的童鞋，做了很多这方面的事情，我不太好再去插手这方面的工作，此外我觉得跟PO的交流、沟通很重要，我怕自己跟PO交流沟通不好，会影响团队。<br>当然这一切都是借口，其实现在这个环境，即使我们跟PO交流，沟通得不好，对我们的好处也是远远大于给我们的影响的，因为PO也是thoughtworks，我们不用太忌讳，太拘束，当然也要当人家PO那样正式对待，另外其他两个同学主动去承担了那些工作，为什么我没有积极的参加？其实说来，还是没有完完全全跳出舒适区，其实就像我在成都的项目里面类似，我在做编程之前的事情，我自己也知道并不好，比如跟BA交流，当然这并不是说我的开发的代码工作就做得多么好，而是我因为coding是我喜欢的工作，我觉得挑战更小，所有在上面更称心一点。还是继续加强在和客户、BA、QA方面的工作吧。增加能力的宽度。</p>
 <h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>我觉得，我在第一周，第二周的表现是要明显好于第三周的，也许是因为疲劳，也许也有一些松懈在里面吧，然后跟不同的人聊天，体会到公司搞这个Thoughtworks University是多么不容易，是花了多少的人力物力，我想我们每个人都应该珍惜这段时光，当然也不得不说，有很多是需要继续改进的，部分Session的质量我觉得还是可以更好的，此外我觉得最恼火的问题就是公寓的网络问题（公寓是公司花钱租的，算是公寓式酒店），基本上一直处于瘫痪的状态，除了可以聊QQ、Skype，有些时候能打开网页以来，基本上一直都处于在刷新页面的状态。希望可以早点解决，以后的童鞋也不用这么恼火了。</p>
@@ -1814,179 +1980,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2013/03/14/some-thougts-after-reading-big-data/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大染志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2013/03/14/some-thougts-after-reading-big-data/" itemprop="url">《大数据》读后感</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2013-03-14T16:37:00+08:00">
-                2013-03-14
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2013-08-31T22:34:15+08:00">
-                2013-08-31
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/我说/" itemprop="url" rel="index">
-                    <span itemprop="name">我说</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/我说/读后感/" itemprop="url" rel="index">
-                    <span itemprop="name">读后感</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>两周前，我拿到了从日本买的Kindle PaperWhite,买这个东西最主要的原因是因为是希望自己可以多读一点书，当然还希望眼睛可以不受什么伤害。然后用这个东西读完的第一本书便是《大数据》。<br>没读之前，想这本书可能讲的是，教我们如何在当今这个时代，开始去挖掘、使用身边的各种各样的大数据，并从其中发现商机。但其实这本书主要讲的是全世界那些成功使用大数据的实例，我们可以看到很多商业公司利用大数据给用户提供了分析和预测的功能，并创造出很大的商业价值。此外我们还可以看到不少政府机构或者其他一些组织也在开始大数据解决他们遇到的一些问题。在本书的最后一章，作者告诉了我们大数据可能带来的坏处。如：通过大数据可能我们的个人各种信息、隐私会很容易地被大数据的拥有者找到，这些信息，可能被政府用来监管我们等；通过大数据可以预测可能发生的事，或者预测我们人个人本书即将做的行为，书中有个例子：警察通过大数据分析得出一个人即将可能犯罪，并把它逮捕了，但事实上这个人现在并没有犯罪。也许这就限制、约束了我们个人的自由。<br>看完这本书，颠覆了自己之前的一些想法：</p>
-<ul>
-<li>以前我们认为错误的数据是没有用，我们需要保证统计的数据的准确性，但是在大数据中，错误的数据也是有用的，它和其他所有相对正确的数据一起构成了整体，也就算不了什么了。我们同样可以从这些数据中得出比较正确的预测和分析。  </li>
-<li>Google利用人们搜索的关键字来预测和判断某个地区是否发生流感，Google通过分析这个地区的人们搜索和流感有关的词的数量等来分析得出。</li>
-<li>Google 从互联网抓取数以亿记的各种语言、各种翻译水平的翻译结果，使用其翻译出来的准确率比那些微软使用正确的词库翻译出来的句子准备率更高。<br>这样的例子在书中还有很多，这里不再列举。  </li>
-</ul>
-<p>我自己的感想是，其实大数据无处不在，只要我们细心，我们就可以挖掘出身边的那些大数据，并做一些有意义的是，就像书中说的那样，我们不需要强求每条数据都那么真实准确，但是从大量的数据中我们就可以得出相对准备的结果。未来成功的公司必定是是那些拥有大量数据、并使用那些数据为大众提供服务的公司。  </p>
-<p>我们ITer 作为生活在大数据时代的幸运儿，都可以想想如何从身边获取一些数据，做一些很cool的实践！</p>
-<p>原谅我的词拙。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2039,7 +2032,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">306</span>
+                <span class="site-state-item-count">307</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2061,7 +2054,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">245</span>
+                <span class="site-state-item-count">248</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

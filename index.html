@@ -277,6 +277,154 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2017/10/12/caddy-markdown/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/12/caddy-markdown/" itemprop="url">使用 Caddy Web服务器显示 Markdown 文件</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-12T16:15:20+08:00">
+                2017-10-12
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-13T09:41:12+08:00">
+                2017-10-13
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>建议阅读此篇文章前，先阅读我们公众号的前篇 Caddy上手文章 ——【<a href="http://toozhao.com/2017/09/19/caddy/">快速上手更简单的 Web 服务器 —— Caddy</a>】</p>
+<p>本篇文章我们将利用 Caddy Web 服务器的Markdown 插件和它强大的网页模板功能，在直接托管，渲染显示Markdown文件。</p>
+<p>现在得益于 Markdown 的简单易用，越来越多的文档都在使用使用 Markdown来编写。像我们常用的 Github、GitBook 等流行服务也都在使用 Markdown。那么为什么越来越多的相关技术文档和资料都是使用 Markdown 编写的呢？我觉得所有原因都归于『简单』二字。我们通过一些常用的符号标记，就可以写出格式整齐、漂亮的文档。而不用写繁琐的 HTML。而通过简单的工具转化，我们就可以将 Markdown 文档转成 HTML 的格式。</p>
+<h2 id="安装-Caddy"><a href="#安装-Caddy" class="headerlink" title="安装 Caddy"></a>安装 Caddy</h2><p>那现在就让我们来实现这个功能吧，首先你得在你的电脑或者服务器上安装 Caddy，如何安装？请查看本公众号之前的文章进行回顾或直接运行如下脚本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://getcaddy.com | bash -s personal</div></pre></td></tr></table></figure></p>
+<h2 id="初步渲染-Markdown"><a href="#初步渲染-Markdown" class="headerlink" title="初步渲染 Markdown"></a>初步渲染 Markdown</h2><p>Markdown 作为 Caddy Web 服务器的标准指令，使得我们可以直接在 Caddyfile 配置文件中使用该指令，托管，渲染Markdown 文件。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">0.0.0.0:8080 &#123;</div><div class="line">  markdown &#123;</div><div class="line">    ext .md .markdown</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这里的配置是说：在我们希望托管 Markdown 文件的服务器地址块中，让服务器对当前目录启用渲染 Markdown 文件的功能，即当我们访问 Markdown 文件时，Caddy 自动将其转化为 HTML 进行展示。下面我将以为我本地的文件作为示例给大家展示效果和截图。</p>
+<p><img src="http://7ktsrz.com1.z0.glb.clouddn.com/files.png" alt="files"></p>
+<p>如图所示为 Caddyfile 所在目录。可以看到这里有若干子目录，和子目录下面的.md 文件。现在让我们运行 caddy。 在浏览器中访问 <code>http://localhost:8080/0.general/0.general.md</code>文件。可以看到效果如下：</p>
+<p><img src="http://7ktsrz.com1.z0.glb.clouddn.com/raw.png" alt="raw"></p>
+<p>Caddy 成功的将 Markdown文件以网页的形式进行展示，并且正确显示此了相应的格式和层次结构。但是这里有个美中不足之处，Caddy 渲染出的效果，不够美观。简单一点说，没有 CSS 修饰。</p>
+<h3 id="美化-Markdown-文件"><a href="#美化-Markdown-文件" class="headerlink" title="美化 Markdown 文件"></a>美化 Markdown 文件</h3><p>那我们如何将Markdown 文件更加美观的展示呢？由于 Caddy 本身是使用 Golang 进行开发的，因此 Caddy 也将 Go 强大的模板功能提供给了用户。这里我们可以利用 Caddy 模板功能来美化 Markdown 文件。我们将在模板网页中加入特定 CSS 来美化页面。CSS 库来自： <a href="https://github.com/sindresorhus/github-markdown-css" target="_blank" rel="external">https://github.com/sindresorhus/github-markdown-css</a></p>
+<p>在 Caddyfile 目录下创建一个叫 <code>template.html</code> 的网页文件，添加如下内容:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>&#123;&#123;.Doc.title&#125;&#125;<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.8.0/github-markdown.css"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">    .markdown-body &#123;</span></div><div class="line"><span class="undefined">      box-sizing: border-box;</span></div><div class="line"><span class="undefined">      min-width: 200px;</span></div><div class="line"><span class="undefined">      max-width: 980px;</span></div><div class="line"><span class="undefined">      margin: 0 auto;</span></div><div class="line"><span class="undefined">      padding: 45px;</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"markdown-body"</span>&gt;</span></div><div class="line">    &#123;&#123;.Doc.body&#125;&#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>我们的 Markdown 文本内容会在 <code>&lt;div class=&quot;markdown-body&quot;&gt;</code> 中显示。<code>github-markdown-css</code> 库会对类名为 <code>markdown-body</code> 中的内容进行美化。<br><code>.Doc.title</code> 和 <code>.Doc.body</code> 则是网页模板中的动态内容，前者为文档的文件名，而后者为文档中的全部内容。与此同时，我们需要在 Caddyfile 配置文件中添加模板特性。<br>HTML 中而外的 <code>&lt;style&gt;</code>标签是为了，限制页面内容的宽度，和将内容居中显示。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">0.0.0.0:8080 &#123;</div><div class="line">  markdown &#123;</div><div class="line">    ext .md .markdown</div><div class="line">    template template.html  <span class="comment">#后面的值即为模板文件的文件地址</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>重启 Caddy 服务器，刷新页面。有没有觉得页面变得更加美观，漂亮了。</p>
+<p><img src="http://7ktsrz.com1.z0.glb.clouddn.com/css.png" alt="css"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://toozhao.com/2017/09/19/caddy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -324,8 +472,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-19T17:50:51+08:00">
-                2017-09-19
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-13T09:11:16+08:00">
+                2017-10-13
               </time>
             
           </span>
@@ -1810,172 +1958,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2013/11/26/what-do-i-think-of-agile/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大染志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2013/11/26/what-do-i-think-of-agile/" itemprop="url">我怎么看敏捷</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2013-11-26T18:51:55+08:00">
-                2013-11-26
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2013-11-26T20:31:33+08:00">
-                2013-11-26
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/我说/" itemprop="url" rel="index">
-                    <span itemprop="name">我说</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="/images/2013/11/agile.jpg" alt="Agile"><br>去年11月份的时候，我进到了ThoughWorks实习，开始了我的TW生涯，从现在除去今年年初由于毕业论文断断续续的10天左右的请假，我已经到ThoughtWorks1年了，现在我想来我聊聊我眼中的敏捷和我对敏捷的看法。它是比较主观的看法。<br>首先，我必须得说敏捷并不是完美无缺的，当然也不是所有行业，所有软件项目都适合使用敏捷来开发和管理的。很明显的一个例子就是，你不能用敏捷来开发NASA的航天飞机的软件系统。从敏捷的理念我们会说，我们让开发航天飞机的起飞系统，然后交付给NASA使用，之后再继续交付降落等其他系统，显示这是行不通的，航天飞机不能在仅仅拥有起飞功能的时候就上天啊。敏捷里强调快速交付，快速响应，及时修复bug，因此我们会允许软件存在潜在少量bug的时候让其上线，使用。这在航天飞行系统里面也是行不通的，因为涉及到人的生命，航天飞行系统应该是不允许任何bug的。  </p>
-<blockquote>
-<p>但我依然会说，敏捷是一种很好的理念和实践，适合大部分IT企业使用，特别是互联网企业和运行互联网产品的企业使用。</p>
-</blockquote>
-<p>在现在互联网时代，天下武功唯快不破。采用敏捷的实践，初期开发MVP（Minimal Valuable Product）产品，快速上线，根据用户的反馈不断更新、改进自己的产品，开发新的功能，这样周而复始，产品把用户最喜欢，优先级最高的功能永远都放在第一时间开发、上线。根据用户的反馈、统计数据的结果不断调整产品的策略，这样才能立于当今互联网。在我们身边也许Github、 Flickr等都是很好的成功例子。<br>下面是我对于一些是非的意见：  </p>
-<ul>
-<li>结对编程能够明显提升代码的质量，让团队成员对代码的熟悉度大幅提升，但是我不赞成至始至终都是结对编程，应该留时间进行单独编程，这样虽然代码质量也许会有一些下降，但是如果伴以TDD对进行辅佐，是不会下降太多，单独编程有助于让dev独立思考，发挥创造力，很多时候会达到意想不到的结果。另外一点结果编程通常达不到两个dev独立编写代码的效率，就像在《人月神话》中讲到的那样，1一个人如果需要开发一个软件需要100填，那么10个程序员10天肯定不能完成任务的，因为期间还需要算上沟通的成本。  </li>
-<li>关于TDD，确有遇到过几次绞尽脑汁也没想明白怎么测试的case。但是我们如果使用 隔离依赖（即mock依赖，stub行为，如使用mockito中的：given().willReturn();或者when().thenReturn()等）的原则来编写测试，绝大多数情况都会变得豁然开朗，就Java而言，遇到静态方法，我们可以通过间接的调用去测试，对于无返回值的方法（void）我们可以采用验证行为的方法去测试(如使用mockito中的verify（）函数)。使用TDD的好处是不言而喻的，用测试代码描述你的需求，表达你想要的结果，既保证了质量也不用担心会做出多余的功能。不过在开发自己的小点子、小创意时，我通常选择Rails和Node.js进行开发因此TDD做得并不好，通产只是选择性的对重要的部分进行测试保证。</li>
-<li>沟通胜于一切，跟项目中所有的人频繁沟通，在实际项目中有一次是这样的，对于story中一个对于生效时间信息的描述有些模糊，我没有多想久自己认为肯定的全局的生效时间，但是不曾想到，当多个子产品出现时，就不能依赖全局生效时间，因为全局生效时间是其中最大第一个，而不一定是当前所需准确的生效时间，因此这个sotry在最后给BA 检查的时候才发现这个bug,试想最初如果我没有随便假设，而是马上给BA发邮件沟通，问清楚生效时间，也不会出现返工的情况。我个人认为良好、高效的沟通甚至比写好代码优先级更高。  </li>
-<li>站会（stand up）既是一种对团队成员工作的可视化，了解彼此的进度等情况，也是锻炼表达能力、增强自信心的好机会。为何这样讲，因为在站会上每个人需要用几句话来概括自己前一天所做的一切，当你讲到你前一天做的一些进步时，团队为你真心叫好，难道不会让你你增强自信心吗？对于站会进行的方式，有团队会选择每个人依次讲解前一天的工作内容；也有人会选择采用按照故事墙的方式来进行，依次对每个列（analysis, ready for dev, in development, test, sign off等）进行浏览等，当讲到自己的那个story时，每个人需要更新自己前一天在这个story上的工作，这样的好处是可以对每个story的情况进行可视化。但是我个人更喜欢前者，这样更加自由，但是目前在工作中基本尝试的都是后者。  </li>
-<li>另外一点是尽早集成，这点感触很深，大三的时候在一家公司实习，当时做一个原型系统，两三个人做一个模块，到最后快要演示的时候，才把几个模块尝试连到一起做集成测试。结果就是，所有人坐在一起进行的进行各种接口的连接、调用，bug修补。一旦连接成功就兴奋到难以言表，仿佛很长一段时间的工作都没有这一下来得兴奋。系统可以集成后，一直都提心吊胆，担心其中某个东西会不会莫名挂掉，因为集成测试都是使用人肉测试的啊。在展示的时候，各种紧张，安排专人时时刻刻注意到服务器。在敏捷中，我们要求及早进行系统集成和和创建部署环境的脚本，每次CI的运行都是一次集成测试，都是一次服务器的部署。因此不用担心在realse的时候不能部署的情况。不过有一件事情是需要注意的，那就是数据库的迁移，在开发机器，测试服务器你还能每次部署的时候都干掉之前的数据库，重新创建，但是在部署到产品服务器的时候就需要小心了，在Java中我们可以用<a href="http://flywaydb.org/" target="_blank" rel="external">Flyway</a> 达到类似Rails中的 rake db migrate的效果。  </li>
-</ul>
-<p>另外，我认为 switch pair(变还你结对同事)、 code review（团队成员坐到一起对团队前一天提交的代码进行浏览、解读），这些都可以让整个团队共享更多的上下文，还可以检查出不到的代码，学习好的代码。<br>也许明年这个时候我对敏捷的看法又有不少新的见解，到时候再来分享。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2028,7 +2010,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">306</span>
+                <span class="site-state-item-count">307</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2050,7 +2032,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">245</span>
+                <span class="site-state-item-count">248</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
