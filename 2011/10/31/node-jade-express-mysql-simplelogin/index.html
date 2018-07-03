@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="mysql,node,express,form,jade,登录验证," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="今天要给大家介绍一下如何利用node.js的expressjademysql三个module实现获取form表单的内容以及通过数据库验证登录的正确性。请确保你已经下载好了前面三个module并且你的电脑里面已经安装好mysql。 首先看看运行页面：  再给大家看看整个小系统的目录结构吧：  请大家按照图中所示的目录结构建立好所有的文档吧。当然jquery你下载就可以了。 接下来，我们将建立数据库：">
+<meta name="keywords" content="mysql,node,express,form,jade,登录验证">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node、express、mysql、jade实现用户登录数据获取及验证">
+<meta property="og:url" content="http://toozhao.com/2011/10/31/node-jade-express-mysql-simplelogin/index.html">
+<meta property="og:site_name" content="大染志">
+<meta property="og:description" content="今天要给大家介绍一下如何利用node.js的expressjademysql三个module实现获取form表单的内容以及通过数据库验证登录的正确性。请确保你已经下载好了前面三个module并且你的电脑里面已经安装好mysql。 首先看看运行页面：  再给大家看看整个小系统的目录结构吧：  请大家按照图中所示的目录结构建立好所有的文档吧。当然jquery你下载就可以了。 接下来，我们将建立数据库：">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://toozhao.com/images/2011/11/1.jpg">
+<meta property="og:image" content="http://toozhao.com/images/2011/11/2.jpg">
+<meta property="og:updated_time" content="2014-07-22T08:49:09.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="node、express、mysql、jade实现用户登录数据获取及验证">
+<meta name="twitter:description" content="今天要给大家介绍一下如何利用node.js的expressjademysql三个module实现获取form表单的内容以及通过数据库验证登录的正确性。请确保你已经下载好了前面三个module并且你的电脑里面已经安装好mysql。 首先看看运行页面：  再给大家看看整个小系统的目录结构吧：  请大家按照图中所示的目录结构建立好所有的文档吧。当然jquery你下载就可以了。 接下来，我们将建立数据库：">
+<meta name="twitter:image" content="http://toozhao.com/images/2011/11/1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://toozhao.com/2011/10/31/node-jade-express-mysql-simplelogin/"/>
+
+
+
+
+
+  <title>node、express、mysql、jade实现用户登录数据获取及验证 | 大染志</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-5243064-16', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">大染志</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">想要玩得很 High 的程序员</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-知识图谱">
+          <a href="https://toozhao.com/knowledge-mind-mapping" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            知识图谱
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2011/10/31/node-jade-express-mysql-simplelogin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">node、express、mysql、jade实现用户登录数据获取及验证</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-10-31T21:00:00+08:00">
+                2011-10-31
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:49:09+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/node-js/" itemprop="url" rel="index">
+                    <span itemprop="name">node.js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>今天要给大家介绍一下如何利用node.js的expressjademysql三个module实现获取form表单的内容以及通过数据库验证登录的正确性。请确保你已经下载好了前面三个module并且你的电脑里面已经安装好mysql。</p>
+<p>首先看看运行页面：</p>
+<p><a href="/images/2011/11/1.jpg"><img class="aligncenter size-full wp-image-2104" title="1" src="/images/2011/11/1.jpg" alt="" width="537" height="395"></a></p>
+<p>再给大家看看整个小系统的目录结构吧：</p>
+<p><a href="/images/2011/11/2.jpg"><img class="aligncenter size-full wp-image-2105" title="2" src="/images/2011/11/2.jpg" alt="" width="254" height="280"></a></p>
+<p>请大家按照图中所示的目录结构建立好所有的文档吧。当然jquery你下载就可以了。</p>
+<p>接下来，我们将建立数据库：</p>
+<pre class="brush: sql; title: ; notranslate" title="">create database receipts;  #创建数据库
+
+#创建名为user的表
+&lt;pre style="padding-left: 30px;"&gt;use receipts;
+create table  user (
+    userid bigint auto_increment not null primary key,
+    username  varchar(20) not null,
+    pass  varchar(30) not null
+);
+</pre>
+
+<p>然后我们来书写我们所需要的login.jade。这里使用jade，我们需要创建一个简单的layout.jade（模板）,在layout模板中我们将定义最基本的网页框架。设定大多数网页相同的部分。这里关于jade的语法我就不多讲了，jade的官网上很详细，直接给出layout的代码：</p>
+<pre class="brush: xml; title: ; notranslate" title="">!!! 5
+html
+      head
+         &lt;span style="color: #ff0000;"&gt; title=title&lt;/span&gt;
+       &lt;span style="color: #ff0000;"&gt; link(rel='stylesheet',type='text/css',href='/css/style.css')&lt;/span&gt;
+      body!=body
+</pre>
+
+<p>注意，由于jade会对我们所写的代码进行重新编码，编码成linux的相关格式，这里建议大家使用类似notepad++、ultra editor等软件时将其编码为UTF-8 无DOM格式，并且请不要在文件中同时使用空格和Tab对文件分隔，会导致报错。这里强调一下比如上述 title=title，这里是把网页的标题赋值给一个变量叫做title，之后我们声明并赋值title。link后面不能添加空格。类似的也一样。</p>
+<p>下面是我们的登录界面login.jade,代码如下：</p>
+<pre class="brush: xml; title: ; notranslate" title="">form(id='login',method='post',action='/login')
+    h1 Log In
+    p(style='margin-top:20px;')   #{error}
+    fieldset(id='inputs')
+        input(id='username',name='username',type='text',placeholder='Username',autofocus='',required='')
+        input(id='password',name='password',type='password',placeholder='Passowrd',required='')
+     fieldset(id='actions')
+        input(type='submit',id='submit',value='Log in')
+        a(href='') Forgot your password
+        a(href='http://google.com') Register
+</pre>
+
+<p>大致是定义一个完整的表单。并且定义一个显示提示错误信息的地方。当然还有最重要的css代码。我将在后面提供源码给大家下载。<br>home.jade和index.jade这个程序里面我们用不到，因此内容可以不管它。</p>
+<p>接下来，我们就开始写代码了。当然是使用express了。首先我们将写两个路由器在app.js中，一个是显示登录的页面并且作为首页，另外一个是验证登录的页面。</p>
+<p>//首先添加配置信息</p>
+<pre class="brush: jscript; title: ; notranslate" title="">app.set('view engine','jade');   //设置模板引擎
+app.set('views',__dirname+'/views');   //配置jade文件夹
+app.use(express.static(__dirname+'/public'));  //设置静态文件文件夹,比如css，js,/images
+&lt;span style="color: #ff0000;"&gt;app.use(express.bodyParser()); //用户获取form表单数据&lt;/span&gt;
+app.use(express.methodOverride());
+
+//设置首页。
+app.get('/',function(req,res){
+    res.render('index',{title:'欢迎使用收据管理系统',error:''});
+});
+</pre>
+
+<pre style="padding-left: 30px;">在编写登录验证登录路由之前，我们需要明确这里我们需要处理那些事：</pre>
+
+<ul>
+<li>获取表单中数据</li>
+<li>创建mysql数据库连接</li>
+<li>从mysql请求数据</li>
+<li>将数据库中数据与form表单进行比较，并返回结果。</li>
+</ul>
+<p>//获取表单中数据<br>var user = req.body.username； //这样便可以获取到form表单中 name=”username”值，依赖于express.bodyParser()</p>
+<p>创建mysql数据库连接。这里我们将做一个小小的封装。将封装的函数写入 user.js</p>
+<pre class="brush: jscript; title: ; notranslate" title="">//连接mysql服务器
+function connectServer(){
+    //创建mysql连接,设置用户名，密码
+    var client = mysql.createClient({
+        user:'root',
+        password :'root'
+    });
+    client.host= '127.0.0.1';
+    client.port=3306;
+    &lt;span style="color: #ff0000;"&gt;client.database='receipts'; //选择需要使用的数据库，创建数据库时不必须，其他时候必须&lt;/span&gt;
+    return client;   //返回创建好的数据库连接对象
+}
+</pre>
+
+<p>//接下来我们将从数据库获取数据，同样我们也做一个封装。因为要执行数据库操作。因此我们需要传入一个数据库连接对象client，并且传入用户名，以便查出该用户对应的密码。再则我们需要创建一个回调函数以便于，在获取到数据库中的值后，做出相关判断。按照常规长发很难获取值。应该闭包可以。（这个回调函数得感谢一个群里的大牛。），代码如下。</p>
+<pre class="brush: jscript; title: ; notranslate" title="">//执行mysql查询操作。返回查询获取到的对象
+ function  selectFun(client,username,callback){
+    //client为一个mysql连接对象
+    client.query('select pass from user where username="'+username+'"',function(err,results,fields){
+        if(err) throw err;
+
+        callback(results);   //在获取结果之后由回调函数进行相关操作
+    });
+}
+</pre>
+
+<pre style="padding-left: 30px;">我们将关于数据库的两个函数，写在user.js里面。因此这里我们需要导出这两个函数，使用exports关键字，以便在其他地方可以使用。
+<pre class="brush: jscript; title: ; notranslate" title="">
+exports.connect = connectServer;
+exports.selectFun  = selectFun;    //注意没有函数的（）哦。&lt;/pre&gt;
+</pre>
+
+
+<pre style="padding-left: 30px;"></pre>
+
+
+<pre style="padding-left: 30px;">好了函数写好了。现在我们就该在app.js中使用了。</pre>
+
+
+<pre style="padding-left: 30px;">导入我们刚创建的user.jsmodule</pre>
+
+
+<pre style="padding-left: 30px;"><span style="color: #ff0000;">var usr = require('./dao/user');</span></pre>
+
+
+<pre style="padding-left: 30px;">然后就可以使用了。
+<pre class="brush: jscript; title: ; notranslate" title="">
+app.post('/login',function(req,res){
+    var user = req.body.username,
+    pass = req.body.password,
+    client = usr.connect(), //创建数据库连接
+    result  = null;
+     //这里在回调函数里面进行mysql返回值的验证。很重要
+    &lt;span style="color: #ff0000;"&gt;usr.selectFun(client,req.body.username,function(result){&lt;/span&gt;
+        console.log('查询结果为'+result);
+
+        if(result[0]===undefined){   //这里需要说明的是，mysql返回结果存在一个数组对象中。
+            res.send('没有该用户！');
+            }else{
+            &lt;span style="color: #ff0000;"&gt;if(result[0].pass==req.body.password){&lt;/span&gt;
+                res.send('登录成功');
+                }else{
+                    res.send('你输入的密码有误');&lt;/pre&gt;
+                          });
+            }
+        }
+    });  //执行查询
+});
+</pre>
+
+
+<pre style="padding-left: 30px;">大家是不是看得太乱了。对不起。都是我的文字控制能力不好。大家凑合着看看吧。我把源码给大家，当然没有包含mysql创建数据库的源码哦。</pre>
+
+
+<blockquote><br>  <pre style="padding-left: 30px;">大家下载源码吧：<a href="http://115.com/file/bh03gw2q#" target="_blank" rel="external">http://115.com/file/bh03gw2q#</a></pre><br><br></blockquote>
+
+
+<pre style="padding-left: 30px;">有什么问题，我们一起交流一起学习吧。</pre>
+
+</pre></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mysql/" rel="tag"># mysql</a>
+          
+            <a href="/tags/node/" rel="tag"># node</a>
+          
+            <a href="/tags/express/" rel="tag"># express</a>
+          
+            <a href="/tags/form/" rel="tag"># form</a>
+          
+            <a href="/tags/jade/" rel="tag"># jade</a>
+          
+            <a href="/tags/登录验证/" rel="tag"># 登录验证</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2011/10/28/node-js-web-express/" rel="next" title="Node.js web框架express入门（1）">
+                <i class="fa fa-chevron-left"></i> Node.js web框架express入门（1）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2011/11/25/solve-hibernate-8-actions/" rel="prev" title="解决Hibernate只执行8次数据库操作">
+                解决Hibernate只执行8次数据库操作 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
+               alt="Junv" />
+          <p class="site-author-name" itemprop="name">Junv</p>
+           
+              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">307</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">69</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">247</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wahyd4" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/junwei-zhao-46944557" target="_blank" title="LinkedIn">
+                  
+                    <i class="fa fa-fw fa-linkedin"></i>
+                  
+                    
+                      LinkedIn
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                    
+                      StackOverflow
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Junv</span>
+
+  
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

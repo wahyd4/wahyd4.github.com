@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Node.js,email,发送," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="10月27日更新，可以发送附件 今天晚上花了点时间试了一下使用node.js发送电子邮件，也挺简单的，不过有个问题一直没有解决，就是发送附件,我弄明白的时候，会补充资料的。 首先我们还是得安装node的第三方用户发送email的module 。 npm install nodemailer 安装好之后，还有一个问题需要注意，我们应该确保用来发送邮件的邮箱地址是打开只是IMAP 、SMTP功能的，这">
+<meta name="keywords" content="Node.js,email,发送">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Node.js发送电子邮件（E-mail）">
+<meta property="og:url" content="http://toozhao.com/2011/10/25/node-js-send-e-mail/index.html">
+<meta property="og:site_name" content="大染志">
+<meta property="og:description" content="10月27日更新，可以发送附件 今天晚上花了点时间试了一下使用node.js发送电子邮件，也挺简单的，不过有个问题一直没有解决，就是发送附件,我弄明白的时候，会补充资料的。 首先我们还是得安装node的第三方用户发送email的module 。 npm install nodemailer 安装好之后，还有一个问题需要注意，我们应该确保用来发送邮件的邮箱地址是打开只是IMAP 、SMTP功能的，这">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2014-07-22T08:49:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用Node.js发送电子邮件（E-mail）">
+<meta name="twitter:description" content="10月27日更新，可以发送附件 今天晚上花了点时间试了一下使用node.js发送电子邮件，也挺简单的，不过有个问题一直没有解决，就是发送附件,我弄明白的时候，会补充资料的。 首先我们还是得安装node的第三方用户发送email的module 。 npm install nodemailer 安装好之后，还有一个问题需要注意，我们应该确保用来发送邮件的邮箱地址是打开只是IMAP 、SMTP功能的，这">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://toozhao.com/2011/10/25/node-js-send-e-mail/"/>
+
+
+
+
+
+  <title>使用Node.js发送电子邮件（E-mail） | 大染志</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-5243064-16', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">大染志</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">想要玩得很 High 的程序员</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-知识图谱">
+          <a href="https://toozhao.com/knowledge-mind-mapping" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            知识图谱
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2011/10/25/node-js-send-e-mail/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">使用Node.js发送电子邮件（E-mail）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-10-25T21:00:00+08:00">
+                2011-10-25
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:49:00+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/node-js/" itemprop="url" rel="index">
+                    <span itemprop="name">node.js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><span style="color: #ff0000;">10月27日更新，可以发送附件</span></p>
+<p>今天晚上花了点时间试了一下使用node.js发送电子邮件，也挺简单的，<del>不过有个问题一直没有解决，就是发送附件,</del>我弄明白的时候，会补充资料的。</p>
+<p>首先我们还是得安装node的第三方用户发送email的module 。</p>
+<pre><code>npm install nodemailer
+</code></pre><p>安装好之后，还有一个问题需要注意，我们应该确保用来发送邮件的邮箱地址是打开只是IMAP 、SMTP功能的，这样才可以发送邮件成功。</p>
+<p>接下来我们就开始写代码，其实很简单，官方网站也都已经说得很清楚了。</p>
+<pre class="brush: jscript; title: ; notranslate" title="">var mail = require('nodemailer');  //包含发送邮件所需module
+mail.SMTP = {
+    use_authentication: true, //如果我们使用QQ等邮箱，这个必须写且为true
+    host: 'smtp.qq.com',   //定义用来发送邮件的邮箱服务器，一般是QQ这些的
+    port:25,    //定义服务器端口，一般是25    ,如果是使用SSL端口一般为465,或者587
+    ssl:false,     //默认不适用SSL，可以省略不写
+    user: 'wahyd4@qq.com',   //邮箱用户名
+    pass:'*****'   //输入邮箱密码
+}
+mail.send_mail(
+{
+    sender:'wahyd4@qq.com',   //发送邮件的地址
+    to:'wahyd4@gmail.com',     //发给谁
+    subject:'随便把',               //主题
+    body:'Hello,这个邮件来自node.js'
+},
+//回调函数，用户判断发送是否成功，如果失败，输出失败原因。
+function(error,success){
+    if(!error){
+        console.log('message success');
+        }else{
+        console.log('failed'+error);
+    }
+}
+);</pre>
+
+<p>这里我没有使用SSL进行发送，而且发送的是纯文本，也可以发送html,如果发送html则在send_mail函数里面加上：</p>
+<pre><code>html: &apos;&lt;p&gt; 你好。。邮件来自node.js&lt;/p&gt;&apos;,
+</code></pre><p>如果使用SSL进行发送我们则需要将mail.SMTP改为：</p>
+<pre class="brush: jscript; title: ; notranslate" title="">mail.SMTP = {
+    use_authentication: true,  //如果我们使用QQ等邮箱，这个必须写且为true
+    host: 'smtp.qq.com',   //定义用来发送邮件的邮箱服务器，一般是QQ这些的
+    port:465,    //定义服务器端口，一般是25    ,如果是使用SSL端口一般为465
+    ssl:true,     //默认不适用SSL，可以省略不写
+    user: 'wahyd4@qq.com',   //邮箱用户名
+    pass:'*****'   //输入邮箱密码
+}
+</pre>
+
+<p>好了。现在你运行程序试试,是不是成功了。</p>
+<p>我今天晚上遇到一个错误 :<strong>503 ERROR,need EHLO and AUTH first</strong>。就是因为没有添加use_authentication = true的缘故。加上之后，搞定。</p>
+<p>———————————————————分割线———————-</p>
+<p>发送附件的话。首先我们得使用</p>
+<pre class="brush: jscript; title: ; notranslate" title="">var fs = require('fs');    //导入文件系统相关的包</pre>
+
+<p>饭后我们将文件读入内存，并将其发送。</p>
+<pre class="brush: jscript; title: ; notranslate" title="">//读入文件
+var img = fs.readFileSync(__dirname+"/cat.jpg");
+
+var attachment = [{
+    'filename': "cat.jpg",   //这里只是给附件取名称，而不是导入文件内容
+    'contents': img         //导入文件
+}]    //定义我们需要发送的附件
+</pre>
+
+<p>接下来我们需要在send_mail函数中加入发送附件即可</p>
+<pre class="brush: jscript; title: ; notranslate" title="">mail.send_mail(
+{
+    sender:'wahyd4@qq.com',   //发送邮件的地址
+    to:'wahyd4@gmail.com',     //发给谁
+    subject:'测试发送文件',       //主题
+    attachments: attachment, //添加附件
+    body:'Hello,这个邮件来自node.js，包含附件哦，亲！'
+
+},
+</pre>
+
+<p>附上Nodemailer的网址：<a href="http://www.nodemailer.org/" target="_blank" rel="external">http://www.nodemailer.org/</a></p>
+<p>enjoy it!</p>
+<p>最后还是感谢 <a href="https://github.com/andris9" target="_blank" rel="external">andris9</a> 大叔很快帮我解决了问题！</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Node-js/" rel="tag"># Node.js</a>
+          
+            <a href="/tags/email/" rel="tag"># email</a>
+          
+            <a href="/tags/发送/" rel="tag"># 发送</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2011/10/24/node-js-connect-mysql/" rel="next" title="使用node.js连接mysql数据库">
+                <i class="fa fa-chevron-left"></i> 使用node.js连接mysql数据库
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2011/10/28/node-js-web-express/" rel="prev" title="Node.js web框架express入门（1）">
+                Node.js web框架express入门（1） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
+               alt="Junv" />
+          <p class="site-author-name" itemprop="name">Junv</p>
+           
+              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">307</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">69</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">247</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wahyd4" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/junwei-zhao-46944557" target="_blank" title="LinkedIn">
+                  
+                    <i class="fa fa-fw fa-linkedin"></i>
+                  
+                    
+                      LinkedIn
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                    
+                      StackOverflow
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Junv</span>
+
+  
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

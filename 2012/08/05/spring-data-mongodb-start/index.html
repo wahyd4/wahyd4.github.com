@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="java,入门,Spring,mongo," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="这篇文章，主要是作为一个记录，记录我一个小时之前搞定这个东西的兴奋心情。spring mongodb主要是mongodb-java-driver 进行了一些封装，然后可以配合强大的spring使用。我觉得可以简单把它看成一个mongo的”ORM”框架。通过我从星期五到星期天的捣腾，我发现熟悉spring 框架本身其实是最重要的。好下面直接上吧： 首先我在eclipse里面建了一个maven项">
+<meta name="keywords" content="java,入门,Spring,mongo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring Data MongoDB 简单使用">
+<meta property="og:url" content="http://toozhao.com/2012/08/05/spring-data-mongodb-start/index.html">
+<meta property="og:site_name" content="大染志">
+<meta property="og:description" content="这篇文章，主要是作为一个记录，记录我一个小时之前搞定这个东西的兴奋心情。spring mongodb主要是mongodb-java-driver 进行了一些封装，然后可以配合强大的spring使用。我觉得可以简单把它看成一个mongo的”ORM”框架。通过我从星期五到星期天的捣腾，我发现熟悉spring 框架本身其实是最重要的。好下面直接上吧： 首先我在eclipse里面建了一个maven项">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://toozhao.com/images/2012/07/logo-mongoDB.png">
+<meta property="og:updated_time" content="2014-07-22T08:51:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spring Data MongoDB 简单使用">
+<meta name="twitter:description" content="这篇文章，主要是作为一个记录，记录我一个小时之前搞定这个东西的兴奋心情。spring mongodb主要是mongodb-java-driver 进行了一些封装，然后可以配合强大的spring使用。我觉得可以简单把它看成一个mongo的”ORM”框架。通过我从星期五到星期天的捣腾，我发现熟悉spring 框架本身其实是最重要的。好下面直接上吧： 首先我在eclipse里面建了一个maven项">
+<meta name="twitter:image" content="http://toozhao.com/images/2012/07/logo-mongoDB.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://toozhao.com/2012/08/05/spring-data-mongodb-start/"/>
+
+
+
+
+
+  <title>Spring Data MongoDB 简单使用 | 大染志</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-5243064-16', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">大染志</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">想要玩得很 High 的程序员</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-知识图谱">
+          <a href="https://toozhao.com/knowledge-mind-mapping" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            知识图谱
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/08/05/spring-data-mongodb-start/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Spring Data MongoDB 简单使用</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-08-05T22:00:00+08:00">
+                2012-08-05
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:51:32+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/mongodb/" itemprop="url" rel="index">
+                    <span itemprop="name">mongodb</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p><img class="alignnone" title="mongo" src="/images/2012/07/logo-mongoDB.png" alt="" width="217" height="90"></p>
+</blockquote>
+<p>这篇文章，主要是作为一个记录，记录我一个小时之前搞定这个东西的兴奋心情。spring mongodb主要是mongodb-java-driver 进行了一些封装，然后可以配合强大的spring使用。我觉得可以简单把它看成一个mongo的”ORM”框架。通过我从星期五到星期天的捣腾，我发现熟悉spring 框架本身其实是最重要的。好下面直接上吧：</p>
+<p>首先我在eclipse里面建了一个maven项目，你需要添加如下依赖信息(这里用到的spring框架是3.0.6.RELEASE版本)：</p>
+<pre class="brush: xml; title: ; notranslate" title="">&lt;properties&gt;
+ &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+ &lt;spring.version&gt;3.0.6.RELEASE&lt;/spring.version&gt;
+ &lt;slf4j.version&gt;1.6.1&lt;/slf4j.version&gt;
+ &lt;/properties&gt;
+
+&lt;dependencies&gt;
+ &lt;dependency&gt;
+ &lt;groupId&gt;junit&lt;/groupId&gt;
+ &lt;artifactId&gt;junit&lt;/artifactId&gt;
+ &lt;version&gt;4.8.1&lt;/version&gt;
+ &lt;scope&gt;test&lt;/scope&gt;
+ &lt;/dependency&gt;
+ &lt;dependency&gt;
+ &lt;groupId&gt;org.springframework.data&lt;/groupId&gt;
+ &lt;artifactId&gt;spring-data-mongodb&lt;/artifactId&gt;
+ &lt;version&gt;1.0.2.RELEASE&lt;/version&gt;
+ &lt;/dependency&gt;
+ &lt;dependency&gt;
+ &lt;groupId&gt;log4j&lt;/groupId&gt;
+ &lt;artifactId&gt;log4j&lt;/artifactId&gt;
+ &lt;version&gt;1.2.16&lt;/version&gt;
+ &lt;/dependency&gt;
+ &lt;dependency&gt;
+ &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+ &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;
+ &lt;version&gt;${slf4j.version}&lt;/version&gt;
+ &lt;/dependency&gt;
+ &lt;dependency&gt;
+ &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+ &lt;artifactId&gt;jcl-over-slf4j&lt;/artifactId&gt;
+ &lt;version&gt;${slf4j.version}&lt;/version&gt;
+ &lt;/dependency&gt;
+ &lt;dependency&gt;
+ &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+ &lt;artifactId&gt;slf4j-log4j12&lt;/artifactId&gt;
+ &lt;version&gt;${slf4j.version}&lt;/version&gt;
+ &lt;/dependency&gt;
+ &lt;!-- Spring dependencies --&gt;
+ &lt;dependency&gt;
+ &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+ &lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+ &lt;version&gt;${spring.version}&lt;/version&gt;
+ &lt;exclusions&gt;
+ &lt;exclusion&gt;
+ &lt;groupId&gt;commons-logging&lt;/groupId&gt;
+ &lt;artifactId&gt;commons-logging&lt;/artifactId&gt;
+ &lt;/exclusion&gt;
+ &lt;/exclusions&gt;
+ &lt;/dependency&gt;
+ &lt;dependency&gt;
+ &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+ &lt;artifactId&gt;spring-test&lt;/artifactId&gt;
+ &lt;version&gt;${spring.version}&lt;/version&gt;
+ &lt;scope&gt;test&lt;/scope&gt;
+ &lt;exclusions&gt;
+ &lt;exclusion&gt;
+ &lt;groupId&gt;commons-logging&lt;/groupId&gt;
+ &lt;artifactId&gt;commons-logging&lt;/artifactId&gt;
+ &lt;/exclusion&gt;
+ &lt;/exclusions&gt;
+ &lt;/dependency&gt;
+ &lt;dependency&gt;
+ &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+ &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+ &lt;version&gt;${spring.version}&lt;/version&gt;
+ &lt;/dependency&gt;
+ &lt;dependency&gt;
+ &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+ &lt;artifactId&gt;spring-aop&lt;/artifactId&gt;
+ &lt;version&gt;${spring.version}&lt;/version&gt;
+ &lt;/dependency&gt;
+ &lt;dependency&gt;
+ &lt;groupId&gt;cglib&lt;/groupId&gt;
+ &lt;artifactId&gt;cglib&lt;/artifactId&gt;
+ &lt;version&gt;2.2&lt;/version&gt;
+ &lt;/dependency&gt;
+ &lt;dependency&gt;
+ &lt;groupId&gt;org.mongodb&lt;/groupId&gt;
+ &lt;artifactId&gt;mongo-java-driver&lt;/artifactId&gt;
+ &lt;version&gt;2.8.0&lt;/version&gt;
+ &lt;/dependency&gt;
+ &lt;dependency&gt;
+ &lt;groupId&gt;org.springframework.data&lt;/groupId&gt;
+ &lt;artifactId&gt;spring-data-commons-core&lt;/artifactId&gt;
+ &lt;version&gt;1.2.1.RELEASE&lt;/version&gt;
+ &lt;/dependency&gt;
+ &lt;/dependencies&gt;
+
+</pre>
+
+<p>由于这里面的某些依赖可能maven中央仓库没有，所以请在pom里添加下面两个spring的仓库:</p>
+<pre class="brush: xml; title: ; notranslate" title="">&lt;repository&gt;
+ &lt;id&gt;spring-maven-release&lt;/id&gt;
+ &lt;name&gt;Spring Maven Release Repository&lt;/name&gt;
+ &lt;url&gt;http://maven.springframework.org/release&lt;/url&gt;
+ &lt;/repository&gt;
+ &lt;repository&gt;
+ &lt;id&gt;spring-maven-milestone&lt;/id&gt;
+ &lt;name&gt;Spring Maven Milestone Repository&lt;/name&gt;
+ &lt;url&gt;http://maven.springframework.org/milestone&lt;/url&gt;
+ &lt;/repository&gt;
+
+</pre>
+
+<p>下面进行我们的代码编写,首先我们需要一个简单的java POJO类:person.java用于存储人的信息，其有三个属性：id(和mongodb中的ObjectId对应)，name-姓名，age-年龄。</p>
+<pre class="brush: java; title: ; notranslate" title="">package com.toozhao.mongo.bean;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+/**
+ *
+ * @author Junv
+ *
+ */
+@Document
+public class Person {
+
+@Id
+ private String id;
+ private String name;
+ private int age;
+
+public Person() {
+
+}
+
+public Person(String name, int age) {
+ this.name = name;
+ this.age = age;
+ }
+
+public String getId() {
+ return id;
+ }
+
+public String getName() {
+ return name;
+ }
+
+public void setId(String id) {
+ this.id = id;
+ }
+
+public void setName(String name) {
+ this.name = name;
+ }
+
+public void setAge(int age) {
+ this.age = age;
+ }
+
+public int getAge() {
+ return age;
+ }
+
+@Override
+ public String toString() {
+ return "Person [id=" + id + ", name=" + name + ", age=" + age + "]";
+ }
+
+}
+
+</pre>
+
+<p>然后我们定义一个执行操作的接口，和其实现类，这里可以看做是一个dao模式。在接口中我们只定义了保存对象和查询一条记录两个方法。</p>
+<pre class="brush: java; title: ; notranslate" title="">package com.toozhao.mongo.repository;
+
+import com.toozhao.mongo.bean.Person;
+/**
+ *
+ * @author Junv
+ *
+ */
+public interface MongoAction {
+
+ public void saveObject(Person objToSave);
+
+ public Person findObject(String id);
+
+}
+
+</pre>
+
+<p>实现类：</p>
+<pre class="brush: java; highlight: [11,14]; title: ; notranslate" title="">package com.toozhao.mongo.repository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.stereotype.Repository;
+
+import com.toozhao.mongo.bean.Person;
+
+@Repository
+public class PersonActionImp implements MongoAction {
+
+@Autowired
+ MongoOperations operation;
+
+public void saveObject(Person objToSave) {
+ operation.insert(objToSave);
+
+}
+
+public Person findObject(String id) {
+ return operation.findOne(new Query(Criteria.where("_id").is(id)),
+ Person.class);
+
+}
+
+}
+
+</pre>
+
+<p>@repository,和@autowired是spring框架中的，主要功能是起到类似反射的作用吧，具体我还没弄得很清楚。</p>
+<p>写一个有main方法的java类，对功能进行简单测试：</p>
+<pre class="brush: java; highlight: [20,21,23]; title: ; notranslate" title="">package com.toozhao.mongo;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.toozhao.mongo.bean.Person;
+import com.toozhao.mongo.repository.MongoAction;
+
+public class MainTest {
+
+private static final Log log = LogFactory.getLog(MainTest.class);
+
+public static void main(String[] args) {
+
+log.info("initial -----------------");
+ ConfigurableApplicationContext context = null;
+ //实例化appliaction Context对象
+ context = new ClassPathXmlApplicationContext(
+ "META-INF/spring/applicationContext.xml");
+ //获取一个MongoAction Bean，以便后面执行相关操作
+ MongoAction action = context.getBean(MongoAction.class);
+ Person person = new Person("Tom", 11);
+
+ action.saveObject(person);
+ log.info("结果为：" + action.findObject(person.getId()));
+
+}
+
+}
+
+</pre>
+
+<p>最后，贴出applicationContext文档，里面主要对mongodb进行了简单的配置，和设置了repository的扫描目录（和@repository对应）。</p>
+<pre class="brush: xml; highlight: [46]; title: ; notranslate" title="">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+ xsi:schemaLocation=
+ "http://www.springframework.org/schema/context
+
+http://www.springframework.org/schema/context/spring-context-3.0.xsd
+
+
+http://www.springframework.org/schema/data/mongo
+
+
+http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd
+
+
+http://www.springframework.org/schema/beans
+
+
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"&gt;
+
+ &lt;context:annotation-config/&gt;
+
+&lt;context:component-scan base-package="com.toozhao.mongo.repository"&gt;
+ &lt;context:exclude-filter type="annotation" expression="org.springframework.context.annotation.Configuration"/&gt;
+ &lt;/context:component-scan&gt;
+
+ &lt;!-- Default bean name is 'mongo' --&gt;
+ &lt;mongo:mongo host="localhost" port="27017"&gt;
+ &lt;mongo:options connections-per-host="8"
+ threads-allowed-to-block-for-connection-multiplier="4"
+ connect-timeout="1000"
+ max-wait-time="1500"
+ auto-connect-retry="true"
+ socket-keep-alive="true"
+ socket-timeout="1500"
+ slave-ok="true"
+ write-number="1"
+ write-timeout="0"
+ write-fsync="true"/&gt;
+ &lt;/mongo:mongo&gt;
+ &lt;!-- xml 配置mongoTemplate--&gt;
+ &lt;bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate"&gt;
+ &lt;constructor-arg ref="mongo"/&gt;
+ &lt;constructor-arg name="databaseName" value="junv"/&gt;
+ &lt;/bean&gt;
+
+ &lt;!-- Use this post processor to translate any MongoExceptions thrown in @Repository annotated classes --&gt;
+ &lt;bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/&gt;
+
+&lt;/beans&gt;
+
+</pre>
+
+<p>当然你还需要做的就是运行这个项目，我们需要在pom.xml里面添加如下代码,<mainclass>为你需要运行的类：</mainclass></p>
+<pre class="brush: xml; highlight: [7]; title: ; notranslate" title="">&lt;plugin&gt;
+ &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+ &lt;artifactId&gt;exec-maven-plugin&lt;/artifactId&gt;
+ &lt;version&gt;1.1.1&lt;/version&gt;
+ &lt;!-- 你需要执行的类， --&gt;
+ &lt;configuration&gt;
+ &lt;mainClass&gt;com.toozhao.mongo.MainTest&lt;/mainClass&gt;
+ &lt;/configuration&gt;
+ &lt;/plugin&gt;
+
+</pre>
+
+<p>最后，使用 mvn exec:java 就可以运行代码了，当然你在有main方法那个类，右键以java程序的方式也可以运行。结果就是你应该可以看到程序像数据库junv.person中插入了一条数据。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/入门/" rel="tag"># 入门</a>
+          
+            <a href="/tags/Spring/" rel="tag"># Spring</a>
+          
+            <a href="/tags/mongo/" rel="tag"># mongo</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2012/07/23/i-am-tired/" rel="next" title="当这组长好累！">
+                <i class="fa fa-chevron-left"></i> 当这组长好累！
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2012/08/08/most-popular-free-repository/" rel="prev" title="分享多个公网上著名的maven组件仓库">
+                分享多个公网上著名的maven组件仓库 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
+               alt="Junv" />
+          <p class="site-author-name" itemprop="name">Junv</p>
+           
+              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">307</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">69</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">247</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wahyd4" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/junwei-zhao-46944557" target="_blank" title="LinkedIn">
+                  
+                    <i class="fa fa-fw fa-linkedin"></i>
+                  
+                    
+                      LinkedIn
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                    
+                      StackOverflow
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Junv</span>
+
+  
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

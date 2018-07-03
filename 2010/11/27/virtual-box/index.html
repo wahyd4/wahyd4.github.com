@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="今天要给大家介绍的是virtual box,如果你以前用过Vmware station 的话，那好说virtual box和Vmware 是一样的软件，只是virtual box 是免费的，vmware 是商业软件。如果你以前没用过的话，就这样说吧，virtual box 可以让你在你的电脑上（一般指在windows 上，当然在linux ，mac 也可以运行虚拟机）同时运行多个系统，比如同时使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Virtual Box 虚拟机">
+<meta property="og:url" content="http://toozhao.com/2010/11/27/virtual-box/index.html">
+<meta property="og:site_name" content="大染志">
+<meta property="og:description" content="今天要给大家介绍的是virtual box,如果你以前用过Vmware station 的话，那好说virtual box和Vmware 是一样的软件，只是virtual box 是免费的，vmware 是商业软件。如果你以前没用过的话，就这样说吧，virtual box 可以让你在你的电脑上（一般指在windows 上，当然在linux ，mac 也可以运行虚拟机）同时运行多个系统，比如同时使用">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://toozhao.com/images/2010/11/11-28-1_conew1.jpg">
+<meta property="og:image" content="http://toozhao.com/images/2010/11/11-28-2_conew1.jpg">
+<meta property="og:image" content="http://toozhao.com/images/2010/11/11-28-3_conew1.jpg">
+<meta property="og:image" content="http://toozhao.com/images/2010/11/11-28-4_conew1.jpg">
+<meta property="og:updated_time" content="2014-07-22T08:41:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Virtual Box 虚拟机">
+<meta name="twitter:description" content="今天要给大家介绍的是virtual box,如果你以前用过Vmware station 的话，那好说virtual box和Vmware 是一样的软件，只是virtual box 是免费的，vmware 是商业软件。如果你以前没用过的话，就这样说吧，virtual box 可以让你在你的电脑上（一般指在windows 上，当然在linux ，mac 也可以运行虚拟机）同时运行多个系统，比如同时使用">
+<meta name="twitter:image" content="http://toozhao.com/images/2010/11/11-28-1_conew1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://toozhao.com/2010/11/27/virtual-box/"/>
+
+
+
+
+
+  <title>Virtual Box 虚拟机 | 大染志</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-5243064-16', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">大染志</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">想要玩得很 High 的程序员</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-知识图谱">
+          <a href="https://toozhao.com/knowledge-mind-mapping" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            知识图谱
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2010/11/27/virtual-box/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junv">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大染志">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Virtual Box 虚拟机</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2010-11-27T21:00:00+08:00">
+                2010-11-27
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T16:41:38+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/头条推荐/" itemprop="url" rel="index">
+                    <span itemprop="name">头条推荐</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/头条推荐/我们爱分享/" itemprop="url" rel="index">
+                    <span itemprop="name">我们爱分享</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>今天要给大家介绍的是virtual box,如果你以前用过Vmware station 的话，那好说virtual box和Vmware 是一样的软件，只是virtual box 是免费的，vmware 是商业软件。如果你以前没用过的话，就这样说吧，virtual box 可以让你在你的电脑上（一般指在windows 上，当然在linux ，mac 也可以运行虚拟机）同时运行多个系统，比如同时使用windows和linux .而不用你真正在硬盘上装几个系统，就目前来讲，虚拟机一般是我们学习linux的好帮手。</p>
+<p><a href="/images/2010/11/11-28-1_conew1.jpg"><img class="aligncenter size-full wp-image-979" title="11-28-1_conew1" src="/images/2010/11/11-28-1_conew1.jpg" alt="" width="140" height="180"></a></p>
+<p>就我上面所说，目前目前出名的虚拟机就是virtual box 和Vmware station，今天我们将着重介绍virtual box,如果你只是想安装虚拟机学习linux 系统，而不是专业人员，哪么virtual box 已经强大到绝对够你使用了。</p>
+<p>好，我们下面从下载安装开始说起。</p>
+<p>首先登陆这个网站：<a href="http://www.virtualbox.org/" target="_blank">virtual box</a>下载virtual box 软件。下载好之后安装，（提示：如果你用的是windows系统的电脑请下载windows版本，绝大多数都应该选择这个版本。）这之间应该都不会有问题，因为安装过程非常简单和其他软件一样。</p>
+<p>安装好之后你将看到如下界面：</p>
+<p><a href="/images/2010/11/11-28-2_conew1.jpg"><img class="aligncenter size-full wp-image-980" title="11-28-2_conew1" src="/images/2010/11/11-28-2_conew1.jpg" alt="" width="599" height="450"></a>你看到左边的是我已经安装好的虚拟机，如果你是刚安装好软件，你的这片区域会是空白的。右边的是关于你安装的缪戈虚拟机的相关配置情况。</p>
+<p>安装好软件之后，我们需要新建虚拟机，这时我们要将你想要安装的系统镜像光碟放入光驱中读取，或者，用虚拟光驱加载你的镜像文件。我这里选择的是虚拟光驱加载镜像。</p>
+<p>我这里新建一个名叫WWW的系统，是linux ubuntu 的版本，所以我要在系统里面选择 linux 然后是选择ubuntu，之后再到选择内存和硬盘，cpu分配等等，按照软件的提示就可以了不用改了。（建议新手都按照软件提示操作，不用改相关参数）</p>
+<p>建好之后你将在上图左侧看到一个www图标。</p>
+<p><a href="/images/2010/11/11-28-3_conew1.jpg"><img class="aligncenter size-full wp-image-981" title="11-28-3_conew1" src="/images/2010/11/11-28-3_conew1.jpg" alt="" width="259" height="279"></a>然后点击开始进行进一步的相关配置，这时刚才装载的系统镜像就发挥作用了，</p>
+<p style="text-align: center;"><br>  <a href="/images/2010/11/11-28-4_conew1.jpg"><img class="aligncenter size-full wp-image-982" title="11-28-4_conew1" src="/images/2010/11/11-28-4_conew1.jpg" alt="" width="474" height="305"></a>选择你加载的系统的盘，然后点击下一步即可进入系统安装了。<br></p>
+
+<p>系统安装这一步我就不再详细说明了，和你在真实环境下载安装时一样的。（PS：这一点和Vmware不一样，Vmware有专门针对ubuntu的优化，如果你选择的是ubuntux系统，那么Vmware可以直接帮你安装好系统，你需要做的就仅仅是输入用户名和密码即可。但是这样也少了很多自定义的配置。对于这一点是仁者见仁智者见智吧。）</p>
+<p>安装好之后你就可以享受你的虚拟机生涯啦。</p>
+<p>下面再讲一些我个人的感悟吧。对于专业人员来说肯定Vmware更加强大，这一点从文件大小就可以看出来，vMware安装好以后有1G多，个人感觉Vmwar会添加很多服务到你的电脑，如果你的电脑禁止了这些服务，很可能你的虚拟机不能正常运行，比如不能正常联网。然后virtual box 则没有，没有强制加入开机自启动的服务，而且运行时的进程也只有两个。</p>
+<p>对于虚拟机联网的问题，联网请输入NAT，这样你就可以在虚拟机里面使用网络了。</p>
+<p>综合网上前辈说的，貌似的确virtual box 占用的内存不很多，可是cpu占用则要大一些，相比较于vmware</p>
+<p>请大家有什么不懂的在文章后面留言吧，我会尽量帮你们解决的。</p>
+<p>virtual box 下载地址：<a href="http://www.virtualbox.org/wiki/Downloads" target="_blank">点我官网下载</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2010/11/24/thanks-giving/" rel="next" title="感恩节话感恩">
+                <i class="fa fa-chevron-left"></i> 感恩节话感恩
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2010/11/27/talk-about-these-two-days/" rel="prev" title="说说这两天">
+                说说这两天 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7ktsrz.com1.z0.glb.clouddn.com/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
+               alt="Junv" />
+          <p class="site-author-name" itemprop="name">Junv</p>
+           
+              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">307</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">69</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">247</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wahyd4" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/junwei-zhao-46944557" target="_blank" title="LinkedIn">
+                  
+                    <i class="fa fa-fw fa-linkedin"></i>
+                  
+                    
+                      LinkedIn
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                    
+                      StackOverflow
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Junv</span>
+
+  
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
