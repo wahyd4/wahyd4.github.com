@@ -2,9 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://toozhao.com/2025/10/27/wow/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://toozhao.com/2017/10/12/caddy-markdown/</loc>
     
-    <lastmod>2025-10-25</lastmod>
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2017/09/19/caddy/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2016/10/17/easiest-way-to-use-go/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +40,2734 @@
   <url>
     <loc>https://toozhao.com/2017/08/23/vscode-golang/</loc>
     
-    <lastmod>2025-10-25</lastmod>
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2015/03/21/active-model-serializers/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2014/10/03/photos-in-Beijing/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2014/10/25/some-photos-from-Daocheng-and-Yading/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2014/08/31/improve-the-load-speed-of-blog/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2014/06/21/my-experience-about-publish-app-to-apple-store/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2014/04/09/develop-web-based-cross-platform-mobile-app/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2013/11/05/run-jetty-7,-8-with-gradle/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2013/11/26/what-do-i-think-of-agile/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2013/10/28/how-a-graduate-become-a-qualified-programmer/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2013/10/24/maven-deploy-3rd-party-jar-to-remote-repository/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2013/09/22/3rd-week-in-twu/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2013/09/17/second-week-in-india/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2013/09/11/first-week-in-india/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2013/08/31/india-glance/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2013/06/13/moco/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2013/05/17/uama/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2013/03/14/some-thougts-after-reading-big-data/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2013/02/07/libr/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2013/01/22/fuck-gfw/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2013/02/01/update-ruby-on-mac-osx/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2013/01/20/my-relexing-ways/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2013/01/05/use-jetty-maven-plugin-debug-webapp/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2013/01/04/2013-goal/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/12/31/2012-review/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/12/28/move-blog-to-github/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/10/06/rails-github-travis-ci/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/11/09/install-postgresql-with-linux/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/10/24/nodejs-mongodb-gridfs/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/10/23/nodejs-mongo-one/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/10/15/have-something-to-say-about-onemonth/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/09/16/huawei-hire-exam/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/09/12/java-select-sorting/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/09/11/java-insertion-sort/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/09/11/java-shell-sorting/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/08/26/js-getparameters-from-scriptsfile/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/09/07/ubuntu-install-elementary3-gtk-theme/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/08/16/java-web-define-error-page/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/08/23/java-cors-cross-domain-request/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/08/09/most-popular-free-repository/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/08/14/java-upload-file-without-enctypemultipartform-data/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/08/06/spring-data-mongodb-start/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/07/24/i-am-tired/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/07/22/html5-full-screen-api/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/07/17/mongodb-getstart/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/07/13/compare-priority-of-maven-repository/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/07/11/a-simple-nodejs-program/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/07/04/java-create-git-repository/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/07/05/access-google-reader/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/07/03/maven-compile-nexus/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/07/01/good-open-source/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/03/22/against-sae/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/07/01/come-back/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/03/09/maven-deploy-external-jar/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/02/02/solve-hudsonjenkins-git-can-not-fetch-from-any-repository/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/02/11/maven-remote-deploy-to-jboss-as-7/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/01/23/happy-new-year/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/01/28/create-github-page/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/01/19/use-maven-deploy-totomcat-7/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/01/12/maven-study-case-one/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/01/09/spring-osgi-hello-world1/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2012/01/09/spring-osgi-hello-world2-log4j-warn-no-appenders-could-be-found-for-logger/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/12/21/java-single-sign-on/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/12/30/nexus-cant-run-under-jdk-1-7/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/11/28/solve-ie-addeventlistener/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/11/29/spring-hibernate-db-too-many-connection/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/11/26/solve-hibernate-8-actions/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/11/01/node-jade-express-mysql-simplelogin/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/10/29/node-js-web-express/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/10/26/node-js-send-e-mail/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/10/23/solve-npm-js-cant-install-node-js/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/10/25/node-js-connect-mysql/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/10/19/notepad-settings/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/10/15/struts2-i18n/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/10/13/ai-tired/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/10/12/money-is-dirty/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/10/09/eclipse-auto-complited/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/09/28/finally-give-upandroid-choose-java-web/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/10/08/got-17-50mm-f2-8/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/09/27/i-think-of-passion/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/07/06/tomcat-db-connection-pool-sql-server/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/09/26/move-to-sina/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/06/24/android-upload-image-to-server/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/06/16/android-take-photo-and-upload/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/06/02/pencil/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/06/03/tortoise-svn-checkout-google-code/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/06/02/balsamiq-mockups/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/05/27/announce/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/04/12/html5-css3-javascript-coverflow/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/04/12/javascript-dom-pdf/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/03/27/bbc-the-chinese-are-coming/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/04/04/a-good-gift/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/03/26/omegle-talk-to-strangers/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/03/21/1561/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/03/15/css3-for-web-designers-pdf/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/03/13/content-lost/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/03/13/chrome-reader/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/03/09/css3html5google20-things-i-learned-about-browsers-and-the-web/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/03/06/wibiya/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/03/05/background-images/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/02/28/fixed-toolbar/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/03/04/360/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/02/28/background-image/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/02/15/good-photos/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/02/23/tv-radios/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/02/17/make-your-own-theme/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/02/10/five-chrome-theme/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/02/08/free-to-read-newspaper/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/02/07/php2011-manual/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/02/01/php-mysql-pdf-download/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/01/27/good-movie/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/02/01/happy-new-year-2/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/01/22/sparkdaks/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/01/22/photoshop-cs4/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/01/21/oneiro/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/01/20/update-windows7-to-sp1/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/01/15/chrome-support-xunlei/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/01/19/173vpn/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/01/15/anngry-birds/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/01/13/google-chrome-app-extensions/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/01/10/use-your-eos-take-video/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/01/10/filezilla/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/01/09/cbox/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/01/08/wang-zhen-fei/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/01/08/linux-tutorial/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/01/06/online-print-photos/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/01/07/the-city-in-the-future/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2011/01/06/generate-favicon-ico/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/29/leave-me/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/27/google-public-dns/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/23/youdao-dict/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/23/c-plus-link/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/20/wordpress-christmas/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/18/survey/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/18/dll-download/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/17/some-websites/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/13/one-week-to-learn-flex4/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/14/some-actions-about-keniu/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/11/program-good/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/11/linux-2010/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/07/android-2-3-come/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/08/android-2-3/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/06/vired/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/06/3d-flash/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/04/javascript/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/12/05/wing/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/30/you-are-beautiful/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/30/jquery-basic-tutorial/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/29/linux-video-tutorial/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/28/virtual-box/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/28/talk-about-these-two-days/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/25/thanks-giving/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/25/ssd3-student-book/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/25/ssd1-student-book/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/25/ssd1/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/25/converstions/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/25/959/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/24/shit-my-dad-says/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/23/css3-good-parts/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/21/php-asp/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/22/micolog/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/21/gae/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/20/java-jdbc/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/20/ticket/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/20/free-css-template/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/18/pictomio/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/18/sogou-theme/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/19/meizu-11-19/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/18/cet-6/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/17/its-long-way-to-go/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/17/time-back-20-years/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/17/computer-preformance/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/15/display-readers/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/16/shift-14/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/15/computer-operation-system/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/14/m9-10-11-14/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/14/html5-show-movie/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/13/sort-node/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/13/personal-web-template/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/12/thanks-support/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/12/worpdress-share-plugin/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/12/avatar-720p/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/11/java/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/12/another-wordpress/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/10/zune/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/09/call-of-duty-7/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/10/java-9-9/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/04/google-changes-life/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/04/kabasky-free/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/04/free-vpn/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/01/google-picasa/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/10/31/format-change/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/11/03/san-css/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/10/30/world-of-goo/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/10/27/speedupmypc/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/10/29/sql/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/10/24/m9/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/10/26/java-best-four/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/10/24/google-chrome/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/10/08/three-nations/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/10/09/a-platform/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/10/07/xiami-free-download/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/10/08/haha/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/10/07/tk-free/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/10/07/prepare-cet-4/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/10/05/qq-reading/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/10/05/jiu-zai-gou/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/10/05/private/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/28/newest-m9/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/10/02/google-earth/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/28/a-competation/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/27/462/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/25/cet-6-2/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/25/remove-trashes/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/25/a-most-usefual-website/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/24/next-year-and-today/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/23/ultraiso/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/23/f1-2010/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/22/wordpress/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/22/nikitamaggie-q/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/21/230/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/19/tencent/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/19/recuva/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/19/end-of-the-summer/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/19/blue-tooth/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/19/blue-tooth-one/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/09/18/a-new-begins/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/07/28/2010%E6%9A%91%E5%81%87%E7%9C%8B%E8%BF%87%E7%9A%84%E7%94%B5%E5%BD%B1/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/08/02/%E6%89%8D%E6%98%8E%E7%99%BD/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/07/25/%E6%88%91%E6%83%B3%E5%86%99%E6%B4%8B%E6%B4%8B%E6%B4%92%E6%B4%925000%E5%AD%97/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/07/19/hello,Linux%EF%BC%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/06/30/%E5%98%BF%E5%98%BF/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/07/17/%E5%85%B3%E4%BA%8Ejava%E6%8B%9B%E8%81%98%E3%80%81%E5%B7%A5%E8%B5%84%E7%9A%84/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/06/18/%E4%BB%8A%E5%A4%A9%EF%BC%9F%E9%94%99%E4%BA%86%EF%BC%8C%E5%BA%94%E8%AF%A5%E6%98%AF%E6%98%A8%E5%A4%A9%EF%BC%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/06/27/%E6%88%91%E7%9A%84%E6%9A%91%E5%81%87%E2%80%A6/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/06/13/%E6%A3%92%E5%AD%90%E6%97%A0%E8%B6%A3%E3%80%81%E6%9C%80%E7%88%B1%E6%A2%85%E5%B8%85%E3%80%81%E9%98%BF%E6%A0%B9%E5%BB%B7%E5%8A%A0%E6%B2%B9%EF%BC%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/06/14/%E5%BE%B7%E5%9B%BD%E9%98%9F%E8%AE%A9%E6%88%91%E7%86%AC%E5%A4%9C%E5%88%B04%E7%82%B9/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/06/12/%E4%B8%96%E7%95%8C%E6%9D%AF%E9%A6%96%E6%97%A5%EF%BC%8C%E6%B3%95%E5%9B%BD%E6%8B%89%E7%A8%80%E6%91%86%E5%B8%A6%EF%BC%8C%E5%8D%97%E9%9D%9E%E8%A1%A8%E7%8E%B0%E5%B0%9A%E5%8F%AF%EF%BC%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/06/04/%E8%BF%99%E4%B8%AA%E6%9D%80%E6%89%8B%E4%B8%8D%E5%A4%AA%E5%86%B7/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/04/15/%E4%BB%8A%E5%A4%A9/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/05/06/%E4%BE%9D%E6%97%A7%E5%8D%88%E5%A4%9C/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/04/08/Betty%E5%A6%82%E4%B8%80%E7%BC%95%E6%B8%85%E6%B3%89/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/04/02/%E4%B8%80%E4%B8%9D%E4%B8%8D%E6%8C%82/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/03/12/%E5%8F%AA%E6%98%AF%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/03/26/%E8%80%81%E6%A0%91%E5%8F%91%E6%96%B0%E7%89%99/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/02/26/40%E5%A4%A9/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/03/05/%E7%BA%A0%E7%BB%93%E2%80%A6%E5%95%8A%EF%BC%81%E7%83%A6%E8%BA%81%EF%BC%8C%E5%8F%91%E7%8B%82%EF%BC%8C%E6%9C%89%E7%97%85/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/02/03/Java%E5%8F%8C%E9%87%8D%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%85%B8%E5%9E%8B%E5%BA%94%E7%94%A8%EF%BC%88%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8%EF%BC%89/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/02/04/You%E6%88%91%E5%8F%8B%EF%BC%8C%E5%90%BE%E6%9C%89%E4%BE%BF%E6%97%A0%E5%BF%A7/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/02/02/JAVA%E9%87%8C%E9%9D%A2%E9%87%8D%E8%A6%81%E8%80%8C%E5%9F%BA%E7%A1%80%E7%9A%84%E4%B8%9C%E8%A5%BF/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/01/23/%E6%96%B0%E6%B5%AA%E6%88%91%E4%BC%9A%E5%9B%9E%E6%9D%A5%E7%9A%84%E3%80%82/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/02/02/Hello-World!JAVA-%E6%88%91%E6%9D%A5%E4%BA%86/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/12/15/%E6%9D%82%E8%AE%B0%E2%80%94%E6%9C%8B%E5%8F%8B%E4%BB%AC%E5%95%8A%EF%BC%8C%E5%A4%9A%E6%9D%A5%E7%9C%8B%E7%9C%8B%E5%93%88%E3%80%82/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2010/01/06/%E8%87%B3%E5%B0%91%E5%8D%8A%E4%B8%AA%E6%9C%88%E6%B2%A1%E5%86%99%E6%97%A5%E5%BF%97/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/12/12/%E6%88%91%E5%86%99%E7%9A%84%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%8D%8A%E6%88%90%E5%93%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/12/13/%E5%86%99%E7%BB%99%E4%BA%B2%E7%88%B1%E7%9A%84%E5%BC%9F%E5%A8%83/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/11/13/%E6%88%91%E4%BB%AC%E9%83%BD%E4%B8%8D%E5%BF%AB%E4%B9%90/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/12/01/%E6%88%91%E6%83%B3%E5%86%85%E4%B8%8B%E5%BA%94%E8%AF%A5%E5%8F%AF%E4%BB%A5%E4%BA%86%E2%80%A6/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/10/25/%E4%BC%A0%E5%AA%92%E4%B8%AD%E5%BF%83%E6%88%91%E6%8A%8A%E4%BD%A0%E5%BC%80%E9%99%A4%E4%BA%86%E2%80%94%E2%80%94%E6%88%91%E8%87%AA%E6%88%91%E5%AE%89%E6%85%B0%E5%9C%B0%E8%AF%B4%E3%80%82-1/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/11/07/%E6%B5%81%E6%84%9F%E6%9D%A5%E8%A2%AD/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/10/09/%E6%88%91%E5%8F%88%E5%8E%BB%E7%8A%AF%E8%B4%B1%E4%BA%86/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/10/03/%E6%99%93%E4%B8%8D%E5%BE%97%E6%98%AF%E5%95%A5/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/10/05/%E5%A4%A7%E5%AD%A6%E2%80%94%E5%A4%9C%E6%B8%B8%E7%A5%9E%E7%9A%84%E8%AF%9E%E7%94%9F%E5%9C%B0/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/09/24/%E5%87%8C%E4%B9%B1but%E7%9C%9F%E5%AE%9E/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/09/07/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%B8%8D%E8%B0%88%E6%81%8B%E7%88%B1%E2%80%A6/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/08/12/%E6%80%80%E5%BF%B5%E2%80%9C%E5%81%9A%E7%89%9B%E2%80%9D%E7%9A%84%E6%97%A5%E5%AD%90/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/09/03/%E6%96%B0%E4%B9%A6%E3%80%82%E6%96%B0%E7%9A%84%E4%BB%BB%E5%8A%A1/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/08/06/%E5%86%99%E7%BB%99%E8%B5%B5%E8%89%B3/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/08/11/%E8%AF%A5%E6%AD%BB/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/08/02/%E6%84%8F%E5%A4%96%E7%9A%84%E6%83%8A%E5%96%9C/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/08/04/%E5%BE%88%E6%BB%A1%E8%B6%B3/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/08/01/%E6%9B%BE%E5%93%A5%E8%B5%B0%E8%80%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/07/22/%E7%94%9F%E5%91%BD%E7%8B%82%E6%83%B3%E6%9B%B2/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/07/23/%E4%BB%8A%E5%A4%A9%E5%BF%83%E6%83%85%EF%BC%8C%E6%80%8E%E4%B8%80%E4%B8%AA%E5%A5%BD%E5%AD%97%E4%BA%86%E5%BE%97%EF%BC%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/07/22/%E5%A5%BD%E6%80%AA%EF%BC%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/07/21/%E4%B8%8B%E5%8D%88%E6%83%B3%E5%87%BA%E6%9D%A5%E7%9A%84/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/07/22/%E4%BB%8A%E5%A4%A9&amp;%E9%81%AD%E9%81%87%E6%97%A5%E5%85%A8%E9%A3%9F/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/07/04/%E5%A5%BD%E6%80%AA%EF%BC%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/06/24/%E7%94%A8%E5%8F%A3%E6%B0%B4%E6%B7%B9%E6%B2%A1%EF%BC%88%E7%81%B5%E6%84%9F%E7%AA%81%E7%8E%B0%EF%BC%89/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/06/20/Crazy-dreaming!/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/06/19/%E9%83%81%E9%97%B7/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/06/17/%E5%87%86%E5%A4%87%E5%A5%BD%E4%BA%86%E5%90%97%EF%BC%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/06/16/%E7%AA%81%E7%84%B6%EF%BC%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/05/12/%E8%BF%9B%E5%86%B5/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/06/16/%E6%83%B3%E5%92%8C%E4%BD%A0%E5%96%9C%E6%AC%A2%E7%9A%84%E4%BA%BA%E6%B0%B8%E8%BF%9C%E5%9C%A8%E4%B8%80%E8%B5%B7%E5%90%97%EF%BC%9F%E4%B8%8D%E7%9C%8B%E5%90%8E%E6%82%94%E2%80%9D/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/04/07/%E4%BA%B2%E7%88%B1%E7%9A%84%E6%9C%8B%E5%8F%8B%EF%BC%8C%E8%AF%B7%E4%B8%BA%E6%88%91%E5%96%9D%E5%BD%A9%EF%BC%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/04/02/%E9%83%81%E9%97%B7/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/04/01/%E4%BA%8C%E8%AF%8A%E8%80%83%E5%AE%8C%E8%80%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/01/22/%E5%AF%92%E5%81%87%E7%AC%AC%E4%B8%80%E5%A4%A9%EF%BC%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/01/21/%E7%BB%88%E4%BA%8E%E6%94%BE%E5%81%87%E4%BA%86%EF%BC%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2008/12/06/%E9%AB%98%E4%B8%89%EF%BC%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2009/01/21/%E7%BB%88%E4%BA%8E%E6%94%BE%E5%81%87%E4%BA%86%E3%80%82%E3%80%82%E3%80%82%E3%80%82%E3%80%82/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2008/07/09/%E4%BB%A4%E6%88%91%E5%BF%83%E7%88%B1%E7%9A%84%E5%A5%B3%E5%AD%A9-%E4%B8%8D%E4%B9%9F%E8%AE%B8%E6%98%AF%E4%BB%A4%E6%89%80%E6%9C%89%E4%BA%BA%E9%83%BD%E5%96%9C%E7%88%B1%E7%9A%84%E5%A5%B3%E5%AD%A9%EF%BC%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2007/10/14/%E6%88%91%E7%9A%84%E5%BF%83%E5%A3%B0/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2008/04/30/%E5%A5%BD%E8%BE%9B%E8%8B%A6%EF%BC%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2007/07/23/%E5%91%8A%E8%99%9A%E4%BC%AA%E7%9A%84%E4%BA%BA/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2007/07/15/%E9%AB%98%E4%B8%80%E6%94%BE%E5%81%87%E6%B5%81%E6%B0%B4%E5%B8%90/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2007/07/23/%E5%8D%96%E6%8A%98%E5%84%BF%E6%A0%B9%E7%9A%84/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2007/07/03/%E5%9B%9B%E5%B7%9D%E6%96%B9%E8%A8%80/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2007/07/01/%E5%BF%83%E9%87%8C%E9%AB%98%E5%85%B4%E5%95%8A%EF%BC%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2007/06/30/%E6%99%9A%E6%9D%A5%E7%9A%84%E6%97%A5%E8%AE%B0/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2007/06/30/%E4%BD%86%E6%84%BF%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2007/06/30/%E6%88%91%E8%BF%98%E4%B8%8D%E5%A4%9F%E5%BC%80%E6%9C%97/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/2006/08/30/%E5%BC%80%E5%AD%A6%E5%86%9B%E8%AE%AD1/</loc>
+    
+    <lastmod>2025-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -23,24 +2777,6 @@
     <loc>https://toozhao.com/about/index.html</loc>
     
     <lastmod>2020-01-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2017/09/19/caddy/</loc>
-    
-    <lastmod>2017-10-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2013/09/22/3rd-week-in-twu/</loc>
-    
-    <lastmod>2017-10-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -65,765 +2801,9 @@
   </url>
   
   <url>
-    <loc>https://toozhao.com/2016/10/17/easiest-way-to-use-go/</loc>
-    
-    <lastmod>2016-10-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2014/08/31/improve-the-load-speed-of-blog/</loc>
-    
-    <lastmod>2015-08-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2015/03/21/active-model-serializers/</loc>
-    
-    <lastmod>2015-03-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://toozhao.com/gallery/index.html</loc>
     
     <lastmod>2014-11-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2014/10/25/some-photos-from-Daocheng-and-Yading/</loc>
-    
-    <lastmod>2014-10-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2014/10/03/photos-in-Beijing/</loc>
-    
-    <lastmod>2014-10-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2013/11/05/run-jetty-7,-8-with-gradle/</loc>
-    
-    <lastmod>2014-09-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/18/a-new-begins/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/08/02/%E6%89%8D%E6%98%8E%E7%99%BD/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/07/28/2010%E6%9A%91%E5%81%87%E7%9C%8B%E8%BF%87%E7%9A%84%E7%94%B5%E5%BD%B1/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/07/25/%E6%88%91%E6%83%B3%E5%86%99%E6%B4%8B%E6%B4%8B%E6%B4%92%E6%B4%925000%E5%AD%97/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/07/19/hello,Linux%EF%BC%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/07/17/%E5%85%B3%E4%BA%8Ejava%E6%8B%9B%E8%81%98%E3%80%81%E5%B7%A5%E8%B5%84%E7%9A%84/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/06/30/%E5%98%BF%E5%98%BF/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/06/27/%E6%88%91%E7%9A%84%E6%9A%91%E5%81%87%E2%80%A6/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/06/18/%E4%BB%8A%E5%A4%A9%EF%BC%9F%E9%94%99%E4%BA%86%EF%BC%8C%E5%BA%94%E8%AF%A5%E6%98%AF%E6%98%A8%E5%A4%A9%EF%BC%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/06/14/%E5%BE%B7%E5%9B%BD%E9%98%9F%E8%AE%A9%E6%88%91%E7%86%AC%E5%A4%9C%E5%88%B04%E7%82%B9/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/06/13/%E6%A3%92%E5%AD%90%E6%97%A0%E8%B6%A3%E3%80%81%E6%9C%80%E7%88%B1%E6%A2%85%E5%B8%85%E3%80%81%E9%98%BF%E6%A0%B9%E5%BB%B7%E5%8A%A0%E6%B2%B9%EF%BC%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/06/12/%E4%B8%96%E7%95%8C%E6%9D%AF%E9%A6%96%E6%97%A5%EF%BC%8C%E6%B3%95%E5%9B%BD%E6%8B%89%E7%A8%80%E6%91%86%E5%B8%A6%EF%BC%8C%E5%8D%97%E9%9D%9E%E8%A1%A8%E7%8E%B0%E5%B0%9A%E5%8F%AF%EF%BC%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/06/04/%E8%BF%99%E4%B8%AA%E6%9D%80%E6%89%8B%E4%B8%8D%E5%A4%AA%E5%86%B7/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/05/06/%E4%BE%9D%E6%97%A7%E5%8D%88%E5%A4%9C/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/04/15/%E4%BB%8A%E5%A4%A9/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/04/08/Betty%E5%A6%82%E4%B8%80%E7%BC%95%E6%B8%85%E6%B3%89/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/04/02/%E4%B8%80%E4%B8%9D%E4%B8%8D%E6%8C%82/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/03/26/%E8%80%81%E6%A0%91%E5%8F%91%E6%96%B0%E7%89%99/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/03/12/%E5%8F%AA%E6%98%AF%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/03/05/%E7%BA%A0%E7%BB%93%E2%80%A6%E5%95%8A%EF%BC%81%E7%83%A6%E8%BA%81%EF%BC%8C%E5%8F%91%E7%8B%82%EF%BC%8C%E6%9C%89%E7%97%85/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/02/26/40%E5%A4%A9/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/02/04/You%E6%88%91%E5%8F%8B%EF%BC%8C%E5%90%BE%E6%9C%89%E4%BE%BF%E6%97%A0%E5%BF%A7/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/02/02/JAVA%E9%87%8C%E9%9D%A2%E9%87%8D%E8%A6%81%E8%80%8C%E5%9F%BA%E7%A1%80%E7%9A%84%E4%B8%9C%E8%A5%BF/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/02/02/Hello-World!JAVA-%E6%88%91%E6%9D%A5%E4%BA%86/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/01/23/%E6%96%B0%E6%B5%AA%E6%88%91%E4%BC%9A%E5%9B%9E%E6%9D%A5%E7%9A%84%E3%80%82/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/01/06/%E8%87%B3%E5%B0%91%E5%8D%8A%E4%B8%AA%E6%9C%88%E6%B2%A1%E5%86%99%E6%97%A5%E5%BF%97/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/12/15/%E6%9D%82%E8%AE%B0%E2%80%94%E6%9C%8B%E5%8F%8B%E4%BB%AC%E5%95%8A%EF%BC%8C%E5%A4%9A%E6%9D%A5%E7%9C%8B%E7%9C%8B%E5%93%88%E3%80%82/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/12/13/%E5%86%99%E7%BB%99%E4%BA%B2%E7%88%B1%E7%9A%84%E5%BC%9F%E5%A8%83/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/12/12/%E6%88%91%E5%86%99%E7%9A%84%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%8D%8A%E6%88%90%E5%93%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/12/01/%E6%88%91%E6%83%B3%E5%86%85%E4%B8%8B%E5%BA%94%E8%AF%A5%E5%8F%AF%E4%BB%A5%E4%BA%86%E2%80%A6/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/11/13/%E6%88%91%E4%BB%AC%E9%83%BD%E4%B8%8D%E5%BF%AB%E4%B9%90/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/10/25/%E4%BC%A0%E5%AA%92%E4%B8%AD%E5%BF%83%E6%88%91%E6%8A%8A%E4%BD%A0%E5%BC%80%E9%99%A4%E4%BA%86%E2%80%94%E2%80%94%E6%88%91%E8%87%AA%E6%88%91%E5%AE%89%E6%85%B0%E5%9C%B0%E8%AF%B4%E3%80%82-1/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/10/09/%E6%88%91%E5%8F%88%E5%8E%BB%E7%8A%AF%E8%B4%B1%E4%BA%86/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/10/05/%E5%A4%A7%E5%AD%A6%E2%80%94%E5%A4%9C%E6%B8%B8%E7%A5%9E%E7%9A%84%E8%AF%9E%E7%94%9F%E5%9C%B0/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/10/03/%E6%99%93%E4%B8%8D%E5%BE%97%E6%98%AF%E5%95%A5/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/09/24/%E5%87%8C%E4%B9%B1but%E7%9C%9F%E5%AE%9E/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/09/07/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%B8%8D%E8%B0%88%E6%81%8B%E7%88%B1%E2%80%A6/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/09/03/%E6%96%B0%E4%B9%A6%E3%80%82%E6%96%B0%E7%9A%84%E4%BB%BB%E5%8A%A1/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/08/12/%E6%80%80%E5%BF%B5%E2%80%9C%E5%81%9A%E7%89%9B%E2%80%9D%E7%9A%84%E6%97%A5%E5%AD%90/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/08/06/%E5%86%99%E7%BB%99%E8%B5%B5%E8%89%B3/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/08/04/%E5%BE%88%E6%BB%A1%E8%B6%B3/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/08/02/%E6%84%8F%E5%A4%96%E7%9A%84%E6%83%8A%E5%96%9C/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/08/01/%E6%9B%BE%E5%93%A5%E8%B5%B0%E8%80%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/07/23/%E4%BB%8A%E5%A4%A9%E5%BF%83%E6%83%85%EF%BC%8C%E6%80%8E%E4%B8%80%E4%B8%AA%E5%A5%BD%E5%AD%97%E4%BA%86%E5%BE%97%EF%BC%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/07/22/%E7%94%9F%E5%91%BD%E7%8B%82%E6%83%B3%E6%9B%B2/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/07/22/%E5%A5%BD%E6%80%AA%EF%BC%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/07/22/%E4%BB%8A%E5%A4%A9&amp;%E9%81%AD%E9%81%87%E6%97%A5%E5%85%A8%E9%A3%9F/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/07/04/%E5%A5%BD%E6%80%AA%EF%BC%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/06/24/%E7%94%A8%E5%8F%A3%E6%B0%B4%E6%B7%B9%E6%B2%A1%EF%BC%88%E7%81%B5%E6%84%9F%E7%AA%81%E7%8E%B0%EF%BC%89/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/06/20/Crazy-dreaming!/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/06/19/%E9%83%81%E9%97%B7/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/06/17/%E5%87%86%E5%A4%87%E5%A5%BD%E4%BA%86%E5%90%97%EF%BC%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/06/16/%E7%AA%81%E7%84%B6%EF%BC%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/06/16/%E6%83%B3%E5%92%8C%E4%BD%A0%E5%96%9C%E6%AC%A2%E7%9A%84%E4%BA%BA%E6%B0%B8%E8%BF%9C%E5%9C%A8%E4%B8%80%E8%B5%B7%E5%90%97%EF%BC%9F%E4%B8%8D%E7%9C%8B%E5%90%8E%E6%82%94%E2%80%9D/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/05/12/%E8%BF%9B%E5%86%B5/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/04/07/%E4%BA%B2%E7%88%B1%E7%9A%84%E6%9C%8B%E5%8F%8B%EF%BC%8C%E8%AF%B7%E4%B8%BA%E6%88%91%E5%96%9D%E5%BD%A9%EF%BC%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/04/02/%E9%83%81%E9%97%B7/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/04/01/%E4%BA%8C%E8%AF%8A%E8%80%83%E5%AE%8C%E8%80%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/01/22/%E5%AF%92%E5%81%87%E7%AC%AC%E4%B8%80%E5%A4%A9%EF%BC%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/01/21/%E7%BB%88%E4%BA%8E%E6%94%BE%E5%81%87%E4%BA%86%E3%80%82%E3%80%82%E3%80%82%E3%80%82%E3%80%82/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/01/21/%E7%BB%88%E4%BA%8E%E6%94%BE%E5%81%87%E4%BA%86%EF%BC%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2008/12/06/%E9%AB%98%E4%B8%89%EF%BC%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2008/07/09/%E4%BB%A4%E6%88%91%E5%BF%83%E7%88%B1%E7%9A%84%E5%A5%B3%E5%AD%A9-%E4%B8%8D%E4%B9%9F%E8%AE%B8%E6%98%AF%E4%BB%A4%E6%89%80%E6%9C%89%E4%BA%BA%E9%83%BD%E5%96%9C%E7%88%B1%E7%9A%84%E5%A5%B3%E5%AD%A9%EF%BC%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2007/10/14/%E6%88%91%E7%9A%84%E5%BF%83%E5%A3%B0/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2007/07/23/%E5%91%8A%E8%99%9A%E4%BC%AA%E7%9A%84%E4%BA%BA/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2007/07/23/%E5%8D%96%E6%8A%98%E5%84%BF%E6%A0%B9%E7%9A%84/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2007/07/15/%E9%AB%98%E4%B8%80%E6%94%BE%E5%81%87%E6%B5%81%E6%B0%B4%E5%B8%90/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2007/07/03/%E5%9B%9B%E5%B7%9D%E6%96%B9%E8%A8%80/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2007/07/01/%E5%BF%83%E9%87%8C%E9%AB%98%E5%85%B4%E5%95%8A%EF%BC%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2007/06/30/%E6%99%9A%E6%9D%A5%E7%9A%84%E6%97%A5%E8%AE%B0/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2007/06/30/%E6%88%91%E8%BF%98%E4%B8%8D%E5%A4%9F%E5%BC%80%E6%9C%97/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2007/06/30/%E4%BD%86%E6%84%BF%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2008/04/30/%E5%A5%BD%E8%BE%9B%E8%8B%A6%EF%BC%81/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/07/21/%E4%B8%8B%E5%8D%88%E6%83%B3%E5%87%BA%E6%9D%A5%E7%9A%84/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/08/11/%E8%AF%A5%E6%AD%BB/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2009/11/07/%E6%B5%81%E6%84%9F%E6%9D%A5%E8%A2%AD/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/02/03/Java%E5%8F%8C%E9%87%8D%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%85%B8%E5%9E%8B%E5%BA%94%E7%94%A8%EF%BC%88%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8%EF%BC%89/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2006/08/30/%E5%BC%80%E5%AD%A6%E5%86%9B%E8%AE%AD1/</loc>
-    
-    <lastmod>2014-09-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -839,1827 +2819,9 @@
   </url>
   
   <url>
-    <loc>https://toozhao.com/2012/11/09/install-postgresql-with-linux/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2013/10/24/maven-deploy-3rd-party-jar-to-remote-repository/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://toozhao.com/my-career/index.html</loc>
     
     <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/12/06/rails-github-travis-ci/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/10/24/nodejs-mongodb-gridfs/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/10/23/nodejs-mongo-one/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/10/15/have-something-to-say-about-onemonth/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/09/16/huawei-hire-exam/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/09/12/java-select-sorting/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/09/11/java-shell-sorting/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/09/11/java-insertion-sort/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/09/07/ubuntu-install-elementary3-gtk-theme/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/08/26/js-getparameters-from-scriptsfile/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/08/23/java-cors-cross-domain-request/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/08/16/java-web-define-error-page/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/08/14/java-upload-file-without-enctypemultipartform-data/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/08/09/most-popular-free-repository/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/08/06/spring-data-mongodb-start/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/07/24/i-am-tired/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/07/22/html5-full-screen-api/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/07/17/mongodb-getstart/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/07/13/compare-priority-of-maven-repository/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/07/11/a-simple-nodejs-program/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/07/05/access-google-reader/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/07/04/java-create-git-repository/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/07/03/maven-compile-nexus/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/07/01/good-open-source/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/07/01/come-back/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/03/22/against-sae/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/03/09/maven-deploy-external-jar/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/02/11/maven-remote-deploy-to-jboss-as-7/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/02/02/solve-hudsonjenkins-git-can-not-fetch-from-any-repository/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/01/28/create-github-page/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/01/23/happy-new-year/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/01/19/use-maven-deploy-totomcat-7/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/01/12/maven-study-case-one/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/01/09/spring-osgi-hello-world2-log4j-warn-no-appenders-could-be-found-for-logger/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/01/09/spring-osgi-hello-world1/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/12/30/nexus-cant-run-under-jdk-1-7/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/12/21/java-single-sign-on/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/11/29/spring-hibernate-db-too-many-connection/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/11/28/solve-ie-addeventlistener/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/11/26/solve-hibernate-8-actions/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/11/01/node-jade-express-mysql-simplelogin/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/10/29/node-js-web-express/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/10/26/node-js-send-e-mail/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/10/25/node-js-connect-mysql/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/10/23/solve-npm-js-cant-install-node-js/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/10/19/notepad-settings/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/10/15/struts2-i18n/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/10/13/ai-tired/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/10/12/money-is-dirty/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/10/09/eclipse-auto-complited/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/10/08/got-17-50mm-f2-8/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/09/28/finally-give-upandroid-choose-java-web/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/09/27/i-think-of-passion/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/09/26/move-to-sina/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/07/06/tomcat-db-connection-pool-sql-server/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/06/24/android-upload-image-to-server/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/06/16/android-take-photo-and-upload/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/06/03/tortoise-svn-checkout-google-code/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/06/02/pencil/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/06/02/balsamiq-mockups/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/05/27/announce/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/04/12/javascript-dom-pdf/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/04/12/html5-css3-javascript-coverflow/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/04/04/a-good-gift/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/03/27/bbc-the-chinese-are-coming/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/03/26/omegle-talk-to-strangers/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/03/21/1561/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/03/15/css3-for-web-designers-pdf/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/03/13/content-lost/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/03/13/chrome-reader/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/03/09/css3html5google20-things-i-learned-about-browsers-and-the-web/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/03/06/wibiya/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/03/05/background-images/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/03/04/360/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/02/28/fixed-toolbar/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/02/28/background-image/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/02/23/tv-radios/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/02/17/make-your-own-theme/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/02/15/good-photos/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/02/10/five-chrome-theme/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/02/08/free-to-read-newspaper/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/02/07/php2011-manual/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/02/01/php-mysql-pdf-download/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/02/01/happy-new-year-2/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/01/27/good-movie/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/01/22/sparkdaks/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/01/22/photoshop-cs4/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/01/21/oneiro/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/01/20/update-windows7-to-sp1/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/01/19/173vpn/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/01/15/chrome-support-xunlei/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/01/15/anngry-birds/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/01/13/google-chrome-app-extensions/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/01/10/use-your-eos-take-video/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/01/10/filezilla/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/01/09/cbox/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/01/08/wang-zhen-fei/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/01/08/linux-tutorial/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/01/07/the-city-in-the-future/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/01/06/online-print-photos/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2011/01/06/generate-favicon-ico/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/29/leave-me/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/27/google-public-dns/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/23/youdao-dict/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/23/c-plus-link/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/20/wordpress-christmas/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/18/survey/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/18/dll-download/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/17/some-websites/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/14/some-actions-about-keniu/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/13/one-week-to-learn-flex4/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/11/program-good/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/11/linux-2010/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/08/android-2-3/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/07/android-2-3-come/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/06/vired/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/06/3d-flash/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/05/wing/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/12/04/javascript/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/30/you-are-beautiful/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/30/jquery-basic-tutorial/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/29/linux-video-tutorial/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/28/virtual-box/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/28/talk-about-these-two-days/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/25/thanks-giving/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/25/ssd3-student-book/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/25/ssd1/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/25/ssd1-student-book/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/25/converstions/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/25/959/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/24/shit-my-dad-says/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/23/css3-good-parts/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/22/micolog/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/21/php-asp/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/21/gae/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/20/ticket/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/20/java-jdbc/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/20/free-css-template/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/19/meizu-11-19/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/18/sogou-theme/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/18/pictomio/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/18/cet-6/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/17/time-back-20-years/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/17/its-long-way-to-go/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/17/computer-preformance/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/16/shift-14/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/15/display-readers/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/15/computer-operation-system/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/14/m9-10-11-14/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/14/html5-show-movie/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/13/sort-node/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/13/personal-web-template/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/12/worpdress-share-plugin/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/12/thanks-support/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/12/avatar-720p/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/12/another-wordpress/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/11/java/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/10/zune/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/10/java-9-9/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/09/call-of-duty-7/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/04/kabasky-free/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/04/google-changes-life/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/04/free-vpn/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/03/san-css/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/11/01/google-picasa/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/10/31/format-change/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/10/30/world-of-goo/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/10/29/sql/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/10/27/speedupmypc/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/10/26/java-best-four/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/10/24/m9/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/10/24/google-chrome/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/10/09/a-platform/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/10/08/three-nations/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/10/08/haha/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/10/07/xiami-free-download/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/10/07/tk-free/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/10/07/prepare-cet-4/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/10/05/qq-reading/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/10/05/private/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/10/05/jiu-zai-gou/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/10/02/google-earth/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/28/newest-m9/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/28/a-competation/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/27/462/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/25/remove-trashes/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/25/cet-6-2/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/25/a-most-usefual-website/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/24/next-year-and-today/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/23/ultraiso/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/23/f1-2010/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/22/wordpress/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/22/nikitamaggie-q/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/21/230/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/19/tencent/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/19/recuva/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/19/end-of-the-summer/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/19/blue-tooth/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2010/09/19/blue-tooth-one/</loc>
-    
-    <lastmod>2014-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2014/06/21/my-experience-about-publish-app-to-apple-store/</loc>
-    
-    <lastmod>2014-07-20</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2678,159 +2840,6 @@
     <loc>https://toozhao.com/recommend/index.html</loc>
     
     <lastmod>2014-05-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2014/04/09/develop-web-based-cross-platform-mobile-app/</loc>
-    
-    <lastmod>2014-04-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2013/11/26/what-do-i-think-of-agile/</loc>
-    
-    <lastmod>2013-11-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2013/10/28/how-a-graduate-become-a-qualified-programmer/</loc>
-    
-    <lastmod>2013-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2013/09/17/second-week-in-india/</loc>
-    
-    <lastmod>2013-09-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2013/09/11/first-week-in-india/</loc>
-    
-    <lastmod>2013-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2013/08/31/india-glance/</loc>
-    
-    <lastmod>2013-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/12/28/move-blog-to-github/</loc>
-    
-    <lastmod>2013-08-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2012/12/31/2012-review/</loc>
-    
-    <lastmod>2013-08-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2013/01/04/2013-goal/</loc>
-    
-    <lastmod>2013-08-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2013/01/05/use-jetty-maven-plugin-debug-webapp/</loc>
-    
-    <lastmod>2013-08-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2013/01/20/my-relexing-ways/</loc>
-    
-    <lastmod>2013-08-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2013/01/22/fuck-gfw/</loc>
-    
-    <lastmod>2013-08-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2013/02/01/update-ruby-on-mac-osx/</loc>
-    
-    <lastmod>2013-08-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2013/02/07/libr/</loc>
-    
-    <lastmod>2013-08-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2013/03/14/some-thougts-after-reading-big-data/</loc>
-    
-    <lastmod>2013-08-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2013/05/17/uama/</loc>
-    
-    <lastmod>2013-08-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://toozhao.com/2013/06/13/moco/</loc>
-    
-    <lastmod>2013-08-31</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4569,6 +4578,20 @@
   
   <url>
     <loc>https://toozhao.com/tags/markdown/</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/tags/twu/</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://toozhao.com/tags/thoughts/</loc>
     <lastmod>2025-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
