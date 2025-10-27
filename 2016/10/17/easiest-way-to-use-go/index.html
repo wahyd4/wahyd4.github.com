@@ -1,145 +1,51 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"toozhao.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"width_expanded":320,"width_dual_column":240,"padding":18},"copycode":{"enable":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp","menu_item":"fadeInDown"},"duration":200}};
+  </script>
 
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="docker,go," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta name="description" content="当我尝试开发一个在 IronWorkerr 上运行的非常简单的程序的时候，我发现目前为止没有一个工具可以让人在几分钟之内运行一段 Go 的示例代码。但在其他语言里面这是可以很容易做到的， 因为他们不像 Go 一样需要设置 GOPATH环境变量，遵守一个特定的代码目录结构，而且他们通常还有更简单的依赖管理工具。 有什么更好的方式吗？我最近想了很多，也写了很过关于 Docker 的文章， 并尝试在所有">
-<meta name="keywords" content="docker,go">
+  <meta name="description" content="当我尝试开发一个在 IronWorkerr 上运行的非常简单的程序的时候，我发现目前为止没有一个工具可以让人在几分钟之内运行一段 Go 的示例代码。但在其他语言里面这是可以很容易做到的， 因为他们不像 Go 一样需要设置 GOPATH环境变量，遵守一个特定的代码目录结构，而且他们通常还有更简单的依赖管理工具。 有什么更好的方式吗？我最近想了很多，也写了很过关于 Docker 的文章， 并尝试在所有">
 <meta property="og:type" content="article">
 <meta property="og:title" content="开发Go项目最简单的方式 — 一个基于Docker的go 工具">
-<meta property="og:url" content="http://toozhao.com/2016/10/17/easiest-way-to-use-go/index.html">
+<meta property="og:url" content="https://toozhao.com/2016/10/17/easiest-way-to-use-go/index.html">
 <meta property="og:site_name" content="大染志">
 <meta property="og:description" content="当我尝试开发一个在 IronWorkerr 上运行的非常简单的程序的时候，我发现目前为止没有一个工具可以让人在几分钟之内运行一段 Go 的示例代码。但在其他语言里面这是可以很容易做到的， 因为他们不像 Go 一样需要设置 GOPATH环境变量，遵守一个特定的代码目录结构，而且他们通常还有更简单的依赖管理工具。 有什么更好的方式吗？我最近想了很多，也写了很过关于 Docker 的文章， 并尝试在所有">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2016-10-17T03:15:21.000Z">
+<meta property="og:locale">
+<meta property="article:published_time" content="2016-10-17T00:30:00.000Z">
+<meta property="article:modified_time" content="2016-10-17T03:15:21.000Z">
+<meta property="article:author" content="Junv">
+<meta property="article:tag" content="docker">
+<meta property="article:tag" content="go">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开发Go项目最简单的方式 — 一个基于Docker的go 工具">
-<meta name="twitter:description" content="当我尝试开发一个在 IronWorkerr 上运行的非常简单的程序的时候，我发现目前为止没有一个工具可以让人在几分钟之内运行一段 Go 的示例代码。但在其他语言里面这是可以很容易做到的， 因为他们不像 Go 一样需要设置 GOPATH环境变量，遵守一个特定的代码目录结构，而且他们通常还有更简单的依赖管理工具。 有什么更好的方式吗？我最近想了很多，也写了很过关于 Docker 的文章， 并尝试在所有">
+
+<link rel="canonical" href="https://toozhao.com/2016/10/17/easiest-way-to-use-go/">
 
 
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    version: '5.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
   };
 </script>
-
-
-
-  <link rel="canonical" href="http://toozhao.com/2016/10/17/easiest-way-to-use-go/"/>
-
-
-
-
 
   <title>开发Go项目最简单的方式 — 一个基于Docker的go 工具 | 大染志</title>
   
@@ -147,259 +53,142 @@
 
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-5243064-16', 'auto');
-  ga('send', 'pageview');
-</script>
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail ">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">大染志</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <p class="site-subtitle">想要玩得很 High 的程序员</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">大染志</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">想要玩得很 High 的程序员</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
+
+
+
 <nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-知识图谱">
-          <a href="https://wiki.toozhao.com" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            知识图谱
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
 </nav>
 
 
 
- </div>
+
+</div>
     </header>
 
-    <main id="main" class="main">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content post posts-expand">
             
 
-  <div id="posts" class="posts-expand">
     
-
-  
-
   
   
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2016/10/17/easiest-way-to-use-go/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://toozhao.com/2016/10/17/easiest-way-to-use-go/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://blog.tuxue.xyz/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+      <meta itemprop="description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="大染志">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">开发Go项目最简单的方式 — 一个基于Docker的go 工具</h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          开发Go项目最简单的方式 — 一个基于Docker的go 工具
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
+              <span class="post-meta-item-text">Posted on</span>
               
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-17T11:30:00+11:00">
-                2016-10-17
-              </time>
-            
 
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2016-10-17T14:15:21+11:00">
-                2016-10-17
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/docker/" itemprop="url" rel="index">
-                    <span itemprop="name">docker</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/docker/go/" itemprop="url" rel="index">
-                    <span itemprop="name">go</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/docker/go/翻译/" itemprop="url" rel="index">
-                    <span itemprop="name">翻译</span>
-                  </a>
-                </span>
-
-                
-                
-              
+              <time title="Created: 2016-10-17 11:30:00 / Modified: 14:15:21" itemprop="dateCreated datePublished" datetime="2016-10-17T11:30:00+11:00">2016-10-17</time>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index"><span itemprop="name">docker</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/go/%E7%BF%BB%E8%AF%91/" itemprop="url" rel="index"><span itemprop="name">翻译</span></a>
+                </span>
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -407,303 +196,194 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        <p>当我尝试开发一个在 <a href="[http://www.iron.io/worker]">IronWorkerr</a> 上运行的非常简单的程序的时候，我发现目前为止没有一个工具可以让人在几分钟之内运行一段 Go 的示例代码。但在其他语言里面这是可以很容易做到的， 因为他们不像 Go 一样需要设置 GOPATH环境变量，遵守一个特定的代码目录结构，而且他们通常还有更简单的依赖管理工具。</p>
-<h3 id="有什么更好的方式吗？"><a href="#有什么更好的方式吗？" class="headerlink" title="有什么更好的方式吗？"></a>有什么更好的方式吗？</h3><p>我最近想了很多，也写了很过关于 Docker 的文章， 并尝试在所有能使用 Docker 的情境下都坚持使用 Docker（是的，我是 Docker 的超级粉丝）。大部分原因是因为在 <a href="[http://www.iron.io/]">Iron.io</a> ，我们从事 Docker 的相关工作。我们运行了很多 Docker 容器，<a href="http://www.iron.io/blog/2014/10/docker-in-production-what-weve-learned.html" target="_blank" rel="external">真的很多</a>。在这期间，我已经意识到 Docker 的强大与疯狂之处。相信我，这不只是炒作。</p>
+        <p>当我尝试开发一个在 <a href="%5Bhttp://www.iron.io/worker%5D">IronWorkerr</a> 上运行的非常简单的程序的时候，我发现目前为止没有一个工具可以让人在几分钟之内运行一段 Go 的示例代码。但在其他语言里面这是可以很容易做到的， 因为他们不像 Go 一样需要设置 GOPATH环境变量，遵守一个特定的代码目录结构，而且他们通常还有更简单的依赖管理工具。</p>
+<h3 id="有什么更好的方式吗？"><a href="#有什么更好的方式吗？" class="headerlink" title="有什么更好的方式吗？"></a>有什么更好的方式吗？</h3><p>我最近想了很多，也写了很过关于 Docker 的文章， 并尝试在所有能使用 Docker 的情境下都坚持使用 Docker（是的，我是 Docker 的超级粉丝）。大部分原因是因为在 <a href="%5Bhttp://www.iron.io/%5D">Iron.io</a> ，我们从事 Docker 的相关工作。我们运行了很多 Docker 容器，<a target="_blank" rel="noopener" href="http://www.iron.io/blog/2014/10/docker-in-production-what-weve-learned.html">真的很多</a>。在这期间，我已经意识到 Docker 的强大与疯狂之处。相信我，这不只是炒作。</p>
 <p>我们向用户展示如何使用 Docker 容器构建和测试他们的 Go 语言程序已经有一段时间了，但始终有一个痛点，让我们如鲠在喉。那便是用户需要将代码放到特定的目录， 配置 GOPATH 环境变量，使用一个第三方工具如 godep 来 加载和代理依赖（注意通常这些依赖和你的代码一样，也需要被版本控制管理），有序的加载相关目录等等。这些当然可以完成，但是总是让人觉得不够爽。</p>
 <p>现在，这个流程变得更好些了。</p>
-<h3 id="介绍下这个基于-Docker-的-Go-工具"><a href="#介绍下这个基于-Docker-的-Go-工具" class="headerlink" title="介绍下这个基于 Docker 的 Go 工具"></a>介绍下这个基于 Docker 的 Go 工具</h3><p>我创建了一个基于 Docker 的 go 工具—— <a href="[https://hub.docker.com/r/treeder/go/]">“treeder/go”</a> ，他让 Go 语言开发变得超级简单。 你唯一需要安装的只有 Docker。 下面是一些它的一些功能和好处：  </p>
+<h3 id="介绍下这个基于-Docker-的-Go-工具"><a href="#介绍下这个基于-Docker-的-Go-工具" class="headerlink" title="介绍下这个基于 Docker 的 Go 工具"></a>介绍下这个基于 Docker 的 Go 工具</h3><p>我创建了一个基于 Docker 的 go 工具—— <a href="%5Bhttps://hub.docker.com/r/treeder/go/%5D">“treeder&#x2F;go”</a> ，他让 Go 语言开发变得超级简单。 你唯一需要安装的只有 Docker。 下面是一些它的一些功能和好处：  </p>
 <ul>
 <li>你不需要安装 Go</li>
 <li>你不需要安装这些相关的工具</li>
 <li>你不需要配置 GOPATH 环境变量</li>
-<li>你不需要将你的代码放到特定的目录（如： /src/github.com/user/hello）或者 Go 的安装目录， 你可以任意放置你的代码。</li>
+<li>你不需要将你的代码放到特定的目录（如： &#x2F;src&#x2F;github.com&#x2F;user&#x2F;hello）或者 Go 的安装目录， 你可以任意放置你的代码。</li>
 <li>不需要重写代码里面依赖导入目录就可以加载相应依赖</li>
 <li>代码交叉编译</li>
 <li>代码静态编译</li>
 <li>将代码打包成 Docker 镜像（一个命令即可搞定，然后你将得到一个包含你的代码的镜像）</li>
 <li>构建远端 git 仓库的代码</li>
 </ul>
-<h3 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h3><h5 id="基础部分"><a href="#基础部分" class="headerlink" title="基础部分"></a>基础部分</h5><p>让我们先来写个简单的例子，首先复制粘贴下面的代码到一个叫 app.go 的文件，放到任意目录。<br><figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> main</div><div class="line"></div><div class="line"><span class="keyword">import</span> (</div><div class="line">  <span class="string">"fmt"</span></div><div class="line">  <span class="string">"log"</span></div><div class="line">  <span class="string">"net/http"</span></div><div class="line"></div><div class="line">  <span class="string">"github.com/gorilla/mux"</span></div><div class="line">)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</div><div class="line">  r := mux.NewRouter()</div><div class="line">  r.HandleFunc(<span class="string">"/"</span>, Hello)</div><div class="line">  http.Handle(<span class="string">"/"</span>, r)</div><div class="line">  fmt.Println(<span class="string">"Starting up on 8080"</span>)</div><div class="line">  log.Fatal(http.ListenAndServe(<span class="string">":8080"</span>, <span class="literal">nil</span>))</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">Hello</span><span class="params">(w http.ResponseWriter, req *http.Request)</span></span> &#123;</div><div class="line">  fmt.Fprintln(w, <span class="string">"Hello world!"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h3><h5 id="基础部分"><a href="#基础部分" class="headerlink" title="基础部分"></a>基础部分</h5><p>让我们先来写个简单的例子，首先复制粘贴下面的代码到一个叫 app.go 的文件，放到任意目录。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">  <span class="string">&quot;fmt&quot;</span></span><br><span class="line">  <span class="string">&quot;log&quot;</span></span><br><span class="line">  <span class="string">&quot;net/http&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="string">&quot;github.com/gorilla/mux&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  r := mux.NewRouter()</span><br><span class="line">  r.HandleFunc(<span class="string">&quot;/&quot;</span>, Hello)</span><br><span class="line">  http.Handle(<span class="string">&quot;/&quot;</span>, r)</span><br><span class="line">  fmt.Println(<span class="string">&quot;Starting up on 8080&quot;</span>)</span><br><span class="line">  log.Fatal(http.ListenAndServe(<span class="string">&quot;:8080&quot;</span>, <span class="literal">nil</span>))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Hello</span><span class="params">(w http.ResponseWriter, req *http.Request)</span></span> &#123;</span><br><span class="line">  fmt.Fprintln(w, <span class="string">&quot;Hello world!&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>注意到这段代码有第三方依赖了吗？ 让我们来代理（vendor） 依赖：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run --rm -v <span class="variable">$PWD</span>:/app -w /app treeder/go vendor</div></pre></td></tr></table></figure>
-<p>上述命令会把抵赖都放 /vendor 目录下<br>然后我们对代码进行构建：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run --rm -v <span class="variable">$PWD</span>:/app -w /app treeder/go build</div></pre></td></tr></table></figure></p>
-<p>接着，我们来运行代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run --rm -v <span class="variable">$PWD</span>:/app -w /app -p 8080:8080 iron/base ./app</div></pre></td></tr></table></figure></p>
-<p>打开浏览器，输入 <a href="[http://localhost:8080]">http://localhost:8080</a>. 哈哈，我们成功的通过 <code>iron/base</code> 这个基础镜像运行了我们的代码。它是一个包含了运行 GO 程序所需的所有东西的很小的镜像。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --<span class="built_in">rm</span> -v <span class="variable">$PWD</span>:/app -w /app treeder/go vendor</span><br></pre></td></tr></table></figure>
+
+<p>上述命令会把抵赖都放 &#x2F;vendor 目录下<br>然后我们对代码进行构建：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --<span class="built_in">rm</span> -v <span class="variable">$PWD</span>:/app -w /app treeder/go build</span><br></pre></td></tr></table></figure>
+<p>接着，我们来运行代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --<span class="built_in">rm</span> -v <span class="variable">$PWD</span>:/app -w /app -p 8080:8080 iron/base ./app</span><br></pre></td></tr></table></figure>
+
+<p>打开浏览器，输入 <a href="%5Bhttp://localhost:8080%5D">http://localhost:8080</a>. 哈哈，我们成功的通过 <code>iron/base</code> 这个基础镜像运行了我们的代码。它是一个包含了运行 GO 程序所需的所有东西的很小的镜像。</p>
 <p>#####更酷炫的东西</p>
-<p>构建一个包含你的代码的可以运行的 Docker 镜像怎么样？<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run --rm -v <span class="variable">$PWD</span>:/app -w /app -v /var/run/docker.sock:/var/run/docker.sock treeder/go image username/myapp:latest</div></pre></td></tr></table></figure></p>
-<p>现在通过你的新镜像来运行代码吧：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run --rm -p 8080:8080 username/myapp</div></pre></td></tr></table></figure></p>
-<p>再次打开 <a href="[http://localhost:8080]">http://localhost:8080</a>，哈哈，现在流程是不是更好了。 这个镜像非常小。你可以通过输入 <code>docker images</code>  来查看这个镜像到底有好大，大概在12M左右吧。</p>
-<p>或者你也可以下载和构建一个远程的代码仓库：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run --rm -v <span class="variable">$PWD</span>:/app -w /app treeder/go remote https://github.com/treeder/hello-app.go.git</div></pre></td></tr></table></figure></p>
+<p>构建一个包含你的代码的可以运行的 Docker 镜像怎么样？</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run --<span class="built_in">rm</span> -v <span class="variable">$PWD</span>:/app -w /app -v /var/run/docker.sock:/var/run/docker.sock treeder/go image username/myapp:latest</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>现在通过你的新镜像来运行代码吧：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --<span class="built_in">rm</span> -p 8080:8080 username/myapp</span><br></pre></td></tr></table></figure>
+<p>再次打开 <a href="%5Bhttp://localhost:8080%5D">http://localhost:8080</a>，哈哈，现在流程是不是更好了。 这个镜像非常小。你可以通过输入 <code>docker images</code>  来查看这个镜像到底有好大，大概在12M左右吧。</p>
+<p>或者你也可以下载和构建一个远程的代码仓库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run --<span class="built_in">rm</span> -v <span class="variable">$PWD</span>:/app -w /app treeder/go remote https://github.com/treeder/hello-app.go.git</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>最后你将得到一个包含这个远程代码仓库的代码的镜像。</p>
 <p>###结论</p>
-<p><a href="[https://medium.com/iron-io-blog/why-and-how-to-use-docker-for-development-a156c1de3b24]">将 Docker 运用于开发</a>再次胜利了，如果你之前开发过 Go 项目，你应该会感谢这个工具带来的简单和简洁。不过它还仅仅是个实验阶段的工具，没有包含太多的其他工具链。不过，就我知道的而言，这应该是最简单的 Go 上手方式了。通过这个工具，仅仅告诉其他人一个代码仓库链接，他们就可以克隆，构建，运行代码而不需要任何初始化流程仅仅只需要 Docker。</p>
-<p>完整的文档和项目源代码请浏览： <a href="https://github.com/treeder/go" target="_blank" rel="external">https://github.com/treeder/go</a></p>
-<p>请不要吝啬你的任何反馈，创建一个 <a href="[https://github.com/treeder/go/issues]">Github issue</a> 或者评论吧。</p>
+<p><a href="%5Bhttps://medium.com/iron-io-blog/why-and-how-to-use-docker-for-development-a156c1de3b24%5D">将 Docker 运用于开发</a>再次胜利了，如果你之前开发过 Go 项目，你应该会感谢这个工具带来的简单和简洁。不过它还仅仅是个实验阶段的工具，没有包含太多的其他工具链。不过，就我知道的而言，这应该是最简单的 Go 上手方式了。通过这个工具，仅仅告诉其他人一个代码仓库链接，他们就可以克隆，构建，运行代码而不需要任何初始化流程仅仅只需要 Docker。</p>
+<p>完整的文档和项目源代码请浏览： <a target="_blank" rel="noopener" href="https://github.com/treeder/go">https://github.com/treeder/go</a></p>
+<p>请不要吝啬你的任何反馈，创建一个 <a href="%5Bhttps://github.com/treeder/go/issues%5D">Github issue</a> 或者评论吧。</p>
 <p><code>更新: 我做了一个更大更好的工具：https://github.com/treeder/devo</code></p>
-<p>翻译自：<a href="https://medium.com/iron-io-blog/the-easiest-way-to-develop-with-go-introducing-a-docker-based-go-tool-c456238507d6" target="_blank" rel="external">https://medium.com/iron-io-blog/the-easiest-way-to-develop-with-go-introducing-a-docker-based-go-tool-c456238507d6</a></p>
+<p>翻译自：<a target="_blank" rel="noopener" href="https://medium.com/iron-io-blog/the-easiest-way-to-develop-with-go-introducing-a-docker-based-go-tool-c456238507d6">https://medium.com/iron-io-blog/the-easiest-way-to-develop-with-go-introducing-a-docker-based-go-tool-c456238507d6</a></p>
 
-      
     </div>
+
     
     
     
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/docker/" rel="tag"># docker</a>
-          
-            <a href="/tags/go/" rel="tag"># go</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/03/21/active-model-serializers/" rel="next" title="在Rails中使用 active_model_serializers 构建json response">
-                <i class="fa fa-chevron-left"></i> 在Rails中使用 active_model_serializers 构建json response
-              </a>
-            
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/docker/" rel="tag"># docker</a>
+              <a href="/tags/go/" rel="tag"># go</a>
           </div>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/08/23/vscode-golang/" rel="prev" title="使用 VS Code 快速搭建你的 Golang 开发 IDE">
-                使用 VS Code 快速搭建你的 Golang 开发 IDE <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
-    
-  </div>
-
-
-        </div>
         
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2015/03/21/active-model-serializers/" rel="prev" title="在Rails中使用 active_model_serializers 构建json response">
+      <i class="fa fa-chevron-left"></i> 在Rails中使用 active_model_serializers 构建json response
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/08/23/vscode-golang/" rel="next" title="使用 VS Code 快速搭建你的 Golang 开发 IDE">
+      使用 VS Code 快速搭建你的 Golang 开发 IDE <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://blog.tuxue.xyz/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
-               alt="Junv" />
-          <p class="site-author-name" itemprop="name">Junv</p>
-           
-              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-            
-              <a href="/archives/">
-            
-                <span class="site-state-item-count">307</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">69</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">247</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/wahyd4" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                    
-                      GitHub
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.linkedin.com/in/junwei-zhao-46944557" target="_blank" title="LinkedIn">
-                  
-                    <i class="fa fa-fw fa-linkedin"></i>
-                  
-                    
-                      LinkedIn
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
-                  
-                    <i class="fa fa-fw fa-stack-overflow"></i>
-                  
-                    
-                      StackOverflow
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                    
-                      Weibo
-                    
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#有什么更好的方式吗？"><span class="nav-number">1.</span> <span class="nav-text">有什么更好的方式吗？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍下这个基于-Docker-的-Go-工具"><span class="nav-number">2.</span> <span class="nav-text">介绍下这个基于 Docker 的 Go 工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#演示"><span class="nav-number">3.</span> <span class="nav-text">演示</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基础部分"><span class="nav-number">3.0.1.</span> <span class="nav-text">基础部分</span></a></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E4%BB%80%E4%B9%88%E6%9B%B4%E5%A5%BD%E7%9A%84%E6%96%B9%E5%BC%8F%E5%90%97%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">有什么更好的方式吗？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D%E4%B8%8B%E8%BF%99%E4%B8%AA%E5%9F%BA%E4%BA%8E-Docker-%E7%9A%84-Go-%E5%B7%A5%E5%85%B7"><span class="nav-number">2.</span> <span class="nav-text">介绍下这个基于 Docker 的 Go 工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BC%94%E7%A4%BA"><span class="nav-number">3.</span> <span class="nav-text">演示</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86"><span class="nav-number">3.0.1.</span> <span class="nav-text">基础部分</span></a></li></ol></li></ol></li></ol></div>
       </div>
-    </main>
+      <!--/noindex-->
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Junv</span>
-
-  
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Junv</p>
+  <div class="site-description" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">307</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">69</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">247</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
 </div>
 
 
 
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Junv</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
         
 
 
@@ -712,115 +392,25 @@
 
 
 
-        
+
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -834,19 +424,12 @@
 
 
 
-  
 
 
 
 
 
-  
 
-  
-
-  
-
-  
 
   
 

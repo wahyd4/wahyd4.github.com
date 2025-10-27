@@ -1,145 +1,52 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"toozhao.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"width_expanded":320,"width_dual_column":240,"padding":18},"copycode":{"enable":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp","menu_item":"fadeInDown"},"duration":200}};
+  </script>
 
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="java,开源,框架," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta name="description" content="作为一个Java程序员，我想我们很多时候都需要和开源（open source software）扯上关系，我不得不说如果我的生活没有开源，肯定会比现在更糟，我们程序员效率一定没有现在这么高。我们通过使用那些著名的开源软件，逐步深入，不断提升了自己的编码水平。也学习了人家的设计功力。          到目前为止我没有设计出或者说贡献出什么开源软件，我自知自己的能力真的还不够。不过我希望哪一天可以为">
-<meta name="keywords" content="java,开源,框架">
+  <meta name="description" content="作为一个Java程序员，我想我们很多时候都需要和开源（open source software）扯上关系，我不得不说如果我的生活没有开源，肯定会比现在更糟，我们程序员效率一定没有现在这么高。我们通过使用那些著名的开源软件，逐步深入，不断提升了自己的编码水平。也学习了人家的设计功力。           到目前为止我没有设计出或者说贡献出什么开源软件，我自知自己的能力真的还不够。不过我希望哪一天可以">
 <meta property="og:type" content="article">
 <meta property="og:title" content="那些年我用过的开源软件、框架">
-<meta property="og:url" content="http://toozhao.com/2012/07/01/good-open-source/index.html">
+<meta property="og:url" content="https://toozhao.com/2012/07/01/good-open-source/index.html">
 <meta property="og:site_name" content="大染志">
-<meta property="og:description" content="作为一个Java程序员，我想我们很多时候都需要和开源（open source software）扯上关系，我不得不说如果我的生活没有开源，肯定会比现在更糟，我们程序员效率一定没有现在这么高。我们通过使用那些著名的开源软件，逐步深入，不断提升了自己的编码水平。也学习了人家的设计功力。          到目前为止我没有设计出或者说贡献出什么开源软件，我自知自己的能力真的还不够。不过我希望哪一天可以为">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2014-07-22T08:50:34.000Z">
+<meta property="og:description" content="作为一个Java程序员，我想我们很多时候都需要和开源（open source software）扯上关系，我不得不说如果我的生活没有开源，肯定会比现在更糟，我们程序员效率一定没有现在这么高。我们通过使用那些著名的开源软件，逐步深入，不断提升了自己的编码水平。也学习了人家的设计功力。           到目前为止我没有设计出或者说贡献出什么开源软件，我自知自己的能力真的还不够。不过我希望哪一天可以">
+<meta property="og:locale">
+<meta property="article:published_time" content="2012-06-30T14:00:00.000Z">
+<meta property="article:modified_time" content="2014-07-22T08:50:34.000Z">
+<meta property="article:author" content="Junv">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="开源">
+<meta property="article:tag" content="框架">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="那些年我用过的开源软件、框架">
-<meta name="twitter:description" content="作为一个Java程序员，我想我们很多时候都需要和开源（open source software）扯上关系，我不得不说如果我的生活没有开源，肯定会比现在更糟，我们程序员效率一定没有现在这么高。我们通过使用那些著名的开源软件，逐步深入，不断提升了自己的编码水平。也学习了人家的设计功力。          到目前为止我没有设计出或者说贡献出什么开源软件，我自知自己的能力真的还不够。不过我希望哪一天可以为">
+
+<link rel="canonical" href="https://toozhao.com/2012/07/01/good-open-source/">
 
 
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    version: '5.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
   };
 </script>
-
-
-
-  <link rel="canonical" href="http://toozhao.com/2012/07/01/good-open-source/"/>
-
-
-
-
 
   <title>那些年我用过的开源软件、框架 | 大染志</title>
   
@@ -147,237 +54,140 @@
 
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-5243064-16', 'auto');
-  ga('send', 'pageview');
-</script>
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail ">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">大染志</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <p class="site-subtitle">想要玩得很 High 的程序员</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">大染志</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">想要玩得很 High 的程序员</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
+
+
+
 <nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-知识图谱">
-          <a href="https://wiki.toozhao.com" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            知识图谱
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
 </nav>
 
 
 
- </div>
+
+</div>
     </header>
 
-    <main id="main" class="main">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content post posts-expand">
             
 
-  <div id="posts" class="posts-expand">
     
-
-  
-
   
   
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/07/01/good-open-source/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://toozhao.com/2012/07/01/good-open-source/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://blog.tuxue.xyz/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+      <meta itemprop="description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="大染志">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">那些年我用过的开源软件、框架</h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          那些年我用过的开源软件、框架
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-07-01T00:00:00+10:00">
-                2012-07-01
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T18:50:34+10:00">
-                2014-07-22
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/我说/" itemprop="url" rel="index">
-                    <span itemprop="name">我说</span>
-                  </a>
-                </span>
-
-                
-                
-              
+              <time title="Created: 2012-07-01 00:00:00" itemprop="dateCreated datePublished" datetime="2012-07-01T00:00:00+10:00">2012-07-01</time>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2014-07-22 18:50:34" itemprop="dateModified" datetime="2014-07-22T18:50:34+10:00">2014-07-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%88%91%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">我说</span></a>
+                </span>
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -385,352 +195,357 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
         <p>作为一个Java程序员，我想我们很多时候都需要和开源（open source software）扯上关系，我不得不说如果我的生活没有开源，肯定会比现在更糟，我们程序员效率一定没有现在这么高。我们通过使用那些著名的开源软件，逐步深入，不断提升了自己的编码水平。也学习了人家的设计功力。</p>
-<div><br>         到目前为止我没有设计出或者说贡献出什么开源软件，我自知自己的能力真的还不够。不过我希望哪一天可以为开源世界添砖加瓦，也希望其他童鞋能够加入这个行列。让世界变得更美好。<br></div>
+<div>
+         到目前为止我没有设计出或者说贡献出什么开源软件，我自知自己的能力真的还不够。不过我希望哪一天可以为开源世界添砖加瓦，也希望其他童鞋能够加入这个行列。让世界变得更美好。
+</div>
 
-<div><br>         下面是我曾经用过的开源软件，可能有些只是简单了解，并不是很熟悉，但是我觉得它很不错也会记录在下面：<br></div>
+<div>
+         下面是我曾经用过的开源软件，可能有些只是简单了解，并不是很熟悉，但是我觉得它很不错也会记录在下面：
+</div>
 
-<div><br>  ========================== 开发语言 ===============================<br></div>
+<div>
+  ========================== 开发语言 ===============================
+</div>
 
-<div><br>  <strong>Java      </strong>      不多说，正是我现在深入学习，使用的。<br></div>
+<div>
+  <strong>Java      </strong>      不多说，正是我现在深入学习，使用的。
+</div>
 
-<div><br>  <strong>PHP  </strong>           适合于快速开发的服务器语言。我只是学习过一些，大概有两三次学习，每次都是学习一点，然后又放弃。最后遗忘。因为我还是喜欢java<br></div>
+<div>
+  <strong>PHP  </strong>           适合于快速开发的服务器语言。我只是学习过一些，大概有两三次学习，每次都是学习一点，然后又放弃。最后遗忘。因为我还是喜欢java
+</div>
 
-<div><br>  <strong>Node.js  </strong>      基于js的服务器后台语言框架。其非阻塞的特点，便于开发高性能的网站。开发快速，现在在国内已经开始流行，而且有很多开源的组件，使得node.js的可以实现的功能越来越多，比如著名的express.js 这是提供快速开发网站的支持，自带restful<br></div>
+<div>
+  <strong>Node.js  </strong>      基于js的服务器后台语言框架。其非阻塞的特点，便于开发高性能的网站。开发快速，现在在国内已经开始流行，而且有很多开源的组件，使得node.js的可以实现的功能越来越多，比如著名的express.js 这是提供快速开发网站的支持，自带restful
+</div>
 
-<div><br>  <strong>C#, C              ,</strong>曾经学过，现在已经快忘得差不多。<br></div>
+<div>
+  <strong>C#, C              ,</strong>曾经学过，现在已经快忘得差不多。
+</div>
 
-<div><br>  <strong>javascript </strong>    主要是用于浏览器的脚本语言，现在有了node.js当然也可以用在后台服务器，入门较简单。jquery也是必学。学好这个东西很重要。现在HTML5 的世界，javascript可以做到事越来越多了。基于V8虚拟机，也使得javascipt在chrome的性能提升了很多倍。<br></div>
+<div>
+  <strong>javascript </strong>    主要是用于浏览器的脚本语言，现在有了node.js当然也可以用在后台服务器，入门较简单。jquery也是必学。学好这个东西很重要。现在HTML5 的世界，javascript可以做到事越来越多了。基于V8虚拟机，也使得javascipt在chrome的性能提升了很多倍。
+</div>
 
-<div><br></div>
+<div>
+</div>
 
-<div><br>  ==================== 工具类 ===================<br></div>
+<div>
+  ==================== 工具类 ===================
+</div>
 
-<div><br>  <strong>Eclipse  </strong>       开源java IDE，当然这个IDE也可以用来开发C/C++ ,PHP,ruby等程序，我认为它是世界上最好的集成开发工具。可以通过插件无限扩展其功能。<br></div>
+<div>
+  <strong>Eclipse  </strong>       开源java IDE，当然这个IDE也可以用来开发C/C++ ,PHP,ruby等程序，我认为它是世界上最好的集成开发工具。可以通过插件无限扩展其功能。
+</div>
 
-<div><br>  <strong>netbeans </strong>    oracle开发的开源java IDE，不过我认为和eclipse还是有一定差距的。不够好用，而且有点卡。<br></div>
+<div>
+  <strong>netbeans </strong>    oracle开发的开源java IDE，不过我认为和eclipse还是有一定差距的。不够好用，而且有点卡。
+</div>
 
-<div><br>  <strong>notepad++ </strong> 开源的文本编辑器，支撑几乎所有语言的高亮显示，还支持安装各种插件扩展其功能哦。很小巧。<br></div>
+<div>
+  <strong>notepad++ </strong> 开源的文本编辑器，支撑几乎所有语言的高亮显示，还支持安装各种插件扩展其功能哦。很小巧。
+</div>
 
-<div><br>  <strong>tomcat  </strong>      开源的java servlet容器，轻量级服务器。性能很好。不过很多Java EE的特性程序，是不能在tomcat上运行的。<br></div>
+<div>
+  <strong>tomcat  </strong>      开源的java servlet容器，轻量级服务器。性能很好。不过很多Java EE的特性程序，是不能在tomcat上运行的。
+</div>
 
-<div><br>  <strong>Jboss AS </strong>   开源的JAVA 应用服务器，它的功能则强大得多，支持tomcat的所有功能，而且对JAVA EE也提供完整支持，现在最新的jboss AS 7中，加入了OSGI功能，使得它更加强大。<br></div>
+<div>
+  <strong>Jboss AS </strong>   开源的JAVA 应用服务器，它的功能则强大得多，支持tomcat的所有功能，而且对JAVA EE也提供完整支持，现在最新的jboss AS 7中，加入了OSGI功能，使得它更加强大。
+</div>
 
-<div><br>  <strong>Jetty    </strong>        开源的java servlet容器，你可以把它简单理解和tomcat 差不多，不过它更加小巧，甚至可以内嵌到应用中，小到只有一个包。也就是你的程序可以本身就单独运行，当然需要在程序中加入jetty相关包。<br></div>
+<div>
+  <strong>Jetty    </strong>        开源的java servlet容器，你可以把它简单理解和tomcat 差不多，不过它更加小巧，甚至可以内嵌到应用中，小到只有一个包。也就是你的程序可以本身就单独运行，当然需要在程序中加入jetty相关包。
+</div>
 
-<div><br>  <strong>Aptana </strong>     开源的eclipse插件，功能强大，提供了很多web开发功能，支持主题、内嵌git 插件等，而且它的javascript 辅助功能也更加强大。其他很多功能我还没有用到，但是它值得你开始使用。<br></div>
+<div>
+  <strong>Aptana </strong>     开源的eclipse插件，功能强大，提供了很多web开发功能，支持主题、内嵌git 插件等，而且它的javascript 辅助功能也更加强大。其他很多功能我还没有用到，但是它值得你开始使用。
+</div>
 
-<div><br>  <strong>checkstyle</strong>   用于检查代码语法和结构的eclipse插件，它的要求比eclipse自身更加严格，对开发人员的编程规范要求很高，不过可以让你写出的代码质量更高、更易于他人阅读理解。<br></div>
+<div>
+  <strong>checkstyle</strong>   用于检查代码语法和结构的eclipse插件，它的要求比eclipse自身更加严格，对开发人员的编程规范要求很高，不过可以让你写出的代码质量更高、更易于他人阅读理解。
+</div>
 
-<div><br>  <strong>findbugs </strong>     检查代码中潜在bug的eclipse插件。我对它使用还不够熟悉，但是它还是很有用，方便你随时检查下代码是否有常见bug。<br></div>
+<div>
+  <strong>findbugs </strong>     检查代码中潜在bug的eclipse插件。我对它使用还不够熟悉，但是它还是很有用，方便你随时检查下代码是否有常见bug。
+</div>
 
-<div><br>  <strong>MAVEN  </strong>     类似于ANT的项目打包、构建工具，也是基于组件式的，你可以通过使用多个maven插件来完成很多功能。使用自动化构建程序等任务，比ant强大很多，同时支持调用ant命令。<br></div>
+<div>
+  <strong>MAVEN  </strong>     类似于ANT的项目打包、构建工具，也是基于组件式的，你可以通过使用多个maven插件来完成很多功能。使用自动化构建程序等任务，比ant强大很多，同时支持调用ant命令。
+</div>
 
-<div><br>  <strong>git    </strong>            开源的代码版本控制工具。分布式，没有中央服务器照样安全工作。<br></div>
+<div>
+  <strong>git    </strong>            开源的代码版本控制工具。分布式，没有中央服务器照样安全工作。
+</div>
 
-<div><br>  <strong>chrome</strong>       谷歌浏览器，我通常用它来调试web 应用程序，相当给力啊。<br></div>
+<div>
+  <strong>chrome</strong>       谷歌浏览器，我通常用它来调试web 应用程序，相当给力啊。
+</div>
 
-<div><br>  <strong>Nexus  </strong>        开源的maven 仓库管理工具，功能很强大。<br></div>
+<div>
+  <strong>Nexus  </strong>        开源的maven 仓库管理工具，功能很强大。
+</div>
 
-<div><br>  <strong>Jenkins  </strong>     开源的项目自动构建、持续集成服务器。基于Hudson 开发。<br></div>
+<div>
+  <strong>Jenkins  </strong>     开源的项目自动构建、持续集成服务器。基于Hudson 开发。
+</div>
 
-<div><br>  <strong>run jetty  </strong>    在eclipse 内一键运行jetty的插件，在开发maven项目的使用用起来特别方便。简单，而传统的run on server是做不到这点的。<br></div>
+<div>
+  <strong>run jetty  </strong>    在eclipse 内一键运行jetty的插件，在开发maven项目的使用用起来特别方便。简单，而传统的run on server是做不到这点的。
+</div>
 
-<div><br>  <strong>M2E  </strong>         开源的maven eclipse 插件，提供图形化支撑。<br></div>
+<div>
+  <strong>M2E  </strong>         开源的maven eclipse 插件，提供图形化支撑。
+</div>
 
-<div><br></div>
+<div>
+</div>
 
-<div><br></div>
+<div>
+</div>
 
-<div><br>  =====================java开发框架=======================<br></div>
+<div>
+  =====================java开发框架=======================
+</div>
 
-<div><br>  <strong>struts  </strong>        很著名的控制层框架，不过我不太喜欢<br></div>
+<div>
+  <strong>struts  </strong>        很著名的控制层框架，不过我不太喜欢
+</div>
 
-<div><br>  <strong>spring framework</strong>  全世界最好的框架之一，它的能力之强大，使用范围之广。据说它里面的代码实现相当经典，不过还没有拜读。其衍生出的很多框架也很好。比如spring security<br></div>
+<div>
+  <strong>spring framework</strong>  全世界最好的框架之一，它的能力之强大，使用范围之广。据说它里面的代码实现相当经典，不过还没有拜读。其衍生出的很多框架也很好。比如spring security
+</div>
 
-<div><br>  <strong>hibernate </strong>     开源的ORM框架，将所有对数据库的 操作都做成操作对象的形式，不过它的弱点在于不能直接使用sql 语句操作，在处理一些比较复杂的查询功能时没有直接操作sql语句简单。很麻烦。<br></div>
+<div>
+  <strong>hibernate </strong>     开源的ORM框架，将所有对数据库的 操作都做成操作对象的形式，不过它的弱点在于不能直接使用sql 语句操作，在处理一些比较复杂的查询功能时没有直接操作sql语句简单。很麻烦。
+</div>
 
-<div><br>  <strong>jgit    </strong>           git的java实现。很不错哦，在一个eclipse插件里面使用了这个包，这样再也没有狂平台的问题，java帮我解决了一切。<br></div>
+<div>
+  <strong>jgit    </strong>           git的java实现。很不错哦，在一个eclipse插件里面使用了这个包，这样再也没有狂平台的问题，java帮我解决了一切。
+</div>
 
-<div><br>  <strong>apache poi </strong>  开源的java api，你可以用它来操作windows 文档：doc，xls，ppt，pdf等等。很方便。以前用它作过导出数据到excel中。<br></div>
+<div>
+  <strong>apache poi </strong>  开源的java api，你可以用它来操作windows 文档：doc，xls，ppt，pdf等等。很方便。以前用它作过导出数据到excel中。
+</div>
 
-<div><br>  <strong>jersey  </strong>        开源的java restful 服务实现。比较简单吧。用起来也舒服。<br></div>
+<div>
+  <strong>jersey  </strong>        开源的java restful 服务实现。比较简单吧。用起来也舒服。
+</div>
 
-<div><br>  <strong>apache CXF </strong> 另一个开源的java web services 实现，当然支持标准的rest服务。通过它还有osgi 版本，很前卫。<br></div>
+<div>
+  <strong>apache CXF </strong> 另一个开源的java web services 实现，当然支持标准的rest服务。通过它还有osgi 版本，很前卫。
+</div>
 
-<div><br>  <strong>dom4j </strong>        java的操作xml 的开源类库，有了它读或者写xml文档都很简单。<br></div>
+<div>
+  <strong>dom4j </strong>        java的操作xml 的开源类库，有了它读或者写xml文档都很简单。
+</div>
 
-<div><br>  <strong>apache fileupload </strong> java开源的文件上传插件，很实用，也比较简单。<br></div>
+<div>
+  <strong>apache fileupload </strong> java开源的文件上传插件，很实用，也比较简单。
+</div>
 
-<div><br>  <strong>log4j    </strong>     java 开源的日志框架，可以将软件日志写到控制台、外部文件、数据库中<br></div>
+<div>
+  <strong>log4j    </strong>     java 开源的日志框架，可以将软件日志写到控制台、外部文件、数据库中
+</div>
 
-<div><br>  slf4j          另外一个开源的java日志框架，但是它本身并不提供实现，而是提供了接口。如过你想把日志写入外部文件或者数据库还需要配合log4j等其他框架使用。<br></div>
+<div>
+  slf4j          另外一个开源的java日志框架，但是它本身并不提供实现，而是提供了接口。如过你想把日志写入外部文件或者数据库还需要配合log4j等其他框架使用。
+</div>
 
-<div><br></div>
+<div>
+</div>
 
-<div><br>  ================其他开发框架 =========================<br></div>
+<div>
+  ================其他开发框架 =========================
+</div>
 
-<div><br>  <strong>twitter bootstrap </strong>    twitter的开源前端框架，用它开发一个网页界面，超级简单，快速，而且很美哦，兼容性也很好。<br></div>
+<div>
+  <strong>twitter bootstrap </strong>    twitter的开源前端框架，用它开发一个网页界面，超级简单，快速，而且很美哦，兼容性也很好。
+</div>
 
-<div><br>  <strong>artdialog    </strong>            一个中国人写的开源js弹出层框架，很好用，而且也很绚丽。强烈推荐。<br></div>
+<div>
+  <strong>artdialog    </strong>            一个中国人写的开源js弹出层框架，很好用，而且也很绚丽。强烈推荐。
+</div>
 
-<div><br>  <strong>jquery form     </strong>      一个开源的jquery form 插件，可以用来执行ajax 表单请求。等等。<br></div>
+<div>
+  <strong>jquery form     </strong>      一个开源的jquery form 插件，可以用来执行ajax 表单请求。等等。
+</div>
 
-<div><br>  <strong>xml2json      </strong>        一个用于把xml文档转成json的jquery 插件。js操作json还是更加舒服。<br></div>
+<div>
+  <strong>xml2json      </strong>        一个用于把xml文档转成json的jquery 插件。js操作json还是更加舒服。
+</div>
 
-<div><br>  <strong>highcharts  </strong>         开源的js图表插件，功能强大，有多种图表，并支持ajax异步强求。<br></div>
+<div>
+  <strong>highcharts  </strong>         开源的js图表插件，功能强大，有多种图表，并支持ajax异步强求。
+</div>
 
-<div><br>  <strong>jquery      </strong>           这个强大的js 框架，让js变得更加好用。<br></div>
+<div>
+  <strong>jquery      </strong>           这个强大的js 框架，让js变得更加好用。
+</div>
 
-<div><br>  jquery UI             jquery 的UI控件框架，集成了很多网页UI组件，不过我认为有了twitter bootstrap 此框架少了很多吸引力。<br></div>
+<div>
+  jquery UI             jquery 的UI控件框架，集成了很多网页UI组件，不过我认为有了twitter bootstrap 此框架少了很多吸引力。
+</div>
 
-<div><br>  <strong>jquery mobile </strong>    用于移动平台的jquery UI插件，可以把节目做得更像移动平台原生，我感觉目前性能还有待提升。<br></div>
+<div>
+  <strong>jquery mobile </strong>    用于移动平台的jquery UI插件，可以把节目做得更像移动平台原生，我感觉目前性能还有待提升。
+</div>
 
-<div><br></div>
+<div>
+</div>
 
-<div><br>  目前只想到这些，文中对开源软件的描述可能有错，欢迎指出，讨论。<br></div>
+<div>
+  目前只想到这些，文中对开源软件的描述可能有错，欢迎指出，讨论。
+</div>
 
-<div><br>  不要重复造轮子。<br></div>
+<div>
+  不要重复造轮子。
+</div>
 
-      
     </div>
+
     
     
     
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/java/" rel="tag"># java</a>
-          
-            <a href="/tags/开源/" rel="tag"># 开源</a>
-          
-            <a href="/tags/框架/" rel="tag"># 框架</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2012/03/22/against-sae/" rel="next" title="抗议SAE !!">
-                <i class="fa fa-chevron-left"></i> 抗议SAE !!
-              </a>
-            
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/java/" rel="tag"># java</a>
+              <a href="/tags/%E5%BC%80%E6%BA%90/" rel="tag"># 开源</a>
+              <a href="/tags/%E6%A1%86%E6%9E%B6/" rel="tag"># 框架</a>
           </div>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2012/07/01/come-back/" rel="prev" title="复活？？">
-                复活？？ <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
-    
-  </div>
-
-
-        </div>
         
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2012/03/22/against-sae/" rel="prev" title="抗议SAE !!">
+      <i class="fa fa-chevron-left"></i> 抗议SAE !!
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2012/07/01/come-back/" rel="next" title="复活？？">
+      复活？？ <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
 
-      
-
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://blog.tuxue.xyz/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
-               alt="Junv" />
-          <p class="site-author-name" itemprop="name">Junv</p>
-           
-              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-            
-              <a href="/archives/">
-            
-                <span class="site-state-item-count">307</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">69</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">247</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/wahyd4" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                    
-                      GitHub
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.linkedin.com/in/junwei-zhao-46944557" target="_blank" title="LinkedIn">
-                  
-                    <i class="fa fa-fw fa-linkedin"></i>
-                  
-                    
-                      LinkedIn
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
-                  
-                    <i class="fa fa-fw fa-stack-overflow"></i>
-                  
-                    
-                      StackOverflow
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                    
-                      Weibo
-                    
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
-    </main>
+      <!--/noindex-->
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Junv</span>
-
-  
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Junv</p>
+  <div class="site-description" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">307</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">69</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">247</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
 </div>
 
 
 
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Junv</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
         
 
 
@@ -739,115 +554,25 @@
 
 
 
-        
+
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -861,19 +586,12 @@
 
 
 
-  
 
 
 
 
 
-  
 
-  
-
-  
-
-  
 
   
 

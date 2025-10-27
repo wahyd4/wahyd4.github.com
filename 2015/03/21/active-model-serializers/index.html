@@ -1,145 +1,51 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"toozhao.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"width_expanded":320,"width_dual_column":240,"padding":18},"copycode":{"enable":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp","menu_item":"fadeInDown"},"duration":200}};
+  </script>
 
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="ruby,json," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta name="description" content="Rails 本身提供很不错的json response功能，可以很方便的将model对象自动转换为json数据。如果我们期望返回的结果很简单也可以构建一个简单的hash,自行编辑你希望的key和value,由Rails 来帮你生成json。那如果是介于两者之间的情况呢？  我希望将我的model以json的形式返回，但是我并不希望将所有的字段返回。 我希望将我的model中部分属性进行稍微的处理和">
-<meta name="keywords" content="ruby,json">
+  <meta name="description" content="Rails 本身提供很不错的json response功能，可以很方便的将model对象自动转换为json数据。如果我们期望返回的结果很简单也可以构建一个简单的hash,自行编辑你希望的key和value,由Rails 来帮你生成json。那如果是介于两者之间的情况呢？  我希望将我的model以json的形式返回，但是我并不希望将所有的字段返回。 我希望将我的model中部分属性进行稍微的处理和">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在Rails中使用 active_model_serializers 构建json response">
-<meta property="og:url" content="http://toozhao.com/2015/03/21/active-model-serializers/index.html">
+<meta property="og:url" content="https://toozhao.com/2015/03/21/active-model-serializers/index.html">
 <meta property="og:site_name" content="大染志">
 <meta property="og:description" content="Rails 本身提供很不错的json response功能，可以很方便的将model对象自动转换为json数据。如果我们期望返回的结果很简单也可以构建一个简单的hash,自行编辑你希望的key和value,由Rails 来帮你生成json。那如果是介于两者之间的情况呢？  我希望将我的model以json的形式返回，但是我并不希望将所有的字段返回。 我希望将我的model中部分属性进行稍微的处理和">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2015-03-21T04:00:16.000Z">
+<meta property="og:locale">
+<meta property="article:published_time" content="2015-03-20T23:35:43.000Z">
+<meta property="article:modified_time" content="2015-03-21T04:00:16.000Z">
+<meta property="article:author" content="Junv">
+<meta property="article:tag" content="ruby">
+<meta property="article:tag" content="json">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在Rails中使用 active_model_serializers 构建json response">
-<meta name="twitter:description" content="Rails 本身提供很不错的json response功能，可以很方便的将model对象自动转换为json数据。如果我们期望返回的结果很简单也可以构建一个简单的hash,自行编辑你希望的key和value,由Rails 来帮你生成json。那如果是介于两者之间的情况呢？  我希望将我的model以json的形式返回，但是我并不希望将所有的字段返回。 我希望将我的model中部分属性进行稍微的处理和">
+
+<link rel="canonical" href="https://toozhao.com/2015/03/21/active-model-serializers/">
 
 
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    version: '5.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
   };
 </script>
-
-
-
-  <link rel="canonical" href="http://toozhao.com/2015/03/21/active-model-serializers/"/>
-
-
-
-
 
   <title>在Rails中使用 active_model_serializers 构建json response | 大染志</title>
   
@@ -147,245 +53,139 @@
 
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-5243064-16', 'auto');
-  ga('send', 'pageview');
-</script>
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail ">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">大染志</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <p class="site-subtitle">想要玩得很 High 的程序员</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">大染志</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">想要玩得很 High 的程序员</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
+
+
+
 <nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-知识图谱">
-          <a href="https://wiki.toozhao.com" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            知识图谱
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
 </nav>
 
 
 
- </div>
+
+</div>
     </header>
 
-    <main id="main" class="main">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content post posts-expand">
             
 
-  <div id="posts" class="posts-expand">
     
-
-  
-
   
   
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2015/03/21/active-model-serializers/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://toozhao.com/2015/03/21/active-model-serializers/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://blog.tuxue.xyz/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+      <meta itemprop="description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="大染志">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">在Rails中使用 active_model_serializers 构建json response</h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          在Rails中使用 active_model_serializers 构建json response
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
+              <span class="post-meta-item-text">Posted on</span>
               
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-21T10:35:43+11:00">
-                2015-03-21
-              </time>
-            
 
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2015-03-21T15:00:16+11:00">
-                2015-03-21
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ruby/" itemprop="url" rel="index">
-                    <span itemprop="name">ruby</span>
-                  </a>
-                </span>
-
-                
-                
-              
+              <time title="Created: 2015-03-21 10:35:43 / Modified: 15:00:16" itemprop="dateCreated datePublished" datetime="2015-03-21T10:35:43+11:00">2015-03-21</time>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ruby/" itemprop="url" rel="index"><span itemprop="name">ruby</span></a>
+                </span>
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-      
 
       
         <p>Rails 本身提供很不错的json response功能，可以很方便的将model对象自动转换为json数据。如果我们期望返回的结果很简单也可以构建一个简单的hash,自行编辑你希望的key和value,由Rails 来帮你生成json。那如果是介于两者之间的情况呢？</p>
@@ -394,254 +194,171 @@
 <li>我希望将我的model中部分属性进行稍微的处理和计算后返回，这样客户端可以直接使用某些字段，而不需要将应用自身的逻辑暴露给客户端，如我有个model记录微信支付属性，有个字段是关于微信支付（”trade_status”），它的值有trade_success, “wait_for_payment”，显然我们可以返回给客户端 “支付成功”，”等待支付”更好。传统的做法，我们为了达到这个目的，我们不仅需要将trade_stauts进行构建，还需要将其他参数也重复写出来。</li>
 </ul>
 <p>ActiveModel::Serializers这个gem 包就可以更好的帮助我们解决上面的痛点，我们只需要对需要返回的属性列举出来，只对需要更改的属性进行计算，其他都不需要了。下面就介绍下它的一些常见用法。</p>
-<p>首先安装Gem<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem <span class="string">'active_model_serializers'</span></div></pre></td></tr></table></figure></p>
-<p>为了可以在我们的rails 项目中使用它，我们还需要在application controller中添加：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">include</span> ActionController::Serialization</div></pre></td></tr></table></figure></p>
-<p>active_model_serializers的使用就是在你是需要返回json的地方，为你的数据创建serializer,你的对象就能通过serializer变成希望的结果。这里假设我有一个User用户对象，User的的大致结构：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span></span></div><div class="line">  field <span class="symbol">:nick_name</span>, <span class="symbol">type:</span> String</div><div class="line">  field <span class="symbol">:email</span>, <span class="symbol">type:</span> String</div><div class="line">  field <span class="symbol">:age</span>, <span class="symbol">type:</span> Integer</div><div class="line">  field <span class="symbol">:password</span>, <span class="symbol">type:</span>String</div><div class="line">  <span class="comment"># 等等更多属性。。。</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
-<p>我现在有个UserController,需要以JSON的形式返回用户的基本信息： 昵称，邮箱，是否成年（大于等于18岁算成年），接下来在app 目录下创建serializers 目录，并创建class UserSerializer对象，继承自 ActiveModel::Serializer, 然后我们的serializer就应该是这样：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserSerializer</span> &lt; ActiveModel::Serializer</span></div><div class="line">  attributes <span class="symbol">:nick_name</span>, <span class="symbol">:email</span>, <span class="symbol">:if_adult</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">if_adult</span></span></div><div class="line">    object.age &gt; <span class="number">18</span> <span class="comment">#object 就是需要被序列化的对象</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
-<p>在serializer中，我们只需要将我们需要的属性通过attributes 的形式列出来，如果model没有的属性，我们需要自行实现该方法。<br>我们也可以覆盖属性，如上的例子，我们也可以将if_adult 改成age,同样我们需要有：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">age</span></span></div><div class="line">  object.age &gt; <span class="number">18</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
+<p>首先安装Gem</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem <span class="string">&#x27;active_model_serializers&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>为了可以在我们的rails 项目中使用它，我们还需要在application controller中添加：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">include</span> <span class="title class_">ActionController::Serialization</span></span><br></pre></td></tr></table></figure>
+<p>active_model_serializers的使用就是在你是需要返回json的地方，为你的数据创建serializer,你的对象就能通过serializer变成希望的结果。这里假设我有一个User用户对象，User的的大致结构：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">User</span></span><br><span class="line">  field <span class="symbol">:nick_name</span>, <span class="symbol">type:</span> <span class="title class_">String</span></span><br><span class="line">  field <span class="symbol">:email</span>, <span class="symbol">type:</span> <span class="title class_">String</span></span><br><span class="line">  field <span class="symbol">:age</span>, <span class="symbol">type:</span> <span class="title class_">Integer</span></span><br><span class="line">  field <span class="symbol">:password</span>, <span class="symbol">type:</span><span class="title class_">String</span></span><br><span class="line">  <span class="comment"># 等等更多属性。。。</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>我现在有个UserController,需要以JSON的形式返回用户的基本信息： 昵称，邮箱，是否成年（大于等于18岁算成年），接下来在app 目录下创建serializers 目录，并创建class UserSerializer对象，继承自 ActiveModel::Serializer, 然后我们的serializer就应该是这样：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UserSerializer</span> &lt; <span class="title class_ inherited__">ActiveModel::Serializer</span></span><br><span class="line">  attributes <span class="symbol">:nick_name</span>, <span class="symbol">:email</span>, <span class="symbol">:if_adult</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">def</span> <span class="title function_">if_adult</span></span><br><span class="line">    object.age &gt; <span class="number">18</span> <span class="comment">#object 就是需要被序列化的对象</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>在serializer中，我们只需要将我们需要的属性通过attributes 的形式列出来，如果model没有的属性，我们需要自行实现该方法。<br>我们也可以覆盖属性，如上的例子，我们也可以将if_adult 改成age,同样我们需要有：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">age</span></span><br><span class="line">  object.age &gt; <span class="number">18</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 <p>接下来完成我们的最后一步，在controller中使用serializer</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserController</span> &lt; ApplicationController</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">show</span></span></div><div class="line">    <span class="comment">#假设 <span class="doctag">@user</span> 是我们经过查询后得到的对象</span></div><div class="line">    render <span class="symbol">json:</span> @user, <span class="symbol">serializer:</span> UserSerializer</div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">index</span></span></div><div class="line">    <span class="comment">#假设 <span class="doctag">@users</span> 是我们经过查询后得到的对象</span></div><div class="line">    render <span class="symbol">json:</span> @user, <span class="symbol">each_serializer:</span> UserSerializer</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
-<p>我们我们希望对一个数组对象进行序列化，我们则需要使用each_serializer，使用该属性后，你的返回结果将变成对象，数组则包裹下对象之下。本例则类似于<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">users: [</div><div class="line">  &#123;&#125;,</div><div class="line">  &#123;&#125;</div><div class="line">]</div></pre></td></tr></table></figure></p>
-<p>这里的”users”这是json的根属性， serializer支持用户自定义根属性，<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">render <span class="symbol">json:</span> @user, <span class="symbol">serializer:</span> UserSerializer, <span class="symbol">root:</span> <span class="string">'customer'</span></div></pre></td></tr></table></figure></p>
-<p>我非常喜欢active model serializers 的一个属性是，支持在serializer中访问你希望的属性，在rails 中，很多时候我们希望访问current_user对象，获取当前登录用户的相关信息。那serializer 则可以很好的做的这一点，在active model serializers 中有 serialization_scope 这样一个方法，在application controller 中声明此方法，传入你希望的参数，便可以在serializer class 中自由访问该对象。解决了serializer 与其他对象交互的问题。<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">serialization_scope <span class="symbol">:current_user</span></div></pre></td></tr></table></figure></p>
-<p>在serializer中, scope 对象便是注入的 current_user对象<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scope.email</div></pre></td></tr></table></figure></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UserController</span> &lt; <span class="title class_ inherited__">ApplicationController</span></span><br><span class="line">  <span class="keyword">def</span> <span class="title function_">show</span></span><br><span class="line">    <span class="comment">#假设 <span class="doctag">@user</span> 是我们经过查询后得到的对象</span></span><br><span class="line">    render <span class="symbol">json:</span> <span class="variable">@user</span>, <span class="symbol">serializer:</span> <span class="title class_">UserSerializer</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">def</span> <span class="title function_">index</span></span><br><span class="line">    <span class="comment">#假设 <span class="doctag">@users</span> 是我们经过查询后得到的对象</span></span><br><span class="line">    render <span class="symbol">json:</span> <span class="variable">@user</span>, <span class="symbol">each_serializer:</span> <span class="title class_">UserSerializer</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>我们我们希望对一个数组对象进行序列化，我们则需要使用each_serializer，使用该属性后，你的返回结果将变成对象，数组则包裹下对象之下。本例则类似于</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">users<span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">  <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+<p>这里的”users”这是json的根属性， serializer支持用户自定义根属性，</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">render <span class="symbol">json:</span> <span class="variable">@user</span>, <span class="symbol">serializer:</span> <span class="title class_">UserSerializer</span>, <span class="symbol">root:</span> <span class="string">&#x27;customer&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>我非常喜欢active model serializers 的一个属性是，支持在serializer中访问你希望的属性，在rails 中，很多时候我们希望访问current_user对象，获取当前登录用户的相关信息。那serializer 则可以很好的做的这一点，在active model serializers 中有 serialization_scope 这样一个方法，在application controller 中声明此方法，传入你希望的参数，便可以在serializer class 中自由访问该对象。解决了serializer 与其他对象交互的问题。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">serialization_scope <span class="symbol">:current_user</span></span><br></pre></td></tr></table></figure>
+<p>在serializer中, scope 对象便是注入的 current_user对象</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scope.email</span><br></pre></td></tr></table></figure>
 <p>此外，active model serializers 支持在返回的json中额外注入meta属性，这样既保留了serializer的简单，模板化，也增添了自由度，使得用户可以自行添加一些额外的属性。</p>
-<p>更详细的使用还请参考：<a href="https://github.com/rails-api/active_model_serializers" target="_blank" rel="external">Github</a></p>
+<p>更详细的使用还请参考：<a target="_blank" rel="noopener" href="https://github.com/rails-api/active_model_serializers">Github</a></p>
 
-      
     </div>
+
     
     
     
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/ruby/" rel="tag"># ruby</a>
-          
-            <a href="/tags/json/" rel="tag"># json</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2014/10/25/some-photos-from-Daocheng-and-Yading/" rel="next" title="稻城、亚丁自驾游之行的一些照片">
-                <i class="fa fa-chevron-left"></i> 稻城、亚丁自驾游之行的一些照片
-              </a>
-            
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/ruby/" rel="tag"># ruby</a>
+              <a href="/tags/json/" rel="tag"># json</a>
           </div>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/17/easiest-way-to-use-go/" rel="prev" title="开发Go项目最简单的方式 — 一个基于Docker的go 工具">
-                开发Go项目最简单的方式 — 一个基于Docker的go 工具 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
-    
-  </div>
-
-
-        </div>
         
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2014/10/25/some-photos-from-Daocheng-and-Yading/" rel="prev" title="稻城、亚丁自驾游之行的一些照片">
+      <i class="fa fa-chevron-left"></i> 稻城、亚丁自驾游之行的一些照片
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2016/10/17/easiest-way-to-use-go/" rel="next" title="开发Go项目最简单的方式 — 一个基于Docker的go 工具">
+      开发Go项目最简单的方式 — 一个基于Docker的go 工具 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
 
-      
-
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://blog.tuxue.xyz/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
-               alt="Junv" />
-          <p class="site-author-name" itemprop="name">Junv</p>
-           
-              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-            
-              <a href="/archives/">
-            
-                <span class="site-state-item-count">307</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">69</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">247</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/wahyd4" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                    
-                      GitHub
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.linkedin.com/in/junwei-zhao-46944557" target="_blank" title="LinkedIn">
-                  
-                    <i class="fa fa-fw fa-linkedin"></i>
-                  
-                    
-                      LinkedIn
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
-                  
-                    <i class="fa fa-fw fa-stack-overflow"></i>
-                  
-                    
-                      StackOverflow
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                    
-                      Weibo
-                    
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
-    </main>
+      <!--/noindex-->
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Junv</span>
-
-  
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Junv</p>
+  <div class="site-description" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">307</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">69</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">247</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
 </div>
 
 
 
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Junv</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
         
 
 
@@ -650,115 +367,25 @@
 
 
 
-        
+
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -772,19 +399,12 @@
 
 
 
-  
 
 
 
 
 
-  
 
-  
-
-  
-
-  
 
   
 

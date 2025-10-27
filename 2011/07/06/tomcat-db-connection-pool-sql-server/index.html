@@ -1,145 +1,52 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"toozhao.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"width_expanded":320,"width_dual_column":240,"padding":18},"copycode":{"enable":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp","menu_item":"fadeInDown"},"duration":200}};
+  </script>
 
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="java,servlet,连接池," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta name="description" content="昨天看了一些网上的tomcat数据库连接池配置的东西，但是一直没配好，主要原因是网上的文章几乎没有争对tomcat 7进行配置的，而且针对SQL SERVER的也不多，今天上午看了官方的文档，花了一上午时间终于配置好了数据库连接池，这里发给大家看看，如果有什么疑问就留言吧。  首先我们需要向项目中导入tomcat-dbcp.jar 、servlet-ap.jar和sql server的驱动sql">
-<meta name="keywords" content="java,servlet,连接池">
+  <meta name="description" content="昨天看了一些网上的tomcat数据库连接池配置的东西，但是一直没配好，主要原因是网上的文章几乎没有争对tomcat 7进行配置的，而且针对SQL SERVER的也不多，今天上午看了官方的文档，花了一上午时间终于配置好了数据库连接池，这里发给大家看看，如果有什么疑问就留言吧。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="tomcat 7配置数据库连接池，使用SQL Server2005实现">
-<meta property="og:url" content="http://toozhao.com/2011/07/06/tomcat-db-connection-pool-sql-server/index.html">
+<meta property="og:url" content="https://toozhao.com/2011/07/06/tomcat-db-connection-pool-sql-server/index.html">
 <meta property="og:site_name" content="大染志">
-<meta property="og:description" content="昨天看了一些网上的tomcat数据库连接池配置的东西，但是一直没配好，主要原因是网上的文章几乎没有争对tomcat 7进行配置的，而且针对SQL SERVER的也不多，今天上午看了官方的文档，花了一上午时间终于配置好了数据库连接池，这里发给大家看看，如果有什么疑问就留言吧。  首先我们需要向项目中导入tomcat-dbcp.jar 、servlet-ap.jar和sql server的驱动sql">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2014-07-22T08:47:30.000Z">
+<meta property="og:description" content="昨天看了一些网上的tomcat数据库连接池配置的东西，但是一直没配好，主要原因是网上的文章几乎没有争对tomcat 7进行配置的，而且针对SQL SERVER的也不多，今天上午看了官方的文档，花了一上午时间终于配置好了数据库连接池，这里发给大家看看，如果有什么疑问就留言吧。">
+<meta property="og:locale">
+<meta property="article:published_time" content="2011-07-05T14:00:00.000Z">
+<meta property="article:modified_time" content="2014-07-22T08:47:30.000Z">
+<meta property="article:author" content="Junv">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="servlet">
+<meta property="article:tag" content="连接池">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tomcat 7配置数据库连接池，使用SQL Server2005实现">
-<meta name="twitter:description" content="昨天看了一些网上的tomcat数据库连接池配置的东西，但是一直没配好，主要原因是网上的文章几乎没有争对tomcat 7进行配置的，而且针对SQL SERVER的也不多，今天上午看了官方的文档，花了一上午时间终于配置好了数据库连接池，这里发给大家看看，如果有什么疑问就留言吧。  首先我们需要向项目中导入tomcat-dbcp.jar 、servlet-ap.jar和sql server的驱动sql">
+
+<link rel="canonical" href="https://toozhao.com/2011/07/06/tomcat-db-connection-pool-sql-server/">
 
 
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    version: '5.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
   };
 </script>
-
-
-
-  <link rel="canonical" href="http://toozhao.com/2011/07/06/tomcat-db-connection-pool-sql-server/"/>
-
-
-
-
 
   <title>tomcat 7配置数据库连接池，使用SQL Server2005实现 | 大染志</title>
   
@@ -147,248 +54,144 @@
 
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-5243064-16', 'auto');
-  ga('send', 'pageview');
-</script>
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail ">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">大染志</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <p class="site-subtitle">想要玩得很 High 的程序员</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">大染志</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">想要玩得很 High 的程序员</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
+
+
+
 <nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-知识图谱">
-          <a href="https://wiki.toozhao.com" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            知识图谱
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
 </nav>
 
 
 
- </div>
+
+</div>
     </header>
 
-    <main id="main" class="main">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content post posts-expand">
             
 
-  <div id="posts" class="posts-expand">
     
-
-  
-
   
   
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2011/07/06/tomcat-db-connection-pool-sql-server/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://toozhao.com/2011/07/06/tomcat-db-connection-pool-sql-server/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://blog.tuxue.xyz/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+      <meta itemprop="description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="大染志">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">tomcat 7配置数据库连接池，使用SQL Server2005实现</h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          tomcat 7配置数据库连接池，使用SQL Server2005实现
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-07-06T00:00:00+10:00">
-                2011-07-06
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T18:47:30+10:00">
-                2014-07-22
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java/编程之美/" itemprop="url" rel="index">
-                    <span itemprop="name">编程之美</span>
-                  </a>
-                </span>
-
-                
-                
-              
+              <time title="Created: 2011-07-06 00:00:00" itemprop="dateCreated datePublished" datetime="2011-07-06T00:00:00+10:00">2011-07-06</time>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2014-07-22 18:47:30" itemprop="dateModified" datetime="2014-07-22T18:47:30+10:00">2014-07-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E/" itemprop="url" rel="index"><span itemprop="name">编程之美</span></a>
+                </span>
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -396,15 +199,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
         <blockquote>
 <p>昨天看了一些网上的tomcat数据库连接池配置的东西，但是一直没配好，主要原因是网上的文章几乎没有争对tomcat 7进行配置的，而且针对SQL SERVER的也不多，今天上午看了官方的文档，花了一上午时间终于配置好了数据库连接池，这里发给大家看看，如果有什么疑问就留言吧。</p>
 </blockquote>
 <p>首先我们需要向项目中导入tomcat-dbcp.jar 、servlet-ap.jar和sql server的驱动sqljdbc4.jar 包到 web-inf 文件夹下的lib目录 。</p>
 <p>然后增加context.xml</p>
-<p>这里有两种方法，第一种是在tomcat程序目录下面的conf/context.xml里面修改，这里修改之后所有的程序都将都将覆盖数据库连接池，但是这种方法不够灵活。这里我们选择第二种方法 在项目的Web-content/meta-inf 目录下创建一个context.xml文件，在里面添加如下内容：</p>
+<p>这里有两种方法，第一种是在tomcat程序目录下面的conf&#x2F;context.xml里面修改，这里修改之后所有的程序都将都将覆盖数据库连接池，但是这种方法不够灵活。这里我们选择第二种方法 在项目的Web-content&#x2F;meta-inf 目录下创建一个context.xml文件，在里面添加如下内容：</p>
 <pre class="brush: xml; title: ; notranslate" title="">&lt;Context path="/SYSDEMO" docBase="SYSDEMO"
 reloadable="true" crossContext="true"&gt;
 &lt;Resource name="jdbc/SYSDEMO" auth="Container" type="javax.sql.DataSource"
@@ -418,24 +218,24 @@ url="jdbc:sqlserver://202.115.90.241:1433;DatabaseName=SYSDEMO"/&gt;
 <p>将driverClassName改为你所使用数据库的驱动，这里是SQL SERVER的驱动。</p>
 <p>将url改为jdbc链接该数据库的地址,这里是SQL SERVER的地址，</p>
 <p>将username 、password改为你自己数据库用户名和密码</p>
-<p>maxActive=”100″ maxIdle=”30″ maxWait=”10000″</p>
+<p>maxActive&#x3D;”100″ maxIdle&#x3D;”30″ maxWait&#x3D;”10000″</p>
 <p>可以将这三个参数进行修改，</p>
 <p>第一个是最大活动的连接数</p>
 <p>第二个是最大的未连接数</p>
 <p>第三个是最长的等待时间，单位是毫秒</p>
-<p>然后再修改项目的webContent/web-inf/web.xml文件</p>
+<p>然后再修改项目的webContent&#x2F;web-inf&#x2F;web.xml文件</p>
 <p>添加如下内容:</p>
 <pre class="brush: xml; title: ; notranslate" title="">&lt;description&gt;MySQL Test App&lt;/description&gt;
-&lt;resource-ref&gt; 
-   &lt;description&gt;DB Connection&lt;/description&gt; 
-   &lt;res-ref-name&gt;jdbc/blog&lt;/res-ref-name&gt; 
-   &lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt; 
-   &lt;res-auth&gt;Container&lt;/res-auth&gt; 
-&lt;/resource-ref&gt; 
+&lt;resource-ref&gt; 
+   &lt;description&gt;DB Connection&lt;/description&gt; 
+   &lt;res-ref-name&gt;jdbc/blog&lt;/res-ref-name&gt; 
+   &lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt; 
+   &lt;res-auth&gt;Container&lt;/res-auth&gt; 
+&lt;/resource-ref&gt; 
 </pre>
 
-<p>这里必须要改的是: <res-ref-name>jdbc/SYSDEMO</res-ref-name></p>
-<p>改为 jdbc/你自己的数据库</p>
+<p>这里必须要改的是: <res-ref-name>jdbc&#x2F;SYSDEMO</res-ref-name></p>
+<p>改为 jdbc&#x2F;你自己的数据库</p>
 <p>好了然后就可以使用了。</p>
 <p>如下是我测试的servlet文件</p>
 <pre class="brush: java; title: ; notranslate" title="">import java.io.IOException;
@@ -456,7 +256,7 @@ public class TestPool extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
      try{
           Context initContext = new InitialContext();
-          Context envContext  = (Context)initContext.lookup("java:/comp/env");
+          Context envContext  = (Context)initContext.lookup("java:/comp/env");
           DataSource ds = (DataSource)envContext.lookup("jdbc/SYSDEMO");
           Connection conn = ds.getConnection();
           System.out.println("成功了。。。。。。。。。。");
@@ -469,246 +269,153 @@ public class TestPool extends HttpServlet {
 
 </pre>
 
-<p>将 DataSource ds = (DataSource)envContext.lookup(“jdbc/SYSDEMO”);</p>
-<p>“jdbc/SYSDEMO” 的sysdemo改为你前面使用的数据库的名称即可。</p>
+<p>将 DataSource ds &#x3D; (DataSource)envContext.lookup(“jdbc&#x2F;SYSDEMO”);</p>
+<p>“jdbc&#x2F;SYSDEMO” 的sysdemo改为你前面使用的数据库的名称即可。</p>
 <p>好了。大功告成。</p>
 
-      
     </div>
+
     
     
     
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/java/" rel="tag"># java</a>
-          
-            <a href="/tags/servlet/" rel="tag"># servlet</a>
-          
-            <a href="/tags/连接池/" rel="tag"># 连接池</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2011/06/24/android-upload-image-to-server/" rel="next" title="Android上传图片到服务器Server端servlet源码">
-                <i class="fa fa-chevron-left"></i> Android上传图片到服务器Server端servlet源码
-              </a>
-            
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/java/" rel="tag"># java</a>
+              <a href="/tags/servlet/" rel="tag"># servlet</a>
+              <a href="/tags/%E8%BF%9E%E6%8E%A5%E6%B1%A0/" rel="tag"># 连接池</a>
           </div>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2011/09/26/move-to-sina/" rel="prev" title="搬到新浪，初衷很无耐">
-                搬到新浪，初衷很无耐 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
-    
-  </div>
-
-
-        </div>
         
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2011/06/24/android-upload-image-to-server/" rel="prev" title="Android上传图片到服务器Server端servlet源码">
+      <i class="fa fa-chevron-left"></i> Android上传图片到服务器Server端servlet源码
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2011/09/26/move-to-sina/" rel="next" title="搬到新浪，初衷很无耐">
+      搬到新浪，初衷很无耐 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
 
-      
-
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://blog.tuxue.xyz/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
-               alt="Junv" />
-          <p class="site-author-name" itemprop="name">Junv</p>
-           
-              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-            
-              <a href="/archives/">
-            
-                <span class="site-state-item-count">307</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">69</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">247</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/wahyd4" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                    
-                      GitHub
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.linkedin.com/in/junwei-zhao-46944557" target="_blank" title="LinkedIn">
-                  
-                    <i class="fa fa-fw fa-linkedin"></i>
-                  
-                    
-                      LinkedIn
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
-                  
-                    <i class="fa fa-fw fa-stack-overflow"></i>
-                  
-                    
-                      StackOverflow
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                    
-                      Weibo
-                    
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
-    </main>
+      <!--/noindex-->
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Junv</span>
-
-  
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Junv</p>
+  <div class="site-description" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">307</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">69</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">247</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
 </div>
 
 
 
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Junv</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
         
 
 
@@ -717,115 +424,25 @@ public class TestPool extends HttpServlet {
 
 
 
-        
+
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -839,19 +456,12 @@ public class TestPool extends HttpServlet {
 
 
 
-  
 
 
 
 
 
-  
 
-  
-
-  
-
-  
 
   
 

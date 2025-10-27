@@ -1,149 +1,55 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"toozhao.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"width_expanded":320,"width_dual_column":240,"padding":18},"copycode":{"enable":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp","menu_item":"fadeInDown"},"duration":200}};
+  </script>
 
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="go,vscode," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta name="description" content="说到 IDE 我们想到的都是 Intellij 和 Eclipse系列这样的几百兆的桌面应用程序，它让我们编程效率得以很大提升，在日常工作中变得离不开这些软件。我们最喜欢用的 IDE 功能主要有：  代码自动补全 代码重构 代码格式化 代码调试 代码高亮 代码错误检查 代码引用查询与跳转  但往往 IDE 也有占用内存多，时不时反应卡顿等问题。因此很多程序员在开发一些动态语言、脚本语言的时候更倾向">
-<meta name="keywords" content="go,vscode">
+  <meta name="description" content="说到 IDE 我们想到的都是 Intellij 和 Eclipse系列这样的几百兆的桌面应用程序，它让我们编程效率得以很大提升，在日常工作中变得离不开这些软件。我们最喜欢用的 IDE 功能主要有：  代码自动补全 代码重构 代码格式化 代码调试 代码高亮 代码错误检查 代码引用查询与跳转  但往往 IDE 也有占用内存多，时不时反应卡顿等问题。因此很多程序员在开发一些动态语言、脚本语言的时候更倾向">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 VS Code 快速搭建你的 Golang 开发 IDE">
-<meta property="og:url" content="http://toozhao.com/2017/08/23/vscode-golang/index.html">
+<meta property="og:url" content="https://toozhao.com/2017/08/23/vscode-golang/index.html">
 <meta property="og:site_name" content="大染志">
 <meta property="og:description" content="说到 IDE 我们想到的都是 Intellij 和 Eclipse系列这样的几百兆的桌面应用程序，它让我们编程效率得以很大提升，在日常工作中变得离不开这些软件。我们最喜欢用的 IDE 功能主要有：  代码自动补全 代码重构 代码格式化 代码调试 代码高亮 代码错误检查 代码引用查询与跳转  但往往 IDE 也有占用内存多，时不时反应卡顿等问题。因此很多程序员在开发一些动态语言、脚本语言的时候更倾向">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.tuxue.xyz/vscode.gif">
-<meta property="og:image" content="http://blog.tuxue.xyz/debug.png">
-<meta property="og:image" content="http://blog.tuxue.xyz/code-runner.png">
-<meta property="og:updated_time" content="2018-09-29T00:12:21.000Z">
+<meta property="og:locale">
+<meta property="og:image" content="https://toozhao.com/vscode.gif">
+<meta property="og:image" content="https://debug.png/">
+<meta property="og:image" content="https://toozhao.com/code-runner.png">
+<meta property="article:published_time" content="2017-08-23T07:26:31.000Z">
+<meta property="article:modified_time" content="2025-10-25T03:21:33.707Z">
+<meta property="article:author" content="Junv">
+<meta property="article:tag" content="go">
+<meta property="article:tag" content="vscode">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用 VS Code 快速搭建你的 Golang 开发 IDE">
-<meta name="twitter:description" content="说到 IDE 我们想到的都是 Intellij 和 Eclipse系列这样的几百兆的桌面应用程序，它让我们编程效率得以很大提升，在日常工作中变得离不开这些软件。我们最喜欢用的 IDE 功能主要有：  代码自动补全 代码重构 代码格式化 代码调试 代码高亮 代码错误检查 代码引用查询与跳转  但往往 IDE 也有占用内存多，时不时反应卡顿等问题。因此很多程序员在开发一些动态语言、脚本语言的时候更倾向">
-<meta name="twitter:image" content="http://blog.tuxue.xyz/vscode.gif">
+<meta name="twitter:image" content="https://toozhao.com/vscode.gif">
+
+<link rel="canonical" href="https://toozhao.com/2017/08/23/vscode-golang/">
 
 
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    version: '5.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
   };
 </script>
-
-
-
-  <link rel="canonical" href="http://toozhao.com/2017/08/23/vscode-golang/"/>
-
-
-
-
 
   <title>使用 VS Code 快速搭建你的 Golang 开发 IDE | 大染志</title>
   
@@ -151,223 +57,136 @@
 
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-5243064-16', 'auto');
-  ga('send', 'pageview');
-</script>
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail ">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">大染志</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <p class="site-subtitle">想要玩得很 High 的程序员</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">大染志</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">想要玩得很 High 的程序员</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
+
+
+
 <nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-知识图谱">
-          <a href="https://wiki.toozhao.com" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            知识图谱
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
 </nav>
 
 
 
- </div>
+
+</div>
     </header>
 
-    <main id="main" class="main">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content post posts-expand">
             
 
-  <div id="posts" class="posts-expand">
     
-
-  
-
   
   
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2017/08/23/vscode-golang/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://toozhao.com/2017/08/23/vscode-golang/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://blog.tuxue.xyz/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+      <meta itemprop="description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="大染志">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">使用 VS Code 快速搭建你的 Golang 开发 IDE</h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          使用 VS Code 快速搭建你的 Golang 开发 IDE
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-23T17:26:31+10:00">
-                2017-08-23
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
+              <time title="Created: 2017-08-23 17:26:31" itemprop="dateCreated datePublished" datetime="2017-08-23T17:26:31+10:00">2017-08-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-10-25 14:21:33" itemprop="dateModified" datetime="2025-10-25T14:21:33+11:00">2025-10-25</time>
               </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-29T10:12:21+10:00">
-                2018-09-29
-              </time>
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-      
 
       
         <p>说到 IDE 我们想到的都是 Intellij 和 Eclipse系列这样的几百兆的桌面应用程序，它让我们编程效率得以很大提升，在日常工作中变得离不开这些软件。我们最喜欢用的 IDE 功能主要有：</p>
@@ -388,8 +207,8 @@
 <p>就我自己日常开发而言，除开 Java 以外，平时编写 Ruby、JavaScript、HTML、Vue.js、Golang、Markdown、Dockerfile 等语言都在使用 vscode。</p>
 <p>在这篇文章中我不会再对为什么要用 VS Code 做过多解释。而是将介绍使用 vscode 快速搭建一个优秀的 Go (Golang) 的开发环境。</p>
 <h3 id="安装-vscode"><a href="#安装-vscode" class="headerlink" title="安装 vscode"></a>安装 vscode</h3><p>说了 vscode 这么多好，如果你还不知道 vscode 是何物的话，这里简单介绍下。vscode 是微软基于 Electron 框架开发的跨平台的开源的文本编辑器。也许你曾用过它的兄弟 Visual Studio，被它的庞大和臃肿吓到，在这里却不用担心。vscode 是一个全新的项目，旨在打造一个轻量级、面向 Web 开发、稳定高效的开发平台。</p>
-<p>你可以通过 <a href="https://code.visualstudio.com" target="_blank" rel="external">https://code.visualstudio.com</a> 官网下载安装 vscode软件</p>
-<h3 id="安装-Go-插件"><a href="#安装-Go-插件" class="headerlink" title="安装 Go 插件"></a>安装 Go 插件</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>vscode 之所以强大，其中很大一点便是因为它拥有庞大的插件对各个语言提供相关的功能。而对于 Go,官方提供了强大的插件 <a href="https://marketplace.visualstudio.com/items?itemName=lukehoban.Go" target="_blank" rel="external">Go</a>。你可以直接通过在插件页面，输入搜索 Go 进行安装相关插件，安装之后对 vscode 进行重启。该插件对 Golang 支持非常丰富的功能：</p>
+<p>你可以通过 <a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com</a> 官网下载安装 vscode软件</p>
+<h3 id="安装-Go-插件"><a href="#安装-Go-插件" class="headerlink" title="安装 Go 插件"></a>安装 Go 插件</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>vscode 之所以强大，其中很大一点便是因为它拥有庞大的插件对各个语言提供相关的功能。而对于 Go,官方提供了强大的插件 <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=lukehoban.Go">Go</a>。你可以直接通过在插件页面，输入搜索 Go 进行安装相关插件，安装之后对 vscode 进行重启。该插件对 Golang 支持非常丰富的功能：</p>
 <ul>
 <li>代码格式化</li>
 <li>保存时代码自动格式化</li>
@@ -401,285 +220,175 @@
 <li>支持代码调试等等功能。</li>
 </ul>
 <p>这些可以功能可以很好的满足我们日常开发所需。</p>
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>Go 插件提供丰富的配置项，让我们对插件的默认行为进行调整，以便最大限度的适合每个人。<br>依次键入<code>F1</code> -&gt; <code>Open User Settings</code> 即可打开vscode 用户配置文件，在文件末尾可以添加类似如下属性。<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">"go.buildOnSave": true, //在保存代码时自动编译代码</div><div class="line">"go.lintOnSave": true, //在保存代码时自动检查代码可以优化的地方，并给出建议</div><div class="line">"go.vetOnSave": true, //在保存代码时自动检查潜在的错误</div><div class="line">"go.buildTags": "",</div><div class="line">"go.buildFlags": [],</div><div class="line">"go.lintTool": "golint", //使用 golint 库来执行 lint操作，你也可以选择使用gometalinter</div><div class="line">"go.lintFlags": [],</div><div class="line">"go.vetFlags": [],</div><div class="line">"go.coverOnSave": false, //在保存代码时执行测试，并显示测试覆盖率</div><div class="line">"go.useCodeSnippetsOnFunctionSuggest": true, //使用代码片段作为提示</div><div class="line">"go.formatOnSave": true, //在保存代码时自动格式化代码</div><div class="line">"go.formatTool": "goimports", //使用 goimports 工具进行代码格式化，或者使用 goreturns和gofmt</div><div class="line">"go.formatFlags": [],</div><div class="line">"go.gocodeAutoBuild": true, //代码自动编译构建</div><div class="line">"go.goroot": "/usr/local/Cellar/go/1.8.3/libexec", //设置 goroot，正常编译 go 代码。</div><div class="line">"go.gopath": "/Users/junv/gocode:/Users/junv/mygocode", // 设置 gopath，有利于自动导入库</div></pre></td></tr></table></figure></p>
-<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p><img src="http://blog.tuxue.xyz/vscode.gif" alt="使用"></p>
-<h4 id="调试-Go程序"><a href="#调试-Go程序" class="headerlink" title="调试 Go程序"></a>调试 Go程序</h4><p>打开 go 源码，在你期望调试的行号左侧，点击即可添加断点。<br>当你第一次进行调试时，vscode 则要求你添加调试程序的相关配置。可以输入类似下图的配置即可。<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"version"</span>: <span class="string">"0.2.0"</span>,</div><div class="line">    <span class="attr">"configurations"</span>: [</div><div class="line">        &#123;</div><div class="line">            "name": "monitor-api", //程序名字</div><div class="line">            "type": "go",</div><div class="line">            "request": "launch",</div><div class="line">            "mode": "debug",</div><div class="line">            "remotePath": "",</div><div class="line">            "port": 1234,</div><div class="line">            "host": "127.0.0.1",</div><div class="line">            "program": "$&#123;workspaceRoot&#125;",</div><div class="line">            "env": &#123;</div><div class="line">                "QUICKPAY_ENV": "testing" //注入你需要的环境变量</div><div class="line">            &#125;,</div><div class="line">            "args": []</div><div class="line">        &#125;</div><div class="line">    ]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>Go 插件提供丰富的配置项，让我们对插件的默认行为进行调整，以便最大限度的适合每个人。<br>依次键入<code>F1</code> -&gt; <code>Open User Settings</code> 即可打开vscode 用户配置文件，在文件末尾可以添加类似如下属性。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;go.buildOnSave&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span> <span class="comment">//在保存代码时自动编译代码</span></span><br><span class="line"><span class="attr">&quot;go.lintOnSave&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span> <span class="comment">//在保存代码时自动检查代码可以优化的地方，并给出建议</span></span><br><span class="line"><span class="attr">&quot;go.vetOnSave&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span> <span class="comment">//在保存代码时自动检查潜在的错误</span></span><br><span class="line"><span class="attr">&quot;go.buildTags&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;go.buildFlags&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;go.lintTool&quot;</span><span class="punctuation">:</span> <span class="string">&quot;golint&quot;</span><span class="punctuation">,</span> <span class="comment">//使用 golint 库来执行 lint操作，你也可以选择使用gometalinter</span></span><br><span class="line"><span class="attr">&quot;go.lintFlags&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;go.vetFlags&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;go.coverOnSave&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span> <span class="comment">//在保存代码时执行测试，并显示测试覆盖率</span></span><br><span class="line"><span class="attr">&quot;go.useCodeSnippetsOnFunctionSuggest&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span> <span class="comment">//使用代码片段作为提示</span></span><br><span class="line"><span class="attr">&quot;go.formatOnSave&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span> <span class="comment">//在保存代码时自动格式化代码</span></span><br><span class="line"><span class="attr">&quot;go.formatTool&quot;</span><span class="punctuation">:</span> <span class="string">&quot;goimports&quot;</span><span class="punctuation">,</span> <span class="comment">//使用 goimports 工具进行代码格式化，或者使用 goreturns和gofmt</span></span><br><span class="line"><span class="attr">&quot;go.formatFlags&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;go.gocodeAutoBuild&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span> <span class="comment">//代码自动编译构建</span></span><br><span class="line"><span class="attr">&quot;go.goroot&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/usr/local/Cellar/go/1.8.3/libexec&quot;</span><span class="punctuation">,</span> <span class="comment">//设置 goroot，正常编译 go 代码。</span></span><br><span class="line"><span class="attr">&quot;go.gopath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/Users/junv/gocode:/Users/junv/mygocode&quot;</span><span class="punctuation">,</span> <span class="comment">// 设置 gopath，有利于自动导入库</span></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p><img src="/vscode.gif" alt="使用"></p>
+<h4 id="调试-Go程序"><a href="#调试-Go程序" class="headerlink" title="调试 Go程序"></a>调试 Go程序</h4><p>打开 go 源码，在你期望调试的行号左侧，点击即可添加断点。<br>当你第一次进行调试时，vscode 则要求你添加调试程序的相关配置。可以输入类似下图的配置即可。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;monitor-api&quot;</span><span class="punctuation">,</span> <span class="comment">//程序名字</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;go&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;mode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;debug&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;remotePath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;port&quot;</span><span class="punctuation">:</span> <span class="number">1234</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;host&quot;</span><span class="punctuation">:</span> <span class="string">&quot;127.0.0.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;program&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceRoot&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;env&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;QUICKPAY_ENV&quot;</span><span class="punctuation">:</span> <span class="string">&quot;testing&quot;</span> <span class="comment">//注入你需要的环境变量</span></span><br><span class="line">            <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>点击开始按钮，即可进行Go 程序调试了。</p>
-<p><img src="http://blog.tuxue.xyz/debug.png" alt="debug"></p>
-<h4 id="快速的搜索"><a href="#快速的搜索" class="headerlink" title="快速的搜索"></a>快速的搜索</h4><p>当项目源代码越来越多，依赖的第三方库也越来越多的时候，你会发现 vscode的搜索功能 变慢了，而且很多时候我们并不希望搜索结果中包含 vendor （第三方依赖源代码）目录下的代码。<br>那么你可以尝试在<code>User Settings</code> 中添加如下的配置：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">"search.exclude": &#123;</div><div class="line">  "**/node_modules": true,</div><div class="line">  "**/bower_components": true,</div><div class="line">  "**/vendor": true  //排除 vendor 目录</div><div class="line">&#125;,</div></pre></td></tr></table></figure></p>
+<p><img src="//debug.png" alt="debug"></p>
+<h4 id="快速的搜索"><a href="#快速的搜索" class="headerlink" title="快速的搜索"></a>快速的搜索</h4><p>当项目源代码越来越多，依赖的第三方库也越来越多的时候，你会发现 vscode的搜索功能 变慢了，而且很多时候我们并不希望搜索结果中包含 vendor （第三方依赖源代码）目录下的代码。<br>那么你可以尝试在<code>User Settings</code> 中添加如下的配置：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;search.exclude&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;**/node_modules&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;**/bower_components&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;**/vendor&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span>  <span class="comment">//排除 vendor 目录</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+
 <p>这样 vscode 在执行搜索的时候就会跳过 vendor 目录下的文件，让搜索保持高效。</p>
-<h3 id="如虎添翼的其他插件"><a href="#如虎添翼的其他插件" class="headerlink" title="如虎添翼的其他插件"></a>如虎添翼的其他插件</h3><h4 id="IntelliJ-IDEA-Keybindings"><a href="#IntelliJ-IDEA-Keybindings" class="headerlink" title="IntelliJ IDEA Keybindings"></a>IntelliJ IDEA Keybindings</h4><p>如果你和我一样也是从 Intellij 系列 IDE 迁移过来，想必你也遇到快捷键不习惯的问题。推荐你安装<a href="https://marketplace.visualstudio.com/items?itemName=k--kato.intellij-idea-keybindings" target="_blank" rel="external">IntelliJ IDEA Keybindings</a> 插件。来映射快捷键，让你在 vscode 可以使用使用 Intellij 的快捷键。<br>如：</p>
+<h3 id="如虎添翼的其他插件"><a href="#如虎添翼的其他插件" class="headerlink" title="如虎添翼的其他插件"></a>如虎添翼的其他插件</h3><h4 id="IntelliJ-IDEA-Keybindings"><a href="#IntelliJ-IDEA-Keybindings" class="headerlink" title="IntelliJ IDEA Keybindings"></a>IntelliJ IDEA Keybindings</h4><p>如果你和我一样也是从 Intellij 系列 IDE 迁移过来，想必你也遇到快捷键不习惯的问题。推荐你安装<a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=k--kato.intellij-idea-keybindings">IntelliJ IDEA Keybindings</a> 插件。来映射快捷键，让你在 vscode 可以使用使用 Intellij 的快捷键。<br>如：</p>
 <ul>
 <li><code>alt</code> + <code>F7</code> 查看方法引用</li>
 <li><code>ctrl</code> + <code>shift</code> + <code>↑</code> 或者 <code>ctrl</code> + <code>shift</code> + <code>↓</code> 移动行</li>
 <li><code>cmd</code> + <code>F4</code> 关闭当前窗口</li>
-<li><code>alt</code> + <code>cmd</code>+ <code>→</code> 或者 <code>alt</code> + <code>cmd</code>+ <code>←</code> 切换到前/后一次操作的鼠标位置了</li>
+<li><code>alt</code> + <code>cmd</code>+ <code>→</code> 或者 <code>alt</code> + <code>cmd</code>+ <code>←</code> 切换到前&#x2F;后一次操作的鼠标位置了</li>
 </ul>
 <p>更多的快捷键映射，可以查看该插件主页。</p>
-<h4 id="Code-Runner"><a href="#Code-Runner" class="headerlink" title="Code Runner"></a>Code Runner</h4><p><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner" target="_blank" rel="external">Code Runner</a> 插件，让你可以快速你运行各种语言的代码片段。</p>
+<h4 id="Code-Runner"><a href="#Code-Runner" class="headerlink" title="Code Runner"></a>Code Runner</h4><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner">Code Runner</a> 插件，让你可以快速你运行各种语言的代码片段。</p>
 <p>在可运行的 go 文件页面，点击界面右上角的<code>➤</code> 即可快速运行该文件。</p>
-<p><img src="http://blog.tuxue.xyz/code-runner.png" alt="code runner"></p>
+<p><img src="/code-runner.png" alt="code runner"></p>
 <h3 id="概括"><a href="#概括" class="headerlink" title="概括"></a>概括</h3><p>通过本篇文章可以看出，依赖于vscode 强大的插件我们可以快速搭建完善的 Go 语言开发环境。而它相较于 IDE 的最大优势则是性能良好、扩展性强、免费和轻量级。</p>
 
-      
     </div>
+
     
     
     
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/go/" rel="tag"># go</a>
-          
-            <a href="/tags/vscode/" rel="tag"># vscode</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/10/17/easiest-way-to-use-go/" rel="next" title="开发Go项目最简单的方式 — 一个基于Docker的go 工具">
-                <i class="fa fa-chevron-left"></i> 开发Go项目最简单的方式 — 一个基于Docker的go 工具
-              </a>
-            
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/go/" rel="tag"># go</a>
+              <a href="/tags/vscode/" rel="tag"># vscode</a>
           </div>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/19/caddy/" rel="prev" title="快速上手更简单的 Web 服务器 —— Caddy">
-                快速上手更简单的 Web 服务器 —— Caddy <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
-    
-  </div>
-
-
-        </div>
         
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2016/10/17/easiest-way-to-use-go/" rel="prev" title="开发Go项目最简单的方式 — 一个基于Docker的go 工具">
+      <i class="fa fa-chevron-left"></i> 开发Go项目最简单的方式 — 一个基于Docker的go 工具
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/09/19/caddy/" rel="next" title="快速上手更简单的 Web 服务器 —— Caddy">
+      快速上手更简单的 Web 服务器 —— Caddy <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://blog.tuxue.xyz/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
-               alt="Junv" />
-          <p class="site-author-name" itemprop="name">Junv</p>
-           
-              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-            
-              <a href="/archives/">
-            
-                <span class="site-state-item-count">307</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">69</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">247</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/wahyd4" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                    
-                      GitHub
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.linkedin.com/in/junwei-zhao-46944557" target="_blank" title="LinkedIn">
-                  
-                    <i class="fa fa-fw fa-linkedin"></i>
-                  
-                    
-                      LinkedIn
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
-                  
-                    <i class="fa fa-fw fa-stack-overflow"></i>
-                  
-                    
-                      StackOverflow
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                    
-                      Weibo
-                    
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-vscode"><span class="nav-number">1.</span> <span class="nav-text">安装 vscode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-Go-插件"><span class="nav-number">2.</span> <span class="nav-text">安装 Go 插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置"><span class="nav-number">2.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用"><span class="nav-number">2.3.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#调试-Go程序"><span class="nav-number">2.4.</span> <span class="nav-text">调试 Go程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#快速的搜索"><span class="nav-number">2.5.</span> <span class="nav-text">快速的搜索</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如虎添翼的其他插件"><span class="nav-number">3.</span> <span class="nav-text">如虎添翼的其他插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#IntelliJ-IDEA-Keybindings"><span class="nav-number">3.1.</span> <span class="nav-text">IntelliJ IDEA Keybindings</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code-Runner"><span class="nav-number">3.2.</span> <span class="nav-text">Code Runner</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#概括"><span class="nav-number">4.</span> <span class="nav-text">概括</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-vscode"><span class="nav-number">1.</span> <span class="nav-text">安装 vscode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Go-%E6%8F%92%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">安装 Go 插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">2.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">2.3.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B0%83%E8%AF%95-Go%E7%A8%8B%E5%BA%8F"><span class="nav-number">2.4.</span> <span class="nav-text">调试 Go程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E7%9A%84%E6%90%9C%E7%B4%A2"><span class="nav-number">2.5.</span> <span class="nav-text">快速的搜索</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E8%99%8E%E6%B7%BB%E7%BF%BC%E7%9A%84%E5%85%B6%E4%BB%96%E6%8F%92%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">如虎添翼的其他插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#IntelliJ-IDEA-Keybindings"><span class="nav-number">3.1.</span> <span class="nav-text">IntelliJ IDEA Keybindings</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code-Runner"><span class="nav-number">3.2.</span> <span class="nav-text">Code Runner</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E6%8B%AC"><span class="nav-number">4.</span> <span class="nav-text">概括</span></a></li></ol></div>
       </div>
-    </main>
+      <!--/noindex-->
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Junv</span>
-
-  
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Junv</p>
+  <div class="site-description" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">307</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">69</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">247</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
 </div>
 
 
 
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Junv</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
         
 
 
@@ -688,115 +397,25 @@
 
 
 
-        
+
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -810,19 +429,12 @@
 
 
 
-  
 
 
 
 
 
-  
 
-  
-
-  
-
-  
 
   
 

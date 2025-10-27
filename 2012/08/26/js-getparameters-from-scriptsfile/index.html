@@ -1,148 +1,56 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"toozhao.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"width_expanded":320,"width_dual_column":240,"padding":18},"copycode":{"enable":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp","menu_item":"fadeInDown"},"duration":200}};
+  </script>
 
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="javascript,对比,效率,正则表达式," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta name="description" content="通常情况下我们在HTML中引用js没有在文件名后面附加任何参数，即： &amp;lt;script type=&quot;text/javascript&quot; src=&quot;test.js&quot;&amp;gt;&amp;lt;/script&amp;gt;    其实我们在其后面加上一些附加参数，我们现在使用的浏览器也是可以识别，同样找到我们需要的js的。（IE6没有测试，不清楚是否支持），即如下： &amp;lt;script type=&quot;text/jav">
-<meta name="keywords" content="javascript,对比,效率,正则表达式">
+  <meta name="description" content="通常情况下我们在HTML中引用js没有在文件名后面附加任何参数，即： &lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;test.js&quot;&gt;&lt;&#x2F;script&gt;    其实我们在其后面加上一些附加参数，我们现在使用的浏览器也是可以识别，同样找到我们需要的js的。（IE6没有测试，不清楚是否支持），即如下： &lt;script type&#x3D;&quot;text&#x2F;jav">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascript获取引用js文件所携带的参数">
-<meta property="og:url" content="http://toozhao.com/2012/08/26/js-getparameters-from-scriptsfile/index.html">
+<meta property="og:url" content="https://toozhao.com/2012/08/26/js-getparameters-from-scriptsfile/index.html">
 <meta property="og:site_name" content="大染志">
-<meta property="og:description" content="通常情况下我们在HTML中引用js没有在文件名后面附加任何参数，即： &amp;lt;script type=&quot;text/javascript&quot; src=&quot;test.js&quot;&amp;gt;&amp;lt;/script&amp;gt;    其实我们在其后面加上一些附加参数，我们现在使用的浏览器也是可以识别，同样找到我们需要的js的。（IE6没有测试，不清楚是否支持），即如下： &amp;lt;script type=&quot;text/jav">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://toozhao.com/images/2012/08/saa.png">
-<meta property="og:image" content="http://toozhao.com/images/2012/08/1111111111.png">
-<meta property="og:updated_time" content="2014-07-22T08:51:54.000Z">
+<meta property="og:description" content="通常情况下我们在HTML中引用js没有在文件名后面附加任何参数，即： &lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;test.js&quot;&gt;&lt;&#x2F;script&gt;    其实我们在其后面加上一些附加参数，我们现在使用的浏览器也是可以识别，同样找到我们需要的js的。（IE6没有测试，不清楚是否支持），即如下： &lt;script type&#x3D;&quot;text&#x2F;jav">
+<meta property="og:locale">
+<meta property="og:image" content="https://toozhao.com/images/2012/08/saa.png">
+<meta property="og:image" content="https://toozhao.com/images/2012/08/1111111111.png">
+<meta property="article:published_time" content="2012-08-25T14:00:00.000Z">
+<meta property="article:modified_time" content="2014-07-22T08:51:54.000Z">
+<meta property="article:author" content="Junv">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="对比">
+<meta property="article:tag" content="效率">
+<meta property="article:tag" content="正则表达式">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript获取引用js文件所携带的参数">
-<meta name="twitter:description" content="通常情况下我们在HTML中引用js没有在文件名后面附加任何参数，即： &amp;lt;script type=&quot;text/javascript&quot; src=&quot;test.js&quot;&amp;gt;&amp;lt;/script&amp;gt;    其实我们在其后面加上一些附加参数，我们现在使用的浏览器也是可以识别，同样找到我们需要的js的。（IE6没有测试，不清楚是否支持），即如下： &amp;lt;script type=&quot;text/jav">
-<meta name="twitter:image" content="http://toozhao.com/images/2012/08/saa.png">
+<meta name="twitter:image" content="https://toozhao.com/images/2012/08/saa.png">
+
+<link rel="canonical" href="https://toozhao.com/2012/08/26/js-getparameters-from-scriptsfile/">
 
 
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    version: '5.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
   };
 </script>
-
-
-
-  <link rel="canonical" href="http://toozhao.com/2012/08/26/js-getparameters-from-scriptsfile/"/>
-
-
-
-
 
   <title>javascript获取引用js文件所携带的参数 | 大染志</title>
   
@@ -150,245 +58,145 @@
 
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-5243064-16', 'auto');
-  ga('send', 'pageview');
-</script>
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail ">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">大染志</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <p class="site-subtitle">想要玩得很 High 的程序员</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">大染志</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">想要玩得很 High 的程序员</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
+
+
+
 <nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-知识图谱">
-          <a href="https://wiki.toozhao.com" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            知识图谱
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
 </nav>
 
 
 
- </div>
+
+</div>
     </header>
 
-    <main id="main" class="main">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content post posts-expand">
             
 
-  <div id="posts" class="posts-expand">
     
-
-  
-
   
   
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2012/08/26/js-getparameters-from-scriptsfile/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://toozhao.com/2012/08/26/js-getparameters-from-scriptsfile/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://blog.tuxue.xyz/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+      <meta itemprop="description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="大染志">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">javascript获取引用js文件所携带的参数</h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          javascript获取引用js文件所携带的参数
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-08-26T00:00:00+10:00">
-                2012-08-26
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T18:51:54+10:00">
-                2014-07-22
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
-                  </a>
-                </span>
-
-                
-                
-              
+              <time title="Created: 2012-08-26 00:00:00" itemprop="dateCreated datePublished" datetime="2012-08-26T00:00:00+10:00">2012-08-26</time>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2014-07-22 18:51:54" itemprop="dateModified" datetime="2014-07-22T18:51:54+10:00">2014-07-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+                </span>
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-      
 
       
         <p>通常情况下我们在HTML中引用js没有在文件名后面附加任何参数，即：</p>
@@ -401,7 +209,7 @@
 
 </pre>
 
-<p>我们现在需要做的就是如何取出这其中的参数。如：div=mydiv;name=tom;age=3。首先附上我自己写的一个js方法，就是使用了常用的函数，如indexOf,substring,split等方法：</p>
+<p>我们现在需要做的就是如何取出这其中的参数。如：div&#x3D;mydiv;name&#x3D;tom;age&#x3D;3。首先附上我自己写的一个js方法，就是使用了常用的函数，如indexOf,substring,split等方法：</p>
 <pre class="brush: jscript; title: ; notranslate" title="">//你需要获取值的js文件名
 var fileName = "test.js";
 //获取到所有&lt;script&gt;对象
@@ -424,19 +232,19 @@ var fileName = "test.js";
 </pre>
 
 <p>我在网上又看到另外一个前辈主要使用了RegExp和match函数，以正则表达式的方式完成了同样的操作，代码如下：</p>
-<pre class="brush: jscript; title: ; notranslate" title="">var jsFileName = "testParam.js";
-var rName = new RegExp(jsFileName+"(\\?(.*))?$")
-var jss=document.getElementsByTagName('script');
-for (var i = 0;i &lt; jss.length; i++){
-    var j = jss[i];
-    if (j.src&&j.src.match(rName)){
-        var oo = j.src.match(rName)[2];
-        if (oo&&(t = oo.match(/([^&=]+)=([^=&]+)/g))){
-            for (var l = 0; l &lt; t.length; l++){
-                r = t[l];
-                var tt = r.match(/([^&=]+)=([^=&]+)/);
-                if (tt)
-                document.write('参数：' + tt[1] + '，参数值：' + tt[2] + '&lt;br /&gt;');
+<pre class="brush: jscript; title: ; notranslate" title="">var jsFileName = "testParam.js";
+var rName = new RegExp(jsFileName+"(\\?(.*))?$")
+var jss=document.getElementsByTagName('script');
+for (var i = 0;i &lt; jss.length; i++){
+    var j = jss[i];
+    if (j.src&&j.src.match(rName)){
+        var oo = j.src.match(rName)[2];
+        if (oo&&(t = oo.match(/([^&=]+)=([^=&]+)/g))){
+            for (var l = 0; l &lt; t.length; l++){
+                r = t[l];
+                var tt = r.match(/([^&=]+)=([^=&]+)/);
+                if (tt)
+                document.write('参数：' + tt[1] + '，参数值：' + tt[2] + '&lt;br /&gt;');
             }
         }
    }
@@ -449,7 +257,7 @@ for (var i = 0;i &lt; jss.length; i++){
 <ul>
 <li>将两个方法的输出都换成一致console.log();</li>
 <li>分别在代码执行前和执行后获取当前时间，相减获取这种方法的执行时间。</li>
-<li>所有测试都在同一台笔记本电脑下，我将测试chrome  21,firefox 14,IE9。每个浏览器分别执行5次</li>
+<li>所有测试都在同一台笔记本电脑下，我将测试chrome  21,firefox 14,IE9。每个浏览器分别执行5次</li>
 </ul>
 <p>我用的测试方法代码：</p>
 <pre class="brush: jscript; title: ; notranslate" title="">var original = new Date().getTime(); //在执行方法前
@@ -461,253 +269,159 @@ console.log(new Date().getTime()-original);
 </pre>
 
 <p>测试5次的结果为：</p>
-<p><a href="/images/2012/08/saa.png"><img class="aligncenter size-full wp-image-2182" title="执行结果统计" src="/images/2012/08/saa.png" alt="" width="360" height="132"></a></p>
+<p><a href="/images/2012/08/saa.png"><img class="aligncenter size-full wp-image-2182" title="执行结果统计" src="/images/2012/08/saa.png" alt="" width="360" height="132" /></a></p>
 <p>结果有点出乎我的意料：在chrome和firefox中普通方式的时间都要好于使用正则表达式这种方式，而更神奇的是在IE中这两种时间都是0毫秒，只有在我快速刷新的时候才偶尔出现时间，一般只有1或者2ms。</p>
 <p>确实很难理解为什么IE时间为0毫秒，只有希望高人可以解答一下了。</p>
 <p>不过不管怎样，至少解决了获取参数这个问题。也不错！</p>
-<p><strong>更新</strong>：根据 <a href="http://weibo.com/jeffz" target="_blank" rel="external">@老赵</a>的建议我将测试次数变到反复执行该方法1000次再比较结果，出现如下的数据：（注意较上图正则和普通的位置对调了一下）</p>
-<p><a href="/images/2012/08/1111111111.png"><img class="aligncenter size-full wp-image-2191" title="执行1000次的结果" src="/images/2012/08/1111111111.png" alt="" width="362" height="169"></a></p>
+<p><strong>更新</strong>：根据 <a target="_blank" rel="noopener" href="http://weibo.com/jeffz">@老赵</a>的建议我将测试次数变到反复执行该方法1000次再比较结果，出现如下的数据：（注意较上图正则和普通的位置对调了一下）</p>
+<p><a href="/images/2012/08/1111111111.png"><img class="aligncenter size-full wp-image-2191" title="执行1000次的结果" src="/images/2012/08/1111111111.png" alt="" width="362" height="169" /></a></p>
 <p>欢迎大家讨论。</p>
-<p>参考正则方式的代码地址：<a href="http://www.cnblogs.com/nrq/archive/2006/08/30/490347.html" target="_blank" rel="external">http://www.cnblogs.com/nrq/archive/2006/08/30/490347.html</a></p>
+<p>参考正则方式的代码地址：<a target="_blank" rel="noopener" href="http://www.cnblogs.com/nrq/archive/2006/08/30/490347.html">http://www.cnblogs.com/nrq/archive/2006/08/30/490347.html</a></p>
 
-      
     </div>
+
     
     
     
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/javascript/" rel="tag"># javascript</a>
-          
-            <a href="/tags/对比/" rel="tag"># 对比</a>
-          
-            <a href="/tags/效率/" rel="tag"># 效率</a>
-          
-            <a href="/tags/正则表达式/" rel="tag"># 正则表达式</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2012/08/23/java-cors-cross-domain-request/" rel="next" title="Java CORS实现Ajax跨域请求">
-                <i class="fa fa-chevron-left"></i> Java CORS实现Ajax跨域请求
-              </a>
-            
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/javascript/" rel="tag"># javascript</a>
+              <a href="/tags/%E5%AF%B9%E6%AF%94/" rel="tag"># 对比</a>
+              <a href="/tags/%E6%95%88%E7%8E%87/" rel="tag"># 效率</a>
+              <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="tag"># 正则表达式</a>
           </div>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2012/09/07/ubuntu-install-elementary3-gtk-theme/" rel="prev" title="Ubuntu安装 GTK主题 Elementary 3">
-                Ubuntu安装 GTK主题 Elementary 3 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
-    
-  </div>
-
-
-        </div>
         
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2012/08/23/java-cors-cross-domain-request/" rel="prev" title="Java CORS实现Ajax跨域请求">
+      <i class="fa fa-chevron-left"></i> Java CORS实现Ajax跨域请求
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2012/09/07/ubuntu-install-elementary3-gtk-theme/" rel="next" title="Ubuntu安装 GTK主题 Elementary 3">
+      Ubuntu安装 GTK主题 Elementary 3 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
 
-      
-
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://blog.tuxue.xyz/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
-               alt="Junv" />
-          <p class="site-author-name" itemprop="name">Junv</p>
-           
-              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-            
-              <a href="/archives/">
-            
-                <span class="site-state-item-count">307</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">69</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">247</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/wahyd4" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                    
-                      GitHub
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.linkedin.com/in/junwei-zhao-46944557" target="_blank" title="LinkedIn">
-                  
-                    <i class="fa fa-fw fa-linkedin"></i>
-                  
-                    
-                      LinkedIn
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
-                  
-                    <i class="fa fa-fw fa-stack-overflow"></i>
-                  
-                    
-                      StackOverflow
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                    
-                      Weibo
-                    
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
-    </main>
+      <!--/noindex-->
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Junv</span>
-
-  
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Junv</p>
+  <div class="site-description" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">307</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">69</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">247</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
 </div>
 
 
 
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Junv</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
         
 
 
@@ -716,115 +430,25 @@ console.log(new Date().getTime()-original);
 
 
 
-        
+
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -838,19 +462,12 @@ console.log(new Date().getTime()-original);
 
 
 
-  
 
 
 
 
 
-  
 
-  
-
-  
-
-  
 
   
 

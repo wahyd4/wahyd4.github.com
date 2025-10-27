@@ -1,150 +1,55 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"toozhao.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"width_expanded":320,"width_dual_column":240,"padding":18},"copycode":{"enable":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp","menu_item":"fadeInDown"},"duration":200}};
+  </script>
 
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="DNS," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta name="description" content="如果你也出现了一下问题：本来一些网站的域名存在，可是你缺被莫名其妙的引导到电信的114页面或者联通的什么页面。或者你访问一些网站时 他告诉你 网站不能打开，或者显示的不是正常的网页。 那么这些都可能是DNS 的问题。如果我们自己不做修改的话，你联网的时候是默认使用电信运营商的DNS解析。比如电信，或者联通他们自己的。这些dns 平时可能看不出来有什么问题，也许一到关键时刻就出篓子。 这两天我自己是">
-<meta name="keywords" content="DNS">
+  <meta name="description" content="如果你也出现了一下问题：本来一些网站的域名存在，可是你缺被莫名其妙的引导到电信的114页面或者联通的什么页面。或者你访问一些网站时 他告诉你 网站不能打开，或者显示的不是正常的网页。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Google public DNS加速网站访问">
-<meta property="og:url" content="http://toozhao.com/2010/12/27/google-public-dns/index.html">
+<meta property="og:url" content="https://toozhao.com/2010/12/27/google-public-dns/index.html">
 <meta property="og:site_name" content="大染志">
-<meta property="og:description" content="如果你也出现了一下问题：本来一些网站的域名存在，可是你缺被莫名其妙的引导到电信的114页面或者联通的什么页面。或者你访问一些网站时 他告诉你 网站不能打开，或者显示的不是正常的网页。 那么这些都可能是DNS 的问题。如果我们自己不做修改的话，你联网的时候是默认使用电信运营商的DNS解析。比如电信，或者联通他们自己的。这些dns 平时可能看不出来有什么问题，也许一到关键时刻就出篓子。 这两天我自己是">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://toozhao.com/images/2010/12/12-27-1.jpg">
-<meta property="og:image" content="http://toozhao.com/images/2010/12/12-27-2.jpg">
-<meta property="og:image" content="http://toozhao.com/images/2010/12/12-27-3.jpg">
-<meta property="og:image" content="http://toozhao.com/images/2010/12/12-27-4.jpg">
-<meta property="og:updated_time" content="2014-07-22T08:43:21.000Z">
+<meta property="og:description" content="如果你也出现了一下问题：本来一些网站的域名存在，可是你缺被莫名其妙的引导到电信的114页面或者联通的什么页面。或者你访问一些网站时 他告诉你 网站不能打开，或者显示的不是正常的网页。">
+<meta property="og:locale">
+<meta property="og:image" content="https://toozhao.com/images/2010/12/12-27-1.jpg">
+<meta property="og:image" content="https://toozhao.com/images/2010/12/12-27-2.jpg">
+<meta property="og:image" content="https://toozhao.com/images/2010/12/12-27-3.jpg">
+<meta property="og:image" content="https://toozhao.com/images/2010/12/12-27-4.jpg">
+<meta property="article:published_time" content="2010-12-26T13:00:00.000Z">
+<meta property="article:modified_time" content="2014-07-22T08:43:21.000Z">
+<meta property="article:author" content="Junv">
+<meta property="article:tag" content="DNS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Google public DNS加速网站访问">
-<meta name="twitter:description" content="如果你也出现了一下问题：本来一些网站的域名存在，可是你缺被莫名其妙的引导到电信的114页面或者联通的什么页面。或者你访问一些网站时 他告诉你 网站不能打开，或者显示的不是正常的网页。 那么这些都可能是DNS 的问题。如果我们自己不做修改的话，你联网的时候是默认使用电信运营商的DNS解析。比如电信，或者联通他们自己的。这些dns 平时可能看不出来有什么问题，也许一到关键时刻就出篓子。 这两天我自己是">
-<meta name="twitter:image" content="http://toozhao.com/images/2010/12/12-27-1.jpg">
+<meta name="twitter:image" content="https://toozhao.com/images/2010/12/12-27-1.jpg">
+
+<link rel="canonical" href="https://toozhao.com/2010/12/27/google-public-dns/">
 
 
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    version: '5.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
   };
 </script>
-
-
-
-  <link rel="canonical" href="http://toozhao.com/2010/12/27/google-public-dns/"/>
-
-
-
-
 
   <title>使用Google public DNS加速网站访问 | 大染志</title>
   
@@ -152,245 +57,145 @@
 
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-5243064-16', 'auto');
-  ga('send', 'pageview');
-</script>
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail ">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">大染志</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <p class="site-subtitle">想要玩得很 High 的程序员</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">大染志</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">想要玩得很 High 的程序员</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
+
+
+
 <nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-知识图谱">
-          <a href="https://wiki.toozhao.com" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            知识图谱
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
 </nav>
 
 
 
- </div>
+
+</div>
     </header>
 
-    <main id="main" class="main">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content post posts-expand">
             
 
-  <div id="posts" class="posts-expand">
     
-
-  
-
   
   
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://toozhao.com/2010/12/27/google-public-dns/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://toozhao.com/2010/12/27/google-public-dns/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Junv">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://blog.tuxue.xyz/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim">
+      <meta itemprop="description" content="Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="大染志">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">使用Google public DNS加速网站访问</h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          使用Google public DNS加速网站访问
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2010-12-27T00:00:00+11:00">
-                2010-12-27
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T18:43:21+10:00">
-                2014-07-22
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/我说/" itemprop="url" rel="index">
-                    <span itemprop="name">我说</span>
-                  </a>
-                </span>
-
-                
-                
-              
+              <time title="Created: 2010-12-27 00:00:00" itemprop="dateCreated datePublished" datetime="2010-12-27T00:00:00+11:00">2010-12-27</time>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2014-07-22 18:43:21" itemprop="dateModified" datetime="2014-07-22T18:43:21+10:00">2014-07-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%88%91%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">我说</span></a>
+                </span>
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-      
 
       
         <p>如果你也出现了一下问题：本来一些网站的域名存在，可是你缺被莫名其妙的引导到电信的114页面或者联通的什么页面。或者你访问一些网站时 他告诉你 网站不能打开，或者显示的不是正常的网页。</p>
@@ -401,258 +206,185 @@
 <p>那好下面就让我们在动手设置DNS。因为我的电脑是windows 7环境 所以就设置win 7吧。</p>
 <p>首先<strong>打开 网络和共享中心（就在右下角的网络菜单栏）</strong></p>
 <p><strong>然后选择你现在说很使用的网络。 点击连接后面的。</strong></p>
-<p style="text-align: center;"><br>  <strong><a href="/images/2010/12/12-27-1.jpg"><img class="size-full wp-image-1131 aligncenter" title="12-27-1" src="/images/2010/12/12-27-1.jpg" alt="" width="595" height="90"> </a></strong>点击进入之后，你将看到如下界面<br></p>
+<p style="text-align: center;">
+  <strong><a href="/images/2010/12/12-27-1.jpg"><img class="size-full wp-image-1131 aligncenter" title="12-27-1" src="/images/2010/12/12-27-1.jpg" alt="" width="595" height="90" /> </a></strong>点击进入之后，你将看到如下界面
+</p>
 
-<p style="text-align: center;"><br>  <a href="/images/2010/12/12-27-2.jpg"><img class="size-full wp-image-1132 aligncenter" title="12-27-2" src="/images/2010/12/12-27-2.jpg" alt="" width="365" height="409"></a><strong>然后点击属性，进行设置 </strong><br></p>
+<p style="text-align: center;">
+  <a href="/images/2010/12/12-27-2.jpg"><img class="size-full wp-image-1132 aligncenter" title="12-27-2" src="/images/2010/12/12-27-2.jpg" alt="" width="365" height="409" /></a><strong>然后点击属性，进行设置 </strong>
+</p>
 
-<p style="text-align: center;"><br>  <strong><a href="/images/2010/12/12-27-3.jpg"><img class="size-full wp-image-1133 aligncenter" title="12-27-3" src="/images/2010/12/12-27-3.jpg" alt="" width="361" height="325"></a>找到internet 协议版本4 tcp/IP.然后点击属性进入设置</strong><br></p>
+<p style="text-align: center;">
+  <strong><a href="/images/2010/12/12-27-3.jpg"><img class="size-full wp-image-1133 aligncenter" title="12-27-3" src="/images/2010/12/12-27-3.jpg" alt="" width="361" height="325" /></a>找到internet 协议版本4 tcp/IP.然后点击属性进入设置</strong>
+</p>
 
-<p style="text-align: center;"><br>  <strong><a href="/images/2010/12/12-27-4.jpg"><img class="size-full wp-image-1135 aligncenter" title="12-27-4" src="/images/2010/12/12-27-4.jpg" alt="" width="406" height="421"></a>选择使用下面的DNS服务器地址。</strong><br></p>
+<p style="text-align: center;">
+  <strong><a href="/images/2010/12/12-27-4.jpg"><img class="size-full wp-image-1135 aligncenter" title="12-27-4" src="/images/2010/12/12-27-4.jpg" alt="" width="406" height="421" /></a>选择使用下面的DNS服务器地址。</strong>
+</p>
 
-<p style="text-align: center;"><br>  <strong>在DNS 服务器里面按照图片所示填入：  8.8.8.8</strong><br></p>
+<p style="text-align: center;">
+  <strong>在DNS 服务器里面按照图片所示填入：  8.8.8.8</strong>
+</p>
 
-<p style="text-align: center;"><br>  <strong>备用里面填入：8.8.4.4</strong><br></p>
+<p style="text-align: center;">
+  <strong>备用里面填入：8.8.4.4</strong>
+</p>
 
-<p style="text-align: center;"><br>  <strong>然后点击确定，就可以啦。</strong><br></p>
+<p style="text-align: center;">
+  <strong>然后点击确定，就可以啦。</strong>
+</p>
 
-<p style="text-align: center;"><br>  <strong>现在断开网络，重新连接，试试。</strong><br></p>
+<p style="text-align: center;">
+  <strong>现在断开网络，重新连接，试试。</strong>
+</p>
 
-<p style="text-align: center;"><br>  <strong>是不是以前不能打开的域名地址，现在可以打开了。（当然这里所指的域名是因为DNS关系不能打开） </strong><br></p>
+<p style="text-align: center;">
+  <strong>是不是以前不能打开的域名地址，现在可以打开了。（当然这里所指的域名是因为DNS关系不能打开） </strong>
+</p>
 
-<p><strong><a href="/images/2010/12/12-27-1.jpg"> </a> </strong></p>
+<p>**<a href="/images/2010/12/12-27-1.jpg"> </a> **</p>
 
-      
     </div>
+
     
     
     
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/DNS/" rel="tag"># DNS</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2010/12/23/c-plus-link/" rel="next" title="C++实现顺序链表所有操作代码">
-                <i class="fa fa-chevron-left"></i> C++实现顺序链表所有操作代码
-              </a>
-            
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/DNS/" rel="tag"># DNS</a>
           </div>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2010/12/29/leave-me/" rel="prev" title="超感人短片 ：让我留下 Leave me">
-                超感人短片 ：让我留下 Leave me <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
-    
-  </div>
-
-
-        </div>
         
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2010/12/23/c-plus-link/" rel="prev" title="C++实现顺序链表所有操作代码">
+      <i class="fa fa-chevron-left"></i> C++实现顺序链表所有操作代码
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2010/12/29/leave-me/" rel="next" title="超感人短片 ：让我留下 Leave me">
+      超感人短片 ：让我留下 Leave me <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
 
-      
-
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://blog.tuxue.xyz/libr.jpg?imageView2/1/w/200/h/200/q/90|imageslim"
-               alt="Junv" />
-          <p class="site-author-name" itemprop="name">Junv</p>
-           
-              <p class="site-description motion-element" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-            
-              <a href="/archives/">
-            
-                <span class="site-state-item-count">307</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">69</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">247</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/wahyd4" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                    
-                      GitHub
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.linkedin.com/in/junwei-zhao-46944557" target="_blank" title="LinkedIn">
-                  
-                    <i class="fa fa-fw fa-linkedin"></i>
-                  
-                    
-                      LinkedIn
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://stackoverflow.com/users/1140611/junv" target="_blank" title="StackOverflow">
-                  
-                    <i class="fa fa-fw fa-stack-overflow"></i>
-                  
-                    
-                      StackOverflow
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/wahyd4" target="_blank" title="Weibo">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                    
-                      Weibo
-                    
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
-    </main>
+      <!--/noindex-->
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Junv</span>
-
-  
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Junv</p>
+  <div class="site-description" itemprop="description">Go, JavaScript, Ruby on Rails, Java,Docker, CI, CD, Photography</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">307</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">69</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">247</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
 </div>
 
 
 
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Junv</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
         
 
 
@@ -661,115 +393,25 @@
 
 
 
-        
+
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -783,19 +425,12 @@
 
 
 
-  
 
 
 
 
 
-  
 
-  
-
-  
-
-  
 
   
 
